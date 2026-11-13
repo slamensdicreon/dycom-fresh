@@ -40,7 +40,7 @@ There's no setup: import the repository in Vercel. The defaults are correct.
 - **Framework preset:** Next.js.
 - **Root directory:** the repository root.
 - **Build command:** `npm run build`. It compiles `content/` in strict mode, generates the Sitecore component map and runs `next build`.
-- **Node.js version:** 24 (read from `engines` in `package.json`).
+- **Node.js version:** 24 (pinned in the project settings and in `engines` in `package.json`).
 
 **Environment variables:** none are needed while the site runs on local content. In that mode `robots.txt` disallows everything, so preview deployments stay out of search indexes. When SitecoreAI is ready, add the Edge variables from `.env.example` to the Vercel project; local content mode switches off on the next deploy.
 
