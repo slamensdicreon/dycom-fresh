@@ -1,0 +1,16 @@
+{
+  "templateName": "Strength Card",
+  "sortOrder": 3,
+  "fields": {
+    "Title": "Where Skill Meets Scale",
+    "Body": "Dycom’s skilled, safety-minded people are the capability that builds, connects, powers, maintains, and advances the digital infrastructure America depends on now and into the future.",
+    "Image": {
+      "$image": "z9b_1903",
+      "alt": "Lineworker in a white hard hat against a weathered wooden wall"
+    },
+    "Link": {
+      "$link": "/careers/",
+      "text": "Careers"
+    }
+  }
+}

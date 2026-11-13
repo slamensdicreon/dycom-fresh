@@ -1,0 +1,29 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "name": "resources",
+  "displayName": "Resource Center",
+  "templateName": "Future Page",
+  "pageDesign": "default",
+  "sitemap": false,
+  "fields": {
+    "Title": "Resource Center | Dycom"
+  },
+  "placeholders": {
+    "headless-main": [
+      {
+        "componentName": "InteriorHero",
+        "dataSource": "pages/resources/hero",
+        "params": {
+          "RenderingIdentifier": "page"
+        }
+      },
+      {
+        "componentName": "PageNotice",
+        "dataSource": "pages/_notices/resources-landing",
+        "params": {
+          "RenderingIdentifier": "notice"
+        }
+      }
+    ]
+  }
+}

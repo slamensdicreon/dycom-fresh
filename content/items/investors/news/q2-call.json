@@ -1,0 +1,13 @@
+{
+  "templateName": "News Item",
+  "sortOrder": 3,
+  "fields": {
+    "Title": "Dycom Industries, Inc. to Host Fiscal 2027 Second Quarter Results Call on August 26, 2026",
+    "Date": "2026-08-14",
+    "DisplayDate": "August 14, 2026",
+    "Link": {
+      "$link": "/investors/news/",
+      "text": "Dycom Industries, Inc. to Host Fiscal 2027 Second Quarter Results Call on August 26, 2026"
+    }
+  }
+}

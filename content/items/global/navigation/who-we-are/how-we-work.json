@@ -1,0 +1,15 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 1,
+  "fields": {
+    "Title": "How we work",
+    "Links": {
+      "$refs": [
+        "global/links/safety",
+        "global/links/quality",
+        "global/links/hazard-recognition",
+        "global/links/contact"
+      ]
+    }
+  }
+}

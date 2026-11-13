@@ -1,0 +1,13 @@
+{
+  "templateName": "News Item",
+  "sortOrder": 2,
+  "fields": {
+    "Title": "Dycom Industries, Inc. Reports Record Fiscal 2027 Second Quarter Results",
+    "Date": "2026-08-26",
+    "DisplayDate": "August 26, 2026",
+    "Link": {
+      "$link": "/investors/news/",
+      "text": "Dycom Industries, Inc. Reports Record Fiscal 2027 Second Quarter Results"
+    }
+  }
+}

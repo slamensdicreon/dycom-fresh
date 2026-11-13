@@ -1,0 +1,92 @@
+{
+  "name": "Investors",
+  "templateName": "Interior Page",
+  "pageDesign": "default",
+  "fields": {
+    "Title": "Investors | Dycom",
+    "baseMetadataDescription": "Dycom Industries, Inc. (NYSE: DY): results, reports, events, investor news, filings, governance and shareholder resources.",
+    "baseOgImage": {
+      "$image": "z9b_6665"
+    }
+  },
+  "placeholders": {
+    "headless-main": [
+      {
+        "componentName": "InteriorHero",
+        "dataSource": "investors/hero",
+        "params": {
+          "RenderingIdentifier": "investors"
+        },
+        "placeholders": {
+          "interior-hero-index": [
+            {
+              "componentName": "InPageIndex",
+              "dataSource": "investors/index"
+            }
+          ]
+        }
+      },
+      {
+        "componentName": "ResultsHighlights",
+        "dataSource": "investors/results",
+        "params": {
+          "RenderingIdentifier": "results",
+          "SectionNumber": "01"
+        }
+      },
+      {
+        "componentName": "FeaturedReports",
+        "dataSource": "investors/reports",
+        "params": {
+          "RenderingIdentifier": "reports",
+          "SectionNumber": "02",
+          "Surface": "paper"
+        }
+      },
+      {
+        "componentName": "SplitSection",
+        "params": {
+          "RenderingIdentifier": "events-news"
+        },
+        "placeholders": {
+          "split-left": [
+            {
+              "componentName": "EventsTimeline",
+              "dataSource": "investors/events",
+              "params": {
+                "RenderingIdentifier": "events",
+                "SectionNumber": "03"
+              }
+            }
+          ],
+          "split-right": [
+            {
+              "componentName": "NewsList",
+              "dataSource": "investors/news",
+              "params": {
+                "RenderingIdentifier": "news",
+                "SectionNumber": "04"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "componentName": "ResourceColumns",
+        "dataSource": "investors/resources",
+        "params": {
+          "RenderingIdentifier": "resources",
+          "SectionNumber": "05",
+          "Surface": "paper"
+        }
+      },
+      {
+        "componentName": "ClosingBand",
+        "dataSource": "investors/closing",
+        "params": {
+          "RenderingIdentifier": "stay-informed"
+        }
+      }
+    ]
+  }
+}

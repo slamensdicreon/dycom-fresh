@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Communications Construction Group",
+  "sortOrder": 5,
+  "fields": {
+    "CompanyId": "3735",
+    "Name": "Communications Construction Group",
+    "FullName": "Communications Construction Group, LLC",
+    "Address": "111 Greenmont Road",
+    "City": "Rising Sun",
+    "State": "MD",
+    "Zip": "21911",
+    "Latitude": {
+      "value": 39.7181975
+    },
+    "Longitude": {
+      "value": -76.0346252
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://www.ccgcatv.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://ccgcatv.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3735.png",
+        "alt": "Communications Construction Group",
+        "width": 237,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

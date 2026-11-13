@@ -1,0 +1,42 @@
+/* Legibility floor for supporting copy (handoff/source/…/src/v2/ConsolidatedV2.css). */
+/* Focused readability and hero-control refinements for the editable V2 frame. */
+/* The brand film has its own band below the facts; the hero keeps only the
+   clear, accessible pause/play control for the background loop. */
+.dy.dy-site .dy-media-actions {
+  justify-content: flex-end;
+}
+
+/* Keep supporting copy comfortably legible instead of dropping to tiny labels. */
+.dy.dy-site .dy-pathway p,
+.dy.dy-site .dy-facts span,
+.dy.dy-site .dy-trade span span,
+.dy.dy-site .dy-investor-tiles p,
+.dy.dy-site .dy-resources a,
+.dy.dy-site .dy-footer-main nav a,
+.dy.dy-site .dy-footer-accordion-content a {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.dy.dy-site .dy-hero-eyebrow,
+.dy.dy-site .dy-who-intro > span {
+  font-size: 15px;
+}
+
+.dy.dy-site .dy-investor-tiles .dy-button {
+  font-size: 16px;
+}
+
+.dy.dy-site .dy-pathway > span,
+.dy.dy-site .dy-hero-copy .dy-button {
+  font-size: 16px;
+}
+
+
+@media (max-width: 767px) {
+  .dy.dy-site .dy-pathway p,
+    .dy.dy-site .dy-trade span span,
+  .dy.dy-site .dy-footer-accordion-content a {
+    font-size: 16px;
+  }
+}

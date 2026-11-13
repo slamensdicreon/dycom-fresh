@@ -1,0 +1,29 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "name": "leadership",
+  "displayName": "Leadership",
+  "templateName": "Future Page",
+  "pageDesign": "default",
+  "sitemap": false,
+  "fields": {
+    "Title": "Leadership | Dycom"
+  },
+  "placeholders": {
+    "headless-main": [
+      {
+        "componentName": "InteriorHero",
+        "dataSource": "pages/who-we-are/leadership/hero",
+        "params": {
+          "RenderingIdentifier": "page"
+        }
+      },
+      {
+        "componentName": "PageNotice",
+        "dataSource": "pages/_notices/who-we-are",
+        "params": {
+          "RenderingIdentifier": "notice"
+        }
+      }
+    ]
+  }
+}

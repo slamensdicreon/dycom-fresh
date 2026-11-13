@@ -1,0 +1,20 @@
+{
+  "templateName": "Footer Column",
+  "sortOrder": 1,
+  "fields": {
+    "Title": "What we do",
+    "Links": {
+      "$refs": [
+        "global/links/what-we-do",
+        "global/links/capabilities",
+        "global/links/engineering",
+        "global/links/project-management",
+        "global/links/wireline-construction",
+        "global/links/wireless-construction",
+        "global/links/fulfillment",
+        "global/links/locating",
+        "global/links/maintenance-restoration"
+      ]
+    }
+  }
+}

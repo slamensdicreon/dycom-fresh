@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Professional Teleconcepts",
+  "sortOrder": 25,
+  "fields": {
+    "CompanyId": "4047",
+    "Name": "Professional Teleconcepts",
+    "FullName": "Professional Teleconcepts, LLC",
+    "Address": "5132 State Highway 12",
+    "City": "Norwich",
+    "State": "NY",
+    "Zip": "13815",
+    "Latitude": {
+      "value": 42.4817404
+    },
+    "Longitude": {
+      "value": -75.5406347
+    },
+    "Region": "Northeast",
+    "Website": {
+      "$link": "http://www.pro-tel.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://pro-tel.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4047.png",
+        "alt": "Professional Teleconcepts",
+        "width": 563,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

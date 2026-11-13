@@ -1,0 +1,14 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 1,
+  "fields": {
+    "Title": "Build & connect",
+    "Links": {
+      "$refs": [
+        "global/links/wireline-construction",
+        "global/links/wireless-construction",
+        "global/links/fulfillment"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "templateName": "Interior Hero",
+  "fields": {
+    "BackLink": {
+      "$link": "/what-we-do/",
+      "text": "What we do"
+    },
+    "Heading": "Engineering",
+    "Overview": "Engineering and project management, wireline and wireless construction, locating, fulfillment, maintenance and restoration."
+  }
+}

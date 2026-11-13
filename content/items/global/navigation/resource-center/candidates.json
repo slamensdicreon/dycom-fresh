@@ -1,0 +1,13 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 3,
+  "fields": {
+    "Title": "Candidates",
+    "Links": {
+      "$refs": [
+        "global/links/recruitment-process",
+        "global/links/benefits"
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "name": "inventory-terms-of-purchase",
+  "displayName": "Inventory terms of purchase",
+  "templateName": "Future Page",
+  "pageDesign": "default",
+  "sitemap": false,
+  "fields": {
+    "Title": "Inventory terms of purchase | Dycom"
+  },
+  "placeholders": {
+    "headless-main": [
+      {
+        "componentName": "InteriorHero",
+        "dataSource": "pages/suppliers/inventory-terms-of-purchase/hero",
+        "params": {
+          "RenderingIdentifier": "page"
+        }
+      },
+      {
+        "componentName": "PageNotice",
+        "dataSource": "pages/_notices/companies",
+        "params": {
+          "RenderingIdentifier": "notice"
+        }
+      }
+    ]
+  }
+}

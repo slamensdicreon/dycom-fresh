@@ -1,0 +1,8 @@
+{
+  "templateName": "Company Fact",
+  "sortOrder": 2,
+  "fields": {
+    "Value": "20,000+",
+    "Label": "Skilled employees"
+  }
+}

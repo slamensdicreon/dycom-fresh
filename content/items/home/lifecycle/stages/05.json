@@ -1,0 +1,18 @@
+{
+  "templateName": "Lifecycle Stage",
+  "sortOrder": 5,
+  "fields": {
+    "Title": "Maintain & respond",
+    "Body": "Once a network is live, inspection, testing and repair keep it performing year after year. When storms, accidents or digging interrupt service, local crews respond and restore connections. Being nearby is what makes a fast response possible.",
+    "Image": {
+      "$image": "z9b_1555",
+      "alt": "Lineworker climbing a pole to inspect and repair the line"
+    },
+    "Services": {
+      "$refs": [
+        "home/lifecycle/services/maintenance-restoration",
+        "home/lifecycle/services/utility-locating"
+      ]
+    }
+  }
+}

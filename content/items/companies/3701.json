@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "C-2 Utility Contractors",
+  "sortOrder": 3,
+  "fields": {
+    "CompanyId": "3701",
+    "Name": "C-2 Utility Contractors",
+    "FullName": "C-2 Utility Contractors, LLC",
+    "Address": "33005 Roberts Court",
+    "City": "Coburg",
+    "State": "OR",
+    "Zip": "97408",
+    "Latitude": {
+      "value": 44.1281521
+    },
+    "Longitude": {
+      "value": -123.0562441
+    },
+    "Region": "West",
+    "Website": {
+      "$link": "https://www.c-2utility.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://www.c-2utility.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3701.png",
+        "alt": "C-2 Utility Contractors",
+        "width": 338,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

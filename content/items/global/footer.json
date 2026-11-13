@@ -1,0 +1,29 @@
+{
+  "templateName": "Site Footer",
+  "fields": {
+    "Logo": {
+      "value": {
+        "src": "/media/brand/logo-reverse.png",
+        "alt": "Dycom",
+        "width": 1910,
+        "height": 309
+      }
+    },
+    "HomeLink": {
+      "$link": "/",
+      "text": "Dycom home"
+    },
+    "Tagline": "Behind the work<br />that connects America.",
+    "Columns": {
+      "$children": "global/footer-columns"
+    },
+    "UtilityLinks": {
+      "$refs": [
+        "global/links/privacy-policy",
+        "global/links/terms-of-use"
+      ]
+    },
+    "CopyrightHolder": "Dycom Industries, Inc.",
+    "MotionLabel": "Motion"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "templateName": "Lifecycle Stage",
+  "sortOrder": 1,
+  "fields": {
+    "Title": "Design & engineering",
+    "Body": "Before anything goes in the ground, engineers walk the route and record what is already there: poles, conduit, rights of way and property lines. That fieldwork becomes network designs, permit packages and construction drawings. Local knowledge at this stage prevents surprises later.",
+    "Image": {
+      "$image": "z9b_1711",
+      "alt": "Two crew members in hard hats reviewing the day’s route at their truck"
+    },
+    "Services": {
+      "$refs": [
+        "home/lifecycle/services/engineering",
+        "home/lifecycle/services/project-management"
+      ]
+    }
+  }
+}

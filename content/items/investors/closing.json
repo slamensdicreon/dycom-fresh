@@ -1,0 +1,18 @@
+{
+  "templateName": "Closing Band",
+  "fields": {
+    "Heading": "Stay informed.",
+    "Text": "Sign up for email alerts on results, filings and events, or reach the Investor Relations team directly.",
+    "BackgroundImage": {
+      "$image": "z9a_4064"
+    },
+    "PrimaryLink": {
+      "$link": "/investors/email-alerts/",
+      "text": "Email alerts"
+    },
+    "SecondaryLink": {
+      "$link": "/investors/contact/",
+      "text": "Contact Investor Relations"
+    }
+  }
+}

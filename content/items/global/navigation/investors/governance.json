@@ -1,0 +1,15 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 1,
+  "fields": {
+    "Title": "Governance",
+    "Links": {
+      "$refs": [
+        "global/links/governance",
+        "global/links/board-of-directors",
+        "global/links/board-committees",
+        "global/links/governance-documents"
+      ]
+    }
+  }
+}

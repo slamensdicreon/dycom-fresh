@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Power Solutions",
+  "sortOrder": 22,
+  "fields": {
+    "CompanyId": "8924",
+    "Name": "Power Solutions",
+    "FullName": "Power Solutions, LLC",
+    "Address": "17201 Melford Boulevard",
+    "City": "Bowie",
+    "State": "MD",
+    "Zip": "20715",
+    "Latitude": {
+      "value": 38.95791916891889
+    },
+    "Longitude": {
+      "value": -76.7092589041098
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "https://powersolutions-llc.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://powersolutions-llc.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/8924.png",
+        "alt": "Power Solutions",
+        "width": 258,
+        "height": 94
+      }
+    },
+    "Description": ""
+  }
+}

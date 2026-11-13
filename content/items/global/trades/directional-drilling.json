@@ -1,0 +1,10 @@
+{
+  "templateName": "Trade",
+  "sortOrder": 3,
+  "fields": {
+    "Name": "Directional drilling",
+    "Description": "Bore under roads and yards to place conduit without open trenches.",
+    "Question": "Ask how operators are trained on each rig.",
+    "Departments": "HDD Operations"
+  }
+}

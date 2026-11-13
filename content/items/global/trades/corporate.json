@@ -1,0 +1,10 @@
+{
+  "templateName": "Trade",
+  "sortOrder": 7,
+  "fields": {
+    "Name": "Corporate",
+    "Description": "Support the operating companies from the Dycom office: finance, people, safety, fleet and technology.",
+    "Question": "Ask how the role works with the operating companies day to day.",
+    "Departments": "Corporate Finance|Human Resources|Corporate Safety|Fleet Administration|Information Technology|Payroll"
+  }
+}

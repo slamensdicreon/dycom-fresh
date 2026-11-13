@@ -1,0 +1,9 @@
+{
+  "templateName": "In-Page Index",
+  "fields": {
+    "Label": "On this page",
+    "Links": {
+      "$children": "investors/index"
+    }
+  }
+}

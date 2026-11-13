@@ -1,0 +1,29 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "name": "privacy-policy",
+  "displayName": "Privacy policy",
+  "templateName": "Future Page",
+  "pageDesign": "default",
+  "sitemap": false,
+  "fields": {
+    "Title": "Privacy policy | Dycom"
+  },
+  "placeholders": {
+    "headless-main": [
+      {
+        "componentName": "InteriorHero",
+        "dataSource": "pages/privacy-policy/hero",
+        "params": {
+          "RenderingIdentifier": "page"
+        }
+      },
+      {
+        "componentName": "PageNotice",
+        "dataSource": "pages/_notices/utility",
+        "params": {
+          "RenderingIdentifier": "notice"
+        }
+      }
+    ]
+  }
+}

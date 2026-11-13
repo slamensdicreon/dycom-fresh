@@ -1,0 +1,29 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "name": "terms-of-use",
+  "displayName": "Terms of use",
+  "templateName": "Future Page",
+  "pageDesign": "default",
+  "sitemap": false,
+  "fields": {
+    "Title": "Terms of use | Dycom"
+  },
+  "placeholders": {
+    "headless-main": [
+      {
+        "componentName": "InteriorHero",
+        "dataSource": "pages/terms-of-use/hero",
+        "params": {
+          "RenderingIdentifier": "page"
+        }
+      },
+      {
+        "componentName": "PageNotice",
+        "dataSource": "pages/_notices/utility",
+        "params": {
+          "RenderingIdentifier": "notice"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "templateName": "Interior Hero",
+  "fields": {
+    "BackLink": {
+      "$link": "/investors/",
+      "text": "Investors"
+    },
+    "Heading": "Stock information",
+    "Overview": "Dycom Industries, Inc. (NYSE: DY). Results, filings, governance and investor resources in one place."
+  }
+}

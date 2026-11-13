@@ -1,0 +1,14 @@
+{
+  "templateName": "Footer Column",
+  "sortOrder": 2,
+  "fields": {
+    "Title": "Our companies",
+    "Links": {
+      "$refs": [
+        "global/links/companies",
+        "global/links/inventory-terms",
+        "global/links/fleet-terms"
+      ]
+    }
+  }
+}

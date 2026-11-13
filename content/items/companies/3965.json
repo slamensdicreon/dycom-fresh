@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "North Sky Communications",
+  "sortOrder": 19,
+  "fields": {
+    "CompanyId": "3965",
+    "Name": "North Sky Communications",
+    "FullName": "North Sky Communications, LLC",
+    "Address": "16701 SE McGillivray Blvd., Suite 200",
+    "City": "Vancouver",
+    "State": "WA",
+    "Zip": "98683",
+    "Latitude": {
+      "value": 45.6039946
+    },
+    "Longitude": {
+      "value": -122.5010866
+    },
+    "Region": "West",
+    "Website": {
+      "$link": "http://www.northskycomm.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://northskycomm.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3965.png",
+        "alt": "North Sky Communications",
+        "width": 640,
+        "height": 131
+      }
+    },
+    "Description": ""
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "templateName": "Inquiry Field",
+  "sortOrder": 3,
+  "fields": {
+    "Name": "work",
+    "Label": "Type of work",
+    "FieldType": "select",
+    "Required": "1",
+    "FullWidth": "",
+    "AutoComplete": "",
+    "Placeholder": "",
+    "Options": {
+      "$children": "home/contact/options/work-types"
+    }
+  }
+}

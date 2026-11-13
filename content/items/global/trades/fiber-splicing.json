@@ -1,0 +1,10 @@
+{
+  "templateName": "Trade",
+  "sortOrder": 0,
+  "fields": {
+    "Name": "Fiber splicing",
+    "Description": "Join and test optical fibers so a route carries signal end to end.",
+    "Question": "Ask which splicing and test equipment is taught.",
+    "Departments": "Splicing - Fiber"
+  }
+}

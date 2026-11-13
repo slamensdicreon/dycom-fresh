@@ -1,0 +1,17 @@
+{
+  "templateName": "Footer Column",
+  "sortOrder": 4,
+  "fields": {
+    "Title": "Resource Center",
+    "Links": {
+      "$refs": [
+        "global/links/resources",
+        "global/links/hazard-recognition",
+        "global/links/employee-handbook",
+        "global/links/benefit-plan-disclosures",
+        "global/links/inventory-terms",
+        "global/links/fleet-terms"
+      ]
+    }
+  }
+}

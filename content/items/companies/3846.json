@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Globe Communications",
+  "sortOrder": 9,
+  "fields": {
+    "CompanyId": "3846",
+    "Name": "Globe Communications",
+    "FullName": "Globe Communications, LLC",
+    "Address": "950 48th Avenue North, Suite 100",
+    "City": "Myrtle Beach",
+    "State": "SC",
+    "Zip": "29577",
+    "Latitude": {
+      "value": 33.7304027
+    },
+    "Longitude": {
+      "value": -78.8560344
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://www.globeinc.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://globeinc.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3846.png",
+        "alt": "Globe Communications",
+        "width": 640,
+        "height": 208
+      }
+    },
+    "Description": ""
+  }
+}

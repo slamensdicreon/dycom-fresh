@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Utility Technologies",
+  "sortOrder": 35,
+  "fields": {
+    "CompanyId": "7970",
+    "Name": "Utility Technologies",
+    "FullName": "Utility Technologies, LLC",
+    "Address": "18612 142nd Ave NE",
+    "City": "Woodinville",
+    "State": "WA",
+    "Zip": "98072",
+    "Latitude": {
+      "value": 47.7623668
+    },
+    "Longitude": {
+      "value": -122.1506868
+    },
+    "Region": "West",
+    "Website": {
+      "$link": "https://utilitytechnologies.net/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://utilitytechnologies.net/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/7970.png",
+        "alt": "Utility Technologies",
+        "width": 640,
+        "height": 234
+      }
+    },
+    "Description": ""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "templateName": "Hero",
+  "fields": {
+    "Eyebrow": "Digital infrastructure leader",
+    "Heading": "Scale is",
+    "HeadingHighlight": "Local",
+    "Description": "Dycom combines local expertise, national capability, and the skilled people to deliver critical infrastructure America depends on.",
+    "PrimaryLink": { "$link": "#companies", "text": "Explore our companies" },
+    "SecondaryLink": { "$link": "#who-we-are", "text": "Who we are" },
+    "BackgroundVideo": { "$file": "/media/film/hero-loop.mp4" },
+    "Poster": { "$image": "hero-poster" }
+  }
+}

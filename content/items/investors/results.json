@@ -1,0 +1,27 @@
+{
+  "templateName": "Results Highlights",
+  "fields": {
+    "Heading": "Q2 2027 results",
+    "Note": "Fiscal 2027 second quarter, ended August 1, 2026. Published August 26, 2026. GAAP figures from the results release.",
+    "BackgroundImage": {
+      "$image": "z9a_0525"
+    },
+    "Metrics": {
+      "$children": "investors/results/metrics"
+    },
+    "Documents": {
+      "$children": "investors/results/documents"
+    },
+    "DocumentsLabel": "Q2 2027 results package",
+    "CallHeading": "Results call replay",
+    "CallText": "Held August 26, 2026, 9:00 AM EDT. The webcast replay, slides and transcript are kept with the event.",
+    "CallPrimaryLink": {
+      "$link": "/investors/events-presentations/",
+      "text": "Open the event"
+    },
+    "CallSecondaryLink": {
+      "$link": "/investors/news/",
+      "text": "Results release"
+    }
+  }
+}

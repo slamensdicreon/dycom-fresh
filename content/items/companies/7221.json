@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Bigham Cable Construction",
+  "sortOrder": 1,
+  "fields": {
+    "CompanyId": "7221",
+    "Name": "Bigham Cable Construction",
+    "FullName": "Bigham Cable Construction, Inc",
+    "Address": "3171 Gulf Breeze Parkway",
+    "City": "Gulf Breeze",
+    "State": "FL",
+    "Zip": "32563",
+    "Latitude": {
+      "value": 30.403811
+    },
+    "Longitude": {
+      "value": -86.975709
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "https://bighamcable.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://bighamcable.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/7221.png",
+        "alt": "Bigham Cable Construction",
+        "width": 447,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

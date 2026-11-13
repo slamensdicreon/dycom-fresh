@@ -1,0 +1,442 @@
+/* Final Design Direction layer (handoff/source/…/src/v2/_group.css). Scoped to .dy-site. */
+
+.dy-site {
+  --dy-gutter: clamp(24px, 5.2vw, 88px);
+  --dy-section: clamp(64px, 7.2vw, 104px);
+  /* Shared tints for type and hairlines on the dark Civic surfaces (map, inquiry form). */
+  --dy-night-line: rgb(255 255 255 / 20%);
+  --dy-night-dim: rgb(255 255 255 / 72%);
+}
+
+.dy-site .dy-header { height: 88px; }
+.dy-site .dy-hero {
+  position: relative;
+  display: block;
+  min-height: min(690px, calc(100svh - 148px));
+  padding: 0;
+  overflow: hidden;
+  background: var(--dy-civic-deep);
+  color: var(--dy-white);
+}
+.dy-site .dy-hero-media {
+  /* In flow, so the hero grows with its copy and the buttons never clip into the pathway band. */
+  position: relative;
+  min-height: inherit;
+  height: auto;
+  color: var(--dy-white);
+}
+.dy-site .dy-hero-media > video,
+.dy-site .dy-hero-media > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 46%; }
+.dy-site .dy-media-shade {
+  inset: 0;
+  background: linear-gradient(90deg, rgb(3 11 58 / 88%) 0%, rgb(3 11 58 / 62%) 45%, rgb(3 11 58 / 8%) 100%), linear-gradient(0deg, rgb(3 11 58 / 52%), transparent 50%);
+}
+.dy-site .dy-hero-copy {
+  position: relative;
+  z-index: 1;
+  min-height: inherit;
+  width: min(760px, 70%);
+  justify-content: center;
+  padding: clamp(44px, 7vw, 96px) var(--dy-gutter) 128px;
+}
+.dy-site .dy-hero-eyebrow,
+.dy-site .dy-who-intro > span {
+  display: block;
+  color: var(--dy-green);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.dy-site .dy-hero h1 { color: var(--dy-white); font-size: clamp(48px, 6.4vw, 88px); }
+.dy-site .dy-hero h1 span { color: var(--dy-green); }
+.dy-site .dy-hero-copy p { max-width: 52ch; font-size: clamp(17px, 1.45vw, 20px); color: var(--dy-white); }
+.dy-site .dy-hero-copy .dy-button { background: var(--dy-green); border-color: var(--dy-green); color: var(--dy-civic-deep); }
+.dy-site .dy-hero-copy .dy-button--outline { color: var(--dy-white); background: transparent; border-color: rgb(255 255 255 / 72%); }
+.dy-site .dy-hero-signal { color: var(--dy-green); width: clamp(88px, 10vw, 144px); height: auto; top: 0; right: 0; }
+.dy-site .dy-media-caption { display: none; }
+.dy-site .dy-media-caption strong { font-size: 18px; }
+/* The band overlaps the hero by 1px: at fractional zoom (the scaled review frame, Retina
+   scaling) the two edges round to different device pixels and a hairline of page white or
+   unshaded photo shows between them. Nothing sits in the hero's last pixel row. */
+.dy-site .dy-pathways { position: relative; margin-top: -1px; padding-inline: var(--dy-gutter); }
+.dy-site .dy-pathway { padding: 22px 20px 24px; }
+.dy-site .dy-pathway > span { font-size: 18px; }
+.dy-site .dy-pathway p { font-size: 15px; }
+
+.dy-site .dy-who-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+  gap: 48px 64px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+.dy-site .dy-who-intro { max-width: 640px; display: flex; flex-direction: column; align-items: start; gap: 20px; }
+.dy-site .dy-who-intro p { font-size: 18px; color: var(--dy-ink); }
+/* What we build beside Who we are: the same eyebrow / H2 / intro stack, then the four lines of work (client feedback, 5 Nov 2026). */
+.dy-site .dy-work-block { max-width: none; }
+.dy-site .dy-work-block p { max-width: 52ch; }
+.dy-site .dy-work-list { list-style: none; margin: 8px 0 0; padding: 0; width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 32px; }
+.dy-site .dy-work-list li { display: flex; flex-direction: column; gap: 8px; padding-top: 14px; border-top: 2px solid var(--dy-green); }
+.dy-site .dy-work-list strong { color: var(--dy-civic); font-size: 18px; font-weight: 600; line-height: 1.25; }
+.dy-site .dy-work-list span { font-size: 15px; line-height: 1.55; color: var(--dy-ink); }
+/* Number call-out over photography (Signal Works pattern), the darker Civic wash of the hero. */
+.dy-site .dy-who-numbers {
+  position: relative; overflow: hidden; isolation: isolate;
+  padding: 56px clamp(24px, 4vw, 56px);
+  background: var(--dy-civic-deep);
+}
+.dy-site .dy-who-numbers > img {
+  position: absolute; inset: 0; z-index: -2;
+  width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center 35%;
+}
+.dy-site .dy-who-numbers::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(90deg, rgb(3 11 58 / 94%) 0%, rgb(3 11 58 / 78%) 55%, rgb(3 11 58 / 58%) 100%);
+}
+.dy-site .dy-facts {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  border: 0;
+  list-style: none;
+}
+.dy-site .dy-facts li { display: flex; flex-direction: column; gap: 10px; padding: 8px 32px; border-left: 1px solid rgb(255 255 255 / 40%); }
+.dy-site .dy-facts li:first-child { border-left: 0; padding-left: 0; }
+.dy-site .dy-facts strong { color: var(--dy-green); font-size: clamp(40px, 4.4vw, 64px); line-height: 1; }
+.dy-site .dy-facts span { color: var(--dy-white); font-size: 15px; font-weight: 500; }
+
+.dy-site #companies { background: var(--dy-civic); color: var(--dy-white); }
+.dy-site #companies h2 { color: var(--dy-white); }
+.dy-site #companies .dy-section-heading p { color: var(--dy-white); }
+.dy-site #companies .dy-network-foot { color: var(--dy-white); }
+.dy-site #companies .dy-network-foot .dy-button { border-color: var(--dy-white); color: var(--dy-white); }
+/* Map palette native to the Civic chapter: the favourite halftone land, inverted
+   to a lighter blue texture on the deep blue; white location squares, green
+   engagement; the directory is a deeper panel of the same blue rather than a
+   white card. */
+.dy-site #companies .dy-network { border: 1px solid var(--dy-night-line); box-shadow: none; background: var(--dy-civic); }
+.dy-site #companies .dy-map { --dy-map-label: var(--dy-white); background: transparent; color: var(--dy-white); }
+.dy-site #companies .dy-map-summary { color: var(--dy-white); }
+.dy-site #companies .dy-map-summary span { color: var(--dy-night-dim); }
+.dy-site #companies .dy-map-svg pattern circle,
+.dy-site #companies .dy-map-svg pattern rect { fill: rgb(255 255 255 / 34%); }
+.dy-site #companies .dy-map-svg path[stroke] { stroke: rgb(255 255 255 / 55%); }
+.dy-site #companies .dy-map-pin { color: var(--dy-white); }
+.dy-site #companies .dy-map-pin.is-active,
+.dy-site #companies .dy-map-pin.is-selected { color: var(--dy-green); }
+.dy-site #companies .dy-map-pin text { paint-order: stroke; stroke: var(--dy-civic); stroke-width: 3px; }
+.dy-site #companies .dy-map-key { color: var(--dy-white); }
+.dy-site #companies .dy-map-key-mark { color: var(--dy-white); }
+.dy-site #companies .dy-map-attribution { color: var(--dy-night-dim); }
+.dy-site #companies .dy-directory { background: var(--dy-civic-deep); border-left: 1px solid var(--dy-night-line); color: var(--dy-white); }
+.dy-site #companies .dy-directory-filters { border-bottom-color: var(--dy-night-line); }
+.dy-site #companies .dy-directory label,
+.dy-site #companies .dy-directory small,
+.dy-site #companies .dy-locate { color: var(--dy-white); }
+.dy-site #companies .dy-map-reset { background: transparent; border-color: var(--dy-white); color: var(--dy-white); }
+.dy-site #companies .dy-map-reset:hover { background: var(--dy-green); border-color: var(--dy-green); color: var(--dy-civic-deep); }
+.dy-site #companies .dy-directory input,
+.dy-site #companies .dy-directory select { background: transparent; border-color: rgb(255 255 255 / 45%); color: var(--dy-white); color-scheme: dark; }
+.dy-site #companies .dy-directory input::placeholder { color: var(--dy-night-dim); }
+.dy-site #companies .dy-directory input:focus-visible,
+.dy-site #companies .dy-directory select:focus-visible { border-color: var(--dy-white); outline-color: var(--dy-green); }
+.dy-site #companies .dy-directory select option { background: var(--dy-civic-deep); color: var(--dy-white); }
+.dy-site #companies .dy-select-label > .dy-chevron { color: var(--dy-white); }
+.dy-site #companies .dy-company-row { color: var(--dy-white); border-bottom-color: var(--dy-night-line); }
+.dy-site #companies .dy-company-row small { color: var(--dy-night-dim); }
+.dy-site #companies .dy-company-row.is-active { background: rgb(255 255 255 / 8%); box-shadow: inset 4px 0 0 var(--dy-green); }
+.dy-site #companies .dy-company-row:focus-visible { outline: 2px solid var(--dy-green); outline-offset: -2px; }
+.dy-site #companies .dy-company-list { scrollbar-color: rgb(255 255 255 / 35%) transparent; }
+.dy-site #companies .dy-empty { color: var(--dy-white); }
+.dy-site #companies .dy-empty > .dy-signal { color: var(--dy-green); }
+.dy-site #companies .dy-empty .dy-button { border-color: var(--dy-white); color: var(--dy-white); }
+.dy-site .dy-network-foot p { font-family: var(--dy-font-display); font-size: 20px; text-transform: uppercase; }
+.dy-site .dy-check-list { list-style: disc; padding-left: 22px; gap: 10px; }
+.dy-site .dy-check-list li { display: list-item; padding-left: 2px; }
+.dy-site .dy-check-list .dy-signal { display: none; }
+/* Who we build for: a photographic bridge between the capabilities and the project lifecycle. */
+.dy-site .dy-customers {
+  position: relative; overflow: hidden; isolation: isolate;
+  padding: clamp(80px, 9vw, 136px) var(--dy-gutter);
+  background: var(--dy-civic-deep); color: var(--dy-white);
+}
+.dy-site .dy-customers > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center 60%; }
+/* Parallax photo bands: the image is 30% taller than the band and drifts by up to 15% of the
+   band height (set by useParallax as --dy-parallax), so the photo moves slower than the page. */
+.dy-site .dy-parallax > img { top: -15%; height: 130%; transform: translate3d(0, var(--dy-parallax, 0px), 0); will-change: transform; }
+.dy-site[data-motion="off"] .dy-parallax > img { transform: none; }
+@media (prefers-reduced-motion: reduce) { .dy-site .dy-parallax > img { transform: none; } }
+.dy-site .dy-customers::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgb(3 11 58 / 94%) 0%, rgb(3 11 58 / 82%) 50%, rgb(3 11 58 / 62%) 100%); }
+.dy-site .dy-customers-inner { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.2fr); gap: clamp(48px, 6vw, 112px); align-items: center; }
+.dy-site .dy-customers-copy { display: flex; flex-direction: column; gap: 24px; }
+.dy-site .dy-customers-eyebrow { font-family: var(--dy-font-display); text-transform: uppercase; font-size: 14px; letter-spacing: .06em; color: var(--dy-green); margin-bottom: -8px; }
+.dy-site .dy-customers h2 { color: var(--dy-white); font-size: clamp(34px, 3.3vw, 48px); max-width: 21ch; }
+.dy-site .dy-customers p { color: var(--dy-white); font-weight: 500; max-width: 46ch; font-size: 17px; line-height: 1.6; }
+.dy-site .dy-customer-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 40px; }
+.dy-site .dy-customer-list li { display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 2px solid var(--dy-green); }
+.dy-site .dy-customer-list strong { font-size: 19px; font-weight: 600; line-height: 1.25; }
+.dy-site .dy-customer-list span { font-size: 15px; font-weight: 500; line-height: 1.6; color: rgb(255 255 255 / 84%); }
+/* The lifecycle is its own chapter after the bridge, not a second block inside What we do. */
+.dy-site .dy-lifecycle { border-top: 0; margin-top: 0; padding: var(--dy-section) var(--dy-gutter); background: var(--dy-white); }
+.dy-site .dy-service-tabs { margin-bottom: 28px; }
+.dy-site .dy-service-tab { min-height: 68px; }
+.dy-site .dy-route-services ul { gap: 8px 18px; }
+.dy-site .dy-route-services li { border: 0; padding: 0; font-size: 16px; font-weight: 500; }
+.dy-site .dy-route-services li a { color: var(--dy-civic); text-decoration: underline; text-underline-offset: 4px; }
+.dy-site .dy-careers { gap: 64px; }
+.dy-site .dy-careers > * { min-width: 0; }
+.dy-site .dy-trade { padding: 14px 0; }
+.dy-site .dy-trade > span { gap: 5px; }
+.dy-site .dy-trade strong { font-size: 18px; }
+.dy-site .dy-trade span span { font-size: 15px; }
+.dy-site .dy-investors { grid-template-columns: minmax(300px, 1.05fr) minmax(0, 1.45fr); gap: 52px; align-items: center; }
+.dy-site .dy-investor-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-self: center; } /* tiles size to their content and sit beside the intro, not stretched to its height (pin 133: less blank blue) */
+.dy-site .dy-investor-tiles article { min-height: 0; aspect-ratio: auto; padding: 18px 16px; gap: 10px; border: 0; border-top: 3px solid var(--dy-green); background: rgb(255 255 255 / 5%); }
+.dy-site .dy-investor-tiles h3 { font-size: 19px; }
+.dy-site .dy-investor-tiles p { font-size: 15px; }
+.dy-site .dy-investor-tiles .dy-button { width: auto; min-height: 44px; height: auto; white-space: normal; padding: 9px 12px; font-size: 14px; margin-top: auto; }
+.dy-site .dy-resources { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; border: 0; }
+.dy-site .dy-resources > div { padding: 0; border: 0; }
+.dy-site .dy-resources h3 { min-height: 46px; font-size: 19px; margin-bottom: 10px; }
+.dy-site .dy-resources a { font-size: 15px; }
+.dy-site .dy-closing { grid-template-columns: .8fr 1.6fr; }
+.dy-site .dy-intents { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+/* Inquiry form: transparent fields ruled in white on the dark surface; no filled boxes. */
+.dy-site .dy-contact-form { width: min(720px, 100%); display: grid; grid-template-columns: 1fr 1fr; gap: 20px 24px; }
+.dy-site .dy-field { display: flex; flex-direction: column; gap: 8px; margin: 0; color: var(--dy-white); }
+.dy-site .dy-field > span { display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; font-weight: 500; letter-spacing: .01em; }
+.dy-site .dy-field > span small { font-size: 12px; font-weight: 400; color: var(--dy-night-dim); }
+.dy-site .dy-field--full,
+.dy-site .dy-contact-form button { grid-column: 1 / -1; }
+.dy-site .dy-contact-form button { justify-self: start; margin-top: 4px; }
+.dy-site .dy-contact-form input,
+.dy-site .dy-contact-form select,
+.dy-site .dy-contact-form textarea { width: 100%; background: transparent; border: 0; border-bottom: 1px solid rgb(255 255 255 / 55%); color: var(--dy-white); color-scheme: dark; font: inherit; font-size: 16px; padding: 0 0 10px; height: auto; box-shadow: none; transition: border-color var(--dy-draw) var(--dy-ease); }
+.dy-site .dy-contact-form input,
+.dy-site .dy-contact-form select { height: 40px; padding: 0 0 2px; }
+.dy-site .dy-contact-form select { padding-right: 32px; }
+.dy-site .dy-contact-form select option { background: var(--dy-civic-deep); color: var(--dy-white); }
+.dy-site .dy-contact-form select:invalid { color: var(--dy-night-dim); }
+.dy-site .dy-contact-form textarea { resize: vertical; min-height: 88px; line-height: 1.5; }
+.dy-site .dy-contact-form ::placeholder { color: var(--dy-night-dim); opacity: 1; }
+.dy-site .dy-contact-form input:hover, .dy-site .dy-contact-form select:hover, .dy-site .dy-contact-form textarea:hover { border-bottom-color: rgb(255 255 255 / 80%); }
+.dy-site .dy-contact-form input:focus-visible, .dy-site .dy-contact-form select:focus-visible, .dy-site .dy-contact-form textarea:focus-visible { outline: none; border-bottom: 2px solid var(--dy-green); padding-bottom: 1px; }
+.dy-site .dy-contact-form textarea:focus-visible { padding-bottom: 9px; }
+.dy-site .dy-contact-form .dy-select-label > .dy-chevron { color: var(--dy-white); right: 4px; bottom: 12px; }
+.dy-site .dy-sent { display: flex; flex-direction: column; align-items: start; gap: 12px; max-width: 48ch; color: var(--dy-white); }
+.dy-site .dy-sent h4 { font-family: var(--dy-font-display); text-transform: uppercase; font-size: 32px; line-height: 1; margin-top: 8px; }
+.dy-site .dy-sent .dy-text-link { color: var(--dy-white); background: transparent; border: 0; padding: 0; }
+.dy-site .dy-footer { padding-top: 42px; }
+.dy-site .dy-footer-main { grid-template-columns: minmax(160px, .6fr) 3.6fr; gap: 44px; padding-bottom: 30px; }
+.dy-site .dy-footer-lockup { display: inline-flex; align-items: center; }
+.dy-site .dy-footer-lockup img { display: block; width: 144px; height: auto; }
+/* Six sitemap groups since the Resource Center joined the navigation. */
+.dy-site .dy-footer-main nav { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
+.dy-site .dy-footer-column h3 { min-height: 32px; }
+.dy-site .dy-footer-main nav a { font-size: 14px; min-height: 34px; }
+.dy-site .dy-footer-accordion { display: none; }
+.dy-site .dy-jump svg { transition: transform var(--dy-draw) var(--dy-ease); }
+.dy-site .dy-jump:hover svg { transform: translateY(4px); }
+.dy-site .dy-accordion-content > .dy-jump { margin-bottom: 12px; }
+.dy-site .dy-prototype-toast { position: fixed; z-index: 80; right: 20px; bottom: 20px; width: min(380px, calc(100vw - 40px)); display: flex; align-items: start; justify-content: space-between; gap: 12px; padding: 16px; border-left: 4px solid var(--dy-green); background: var(--dy-white); color: var(--dy-civic); box-shadow: 0 12px 40px rgb(0 0 0 / 25%); }
+.dy-site .dy-prototype-toast p { display: flex; flex-direction: column; gap: 4px; }
+.dy-site .dy-prototype-toast small { color: var(--dy-ink); }
+.dy-site .dy-prototype-toast button { min-width: 36px; min-height: 36px; border: 0; background: transparent; color: var(--dy-civic); font-size: 24px; }
+
+/* Brand video band: the brand film's one home on the page. The poster, eyebrow and
+   play control cover the video until it is first played; after that the native
+   controls take over. */
+.dy-site .dy-film { position: relative; isolation: isolate; overflow: hidden; width: 100%; aspect-ratio: 16 / 9; max-height: min(720px, 86svh); background: var(--dy-civic-deep); color: var(--dy-white); }
+.dy-site .dy-film > video { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; background: var(--dy-civic-deep); }
+.dy-site .dy-film-cover { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 28px; padding: clamp(32px, 5vw, 72px) var(--dy-gutter); background: linear-gradient(0deg, rgb(3 11 58 / 82%) 0%, rgb(3 11 58 / 30%) 55%, rgb(3 11 58 / 0%) 100%); }
+.dy-site .dy-film[data-started] .dy-film-cover { display: none; }
+.dy-site .dy-film-play { display: inline-flex; align-items: center; gap: 16px; padding: 0 16px 0 0; border: 0; background: transparent; color: var(--dy-white); font: inherit; font-size: 16px; font-weight: 500; cursor: pointer; }
+.dy-site .dy-film-play svg { flex: none; box-sizing: border-box; width: 76px; height: 76px; padding: 22px 20px 22px 26px; background: var(--dy-green); color: var(--dy-civic-deep); transition: background-color var(--dy-draw) var(--dy-ease), color var(--dy-draw) var(--dy-ease); }
+.dy-site .dy-film-play:hover svg { background: var(--dy-white); }
+.dy-site .dy-film-play:focus-visible { outline: 2px solid var(--dy-green); outline-offset: 4px; }
+.dy-site .dy-film-copy { display: flex; flex-direction: column; gap: 10px; }
+.dy-site .dy-film-eyebrow { color: var(--dy-green); font-size: 14px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.dy-site .dy-film h2 { max-width: 20ch; color: var(--dy-white); font-size: clamp(28px, 3.2vw, 46px); }
+
+/* Four-card column on white (user direction, Nov 4 2026 — too much Civic in a row once it followed Our companies). Unboxed like the Investors page: no panel behind each card, the Signal Green rule over the photo and copy flush with the column, so the cards belong to the page rather than sitting on it. */
+.dy-site .dy-strengths { background: var(--dy-white); }
+.dy-site .dy-strength-cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.dy-site .dy-strength-card { display: flex; flex-direction: column; min-width: 0; border-top: 3px solid var(--dy-green); background: transparent; }
+.dy-site .dy-strength-card > img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.dy-site .dy-strength-copy { flex: 1; display: flex; flex-direction: column; gap: 14px; padding: 22px 0 0; }
+.dy-site .dy-strength-copy h3 { font-family: var(--dy-font-display); font-weight: 400; font-size: 26px; line-height: 1.06; letter-spacing: .005em; text-transform: uppercase; color: var(--dy-civic); }
+.dy-site .dy-strength-copy p { flex: 1; font-size: 15px; line-height: 1.5; font-weight: 500; color: var(--dy-ink); }
+.dy-site .dy-strength-copy .dy-button { align-self: flex-start; margin-top: auto; }
+
+/* Brand statement: one sentence at display size, centred on a paper band so it reads as a pause between the four-card column and Who we build for rather than a half-empty row on white (user direction, Nov 4 2026). */
+.dy-site .dy-statement { display: flex; flex-direction: column; align-items: center; gap: 28px; padding-block: clamp(56px, 7vw, 96px); background: var(--dy-paper); text-align: center; }
+.dy-site .dy-statement > .dy-signal { width: clamp(48px, 5vw, 72px); height: auto; color: var(--dy-green); }
+.dy-site .dy-statement p { max-width: 30ch; margin: 0; font-size: clamp(24px, 2.7vw, 40px); line-height: 1.25; font-weight: 500; color: var(--dy-civic); text-wrap: balance; }
+
+/* Six groups in the desktop header: at the narrow end of the desktop range the
+   labels stay on one line by tightening the lockup, type and gaps. */
+.dy-site .dy-nav-trigger { white-space: nowrap; }
+
+/* Language switch: a square globe button beside Find a job (desktop) or the menu
+   button (phones), opening a short square menu. Visual only in the prototype. */
+.dy-site .dy-lang { position: relative; flex: none; margin-right: -8px; }
+/* No box: the globe reads like a seventh nav item — a bare icon in Civic Blue
+   that draws the same Signal Green underline as the group triggers. */
+.dy-site .dy-lang-trigger { position: relative; width: 44px; min-width: 44px; border: 0; color: var(--dy-civic); }
+.dy-site .dy-lang-trigger svg { width: 22px; height: 22px; }
+.dy-site .dy-lang-trigger::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--dy-green); transform: scaleX(0); transform-origin: right; transition: transform var(--dy-draw) var(--dy-ease); }
+.dy-site .dy-lang-trigger:hover::after, .dy-site .dy-lang-trigger[aria-expanded="true"]::after { transform: scaleX(1); transform-origin: left; }
+.dy-site .dy-lang-trigger:focus-visible { outline: 2px solid var(--dy-green); outline-offset: 2px; }
+.dy-site .dy-lang-menu { position: absolute; top: calc(100% + 10px); right: 0; z-index: 3; display: flex; flex-direction: column; min-width: 180px; padding: 8px 0; background: var(--dy-white); border: 1px solid var(--dy-rule); box-shadow: 0 15px 25px rgb(0 0 0 / 8%); }
+.dy-site .dy-lang-menu button { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; padding: 0 20px; border: 0; background: transparent; color: var(--dy-civic); font: inherit; font-size: 16px; text-align: left; cursor: pointer; box-shadow: none; }
+.dy-site .dy-lang-menu button::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--dy-green); transform: scaleY(0); transition: transform var(--dy-draw) var(--dy-ease); }
+.dy-site .dy-lang-menu button[aria-checked="true"]::before, .dy-site .dy-lang-menu button:hover::before, .dy-site .dy-lang-menu button:focus-visible::before { transform: scaleY(1); }
+.dy-site .dy-lang-menu button[aria-checked="true"] { font-weight: 600; }
+.dy-site .dy-lang-menu button[aria-checked="true"]::after { content: ""; width: 8px; height: 8px; background: var(--dy-green); }
+.dy-site .dy-lang-menu button:focus-visible { outline: 2px solid var(--dy-green); outline-offset: -2px; }
+@media (min-width: 1100px) and (max-width: 1219px) {
+  .dy-site .dy-header { gap: 18px; }
+  .dy-site .dy-brand img { width: 124px; }
+  .dy-site .dy-desktop-nav { gap: 8px; }
+  .dy-site .dy-nav-trigger { font-size: 13px; gap: 5px; }
+  .dy-site .dy-nav-trigger .dy-chevron { width: 14px; height: 14px; }
+  .dy-site .dy-header-job .dy-button { padding-left: 16px; padding-right: 16px; }
+}
+
+@media (max-width: 1099px) {
+  .dy-site .dy-lang { margin-left: auto; margin-right: 0; }
+  .dy-site .dy-header { gap: 12px; }
+  .dy-site .dy-mega { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+  .dy-site .dy-mega-intro { grid-column: 1 / -1; }
+  .dy-site .dy-investors { grid-template-columns: 1fr; }
+  .dy-site .dy-footer-main { grid-template-columns: 1fr; }
+  .dy-site .dy-who-grid { grid-template-columns: 1fr; gap: 36px; align-items: start; }
+  .dy-site .dy-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 0; }
+  .dy-site .dy-facts li:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .dy-site .dy-strength-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 767px) {
+  .dy-site { --dy-gutter: 24px; --dy-section: 60px; }
+  .dy-site .dy-header { height: 76px; }
+  .dy-site .dy-hero { min-height: 630px; }
+  .dy-site .dy-hero-media { height: auto; }
+  .dy-site .dy-hero-media > video,
+  .dy-site .dy-hero-media > img { object-position: 58% center; }
+  .dy-site .dy-media-shade { background: linear-gradient(90deg, rgb(3 11 58 / 84%), rgb(3 11 58 / 35%)), linear-gradient(0deg, rgb(3 11 58 / 82%) 0%, transparent 80%); }
+  .dy-site .dy-hero-copy { width: 100%; min-height: 630px; padding: 82px 24px 154px; gap: 20px; }
+  .dy-site .dy-media-caption { display: none; }
+  .dy-site .dy-hero h1 { font-size: clamp(42px, 11vw, 58px); }
+  .dy-site .dy-hero-copy .dy-actions { flex-direction: row; align-items: start; }
+  .dy-site .dy-hero-copy .dy-button { white-space: normal; padding: 10px 14px; height: auto; min-height: 48px; font-size: 14px; }
+  .dy-site .dy-hero-signal { width: 70px; top: 0; right: 0; }
+  .dy-site .dy-media-caption { bottom: 78px; }
+  .dy-site .dy-media-actions { left: 18px; right: 18px; bottom: 14px; }
+  .dy-site .dy-pathways { grid-template-columns: 1fr 1fr; padding: 0 24px; }
+  .dy-site .dy-pathway { border: 0; border-top: 1px solid var(--dy-civic-soft); padding: 18px 10px; }
+  .dy-site .dy-pathway:nth-child(odd) { border-right: 1px solid var(--dy-civic-soft); }
+  .dy-site .dy-pathway > span { font-size: 16px; }
+  .dy-site .dy-pathway p { font-size: 14px; }
+  .dy-site #companies .dy-directory { border-left: 0; border-top: 1px solid var(--dy-night-line); }
+  .dy-site .dy-who-grid { gap: 28px; margin-bottom: 28px; }
+  .dy-site .dy-who-intro { gap: 16px; }
+  .dy-site .dy-who-intro p { font-size: 16px; }
+  .dy-site .dy-work-list { grid-template-columns: 1fr; gap: 16px; }
+  .dy-site .dy-work-list strong { font-size: 17px; }
+  .dy-site .dy-who-numbers { padding: 32px 24px; }
+  .dy-site .dy-who-numbers::before { background: linear-gradient(0deg, rgb(3 11 58 / 94%), rgb(3 11 58 / 72%)); }
+  .dy-site .dy-facts { grid-template-columns: 1fr; gap: 0; }
+  .dy-site .dy-facts li { border-left: 0; border-top: 1px solid rgb(255 255 255 / 40%); padding: 18px 0; gap: 6px; }
+  .dy-site .dy-facts li:first-child { border-top: 0; padding-top: 0; }
+  .dy-site .dy-facts strong { font-size: 44px; }
+  .dy-site .dy-section-heading { grid-template-columns: 1fr; gap: 18px; }
+  .dy-site #companies .dy-section-heading { margin-bottom: 28px; }
+  .dy-site .dy-network { grid-template-columns: 1fr; }
+  /* Capabilities: each step opens in place. */
+  .dy-site .dy-service-accordion { border-top: 1px solid var(--dy-rule); }
+  .dy-site .dy-service-item { border-bottom: 1px solid var(--dy-rule); }
+  .dy-site .dy-service-tab { width: 100%; max-width: none; min-height: 64px; padding: 14px 0; gap: 14px; border: 0; background: transparent; font-size: 18px; font-weight: 500; color: var(--dy-civic); text-align: left; box-shadow: none; }
+  .dy-site .dy-service-tab > span { flex: none; width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--dy-civic); font-size: 15px; color: var(--dy-civic); transition: background-color var(--dy-draw) var(--dy-ease), color var(--dy-draw) var(--dy-ease); }
+  .dy-site .dy-service-tab[data-state="open"] > span { background: var(--dy-civic); color: var(--dy-white); }
+  .dy-site .dy-service-tab > .dy-chevron { width: 20px; height: 20px; margin-left: auto; flex: none; color: var(--dy-green); transition: transform var(--dy-draw) var(--dy-ease); }
+  .dy-site .dy-service-tab[data-state="open"] > .dy-chevron { transform: rotate(180deg); }
+  .dy-site .dy-service-panel { grid-template-columns: 1fr; gap: 20px; padding: 4px 0 24px; }
+  .dy-site .dy-service-panel > img { aspect-ratio: 16 / 10; }
+  .dy-site .dy-service-panel > div { gap: 16px; }
+  .dy-site .dy-service-panel h3 { font-size: 24px; }
+  .dy-site .dy-accordion-content > :last-child { margin-bottom: 0; }
+  /* Lifecycle: a vertical stepper whose open stage expands under its own number. */
+  .dy-site .dy-lifecycle { margin-top: 0; padding: var(--dy-section) var(--dy-gutter); }
+  .dy-site .dy-customers { padding: 64px var(--dy-gutter); }
+  .dy-site .dy-film { aspect-ratio: 4 / 3; max-height: none; }
+  .dy-site .dy-film-cover { gap: 20px; padding: 24px; }
+  .dy-site .dy-film-play svg { width: 60px; height: 60px; padding: 17px 15px 17px 20px; }
+  .dy-site .dy-film h2 { font-size: 26px; }
+  .dy-site .dy-strength-cards { grid-template-columns: 1fr; gap: 16px; }
+  .dy-site .dy-strength-card > img { aspect-ratio: 16 / 10; }
+  .dy-site .dy-statement { gap: 20px; }
+  .dy-site .dy-statement > .dy-signal { width: 44px; }
+  .dy-site .dy-statement p { font-size: 24px; max-width: none; }
+  /* Parallax photo bands: the image is 30% taller than the band and drifts by up to 15% of the
+   band height (set by useParallax as --dy-parallax), so the photo moves slower than the page. */
+.dy-site .dy-parallax > img { top: -15%; height: 130%; transform: translate3d(0, var(--dy-parallax, 0px), 0); will-change: transform; }
+.dy-site[data-motion="off"] .dy-parallax > img { transform: none; }
+@media (prefers-reduced-motion: reduce) { .dy-site .dy-parallax > img { transform: none; } }
+.dy-site .dy-customers::before { background: linear-gradient(0deg, rgb(3 11 58 / 94%), rgb(3 11 58 / 76%)); }
+  .dy-site .dy-customers-inner { grid-template-columns: 1fr; gap: 40px; }
+  .dy-site .dy-customers-copy { max-width: none; }
+  .dy-site .dy-customer-list { grid-template-columns: 1fr; gap: 24px; }
+  .dy-site .dy-route-accordion { position: relative; padding-left: 12px; border-left: 2px solid var(--dy-rule); }
+  .dy-site .dy-route-item { position: relative; }
+  .dy-site .dy-route-item[data-state="open"]::before { content: ""; position: absolute; left: -14px; top: 9px; width: 4px; height: 42px; background: var(--dy-green); }
+  .dy-site .dy-route-stop { width: 100%; max-width: none; min-height: 60px; flex-direction: row; justify-content: start; align-items: center; text-align: left; gap: 14px; padding: 9px 0; border: 0; background: transparent; font-size: 17px; font-weight: 500; color: var(--dy-civic); box-shadow: none; }
+  .dy-site .dy-route-stop > span { width: 42px; height: 42px; flex: none; font-size: 16px; }
+  .dy-site .dy-route-stop > span::after { content: none; }
+  .dy-site .dy-route-stop[data-state="open"] > span { color: var(--dy-white); background: var(--dy-civic); }
+  .dy-site .dy-route-stop > .dy-chevron { width: 20px; height: 20px; margin-left: auto; flex: none; color: var(--dy-green); transition: transform var(--dy-draw) var(--dy-ease); }
+  .dy-site .dy-route-stop[data-state="open"] > .dy-chevron { transform: rotate(180deg); }
+  .dy-site .dy-route-panel { grid-template-columns: 1fr; margin: 4px 0 20px; border: 0; background: transparent; }
+  .dy-site .dy-route-panel > img { min-height: 0; height: auto; aspect-ratio: 16 / 10; border: 0; object-position: center 30%; }
+  .dy-site .dy-route-copy { padding: 18px 0 0; gap: 14px; }
+  .dy-site .dy-route-copy p { font-size: 16px; }
+  .dy-site .dy-route-services { flex-direction: column; align-items: start; gap: 6px; }
+  .dy-site .dy-route-next { display: inline-flex; align-items: center; gap: 8px; margin-top: 6px; padding: 0; border: 0; background: transparent; color: var(--dy-civic); font-size: 16px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
+  .dy-site .dy-how { grid-template-columns: 1fr; max-height: none; }
+  .dy-site .dy-how-copy { padding: 60px 24px 28px; }
+  .dy-site .dy-how > img { width: calc(100% - 48px); margin: 0 24px 54px; aspect-ratio: 4 / 3; }
+  .dy-site .dy-careers { grid-template-columns: 1fr; gap: 38px; }
+  .dy-site .dy-career-copy { gap: 20px; }
+  .dy-site .dy-trade span span { display: block; font-size: 14px; }
+  .dy-site .dy-investor-tiles { grid-template-columns: 1fr; gap: 12px; }
+  .dy-site .dy-investor-tiles article { padding: 16px 16px 16px 18px; }
+  .dy-site .dy-investor-tiles .dy-button { margin-top: 4px; }
+  .dy-site .dy-resources { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 20px; }
+  .dy-site .dy-resources h3 { min-height: 0; }
+  .dy-site .dy-closing { grid-template-columns: 1fr; gap: 24px; }
+  .dy-site .dy-intents { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dy-site .dy-contact-form { grid-template-columns: 1fr; gap: 18px; }
+  .dy-site .dy-field,
+  .dy-site .dy-contact-form button { grid-column: 1; }
+  .dy-site .dy-footer-main { gap: 24px; }
+  .dy-site .dy-footer-columns { display: none !important; }
+  .dy-site .dy-footer-accordion { display: block; border-top: 1px solid var(--dy-civic-soft); }
+  .dy-site .dy-footer-accordion-item { border-bottom: 1px solid var(--dy-civic-soft); }
+  .dy-site .dy-footer-accordion-trigger { width: 100%; min-height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border: 0; background: transparent; color: var(--dy-white); text-align: left; font-size: 16px; }
+  .dy-site .dy-footer-accordion-trigger svg { width: 18px; height: 18px; color: var(--dy-green); transition: transform .2s ease; }
+  .dy-site .dy-footer-accordion-trigger[data-state="open"] svg { transform: rotate(180deg); }
+  .dy-site .dy-footer-accordion-content { display: flex; flex-direction: column; padding: 0 0 12px; }
+  .dy-site .dy-footer-accordion-content a { min-height: 40px; display: flex; align-items: center; color: var(--dy-white); font-size: 14px; }
+  .dy-site .dy-footer-utility { justify-content: start; gap: 6px 18px; padding-top: 16px; }
+  .dy-site .dy-footer-utility > span { width: 100%; }
+}
+
+@media (max-width: 420px) {
+  .dy-site .dy-pathway > span { font-size: 14px; }
+  .dy-site .dy-pathway p { font-size: 13px; }
+  .dy-site .dy-hero-copy .dy-actions { flex-direction: column; }
+  .dy-site .dy-hero-copy .dy-button { width: max-content; max-width: 100%; }
+}

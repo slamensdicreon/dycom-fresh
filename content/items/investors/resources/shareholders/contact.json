@@ -1,0 +1,10 @@
+{
+  "templateName": "Link",
+  "sortOrder": 4,
+  "fields": {
+    "Link": {
+      "$link": "/investors/contact/",
+      "text": "Contact Investor Relations"
+    }
+  }
+}

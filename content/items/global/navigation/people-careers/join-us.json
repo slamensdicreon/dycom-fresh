@@ -1,0 +1,14 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 0,
+  "fields": {
+    "Title": "Join us",
+    "Links": {
+      "$refs": [
+        "global/links/open-roles",
+        "global/links/trades",
+        "global/links/recruitment-process"
+      ]
+    }
+  }
+}

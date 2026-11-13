@@ -1,0 +1,12 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "templateName": "Interior Hero",
+  "fields": {
+    "BackLink": {
+      "$link": "/",
+      "text": "Dycom home"
+    },
+    "Heading": "Resource Center",
+    "Overview": "Reports, safety and employee materials, purchasing terms and candidate guides, gathered in one searchable place."
+  }
+}

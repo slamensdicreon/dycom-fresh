@@ -1,0 +1,12 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "templateName": "Interior Hero",
+  "fields": {
+    "BackLink": {
+      "$link": "/companies/",
+      "text": "Our companies"
+    },
+    "Heading": "Inventory terms of purchase",
+    "Overview": "Identifiable companies with their own names, people and websites, connected by one national group."
+  }
+}

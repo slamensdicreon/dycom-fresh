@@ -1,0 +1,9 @@
+{
+  "templateName": "Metric",
+  "sortOrder": 1,
+  "fields": {
+    "Label": "Net income",
+    "Value": "$115.6",
+    "Unit": "million"
+  }
+}

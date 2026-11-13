@@ -1,0 +1,16 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "templateName": "Page Notice",
+  "fields": {
+    "Heading": "This page is currently unavailable",
+    "Text": "We are preparing this page. You can still search open roles across our family of companies now.",
+    "PrimaryLink": {
+      "$link": "#open-roles",
+      "text": "Browse open roles"
+    },
+    "SecondaryLink": {
+      "$link": "/careers/",
+      "text": "People & careers overview"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "templateName": "Navigation Link",
+  "fields": {
+    "Link": {
+      "$link": "/who-we-are/leadership/",
+      "text": "Leadership"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 2,
+  "fields": {
+    "Title": "Maintain & protect",
+    "Links": {
+      "$refs": [
+        "global/links/locating",
+        "global/links/maintenance-restoration"
+      ]
+    }
+  }
+}

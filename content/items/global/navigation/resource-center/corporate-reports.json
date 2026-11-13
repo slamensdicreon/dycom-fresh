@@ -1,0 +1,14 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 0,
+  "fields": {
+    "Title": "Corporate reports",
+    "Links": {
+      "$refs": [
+        "global/links/res-sustainability",
+        "global/links/res-filings",
+        "global/links/res-values"
+      ]
+    }
+  }
+}

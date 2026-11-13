@@ -1,0 +1,30 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "name": "404",
+  "displayName": "Page not found",
+  "templateName": "Error Page",
+  "pageDesign": "default",
+  "notFound": true,
+  "sitemap": false,
+  "fields": {
+    "Title": "Page not found | Dycom"
+  },
+  "placeholders": {
+    "headless-main": [
+      {
+        "componentName": "InteriorHero",
+        "dataSource": "pages/404/hero",
+        "params": {
+          "RenderingIdentifier": "page"
+        }
+      },
+      {
+        "componentName": "PageNotice",
+        "dataSource": "pages/404/notice",
+        "params": {
+          "RenderingIdentifier": "notice"
+        }
+      }
+    ]
+  }
+}

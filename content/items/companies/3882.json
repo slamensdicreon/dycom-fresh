@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Kanaan Communications",
+  "sortOrder": 13,
+  "fields": {
+    "CompanyId": "3882",
+    "Name": "Kanaan Communications",
+    "FullName": "Kanaan Communications, LLC",
+    "Address": "40483 Koppernick Road. Suite 10",
+    "City": "Canton",
+    "State": "MI",
+    "Zip": "48187",
+    "Latitude": {
+      "value": 42.34047637695202
+    },
+    "Longitude": {
+      "value": -83.44013648958216
+    },
+    "Region": "Midwest",
+    "Website": {
+      "$link": "http://www.kanaancomm.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://www.kanaancomm.com/careers",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3882.png",
+        "alt": "Kanaan Communications",
+        "width": 312,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

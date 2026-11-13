@@ -1,0 +1,12 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "templateName": "Interior Hero",
+  "fields": {
+    "BackLink": {
+      "$link": "/who-we-are/",
+      "text": "Who we are"
+    },
+    "Heading": "Sustainability",
+    "Overview": "Our operating companies share a commitment to people, safe work, quality and responsible business practices."
+  }
+}

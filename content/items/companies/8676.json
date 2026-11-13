@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Lambert's Cable Splicing Company",
+  "sortOrder": 14,
+  "fields": {
+    "CompanyId": "8676",
+    "Name": "Lambert's Cable Splicing Company",
+    "FullName": "Lambert's Cable Splicing Company, LLC",
+    "Address": "2521 South Wesleyan Boulevard",
+    "City": "Rocky Mount",
+    "State": "NC",
+    "Zip": "27803",
+    "Latitude": {
+      "value": 35.8901278
+    },
+    "Longitude": {
+      "value": -77.8213142
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://www.lambertcable.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://www.lambertcable.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/8676.png",
+        "alt": "Lambert's Cable Splicing Company",
+        "width": 257,
+        "height": 157
+      }
+    },
+    "Description": ""
+  }
+}

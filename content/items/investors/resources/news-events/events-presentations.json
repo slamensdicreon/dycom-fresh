@@ -1,0 +1,10 @@
+{
+  "templateName": "Link",
+  "sortOrder": 1,
+  "fields": {
+    "Link": {
+      "$link": "/investors/events-presentations/",
+      "text": "Events & presentations"
+    }
+  }
+}

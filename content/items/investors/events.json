@@ -1,0 +1,13 @@
+{
+  "templateName": "Events Timeline",
+  "fields": {
+    "Heading": "Events",
+    "Events": {
+      "$children": "investors/events"
+    },
+    "AllLink": {
+      "$link": "/investors/events-presentations/",
+      "text": "All events & presentations"
+    }
+  }
+}

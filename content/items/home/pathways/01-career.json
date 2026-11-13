@@ -1,0 +1,12 @@
+{
+  "templateName": "Pathway Tile",
+  "sortOrder": 1,
+  "fields": {
+    "Title": "Career Seekers",
+    "Description": "Explore career opportunities across our family of companies.",
+    "Link": {
+      "$link": "#open-roles",
+      "text": "Career Seekers"
+    }
+  }
+}

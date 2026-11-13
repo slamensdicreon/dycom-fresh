@@ -1,0 +1,10 @@
+{
+  "templateName": "Link",
+  "sortOrder": 2,
+  "fields": {
+    "Link": {
+      "$link": "/investors/analyst-coverage/",
+      "text": "Analyst coverage"
+    }
+  }
+}

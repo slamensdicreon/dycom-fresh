@@ -1,0 +1,24 @@
+{
+  "name": "Home",
+  "templateName": "Home Page",
+  "pageDesign": "default",
+  "fields": {
+    "Title": "Home | Dycom",
+    "baseMetadataDescription": "Dycom combines local expertise, national capability, and the skilled people to deliver critical infrastructure America depends on.",
+    "baseOgTitle": "Dycom — Scale is Local",
+    "baseOgImage": { "$image": "hero-poster" }
+  },
+  "placeholders": {
+    "headless-main": [
+      { "componentName": "Hero", "dataSource": "home/hero", "params": { "RenderingIdentifier": "top" } },
+      { "componentName": "Pathways", "dataSource": "home/pathways", "params": { "RenderingIdentifier": "pathways" } },
+      { "componentName": "WhoWeAre", "dataSource": "home/who-we-are", "params": { "RenderingIdentifier": "who-we-are" } },
+      { "componentName": "BrandFilm", "dataSource": "home/brand-film", "params": { "RenderingIdentifier": "film" } },
+      { "componentName": "CompanyDirectory", "dataSource": "home/companies", "params": { "RenderingIdentifier": "companies" } },
+      { "componentName": "Strengths", "dataSource": "home/strengths", "params": { "RenderingIdentifier": "strengths" } },
+      { "componentName": "BrandStatement", "dataSource": "home/brand-statement", "params": { "RenderingIdentifier": "statement" } },
+      { "componentName": "Lifecycle", "dataSource": "home/lifecycle", "params": { "RenderingIdentifier": "lifecycle" } },
+      { "componentName": "ContactForm", "dataSource": "home/contact", "params": { "RenderingIdentifier": "contact" } }
+    ]
+  }
+}

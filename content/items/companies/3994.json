@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Parkside Utility Construction",
+  "sortOrder": 20,
+  "fields": {
+    "CompanyId": "3994",
+    "Name": "Parkside Utility Construction",
+    "FullName": "Parkside Utility Construction, LLC",
+    "Address": "140 Clemens Road, Suite 200",
+    "City": "Harleysville",
+    "State": "PA",
+    "Zip": "19438",
+    "Latitude": {
+      "value": 40.26751710118931
+    },
+    "Longitude": {
+      "value": -75.36053270319404
+    },
+    "Region": "Northeast",
+    "Website": {
+      "$link": "http://www.parksideutil.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://www.parksideutil.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3994.png",
+        "alt": "Parkside Utility Construction",
+        "width": 350,
+        "height": 135
+      }
+    },
+    "Description": ""
+  }
+}

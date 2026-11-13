@@ -1,0 +1,9 @@
+{
+  "templateName": "Navigation Link",
+  "fields": {
+    "Link": {
+      "$link": "/companies/",
+      "text": "Company directory"
+    }
+  }
+}

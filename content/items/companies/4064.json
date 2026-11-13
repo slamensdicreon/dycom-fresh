@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Star Construction",
+  "sortOrder": 28,
+  "fields": {
+    "CompanyId": "4064",
+    "Name": "Star Construction",
+    "FullName": "Star Construction, LLC",
+    "Address": "6621 Asheville Highway",
+    "City": "Knoxville",
+    "State": "TN",
+    "Zip": "37924",
+    "Latitude": {
+      "value": 36.0188924
+    },
+    "Longitude": {
+      "value": -83.8092193
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "https://star-llc.net/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://star-llc.net/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4064.png",
+        "alt": "Star Construction",
+        "width": 496,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

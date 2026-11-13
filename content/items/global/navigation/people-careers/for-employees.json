@@ -1,0 +1,13 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 2,
+  "fields": {
+    "Title": "For employees",
+    "Links": {
+      "$refs": [
+        "global/links/employee-handbook",
+        "global/links/benefit-plan-disclosures"
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "templateName": "Navigation Link",
+  "fields": {
+    "Link": {
+      "$link": "/careers/benefit-plan-disclosures/",
+      "text": "Benefit plan disclosures"
+    }
+  }
+}

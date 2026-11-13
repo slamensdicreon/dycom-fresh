@@ -1,0 +1,10 @@
+{
+  "templateName": "Trade",
+  "sortOrder": 2,
+  "fields": {
+    "Name": "Aerial linework",
+    "Description": "Place and maintain cable on poles and strand.",
+    "Question": "Ask what climbing training comes before working at height.",
+    "Departments": "Aerial Construction"
+  }
+}

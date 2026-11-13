@@ -1,0 +1,12 @@
+{
+  "templateName": "Pathway Tile",
+  "sortOrder": 3,
+  "fields": {
+    "Title": "Investors",
+    "Description": "Find the latest news, reports and events",
+    "Link": {
+      "$link": "/investors/",
+      "text": "Investors"
+    }
+  }
+}

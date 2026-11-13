@@ -1,0 +1,19 @@
+{
+  "templateName": "Footer Column",
+  "sortOrder": 3,
+  "fields": {
+    "Title": "People & careers",
+    "Links": {
+      "$refs": [
+        "global/links/careers",
+        "global/links/open-roles",
+        "global/links/trades",
+        "global/links/life",
+        "global/links/benefits",
+        "global/links/recruitment-process",
+        "global/links/employee-handbook",
+        "global/links/benefit-plan-disclosures"
+      ]
+    }
+  }
+}

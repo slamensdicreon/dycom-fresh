@@ -1,0 +1,14 @@
+{
+  "templateName": "Inquiry Intent",
+  "sortOrder": 2,
+  "fields": {
+    "Key": "careers",
+    "Label": "Careers",
+    "Prompt": "Tell us the trade and the area you have in mind, and we’ll show you the matching openings.",
+    "SubmitLabel": "Search jobs",
+    "Behavior": "roles",
+    "Fields": {
+      "$children": "home/contact/fields/careers"
+    }
+  }
+}

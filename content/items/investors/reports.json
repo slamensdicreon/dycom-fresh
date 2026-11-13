@@ -1,0 +1,10 @@
+{
+  "templateName": "Featured Reports",
+  "fields": {
+    "Heading": "Featured reports",
+    "Note": "",
+    "Reports": {
+      "$children": "investors/reports"
+    }
+  }
+}

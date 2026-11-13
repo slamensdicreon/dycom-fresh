@@ -1,0 +1,10 @@
+{
+  "templateName": "Link Group",
+  "sortOrder": 1,
+  "fields": {
+    "Title": "Governance",
+    "Links": {
+      "$children": "investors/resources/governance"
+    }
+  }
+}

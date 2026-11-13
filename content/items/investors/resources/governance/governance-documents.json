@@ -1,0 +1,10 @@
+{
+  "templateName": "Link",
+  "sortOrder": 3,
+  "fields": {
+    "Link": {
+      "$link": "/investors/governance-documents/",
+      "text": "Governance documents"
+    }
+  }
+}

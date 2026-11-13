@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Niels Fugal Sons Company",
+  "sortOrder": 18,
+  "fields": {
+    "CompanyId": "3956",
+    "Name": "Niels Fugal Sons Company",
+    "FullName": "Niels Fugal Sons Company, LLC",
+    "Address": "1005 S. Main",
+    "City": "Pleasant Grove",
+    "State": "UT",
+    "Zip": "84062",
+    "Latitude": {
+      "value": 40.3518433
+    },
+    "Longitude": {
+      "value": -111.7400677
+    },
+    "Region": "West",
+    "Website": {
+      "$link": "http://www.fugal.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://fugal.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3956.png",
+        "alt": "Niels Fugal Sons Company",
+        "width": 640,
+        "height": 161
+      }
+    },
+    "Description": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "templateName": "Link Group",
+  "sortOrder": 0,
+  "fields": {
+    "Title": "Financials & filings",
+    "Links": {
+      "$children": "investors/resources/financials"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "White Mountain Cable Construction",
+  "sortOrder": 37,
+  "fields": {
+    "CompanyId": "4217",
+    "Name": "White Mountain Cable Construction",
+    "FullName": "White Mountain Cable Construction, LLC",
+    "Address": "111 Greenmont Road",
+    "City": "Rising Sun",
+    "State": "MD",
+    "Zip": "21911",
+    "Latitude": {
+      "value": 39.7181975
+    },
+    "Longitude": {
+      "value": -76.0346252
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://www.wmc1.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://www.wmc1.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4217.png",
+        "alt": "White Mountain Cable Construction",
+        "width": 350,
+        "height": 182
+      }
+    },
+    "Description": ""
+  }
+}

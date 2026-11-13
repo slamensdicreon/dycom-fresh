@@ -1,0 +1,20 @@
+{
+  "templateName": "Lifecycle Stage",
+  "sortOrder": 3,
+  "fields": {
+    "Title": "Build & connect",
+    "Body": "Crews place aerial strand on poles or conduit beneath streets, then pull and splice fiber route by route. Wireless teams build and upgrade cell sites, from macro towers to small cells on existing structures. The work is sequenced so streets, sidewalks and driveways stay open as much as possible.",
+    "Image": {
+      "$image": "z9b_0192",
+      "alt": "Technician pulling new cable through woodland along the route"
+    },
+    "Services": {
+      "$refs": [
+        "home/lifecycle/services/wireline-construction",
+        "home/lifecycle/services/wireless-construction",
+        "home/lifecycle/services/fulfillment",
+        "home/lifecycle/services/electrical-contracting"
+      ]
+    }
+  }
+}

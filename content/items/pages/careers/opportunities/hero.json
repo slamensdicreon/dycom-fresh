@@ -1,0 +1,12 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "templateName": "Interior Hero",
+  "fields": {
+    "BackLink": {
+      "$link": "/careers/",
+      "text": "People & careers"
+    },
+    "Heading": "Open roles",
+    "Overview": "Get to know the trades and the questions to ask, then search current openings."
+  }
+}

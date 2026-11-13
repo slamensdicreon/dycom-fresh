@@ -1,0 +1,24 @@
+{
+  "templateName": "Site Header",
+  "fields": {
+    "Logo": {
+      "value": {
+        "src": "/media/brand/logo-light.png",
+        "alt": "Dycom",
+        "width": 1910,
+        "height": 309
+      }
+    },
+    "HomeLink": {
+      "$link": "/",
+      "text": "Dycom home"
+    },
+    "JobsLink": {
+      "$link": "#open-roles",
+      "text": "Find a job"
+    },
+    "Groups": {
+      "$children": "global/navigation"
+    }
+  }
+}

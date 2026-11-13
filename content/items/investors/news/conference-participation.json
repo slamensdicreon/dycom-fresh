@@ -1,0 +1,13 @@
+{
+  "templateName": "News Item",
+  "sortOrder": 0,
+  "fields": {
+    "Title": "Dycom Industries, Inc. to Participate in Upcoming Institutional Investor Conference",
+    "Date": "2026-09-10",
+    "DisplayDate": "September 10, 2026",
+    "Link": {
+      "$link": "/investors/news/",
+      "text": "Dycom Industries, Inc. to Participate in Upcoming Institutional Investor Conference"
+    }
+  }
+}

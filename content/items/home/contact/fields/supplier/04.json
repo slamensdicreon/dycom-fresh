@@ -1,0 +1,13 @@
+{
+  "templateName": "Inquiry Field",
+  "sortOrder": 4,
+  "fields": {
+    "Name": "message",
+    "Label": "Anything else we should know?",
+    "FieldType": "textarea",
+    "Required": "",
+    "FullWidth": "1",
+    "AutoComplete": "",
+    "Placeholder": ""
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Precision Valley Communications of Vermont",
+  "sortOrder": 23,
+  "fields": {
+    "CompanyId": "4022",
+    "Name": "Precision Valley Communications of Vermont",
+    "FullName": "Precision Valley Communications of Vermont, LLC",
+    "Address": "36 Precision Drive, Suite 200",
+    "City": "North Springfield",
+    "State": "VT",
+    "Zip": "5150",
+    "Latitude": {
+      "value": 43.327785
+    },
+    "Longitude": {
+      "value": -72.534462
+    },
+    "Region": "Northeast",
+    "Website": {
+      "$link": "http://www.pvc2.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://www.pvc2.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4022.png",
+        "alt": "Precision Valley Communications of Vermont",
+        "width": 335,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "$comment": "Rendering definitions: the placeholders each rendering exposes (Sitecore's 'Layout Service Placeholders' field on the JSON rendering item). The Layout Service always returns these keys, empty when nothing is placed in them.",
+  "InteriorHero": { "placeholders": ["interior-hero-index"] },
+  "SplitSection": { "placeholders": ["split-left", "split-right"] }
+}

@@ -1,0 +1,8 @@
+{
+  "templateName": "Company Fact",
+  "sortOrder": 1,
+  "fields": {
+    "Value": "50 states",
+    "Label": "National coverage"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "templateName": "Navigation Group",
+  "sortOrder": 4,
+  "fields": {
+    "Label": "Resource Center",
+    "Intro": "The documents people rely on.",
+    "Description": "Reports, safety and employee materials, purchasing terms and candidate guides, gathered in one searchable place.",
+    "OverviewLink": {
+      "$link": "/resources/",
+      "text": "All resources"
+    },
+    "ChapterLink": {
+      "value": {
+        "href": ""
+      }
+    },
+    "Columns": {
+      "$children": "global/navigation/resource-center"
+    }
+  }
+}

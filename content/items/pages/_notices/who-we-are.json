@@ -1,0 +1,16 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "templateName": "Page Notice",
+  "fields": {
+    "Heading": "This page is currently unavailable",
+    "Text": "We are preparing this page. Until it is ready, you can continue from the pages below.",
+    "PrimaryLink": {
+      "$link": "/who-we-are/",
+      "text": "Who we are overview"
+    },
+    "SecondaryLink": {
+      "$link": "/",
+      "text": "Dycom home"
+    }
+  }
+}

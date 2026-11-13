@@ -1,0 +1,9 @@
+{
+  "templateName": "Strengths",
+  "fields": {
+    "Label": "Operating strengths",
+    "Cards": {
+      "$children": "home/strengths"
+    }
+  }
+}

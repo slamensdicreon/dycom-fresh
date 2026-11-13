@@ -1,0 +1,9 @@
+{
+  "templateName": "Navigation Link",
+  "fields": {
+    "Link": {
+      "$link": "/how-we-work/hazard-recognition/",
+      "text": "Hazard recognition"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Tjader & Highstrom Utility Services",
+  "sortOrder": 31,
+  "fields": {
+    "CompanyId": "4147",
+    "Name": "Tjader & Highstrom Utility Services",
+    "FullName": "Tjader & Highstrom Utility Services, LLC",
+    "Address": "541 Industrial Boulevard, P.O. Box 307",
+    "City": "New Richmond",
+    "State": "WI",
+    "Zip": "54017",
+    "Latitude": {
+      "value": 45.1339398
+    },
+    "Longitude": {
+      "value": -92.5448594
+    },
+    "Region": "Midwest",
+    "Website": {
+      "$link": "https://tjaderandhighstrom.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://tjaderandhighstrom.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4147.png",
+        "alt": "Tjader & Highstrom Utility Services",
+        "width": 465,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "National Technology Integrators",
+  "sortOrder": 16,
+  "fields": {
+    "CompanyId": "9151",
+    "Name": "National Technology Integrators",
+    "FullName": "National Technology Integrators, LLC",
+    "Address": "40 W Gude Drive",
+    "City": "Rockville",
+    "State": "MD",
+    "Zip": "20850",
+    "Latitude": {
+      "value": 39.10471106431902
+    },
+    "Longitude": {
+      "value": -77.15963511488877
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "https://www.nti.llc/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://www.nti.llc/careers",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/9151.svg",
+        "alt": "National Technology Integrators",
+        "width": 53,
+        "height": 32
+      }
+    },
+    "Description": ""
+  }
+}

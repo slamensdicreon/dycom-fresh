@@ -1,0 +1,13 @@
+{
+  "templateName": "News List",
+  "fields": {
+    "Heading": "Investor news",
+    "Items": {
+      "$children": "investors/news"
+    },
+    "AllLink": {
+      "$link": "/investors/news/",
+      "text": "All investor news"
+    }
+  }
+}

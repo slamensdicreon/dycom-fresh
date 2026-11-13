@@ -1,0 +1,10 @@
+{
+  "templateName": "Trade",
+  "sortOrder": 4,
+  "fields": {
+    "Name": "CDL driving",
+    "Description": "Move reels, equipment and materials between yards and sites.",
+    "Question": "Ask which endorsements and overnights the role needs.",
+    "Departments": "Fleet / Transport"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "templateName": "Report",
+  "sortOrder": 1,
+  "fields": {
+    "Label": "Reporting year 2026",
+    "Title": "2026 Annual Report",
+    "Description": "Letter to shareholders, financial statements and Form 10-K.",
+    "Cover": {
+      "$image": "z9b_2139"
+    },
+    "Link": {
+      "$link": "/investors/annual-reports/",
+      "text": "Open report"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 1,
+  "fields": {
+    "Title": "Safety & employees",
+    "Links": {
+      "$refs": [
+        "global/links/hazard-recognition",
+        "global/links/employee-handbook",
+        "global/links/benefit-plan-disclosures"
+      ]
+    }
+  }
+}

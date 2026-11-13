@@ -1,0 +1,12 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "templateName": "Interior Hero",
+  "fields": {
+    "BackLink": {
+      "$link": "/",
+      "text": "Dycom home"
+    },
+    "Heading": "Page not found",
+    "Overview": "The page you were looking for has moved or no longer exists."
+  }
+}

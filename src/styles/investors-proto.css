@@ -1,0 +1,114 @@
+/* Investors interior template (handoff/source/…/src/v2/investors-v2.css). */
+/* Consolidated V2 — Investors overview. Photography-led bands and rule-based
+   layouts replace the original page's bordered boxes. Scoped to the V2 page. */
+
+/* Photo bands: hero and closing. The image sits under a Civic wash so white copy keeps AA contrast. */
+.dy-site .dy-irp-photo { position: relative; overflow: hidden; isolation: isolate; }
+.dy-site .dy-irp-photo > img {
+  position: absolute; inset: 0; z-index: -2;
+  width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center;
+}
+.dy-site .dy-irp-photo::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(90deg, rgb(3 11 58 / 95%) 0%, rgb(3 11 58 / 84%) 48%, rgb(3 11 58 / 56%) 100%);
+}
+.dy-site .dy-irp-hero > img { object-position: 70% center; }
+.dy-site .dy-irp-hero-grid { padding: 88px 0 64px; }
+.dy-site .dy-irp-hero-copy p { color: var(--dy-white); font-size: 18px; }
+.dy-site .dy-irp-listing { border-left-color: var(--dy-green); }
+.dy-site .dy-irp-listing p { color: var(--dy-white); font-size: 16px; }
+.dy-site .dy-irp-jumps { border-top-color: rgb(255 255 255 / 35%); }
+.dy-site .dy-irp-jumps a { border-left-color: rgb(255 255 255 / 35%); }
+
+/* Results: numbers over photography (the preferred number call-out), no boxes. */
+.dy-site .dy-irp-band {
+  position: relative; overflow: hidden; isolation: isolate;
+  padding: 56px clamp(24px, 4vw, 56px);
+}
+.dy-site .dy-irp-band > img {
+  position: absolute; inset: 0; z-index: -2;
+  width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center 40%;
+}
+.dy-site .dy-irp-band::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(90deg, rgb(3 11 58 / 94%), rgb(3 11 58 / 72%) 60%, rgb(3 11 58 / 50%));
+}
+.dy-site .dy-irp-metrics { gap: 0; }
+.dy-site .dy-irp-metrics > div {
+  border: 0; border-left: 1px solid rgb(255 255 255 / 40%);
+  padding: 8px 32px; gap: 14px; overflow: visible;
+}
+.dy-site .dy-irp-metrics > div:first-child { border-left: 0; padding-left: 0; }
+.dy-site .dy-irp-metrics > div::before { content: none; }
+.dy-site .dy-irp-metrics dt { color: var(--dy-white); font-size: 14px; }
+.dy-site .dy-irp-metrics dd strong { color: var(--dy-green); font-size: clamp(52px, 5.2vw, 76px); }
+.dy-site .dy-irp-metrics dd span { color: var(--dy-white); font-size: 14px; }
+
+/* Results package: a rule-separated list beside the call replay; nothing boxed. */
+.dy-site .dy-irp-package { margin-top: 40px; gap: 64px; grid-template-columns: minmax(0, 1.4fr) minmax(300px, 1fr); align-items: start; }
+.dy-site .dy-irp-docs { grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--dy-rule); }
+.dy-site .dy-irp-docs a {
+  min-height: 0; padding: 18px 0; background: transparent; border-left: 0; border-bottom: 1px solid var(--dy-rule);
+  align-items: center; gap: 18px;
+}
+.dy-site .dy-irp-docs a::after { left: 0; right: 0; top: auto; bottom: -1px; width: auto; height: 2px; transform: scaleX(0); transform-origin: right; }
+.dy-site .dy-irp-docs a:hover::after, .dy-site .dy-irp-docs a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+.dy-site .dy-irp-docs a > svg:first-child { color: var(--dy-green); margin-top: 0; }
+.dy-site .dy-irp-docs a > svg:last-child { flex: none; color: var(--dy-civic); transition: transform var(--dy-draw) var(--dy-ease); }
+.dy-site .dy-irp-docs a:hover > svg:last-child { transform: translateX(6px); }
+.dy-site .dy-irp-docs a strong { font-size: 17px; }
+.dy-site .dy-irp-docs a small { font-size: 14px; }
+.dy-site .dy-irp-call { padding: 0 0 0 28px; border-left: 3px solid var(--dy-green); background: transparent; color: var(--dy-ink); }
+.dy-site .dy-irp-call h3 { color: var(--dy-civic); }
+.dy-site .dy-irp-call p { color: var(--dy-ink); font-size: 16px; font-weight: 400; }
+
+/* Featured reports: cover preview + copy, stacked without borders. */
+.dy-site .dy-irp-reports { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+.dy-site .dy-irp-report { padding: 0; min-height: 0; border: 0; background: transparent; gap: 10px; }
+.dy-site .dy-irp-report small { color: var(--dy-green); }
+.dy-site .dy-irp-report h3 { font-size: 28px; color: var(--dy-civic); }
+.dy-site .dy-irp-report p { font-size: 16px; color: var(--dy-ink); }
+.dy-site .dy-irp-report .dy-button { margin-top: auto; }
+.dy-site .dy-irp-report p { margin-bottom: 10px; }
+.dy-site .dy-irp-cover {
+  position: relative; width: 100%; aspect-ratio: 4 / 3; margin-bottom: 14px; overflow: hidden; isolation: isolate;
+  background: var(--dy-civic);
+}
+.dy-site .dy-irp-cover > img {
+  position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; max-width: none; object-fit: cover;
+  transition: transform .6s var(--dy-ease);
+}
+.dy-site .dy-irp-report:hover .dy-irp-cover > img { transform: scale(1.04); }
+.dy-site .dy-irp-cover::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(0deg, rgb(3 11 58 / 92%) 0%, rgb(3 11 58 / 40%) 55%, rgb(3 11 58 / 10%) 100%);
+}
+.dy-site .dy-irp-cover-plate {
+  position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; gap: 10px; padding: 20px;
+  color: var(--dy-white); font-family: var(--dy-font-display); text-transform: uppercase; font-size: 22px; line-height: 1.02;
+}
+.dy-site .dy-irp-cover-plate .dy-signal { width: 28px; height: 28px; color: var(--dy-green); }
+.dy-site .dy-irp-cover-plate > span { max-width: 14ch; }
+
+/* Closing band on photography. */
+.dy-site .dy-irp-close > img { object-position: center 60%; }
+.dy-site .dy-irp-close p { color: var(--dy-white); }
+
+@media (max-width: 1099px) {
+  .dy-site .dy-irp-package { grid-template-columns: 1fr; gap: 40px; }
+  .dy-site .dy-irp-reports { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+  .dy-site .dy-irp-report { grid-column: auto; }
+}
+@media (max-width: 767px) {
+  .dy-site .dy-irp-hero-grid { padding: 48px 0 40px; }
+  .dy-site .dy-irp-photo::before { background: linear-gradient(0deg, rgb(3 11 58 / 94%), rgb(3 11 58 / 80%)); }
+  .dy-site .dy-irp-band { padding: 32px 24px; }
+  .dy-site .dy-irp-metrics { gap: 0; }
+  .dy-site .dy-irp-metrics > div { border-left: 0; border-top: 1px solid rgb(255 255 255 / 40%); padding: 20px 0; gap: 8px; }
+  .dy-site .dy-irp-metrics > div:first-child { border-top: 0; padding-top: 0; }
+  .dy-site .dy-irp-metrics dd strong { font-size: 48px; }
+  .dy-site .dy-irp-docs a { padding: 14px 0; gap: 14px; }
+  .dy-site .dy-irp-call { padding-left: 20px; }
+  .dy-site .dy-irp-reports { grid-template-columns: 1fr; gap: 36px; }
+  .dy-site .dy-irp-cover { aspect-ratio: 16 / 10; }
+}

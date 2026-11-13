@@ -1,0 +1,15 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 0,
+  "fields": {
+    "Title": "Financials & filings",
+    "Links": {
+      "$refs": [
+        "global/links/quarterly-reports",
+        "global/links/annual-reports",
+        "global/links/sec-filings",
+        "global/links/stock-information"
+      ]
+    }
+  }
+}

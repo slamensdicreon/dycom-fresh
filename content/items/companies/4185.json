@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "UtiliQuest",
+  "sortOrder": 34,
+  "fields": {
+    "CompanyId": "4185",
+    "Name": "UtiliQuest",
+    "FullName": "UtiliQuest, LLC",
+    "Address": "2575 Westside Parkway, Ste.100",
+    "City": "Alpharetta",
+    "State": "GA",
+    "Zip": "30004",
+    "Latitude": {
+      "value": 34.0839405
+    },
+    "Longitude": {
+      "value": -84.2724437
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://www.utiliquest.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://utiliquest.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4185.png",
+        "alt": "UtiliQuest",
+        "width": 640,
+        "height": 171
+      }
+    },
+    "Description": ""
+  }
+}
