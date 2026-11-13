@@ -1,0 +1,9 @@
+{
+  "templateName": "Navigation Link",
+  "fields": {
+    "Link": {
+      "$link": "/investors/sec-filings/",
+      "text": "SEC filings"
+    }
+  }
+}

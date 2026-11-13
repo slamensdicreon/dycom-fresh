@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Triple-D Communications",
+  "sortOrder": 33,
+  "fields": {
+    "CompanyId": "4165",
+    "Name": "Triple-D Communications",
+    "FullName": "Triple-D Communications, LLC",
+    "Address": "3006 Park Central Ave.",
+    "City": "Nicholasville",
+    "State": "KY",
+    "Zip": "40356",
+    "Latitude": {
+      "value": 37.9351406
+    },
+    "Longitude": {
+      "value": -84.5450432
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://www.tdllc.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://tdllc.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4165.png",
+        "alt": "Triple-D Communications",
+        "width": 640,
+        "height": 132
+      }
+    },
+    "Description": ""
+  }
+}

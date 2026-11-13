@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Golden State Utility Co.",
+  "sortOrder": 10,
+  "fields": {
+    "CompanyId": "3865",
+    "Name": "Golden State Utility Co.",
+    "FullName": "Golden State Utility Co.",
+    "Address": "16701 SE McGillivray Blvd., Suite 200",
+    "City": "Vancouver",
+    "State": "WA",
+    "Zip": "98683",
+    "Latitude": {
+      "value": 45.6039946
+    },
+    "Longitude": {
+      "value": -122.5010866
+    },
+    "Region": "West",
+    "Website": {
+      "$link": "http://www.gsuc.net/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://northskycomm.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3865.png",
+        "alt": "Golden State Utility Co.",
+        "width": 640,
+        "height": 117
+      }
+    },
+    "Description": ""
+  }
+}

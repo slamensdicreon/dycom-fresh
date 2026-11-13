@@ -1,0 +1,22 @@
+{
+  "templateName": "Contact Form",
+  "fields": {
+    "Heading": "Let’s get\nto work.",
+    "Prompt": "What brings you here?",
+    "IntentsLabel": "Inquiry type",
+    "NameLabel": "Your name",
+    "EmailLabel": "Email address",
+    "OptionalLabel": "Optional",
+    "SelectPlaceholder": "Select one",
+    "SelectedCompanyLead": "Exploring {company}?",
+    "SelectedCompanyNote": "Include the company name with your project inquiry so the team can direct you.",
+    "SelectedCompanyMessage": "I’m interested in {company}. ",
+    "ThankYouHeading": "Thank you",
+    "ThankYouBody": "Your inquiry is with the right team. We’ll follow up at the email address you provided.",
+    "SendAnotherLabel": "Send another inquiry",
+    "ErrorMessage": "Your inquiry could not be sent. Please try again.",
+    "Intents": {
+      "$children": "home/contact/intents"
+    }
+  }
+}

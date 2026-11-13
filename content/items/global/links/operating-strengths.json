@@ -1,0 +1,9 @@
+{
+  "templateName": "Navigation Link",
+  "fields": {
+    "Link": {
+      "$link": "/who-we-are/operating-strengths/",
+      "text": "Operating strengths"
+    }
+  }
+}

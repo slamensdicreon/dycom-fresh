@@ -1,0 +1,14 @@
+/* Rules that belong to this app rather than to the ported prototype CSS. */
+body { background: var(--dy-white, #fff); }
+
+.dy-skip {
+  position: absolute; left: 8px; top: -100px; z-index: 100;
+  padding: 12px 18px; background: #041054; color: #fff; font: 600 16px/1 var(--font-geist), Arial, sans-serif;
+}
+.dy-skip:focus { top: 8px; outline: 3px solid #00b609; outline-offset: 2px; }
+
+main#content:focus { outline: none; }
+
+.dy-fallback { max-width: 720px; margin: 120px auto; padding: 0 24px; font-family: var(--font-geist), Arial, sans-serif; color: #354846; }
+.dy-fallback h1 { font: 400 48px/1.06 var(--font-fjalla), Impact, sans-serif; text-transform: uppercase; color: #041054; margin-bottom: 16px; }
+.dy-fallback a { color: #041054; text-decoration: underline; text-underline-offset: 5px; }

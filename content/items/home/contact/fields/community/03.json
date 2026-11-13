@@ -1,0 +1,13 @@
+{
+  "templateName": "Inquiry Field",
+  "sortOrder": 3,
+  "fields": {
+    "Name": "message",
+    "Label": "Details",
+    "FieldType": "textarea",
+    "Required": "1",
+    "FullWidth": "1",
+    "AutoComplete": "",
+    "Placeholder": ""
+  }
+}

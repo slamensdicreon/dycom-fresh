@@ -1,0 +1,10 @@
+{
+  "templateName": "Resource Columns",
+  "fields": {
+    "Heading": "Filings, governance & shareholder resources",
+    "Note": "Every investor page of the site, in one place.",
+    "Columns": {
+      "$children": "investors/resources"
+    }
+  }
+}

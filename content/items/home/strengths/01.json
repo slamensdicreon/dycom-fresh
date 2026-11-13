@@ -1,0 +1,16 @@
+{
+  "templateName": "Strength Card",
+  "sortOrder": 1,
+  "fields": {
+    "Title": "Scale is Local",
+    "Body": "Dycom’s national strength is delivered through trusted local operating companies that bring customer knowledge, local accountability, and execution at scale.",
+    "Image": {
+      "$image": "z9b_0540",
+      "alt": "Two crew members seated and laughing in the back of a work van"
+    },
+    "Link": {
+      "$link": "/who-we-are/operating-strengths/",
+      "text": "Operating Strengths"
+    }
+  }
+}

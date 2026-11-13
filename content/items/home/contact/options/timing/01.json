@@ -1,0 +1,8 @@
+{
+  "templateName": "Form Option",
+  "sortOrder": 1,
+  "fields": {
+    "Text": "Ready to start",
+    "Value": "Ready to start"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "templateName": "Inquiry Field",
+  "sortOrder": 2,
+  "fields": {
+    "Name": "location",
+    "Label": "Project location",
+    "FieldType": "text",
+    "Required": "1",
+    "FullWidth": "",
+    "AutoComplete": "",
+    "Placeholder": "City, state"
+  }
+}

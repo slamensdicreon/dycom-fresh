@@ -1,0 +1,13 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 1,
+  "fields": {
+    "Title": "Life at Dycom",
+    "Links": {
+      "$refs": [
+        "global/links/life",
+        "global/links/benefits"
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "templateName": "In-Page Link",
+  "sortOrder": 0,
+  "fields": {
+    "Label": "Results",
+    "Link": {
+      "$link": "#results",
+      "text": "Results"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "templateName": "Lifecycle Stage",
+  "sortOrder": 4,
+  "fields": {
+    "Title": "Maintain & restore",
+    "Body": "Every route is tested end to end before it carries traffic, and technicians connect homes and businesses to the new network. Surfaces that were opened are restored and as-built records are updated for the teams who come next. The job is finished when the site looks the way it did before the work began.",
+    "Image": {
+      "$image": "z9b_6665",
+      "alt": "Fiber patch cables plugged into a lit network rack during testing"
+    },
+    "Services": {
+      "$refs": [
+        "home/lifecycle/services/maintenance",
+        "home/lifecycle/services/emergency-response"
+      ]
+    }
+  }
+}

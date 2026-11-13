@@ -1,0 +1,21 @@
+{
+  "templateName": "Navigation Group",
+  "sortOrder": 3,
+  "fields": {
+    "Label": "People & careers",
+    "Intro": "Skilled work with a local employer.",
+    "Description": "Get to know the trades and the questions to ask, then search current openings.",
+    "OverviewLink": {
+      "$link": "/careers/",
+      "text": "Careers overview"
+    },
+    "ChapterLink": {
+      "value": {
+        "href": ""
+      }
+    },
+    "Columns": {
+      "$children": "global/navigation/people-careers"
+    }
+  }
+}

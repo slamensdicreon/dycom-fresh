@@ -1,0 +1,16 @@
+{
+  "templateName": "Strength Card",
+  "sortOrder": 2,
+  "fields": {
+    "Title": "Built to Deliver",
+    "Body": "Dycom turns complex digital infrastructure demand into work that is built, connected, powered, sustained, restored, and evolved safely, reliably, and at pace.",
+    "Image": {
+      "$image": "z9b_0355",
+      "alt": "Directional drill head emerging from wet soil"
+    },
+    "Link": {
+      "$link": "/what-we-do/capabilities/",
+      "text": "Our Capabilities"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Trawick Construction Company",
+  "sortOrder": 32,
+  "fields": {
+    "CompanyId": "4152",
+    "Name": "Trawick Construction Company",
+    "FullName": "Trawick Construction Company, LLC",
+    "Address": "1555 South Boulevard",
+    "City": "Chipley",
+    "State": "FL",
+    "Zip": "32428",
+    "Latitude": {
+      "value": 30.771218
+    },
+    "Longitude": {
+      "value": -85.564087
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://trawickconstruction.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://trawickconstruction.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4152.png",
+        "alt": "Trawick Construction Company",
+        "width": 351,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

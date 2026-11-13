@@ -1,0 +1,31 @@
+/* Interior-page renderings (InteriorHero, ResultsHighlights, FeaturedReports, SplitSection,
+   EventsTimeline, NewsList, ResourceColumns, ClosingBand, PageNotice). The bulk of the styling is the
+   ported prototype CSS in investors-proto.css and brand.css; these rules replace what the prototype
+   hung on its page-level `main.dycom-c5__irp` class, which renderings cannot rely on. */
+
+/* Was `.dycom-c5__irp .dycom-c5__resources { margin-top: 0 }`. */
+.dy .dy-resources--flush { margin-top: 0; }
+
+/* Was `.dycom-c5__irp[data-motion="off"] …`: the metric bars stay still when motion is off. */
+.dy[data-motion='off'] .dy-irp-metrics > div::before { animation: none; }
+
+/* EventsTimeline / NewsList render inside a SplitSection column. */
+.dy .dy-irp-feed { display: flex; flex-direction: column; align-items: start; width: 100%; }
+.dy .dy-irp-feed > .dy-button { margin-top: 32px; }
+
+/* Interior hero without a listing block: the copy takes the full width. */
+.dy .dy-irp-hero-grid--solo { grid-template-columns: minmax(0, 1fr); }
+.dy .dy-irp-hero:not(.dy-irp-photo) { background: var(--dy-civic); }
+
+/* Page notice (future-state pages, 404). */
+.dy .dy-notice { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 32px; align-items: start; }
+.dy .dy-notice-mark { width: 56px; height: 56px; color: var(--dy-green); }
+.dy .dy-notice-copy { display: flex; flex-direction: column; align-items: start; gap: 20px; max-width: 62ch; }
+.dy .dy-notice-copy h2 { font-size: clamp(28px, 3vw, 40px); }
+.dy .dy-notice-copy .dy-actions { margin-top: 8px; }
+
+@media (max-width: 767px) {
+  .dy .dy-notice { grid-template-columns: 1fr; gap: 20px; }
+  .dy .dy-notice-mark { width: 40px; height: 40px; }
+  .dy .dy-notice-copy .dy-actions { flex-direction: column; align-items: stretch; width: 100%; }
+}

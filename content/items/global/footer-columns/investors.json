@@ -1,0 +1,19 @@
+{
+  "templateName": "Footer Column",
+  "sortOrder": 5,
+  "fields": {
+    "Title": "Investors",
+    "Links": {
+      "$refs": [
+        "global/links/investors",
+        "global/links/quarterly-reports",
+        "global/links/annual-reports",
+        "global/links/sec-filings",
+        "global/links/governance",
+        "global/links/investor-news",
+        "global/links/events-presentations",
+        "global/links/investor-contact"
+      ]
+    }
+  }
+}

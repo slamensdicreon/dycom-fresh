@@ -1,0 +1,12 @@
+{
+  "templateName": "Results Document",
+  "sortOrder": 0,
+  "fields": {
+    "Title": "Q2 2027 Results Release",
+    "Kind": "Press release",
+    "Link": {
+      "$link": "/investors/quarterly-reports/",
+      "text": "Q2 2027 Results Release"
+    }
+  }
+}

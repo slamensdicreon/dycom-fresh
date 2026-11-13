@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "NeoCom Solutions",
+  "sortOrder": 17,
+  "fields": {
+    "CompanyId": "3954",
+    "Name": "NeoCom Solutions",
+    "FullName": "NeoCom Solutions, LLC",
+    "Address": "200 North Point Center East, Suite 400",
+    "City": "Alpharetta",
+    "State": "GA",
+    "Zip": "30022",
+    "Latitude": {
+      "value": 34.04649625783536
+    },
+    "Longitude": {
+      "value": -84.29926074573898
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://www.neocom.biz/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://neocom.biz/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3954.png",
+        "alt": "NeoCom Solutions",
+        "width": 640,
+        "height": 125
+      }
+    },
+    "Description": ""
+  }
+}

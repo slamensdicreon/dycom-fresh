@@ -1,0 +1,12 @@
+{
+  "templateName": "Pathway Tile",
+  "sortOrder": 2,
+  "fields": {
+    "Title": "Customers",
+    "Description": "Learn more about our solutions and services",
+    "Link": {
+      "$link": "#what-we-build",
+      "text": "Customers"
+    }
+  }
+}

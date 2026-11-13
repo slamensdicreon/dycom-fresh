@@ -1,0 +1,12 @@
+{
+  "templateName": "Results Document",
+  "sortOrder": 2,
+  "fields": {
+    "Title": "Q2 2027 Outlook Expectations Summary",
+    "Kind": "Summary · as of August 26, 2026",
+    "Link": {
+      "$link": "/investors/quarterly-reports/",
+      "text": "Q2 2027 Outlook Expectations Summary"
+    }
+  }
+}

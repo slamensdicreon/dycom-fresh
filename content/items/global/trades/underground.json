@@ -1,0 +1,10 @@
+{
+  "templateName": "Trade",
+  "sortOrder": 6,
+  "fields": {
+    "Name": "Underground",
+    "Description": "Place conduit and cable below grade, then restore the site.",
+    "Question": "Ask about equipment training and physical requirements.",
+    "Departments": "Underground Labor|Underground Supervision"
+  }
+}

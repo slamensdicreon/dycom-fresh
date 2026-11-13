@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Ivy H. Smith Company",
+  "sortOrder": 11,
+  "fields": {
+    "CompanyId": "3876",
+    "Name": "Ivy H. Smith Company",
+    "FullName": "Ivy H. Smith Company, LLC",
+    "Address": "200 North Point Center East, Suite 400",
+    "City": "Alpharetta",
+    "State": "GA",
+    "Zip": "30022",
+    "Latitude": {
+      "value": 34.0463216
+    },
+    "Longitude": {
+      "value": -84.2992929
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://www.ivysmith.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://ivysmith.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3876.png",
+        "alt": "Ivy H. Smith Company",
+        "width": 442,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

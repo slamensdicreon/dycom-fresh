@@ -1,0 +1,20 @@
+{
+  "templateName": "Navigation Group",
+  "sortOrder": 0,
+  "fields": {
+    "Label": "Who we are",
+    "Intro": "The people connecting America.",
+    "Description": "Our operating companies share a commitment to people, safe work, quality and responsible business practices.",
+    "OverviewLink": {
+      "$link": "/who-we-are/",
+      "text": "Who we are overview"
+    },
+    "ChapterLink": {
+      "$link": "#who-we-are",
+      "text": "Who we are"
+    },
+    "Columns": {
+      "$children": "global/navigation/who-we-are"
+    }
+  }
+}

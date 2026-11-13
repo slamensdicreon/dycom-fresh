@@ -1,0 +1,13 @@
+{
+  "templateName": "Inquiry Field",
+  "sortOrder": 5,
+  "fields": {
+    "Name": "message",
+    "Label": "Tell us about the project",
+    "FieldType": "textarea",
+    "Required": "1",
+    "FullWidth": "1",
+    "AutoComplete": "",
+    "Placeholder": "Scope, route miles, number of sites, or anything else that helps us prepare."
+  }
+}

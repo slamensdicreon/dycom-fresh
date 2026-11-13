@@ -1,0 +1,13 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 0,
+  "fields": {
+    "Title": "Plan & design",
+    "Links": {
+      "$refs": [
+        "global/links/engineering",
+        "global/links/project-management"
+      ]
+    }
+  }
+}

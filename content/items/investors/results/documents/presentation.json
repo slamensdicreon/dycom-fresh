@@ -1,0 +1,12 @@
+{
+  "templateName": "Results Document",
+  "sortOrder": 1,
+  "fields": {
+    "Title": "Q2 2027 Presentation Materials",
+    "Kind": "Slides",
+    "Link": {
+      "$link": "/investors/quarterly-reports/",
+      "text": "Q2 2027 Presentation Materials"
+    }
+  }
+}

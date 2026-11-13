@@ -1,0 +1,16 @@
+{
+  "templateName": "Inquiry Field",
+  "sortOrder": 4,
+  "fields": {
+    "Name": "timing",
+    "Label": "Timing",
+    "FieldType": "select",
+    "Required": "1",
+    "FullWidth": "",
+    "AutoComplete": "",
+    "Placeholder": "",
+    "Options": {
+      "$children": "home/contact/options/timing"
+    }
+  }
+}

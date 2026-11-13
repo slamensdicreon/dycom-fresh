@@ -1,0 +1,18 @@
+{
+  "templateName": "Lifecycle Stage",
+  "sortOrder": 2,
+  "fields": {
+    "Title": "Locate & prepare",
+    "Body": "Buried utilities are located and marked so crews can dig safely around gas, water, power and existing communications lines. Traffic control is arranged, permits are confirmed and materials are staged at a local yard. The schedule is coordinated with the customer and the community before the first truck arrives.",
+    "Image": {
+      "$image": "z9b_1028",
+      "alt": "Excavator opening a marked trench while the crew prepares the line"
+    },
+    "Services": {
+      "$refs": [
+        "home/lifecycle/services/utility-locating",
+        "home/lifecycle/services/project-management"
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "templateName": "Lifecycle",
+  "fields": {
+    "Heading": "Expertise for the\nentire lifecycle",
+    "Intro": "Dycom provides the scale to manage your entire infrastructure lifecycle and the agility to deploy specialized services at any stage. We take full ownership of our delivery, ensuring our work integrates seamlessly into your broader project goals.",
+    "StagesLabel": "Stages of a local job",
+    "StageLabel": "Stage",
+    "OfLabel": "of",
+    "ServicesLabel": "Services involved",
+    "PreviousLabel": "Previous",
+    "NextLabel": "Next",
+    "Stages": {
+      "$children": "home/lifecycle/stages"
+    }
+  }
+}

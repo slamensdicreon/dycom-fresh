@@ -1,0 +1,16 @@
+{
+  "templateName": "Report",
+  "sortOrder": 0,
+  "fields": {
+    "Label": "Presented September 2, 2026",
+    "Title": "Q2 2027 Investor Presentation",
+    "Description": "Strategy, markets and the quarter in one deck.",
+    "Cover": {
+      "$image": "z9a_5195"
+    },
+    "Link": {
+      "$link": "/investors/events-presentations/",
+      "text": "Open report"
+    }
+  }
+}

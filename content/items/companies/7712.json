@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Jansen Cable Construction",
+  "sortOrder": 12,
+  "fields": {
+    "CompanyId": "7712",
+    "Name": "Jansen Cable Construction",
+    "FullName": "Jansen Cable Construction, LLC",
+    "Address": "16766 North US Hwy 45",
+    "City": "Effingham",
+    "State": "IL",
+    "Zip": "62401",
+    "Latitude": {
+      "value": 39.1597968
+    },
+    "Longitude": {
+      "value": -88.5262403
+    },
+    "Region": "Midwest",
+    "Website": {
+      "$link": "https://www.jansencable.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://jansencable.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/7712.png",
+        "alt": "Jansen Cable Construction",
+        "width": 640,
+        "height": 191
+      }
+    },
+    "Description": ""
+  }
+}

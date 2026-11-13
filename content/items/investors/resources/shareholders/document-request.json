@@ -1,0 +1,10 @@
+{
+  "templateName": "Link",
+  "sortOrder": 2,
+  "fields": {
+    "Link": {
+      "$link": "/investors/document-request/",
+      "text": "Document request"
+    }
+  }
+}

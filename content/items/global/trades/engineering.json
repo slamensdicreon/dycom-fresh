@@ -1,0 +1,10 @@
+{
+  "templateName": "Trade",
+  "sortOrder": 5,
+  "fields": {
+    "Name": "Engineering",
+    "Description": "Survey routes and produce the drawings and permits crews build from.",
+    "Question": "Ask how field time and design time are balanced.",
+    "Departments": "OSP Engineering"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Sage Telecommunications Corp. of Colorado",
+  "sortOrder": 27,
+  "fields": {
+    "CompanyId": "4058",
+    "Name": "Sage Telecommunications Corp. of Colorado",
+    "FullName": "Sage Telecommunications Corp. of Colorado, LLC",
+    "Address": "6700 Race St.",
+    "City": "Denver",
+    "State": "CO",
+    "Zip": "80229",
+    "Latitude": {
+      "value": 39.8182188
+    },
+    "Longitude": {
+      "value": -104.9630255
+    },
+    "Region": "West",
+    "Website": {
+      "$link": "http://www.sagecom.net/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://www.sagecom.net/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4058.png",
+        "alt": "Sage Telecommunications Corp. of Colorado",
+        "width": 476,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

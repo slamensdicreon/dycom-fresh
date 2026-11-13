@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Blair Park Services",
+  "sortOrder": 2,
+  "fields": {
+    "CompanyId": "3699",
+    "Name": "Blair Park Services",
+    "FullName": "Blair Park Services, LLC",
+    "Address": "405 Caredean Dr., Stes G & H",
+    "City": "Horsham",
+    "State": "PA",
+    "Zip": "19044",
+    "Latitude": {
+      "value": 40.2031199
+    },
+    "Longitude": {
+      "value": -75.1728675
+    },
+    "Region": "Northeast",
+    "Website": {
+      "$link": "http://www.blairpark.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://blairpark.com/careers",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3699.png",
+        "alt": "Blair Park Services",
+        "width": 640,
+        "height": 233
+      }
+    },
+    "Description": ""
+  }
+}

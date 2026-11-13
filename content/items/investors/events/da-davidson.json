@@ -1,0 +1,14 @@
+{
+  "templateName": "Investor Event",
+  "sortOrder": 0,
+  "fields": {
+    "Title": "D.A. Davidson 25th Annual Diversified Industrials & Services Conference",
+    "Date": "2026-09-24",
+    "DisplayDate": "September 24, 2026",
+    "Time": "9:00 AM EDT",
+    "WebcastLink": {
+      "$link": "/investors/events-presentations/",
+      "text": "Webcast"
+    }
+  }
+}

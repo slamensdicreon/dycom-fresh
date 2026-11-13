@@ -1,0 +1,20 @@
+{
+  "templateName": "Navigation Group",
+  "sortOrder": 1,
+  "fields": {
+    "Label": "What we do",
+    "Intro": "Plan. Build. Maintain.",
+    "Description": "Engineering and project management, wireline and wireless construction, locating, fulfillment, maintenance and restoration.",
+    "OverviewLink": {
+      "$link": "/what-we-do/",
+      "text": "All services"
+    },
+    "ChapterLink": {
+      "$link": "#what-we-build",
+      "text": "What we do"
+    },
+    "Columns": {
+      "$children": "global/navigation/what-we-do"
+    }
+  }
+}

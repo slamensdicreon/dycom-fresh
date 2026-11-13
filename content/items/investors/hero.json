@@ -1,0 +1,17 @@
+{
+  "templateName": "Interior Hero",
+  "fields": {
+    "BackLink": {
+      "$link": "/",
+      "text": "Dycom home"
+    },
+    "Heading": "Investors",
+    "Overview": "Dycom Industries, Inc. (NYSE: DY) is a leading provider of specialty contracting services throughout the United States. We supply the nation’s leading telecommunications service providers with the single most critical resource they need: skilled people.",
+    "BackgroundImage": {
+      "$image": "z9b_6665"
+    },
+    "ListingLabel": "Listed",
+    "ListingValue": "NYSE: DY",
+    "ListingText": "Serving the nation from hundreds of field offices with a workforce of more than 20,000 people, we remain unparalleled in scope and scale."
+  }
+}

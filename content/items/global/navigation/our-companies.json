@@ -1,0 +1,20 @@
+{
+  "templateName": "Navigation Group",
+  "sortOrder": 2,
+  "fields": {
+    "Label": "Our companies",
+    "Intro": "Scale is local.",
+    "Description": "Identifiable companies with their own names, people and websites, connected by one national group.",
+    "OverviewLink": {
+      "$link": "/companies/",
+      "text": "All companies"
+    },
+    "ChapterLink": {
+      "$link": "#companies",
+      "text": "Our companies"
+    },
+    "Columns": {
+      "$children": "global/navigation/our-companies"
+    }
+  }
+}

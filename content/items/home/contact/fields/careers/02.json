@@ -1,0 +1,13 @@
+{
+  "templateName": "Inquiry Field",
+  "sortOrder": 2,
+  "fields": {
+    "Name": "location",
+    "Label": "Where you’d like to work",
+    "FieldType": "text",
+    "Required": "",
+    "FullWidth": "",
+    "AutoComplete": "",
+    "Placeholder": "City or state"
+  }
+}

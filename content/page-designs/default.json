@@ -1,0 +1,12 @@
+{
+  "name": "Default page design",
+  "placeholders": {
+    "headless-header": [
+      { "componentName": "SiteHeader", "dataSource": "global/header" }
+    ],
+    "headless-footer": [
+      { "componentName": "SiteFooter", "dataSource": "global/footer" },
+      { "componentName": "RolesDrawer", "dataSource": "global/roles-drawer" }
+    ]
+  }
+}

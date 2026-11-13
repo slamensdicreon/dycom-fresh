@@ -1,0 +1,14 @@
+/* Site chrome renderings: header, footer, roles drawer. */
+
+/* Phone-menu accordion: the ported keyframes animate height from Radix's measured variable; this
+   build mounts the open panel directly, so it fades in instead. */
+.dy .dy-accordion-content--static[data-state="open"] { animation: dy-chrome-fade .32s var(--dy-ease); }
+@keyframes dy-chrome-fade { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+.dy[data-motion="off"] .dy-accordion-content--static { animation: none; }
+
+/* h3 wrappers added around the footer accordion triggers for heading semantics. */
+.dy-site .dy-footer-accordion-item > h3 { margin: 0; font: inherit; }
+.dy-site .dy-accordion-head { font: inherit; }
+
+/* Brand logos keep their aspect ratio at the fixed 144px width. */
+.dy .dy-brand img, .dy .dy-footer-lockup img, .dy .dy-dialog-brand img { width: 144px; height: auto; }

@@ -1,0 +1,28 @@
+{
+  "templateName": "Roles Drawer",
+  "fields": {
+    "Heading": "Find your crew.",
+    "CountLabel": "open roles",
+    "WorkLabel": "Work",
+    "WorkPlaceholder": "Splicer, driver…",
+    "WhereLabel": "Where",
+    "WherePlaceholder": "City, state or ZIP",
+    "TradeLabel": "Trade",
+    "AllTradesLabel": "All trades",
+    "CompanyLabel": "Company",
+    "AllCompaniesLabel": "All companies",
+    "ResetLabel": "Reset filters",
+    "ShowMoreLabel": "Show more",
+    "BackLabel": "Back to all roles",
+    "EntryLevelLabel": "Entry level",
+    "EmptyHeading": "No roles match.",
+    "EmptyText": "Try a nearby state, a broader trade or another company.",
+    "ApplyText": "<p>Applications are made on the operating company’s careers site. Requirements, pay and schedule are confirmed there.</p>",
+    "ApplyLabel": "Apply on the company careers site",
+    "LoadingText": "Loading open roles…",
+    "ErrorText": "Open roles could not be loaded. Please try again.",
+    "Trades": {
+      "$children": "global/trades"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "templateName": "Inquiry Intent",
+  "sortOrder": 3,
+  "fields": {
+    "Key": "supplier",
+    "Label": "Supplier",
+    "Prompt": "Tell us what you provide and where, and purchasing will review it against current needs.",
+    "SubmitLabel": "Send inquiry",
+    "Behavior": "inquiry",
+    "Fields": {
+      "$children": "home/contact/fields/supplier"
+    }
+  }
+}

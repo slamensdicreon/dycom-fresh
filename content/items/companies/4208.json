@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "VCI Construction",
+  "sortOrder": 36,
+  "fields": {
+    "CompanyId": "4208",
+    "Name": "VCI Construction",
+    "FullName": "VCI Construction, LLC",
+    "Address": "1921 West 11th Street",
+    "City": "Upland",
+    "State": "CA",
+    "Zip": "91786",
+    "Latitude": {
+      "value": 34.1036059
+    },
+    "Longitude": {
+      "value": -117.6859093
+    },
+    "Region": "West",
+    "Website": {
+      "$link": "http://www.vcicom.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://vcicom.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4208.png",
+        "alt": "VCI Construction",
+        "width": 458,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

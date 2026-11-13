@@ -1,0 +1,16 @@
+{
+  "generatedBy": "scripts/generate-future-pages.mjs",
+  "templateName": "Page Notice",
+  "fields": {
+    "Heading": "Let’s find what you need",
+    "Text": "Start again from the home page, or search open roles across our family of companies.",
+    "PrimaryLink": {
+      "$link": "/",
+      "text": "Dycom home"
+    },
+    "SecondaryLink": {
+      "$link": "#open-roles",
+      "text": "Browse open roles"
+    }
+  }
+}

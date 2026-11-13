@@ -1,0 +1,16 @@
+{
+  "templateName": "Report",
+  "sortOrder": 2,
+  "fields": {
+    "Label": "Annual meeting May 28, 2026",
+    "Title": "2026 Proxy Statement",
+    "Description": "Board nominees, governance and executive compensation.",
+    "Cover": {
+      "$image": "z9b_1711"
+    },
+    "Link": {
+      "$link": "/investors/sec-filings/",
+      "text": "Open report"
+    }
+  }
+}

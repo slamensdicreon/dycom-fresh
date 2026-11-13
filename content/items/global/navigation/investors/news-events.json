@@ -1,0 +1,14 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 2,
+  "fields": {
+    "Title": "News & events",
+    "Links": {
+      "$refs": [
+        "global/links/investor-news",
+        "global/links/events-presentations",
+        "global/links/analyst-coverage"
+      ]
+    }
+  }
+}

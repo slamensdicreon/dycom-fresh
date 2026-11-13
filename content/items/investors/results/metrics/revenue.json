@@ -1,0 +1,9 @@
+{
+  "templateName": "Metric",
+  "sortOrder": 0,
+  "fields": {
+    "Label": "Contract revenues",
+    "Value": "$2.006",
+    "Unit": "billion"
+  }
+}

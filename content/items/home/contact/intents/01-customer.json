@@ -1,0 +1,14 @@
+{
+  "templateName": "Inquiry Intent",
+  "sortOrder": 1,
+  "fields": {
+    "Key": "customer",
+    "Label": "Customer or project",
+    "Prompt": "Tell us where the work is and what kind of network it is, and we’ll connect you with the local team.",
+    "SubmitLabel": "Send inquiry",
+    "Behavior": "inquiry",
+    "Fields": {
+      "$children": "home/contact/fields/customer"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "templateName": "Who We Are",
+  "fields": {
+    "Eyebrow": "Who we are",
+    "Heading": "The people\nconnecting America.",
+    "Body": "Dycom delivers solutions that build, connect, power, and sustain the digital and critical infrastructure that connects America and its essential industries, for today and tomorrow. Our scale is local: we combine national reach and resources with the regional knowledge and expertise of our 40 operating companies to partner with our customers and execute complex work across the full project lifecycle.",
+    "WorkEyebrow": "What we build",
+    "WorkHeading": "Our work keeps America connected.",
+    "WorkBody": "From the smallest town to the largest city, Dycom companies deliver for the telecommunications, utility industries and critical infrastructure.",
+    "LinesOfWork": {
+      "$children": "home/who-we-are/lines-of-work"
+    },
+    "FactsLabel": "Dycom at a glance",
+    "Facts": {
+      "$children": "shared/company-facts"
+    },
+    "FactsImage": {
+      "$image": "z9b_2679",
+      "alt": "Three crew members from a Dycom company sharing a laugh on site"
+    }
+  }
+}

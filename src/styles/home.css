@@ -1,0 +1,10 @@
+/* home renderings */
+
+/* Brand film: the cover (poster, play control, caption) returns whenever the film is paused or
+   ends, as Dycom content v0.1 §2.1 specifies; the ported rule hid it for good after the first play.
+   While it plays the cover is `hidden` and the native controls are reachable. */
+.dy-site .dy-film[data-started] .dy-film-cover { display: flex; background: linear-gradient(0deg, rgb(3 11 58 / 82%) 0%, rgb(3 11 58 / 30%) 55%, rgb(3 11 58 / 10%) 100%); }
+.dy-site .dy-film[data-started] .dy-film-cover[hidden] { display: none; }
+
+/* Closing form: error message when a submission fails (FRM0006). */
+.dy-site .dy-form-error { grid-column: 1 / -1; color: var(--dy-white); font-weight: 500; padding-left: 12px; border-left: 3px solid var(--dy-green); }

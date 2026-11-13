@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Locating",
+  "sortOrder": 15,
+  "fields": {
+    "CompanyId": "3949",
+    "Name": "Locating",
+    "FullName": "Locating, Inc",
+    "Address": "2575 Westside Parkway, Suite 100",
+    "City": "Alpharetta",
+    "State": "GA",
+    "Zip": "30004",
+    "Latitude": {
+      "value": 34.0839405
+    },
+    "Longitude": {
+      "value": -84.2724437
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://www.locatinginc.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://locatinginc.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3949.png",
+        "alt": "Locating",
+        "width": 500,
+        "height": 128
+      }
+    },
+    "Description": ""
+  }
+}

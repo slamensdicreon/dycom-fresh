@@ -1,0 +1,14 @@
+{
+  "templateName": "Inquiry Intent",
+  "sortOrder": 4,
+  "fields": {
+    "Key": "community",
+    "Label": "Community",
+    "Prompt": "Tell us where the work is and what you’re seeing, and the crew’s local office will follow up.",
+    "SubmitLabel": "Send inquiry",
+    "Behavior": "inquiry",
+    "Fields": {
+      "$children": "home/contact/fields/community"
+    }
+  }
+}

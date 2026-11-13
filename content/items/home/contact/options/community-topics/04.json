@@ -1,0 +1,8 @@
+{
+  "templateName": "Form Option",
+  "sortOrder": 4,
+  "fields": {
+    "Text": "Schedule or traffic",
+    "Value": "Schedule or traffic"
+  }
+}

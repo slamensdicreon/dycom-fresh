@@ -1,0 +1,15 @@
+{
+  "templateName": "Brand Film",
+  "fields": {
+    "Eyebrow": "Our people at work",
+    "Caption": "The people and work behind America’s infrastructure.",
+    "PlayLabel": "Play the film",
+    "Video": {
+      "$file": "/media/film/brand-film.mp4",
+      "title": "Dycom brand film"
+    },
+    "Poster": {
+      "$image": "film-poster"
+    }
+  }
+}

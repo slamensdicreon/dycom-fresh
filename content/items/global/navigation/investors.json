@@ -1,0 +1,21 @@
+{
+  "templateName": "Navigation Group",
+  "sortOrder": 5,
+  "fields": {
+    "Label": "Investors",
+    "Intro": "Local expertise. National scale.",
+    "Description": "Dycom Industries, Inc. (NYSE: DY). Results, filings, governance and investor resources in one place.",
+    "OverviewLink": {
+      "$link": "/investors/",
+      "text": "Investors overview"
+    },
+    "ChapterLink": {
+      "value": {
+        "href": ""
+      }
+    },
+    "Columns": {
+      "$children": "global/navigation/investors"
+    }
+  }
+}

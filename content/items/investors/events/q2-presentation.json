@@ -1,0 +1,15 @@
+{
+  "templateName": "Investor Event",
+  "sortOrder": 1,
+  "fields": {
+    "Title": "Dycom Q2 2027 Investor Presentation",
+    "Date": "2026-09-02",
+    "DisplayDate": "September 2, 2026",
+    "Time": "",
+    "WebcastLink": {
+      "value": {
+        "href": ""
+      }
+    }
+  }
+}

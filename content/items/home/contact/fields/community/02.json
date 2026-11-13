@@ -1,0 +1,16 @@
+{
+  "templateName": "Inquiry Field",
+  "sortOrder": 2,
+  "fields": {
+    "Name": "topic",
+    "Label": "What is this about?",
+    "FieldType": "select",
+    "Required": "1",
+    "FullWidth": "1",
+    "AutoComplete": "",
+    "Placeholder": "",
+    "Options": {
+      "$children": "home/contact/options/community-topics"
+    }
+  }
+}

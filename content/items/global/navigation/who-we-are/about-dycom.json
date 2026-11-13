@@ -1,0 +1,15 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 0,
+  "fields": {
+    "Title": "About Dycom",
+    "Links": {
+      "$refs": [
+        "global/links/values",
+        "global/links/leadership",
+        "global/links/sustainability",
+        "global/links/news"
+      ]
+    }
+  }
+}

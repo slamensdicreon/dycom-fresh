@@ -1,0 +1,10 @@
+{
+  "templateName": "Trade",
+  "sortOrder": 1,
+  "fields": {
+    "Name": "Locating",
+    "Description": "Find and mark buried utilities before anyone digs.",
+    "Question": "Ask how new locators are paired with experienced ones.",
+    "Departments": "Damage Prevention"
+  }
+}

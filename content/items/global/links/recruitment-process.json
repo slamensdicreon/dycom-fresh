@@ -1,0 +1,9 @@
+{
+  "templateName": "Navigation Link",
+  "fields": {
+    "Link": {
+      "$link": "/careers/recruitment-process/",
+      "text": "Our recruitment process"
+    }
+  }
+}

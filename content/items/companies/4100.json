@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "TCS Communications",
+  "sortOrder": 29,
+  "fields": {
+    "CompanyId": "4100",
+    "Name": "TCS Communications",
+    "FullName": "TCS Communications, LLC",
+    "Address": "3171 Gulf Breeze Parkway",
+    "City": "Gulf Breeze",
+    "State": "FL",
+    "Zip": "32563",
+    "Latitude": {
+      "value": 30.38582737481639
+    },
+    "Longitude": {
+      "value": -87.09180315581953
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://www.tcscomm.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://tcscomm.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4100.png",
+        "alt": "TCS Communications",
+        "width": 327,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

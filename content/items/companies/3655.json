@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Ansco & Associates",
+  "sortOrder": 0,
+  "fields": {
+    "CompanyId": "3655",
+    "Name": "Ansco & Associates",
+    "FullName": "Ansco & Associates, LLC",
+    "Address": "200 North Point Center East, Suite 400",
+    "City": "Alpharetta",
+    "State": "GA",
+    "Zip": "30022",
+    "Latitude": {
+      "value": 34.0463216
+    },
+    "Longitude": {
+      "value": -84.2992929
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "https://anscollc.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://anscollc.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3655.png",
+        "alt": "Ansco & Associates",
+        "width": 476,
+        "height": 86
+      }
+    },
+    "Description": ""
+  }
+}

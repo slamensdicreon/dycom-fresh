@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Prince Telecom",
+  "sortOrder": 24,
+  "fields": {
+    "CompanyId": "4025",
+    "Name": "Prince Telecom",
+    "FullName": "Prince Telecom, LLC",
+    "Address": "551 A Mews Drive",
+    "City": "New Castle",
+    "State": "DE",
+    "Zip": "19720",
+    "Latitude": {
+      "value": 39.67927
+    },
+    "Longitude": {
+      "value": -75.5490498
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://www.princetelecom.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://princetelecom.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4025.png",
+        "alt": "Prince Telecom",
+        "width": 640,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

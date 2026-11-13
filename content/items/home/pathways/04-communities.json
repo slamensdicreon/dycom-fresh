@@ -1,0 +1,12 @@
+{
+  "templateName": "Pathway Tile",
+  "sortOrder": 4,
+  "fields": {
+    "Title": "Communities",
+    "Description": "See how we’re supporting locally and nationally.",
+    "Link": {
+      "$link": "#contact",
+      "text": "Communities"
+    }
+  }
+}

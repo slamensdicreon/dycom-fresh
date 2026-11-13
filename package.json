@@ -1,0 +1,44 @@
+{
+  "name": "dycomind-com",
+  "version": "0.1.0",
+  "private": true,
+  "description": "dycomind.com \u2014 Next.js App Router front end built to Sitecore Content SDK conventions, running on local layout data until SitecoreAI is connected.",
+  "scripts": {
+    "dev": "npm-run-all --serial content:build sitecore-tools:generate-map sitecore-tools:build --parallel next:dev content:watch sitecore-tools:generate-map:watch",
+    "build": "npm-run-all --serial content:build:strict sitecore-tools:generate-map sitecore-tools:build next:build",
+    "start": "next start",
+    "next:dev": "next dev -p ${PORT:-3000}",
+    "next:build": "next build",
+    "content:build": "node scripts/build-local-content.mjs",
+    "content:watch": "node scripts/build-local-content.mjs --watch",
+    "sitecore-tools:generate-map": "sitecore-tools project component generate-map",
+    "sitecore-tools:generate-map:watch": "sitecore-tools project component generate-map --watch",
+    "sitecore-tools:build": "sitecore-tools project build",
+    "prepare-local": "npm-run-all --serial content:build sitecore-tools:generate-map sitecore-tools:build",
+    "typecheck": "npm run prepare-local && tsc --noEmit",
+    "content:build:strict": "node scripts/build-local-content.mjs --strict"
+  },
+  "dependencies": {
+    "@sitecore-content-sdk/analytics-core": "2.1.2",
+    "@sitecore-content-sdk/events": "2.1.2",
+    "@sitecore-content-sdk/nextjs": "2.5.1",
+    "@sitecore-content-sdk/personalize": "2.1.0",
+    "lucide-react": "^0.545.0",
+    "next": "16.4.6",
+    "next-intl": "4.15.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@sitecore-content-sdk/cli": "2.4.0",
+    "@types/node": "^24.10.4",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "npm-run-all2": "^9.0.4",
+    "typescript": "~5.8.3"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}

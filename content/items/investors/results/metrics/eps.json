@@ -1,0 +1,9 @@
+{
+  "templateName": "Metric",
+  "sortOrder": 2,
+  "fields": {
+    "Label": "Diluted earnings per share",
+    "Value": "$3.81",
+    "Unit": "GAAP"
+  }
+}

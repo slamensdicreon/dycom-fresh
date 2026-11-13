@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "CableCom",
+  "sortOrder": 4,
+  "fields": {
+    "CompanyId": "3705",
+    "Name": "CableCom",
+    "FullName": "CableCom, LLC",
+    "Address": "1429 Avenue D, #339",
+    "City": "Snohomish",
+    "State": "WA",
+    "Zip": "98290",
+    "Latitude": {
+      "value": 47.92918539999999
+    },
+    "Longitude": {
+      "value": -122.0990391
+    },
+    "Region": "West",
+    "Website": {
+      "$link": "http://www.cablecomllc.us/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://cablecomllc.us/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3705.png",
+        "alt": "CableCom",
+        "width": 400,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

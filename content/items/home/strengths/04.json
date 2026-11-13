@@ -1,0 +1,16 @@
+{
+  "templateName": "Strength Card",
+  "sortOrder": 4,
+  "fields": {
+    "Title": "Shaping What’s Next",
+    "Body": "Dycom invests in the technology, capabilities, partnerships, and skilled workforce that help customers prepare for what’s next.",
+    "Image": {
+      "$image": "z9a_0525",
+      "alt": "Green laser level lines crossing a data center floor"
+    },
+    "Link": {
+      "$link": "/resources/",
+      "text": "Resource Center"
+    }
+  }
+}

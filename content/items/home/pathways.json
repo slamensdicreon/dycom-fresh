@@ -1,0 +1,9 @@
+{
+  "templateName": "Pathways",
+  "fields": {
+    "Label": "Choose your path",
+    "Tiles": {
+      "$children": "home/pathways"
+    }
+  }
+}

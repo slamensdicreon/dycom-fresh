@@ -1,0 +1,13 @@
+{
+  "templateName": "Inquiry Field",
+  "sortOrder": 1,
+  "fields": {
+    "Name": "organization",
+    "Label": "Company",
+    "FieldType": "text",
+    "Required": "1",
+    "FullWidth": "",
+    "AutoComplete": "organization",
+    "Placeholder": ""
+  }
+}

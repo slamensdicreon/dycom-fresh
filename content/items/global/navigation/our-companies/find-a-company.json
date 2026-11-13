@@ -1,0 +1,13 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 0,
+  "fields": {
+    "Title": "Find a company",
+    "Links": {
+      "$refs": [
+        "global/links/companies",
+        "global/links/contact-company"
+      ]
+    }
+  }
+}

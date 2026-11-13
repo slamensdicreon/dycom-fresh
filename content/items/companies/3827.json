@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Fiber Technologies Solutions",
+  "sortOrder": 8,
+  "fields": {
+    "CompanyId": "3827",
+    "Name": "Fiber Technologies Solutions",
+    "FullName": "Fiber Technologies Solutions, LLC",
+    "Address": "2675 Mall of Georgia Blvd, Suite 301",
+    "City": "Buford",
+    "State": "GA",
+    "Zip": "30519",
+    "Latitude": {
+      "value": 34.0643342
+    },
+    "Longitude": {
+      "value": -83.9742815
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "https://fibertechnologiessolutions.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://fibertechnologiessolutions.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3827.png",
+        "alt": "Fiber Technologies Solutions",
+        "width": 410,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

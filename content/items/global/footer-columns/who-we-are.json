@@ -1,0 +1,20 @@
+{
+  "templateName": "Footer Column",
+  "sortOrder": 0,
+  "fields": {
+    "Title": "Who we are",
+    "Links": {
+      "$refs": [
+        "global/links/who-we-are",
+        "global/links/values",
+        "global/links/operating-strengths",
+        "global/links/leadership",
+        "global/links/safety",
+        "global/links/quality",
+        "global/links/sustainability",
+        "global/links/news",
+        "global/links/contact"
+      ]
+    }
+  }
+}

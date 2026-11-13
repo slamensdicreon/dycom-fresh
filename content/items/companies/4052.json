@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "RJE Telecom",
+  "sortOrder": 26,
+  "fields": {
+    "CompanyId": "4052",
+    "Name": "RJE Telecom",
+    "FullName": "RJE Telecom, LLC",
+    "Address": "5905 Breckenridge Parkway, Suite F",
+    "City": "Tampa",
+    "State": "FL",
+    "Zip": "33610",
+    "Latitude": {
+      "value": 28.0015475
+    },
+    "Longitude": {
+      "value": -82.35803
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://www.rjetelecom.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://www.rjetelecom.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4052.png",
+        "alt": "RJE Telecom",
+        "width": 640,
+        "height": 181
+      }
+    },
+    "Description": ""
+  }
+}

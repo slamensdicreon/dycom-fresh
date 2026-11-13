@@ -1,0 +1,13 @@
+{
+  "templateName": "News Item",
+  "sortOrder": 1,
+  "fields": {
+    "Title": "Dycom Announces Authorization of a New $150 Million Stock Repurchase Program",
+    "Date": "2026-08-26",
+    "DisplayDate": "August 26, 2026",
+    "Link": {
+      "$link": "/investors/news/",
+      "text": "Dycom Announces Authorization of a New $150 Million Stock Repurchase Program"
+    }
+  }
+}

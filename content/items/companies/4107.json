@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "TelCom Construction",
+  "sortOrder": 30,
+  "fields": {
+    "CompanyId": "4107",
+    "Name": "TelCom Construction",
+    "FullName": "TelCom Construction, LLC",
+    "Address": "2218 200th St. E",
+    "City": "Clearwater",
+    "State": "MN",
+    "Zip": "55320",
+    "Latitude": {
+      "value": 45.4131527
+    },
+    "Longitude": {
+      "value": -94.0694364
+    },
+    "Region": "Midwest",
+    "Website": {
+      "$link": "https://telcomconstruction.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://telcomconstruction.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4107.png",
+        "alt": "TelCom Construction",
+        "width": 640,
+        "height": 89
+      }
+    },
+    "Description": ""
+  }
+}

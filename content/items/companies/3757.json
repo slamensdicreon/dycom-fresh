@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Ervin Cable Construction",
+  "sortOrder": 7,
+  "fields": {
+    "CompanyId": "3757",
+    "Name": "Ervin Cable Construction",
+    "FullName": "Ervin Cable Construction, LLC",
+    "Address": "450 Pryor Blvd.",
+    "City": "Sturgis",
+    "State": "KY",
+    "Zip": "42459",
+    "Latitude": {
+      "value": 37.5406532
+    },
+    "Longitude": {
+      "value": -87.9603579
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://www.ervincable.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://ervincable.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3757.png",
+        "alt": "Ervin Cable Construction",
+        "width": 552,
+        "height": 240
+      }
+    },
+    "Description": ""
+  }
+}

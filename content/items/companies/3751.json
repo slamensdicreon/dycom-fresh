@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Engineering Associates",
+  "sortOrder": 6,
+  "fields": {
+    "CompanyId": "3751",
+    "Name": "Engineering Associates",
+    "FullName": "Engineering Associates, LLC",
+    "Address": "5905 Breckenridge Parkway Ste F",
+    "City": "Tampa",
+    "State": "FL",
+    "Zip": "33610",
+    "Latitude": {
+      "value": 28.0015475
+    },
+    "Longitude": {
+      "value": -82.35803
+    },
+    "Region": "South",
+    "Website": {
+      "$link": "http://www.engineeringassociates.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://engineeringassociates.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/3751.png",
+        "alt": "Engineering Associates",
+        "width": 640,
+        "height": 131
+      }
+    },
+    "Description": ""
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "templateName": "Navigation Column",
+  "sortOrder": 3,
+  "fields": {
+    "Title": "Shareholder resources",
+    "Links": {
+      "$refs": [
+        "global/links/shareholder-services",
+        "global/links/faqs",
+        "global/links/document-request",
+        "global/links/email-alerts",
+        "global/links/investor-contact"
+      ]
+    }
+  }
+}

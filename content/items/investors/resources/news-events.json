@@ -1,0 +1,10 @@
+{
+  "templateName": "Link Group",
+  "sortOrder": 2,
+  "fields": {
+    "Title": "News & events",
+    "Links": {
+      "$children": "investors/resources/news-events"
+    }
+  }
+}

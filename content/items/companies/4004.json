@@ -1,0 +1,38 @@
+{
+  "templateName": "Company",
+  "displayName": "Pauley Construction",
+  "sortOrder": 21,
+  "fields": {
+    "CompanyId": "4004",
+    "Name": "Pauley Construction",
+    "FullName": "Pauley Construction, LLC",
+    "Address": "2021 West Melinda Lane",
+    "City": "Phoenix",
+    "State": "AZ",
+    "Zip": "85027",
+    "Latitude": {
+      "value": 33.6809568
+    },
+    "Longitude": {
+      "value": -112.1022195
+    },
+    "Region": "West",
+    "Website": {
+      "$link": "http://www.pauleyc.com/",
+      "text": "Company website"
+    },
+    "Careers": {
+      "$link": "https://pauleyc.com/careers/",
+      "text": "Company careers page"
+    },
+    "Logo": {
+      "value": {
+        "src": "/media/company-logos/4004.png",
+        "alt": "Pauley Construction",
+        "width": 640,
+        "height": 175
+      }
+    },
+    "Description": ""
+  }
+}
