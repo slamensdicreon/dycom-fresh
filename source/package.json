@@ -1,0 +1,17 @@
+{
+  "name": "dycom-final-design-direction",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.26.1",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @workspace/dycom-concept-05 dev",
+    "build": "pnpm --filter @workspace/dycom-concept-05 build",
+    "typecheck": "tsc --build && pnpm --filter @workspace/dycom-concept-05 typecheck"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3"
+  }
+}

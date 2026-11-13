@@ -1,0 +1,200 @@
+/* Design System chrome. Everything here consumes the brand tokens declared on
+   .dycom-c5 (the DS root carries both classes) so the documentation site is
+   itself an instance of the system: Civic Blue + Signal Green, Fjalla One +
+   Geist, square corners, draw-in highlights. */
+
+.dycom-ds { min-height: 100dvh; display: flex; flex-direction: column; }
+.dycom-ds .dycom-ds__top { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px; padding: 0 var(--c5-gutter); background: var(--c5-civic); color: var(--c5-white); }
+.dycom-ds .dycom-ds__brand { display: flex; align-items: center; gap: 18px; color: var(--c5-white); min-height: 44px; }
+.dycom-ds .dycom-ds__brand img { width: 112px; height: auto; display: block; }
+.dycom-ds .dycom-ds__brand span { font-family: var(--c5-font-display); text-transform: uppercase; font-size: 18px; letter-spacing: .02em; padding-left: 18px; border-left: 1px solid var(--c5-civic-soft); line-height: 1; }
+.dycom-ds .dycom-ds__top-actions { display: flex; align-items: center; gap: 8px; }
+.dycom-ds .dycom-ds__top-actions button { min-height: 44px; padding: 0 14px; background: transparent; border: 1px solid var(--c5-civic-soft); color: var(--c5-white); font-size: 14px; font-weight: 500; white-space: nowrap; display: inline-flex; align-items: center; gap: 8px; }
+.dycom-ds .dycom-ds__top-actions button[aria-pressed="true"] { border-color: var(--c5-white); }
+.dycom-ds .dycom-ds__top-actions button.dycom-ds__contents { display: none; }
+.dycom-ds .dycom-ds__top-actions button.dycom-ds__rail-toggle { display: inline-flex; align-items: center; gap: 8px; }
+.dycom-ds[data-rail="hidden"] .dycom-ds__body { grid-template-columns: minmax(0, 1fr); }
+.dycom-ds[data-rail="hidden"] .dycom-ds__rail { display: none; }
+.dycom-ds[data-rail="hidden"] .dycom-ds__top-actions button.dycom-ds__contents { display: inline-flex; }
+
+.dycom-ds .dycom-ds__body { display: grid; grid-template-columns: 264px minmax(0, 1fr); flex: 1; }
+.dycom-ds .dycom-ds__rail { position: sticky; top: 72px; align-self: start; max-height: calc(100dvh - 72px); overflow-y: auto; padding: 32px 0 48px; border-right: 1px solid var(--c5-rule); background: var(--c5-white); }
+.dycom-ds .dycom-ds__nav-group { padding: 0 28px 28px; }
+.dycom-ds .dycom-ds__nav-group h2 { font-size: 13px; letter-spacing: .08em; margin: 0 0 8px; color: var(--c5-ink); }
+.dycom-ds .dycom-ds__nav-group a { position: relative; display: flex; align-items: center; min-height: 40px; padding: 8px 0 8px 14px; font-size: 15px; color: var(--c5-civic); transition: color var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-ds__nav-group a::before { content: ""; position: absolute; left: 0; top: 6px; bottom: 6px; width: 3px; background: var(--c5-green); transform: scaleY(0); transform-origin: bottom; transition: transform var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-ds__nav-group a:hover::before, .dycom-ds .dycom-ds__nav-group a[aria-current="page"]::before { transform: scaleY(1); transform-origin: top; }
+.dycom-ds .dycom-ds__nav-group a[aria-current="page"] { font-weight: 600; }
+.dycom-ds .dycom-ds__nav-group a.dycom-ds__nav-sub { padding-left: 28px; font-size: 14px; min-height: 36px; }
+
+.dycom-ds .dycom-ds__page { min-width: 0; padding-bottom: 96px; }
+.dycom-ds .dycom-ds__page-head { padding: 56px var(--c5-gutter) 40px; border-bottom: 1px solid var(--c5-rule); }
+.dycom-ds .dycom-ds__eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--c5-font-display); text-transform: uppercase; font-size: 14px; letter-spacing: .06em; color: var(--c5-civic); margin-bottom: 18px; }
+.dycom-ds .dycom-ds__eyebrow::before { content: ""; width: 14px; height: 14px; background: var(--c5-green); }
+.dycom-ds .dycom-ds__page-head h1 { font-size: var(--c5-h2); max-width: 20ch; }
+.dycom-ds .dycom-ds__page-head > p { margin-top: 20px; font-size: 19px; line-height: 1.5; max-width: 62ch; }
+.dycom-ds .dycom-ds__chip { display: inline-flex; align-items: center; min-height: 30px; padding: 0 10px; border: 1px solid var(--c5-rule); font-family: var(--c5-font-display); font-size: 13px; letter-spacing: .04em; text-transform: uppercase; color: var(--c5-civic); background: var(--c5-white); }
+
+.dycom-ds .dycom-ds__section { padding: 48px var(--c5-gutter) 8px; }
+.dycom-ds .dycom-ds__section > h2 { font-size: 28px; margin-bottom: 14px; }
+.dycom-ds .dycom-ds__section > h3 { margin: 32px 0 10px; font-size: 20px; }
+.dycom-ds .dycom-ds__section > p, .dycom-ds .dycom-ds__prose p { font-size: var(--c5-body); line-height: 1.6; max-width: 70ch; }
+.dycom-ds .dycom-ds__section > p + p, .dycom-ds .dycom-ds__prose p + p { margin-top: 12px; }
+.dycom-ds .dycom-ds__prose ul { margin: 12px 0 0; padding-left: 20px; max-width: 70ch; line-height: 1.6; }
+.dycom-ds .dycom-ds__prose li + li { margin-top: 6px; }
+.dycom-ds .dycom-ds__prose code, .dycom-ds code { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .92em; background: var(--c5-paper); padding: 1px 6px; color: var(--c5-civic); }
+
+/* Example stage: the real component, rendered live. */
+.dycom-ds .dycom-ds__stage { margin: 28px 0 8px; border: 1px solid var(--c5-rule); background: var(--c5-white); }
+.dycom-ds .dycom-ds__stage-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; min-height: 44px; padding: 8px 16px; border-bottom: 1px solid var(--c5-rule); background: var(--c5-paper); font-size: 13px; color: var(--c5-ink); }
+.dycom-ds .dycom-ds__stage-bar strong { font-family: var(--c5-font-display); text-transform: uppercase; letter-spacing: .06em; font-weight: 400; color: var(--c5-civic); }
+.dycom-ds .dycom-ds__stage-body { position: relative; }
+.dycom-ds .dycom-ds__stage-body.is-padded { padding: 40px; }
+.dycom-ds .dycom-ds__stage-body.is-dark { background: var(--c5-civic); color: var(--c5-white); }
+.dycom-ds .dycom-ds__stage-body.is-paper { background: var(--c5-paper); }
+.dycom-ds .dycom-ds__row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 20px; }
+.dycom-ds .dycom-ds__row + .dycom-ds__row { margin-top: 24px; }
+/* Framed example: the real component at a real viewport width, scaled to the column when wider than it. */
+.dycom-ds .dycom-ds__viewports { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0 12px; }
+.dycom-ds .dycom-ds__viewports button { min-height: 36px; padding: 0 12px; margin-right: -1px; border: 1px solid var(--c5-civic); background: var(--c5-white); color: var(--c5-civic); font-size: 13px; font-weight: 500; display: inline-flex; align-items: baseline; gap: 6px; cursor: pointer; }
+.dycom-ds .dycom-ds__viewports button small { font-size: 11px; opacity: .7; font-weight: 400; }
+.dycom-ds .dycom-ds__viewports button[aria-pressed="true"] { background: var(--c5-civic); color: var(--c5-white); }
+.dycom-ds .dycom-ds__viewports button[aria-pressed="true"] small { opacity: .8; }
+.dycom-ds .dycom-ds__viewports button:focus-visible { outline: 3px solid var(--c5-green); outline-offset: 2px; position: relative; z-index: 1; }
+.dycom-ds .dycom-ds__viewport-note { font-size: 13px; color: var(--c5-ink); margin-left: 4px; }
+.dycom-ds .dycom-ds__frame-wrap { display: flex; justify-content: center; background: var(--c5-paper); overflow: hidden; }
+.dycom-ds .dycom-ds__frame-wrap[data-preset="desktop"] { justify-content: flex-start; background: var(--c5-white); }
+.dycom-ds .dycom-ds__frame-box { position: relative; overflow: hidden; flex: 0 0 auto; max-width: 100%; }
+.dycom-ds .dycom-ds__frame-wrap:not([data-preset="desktop"]) .dycom-ds__frame-box { border-left: 1px solid var(--c5-rule); border-right: 1px solid var(--c5-rule); }
+.dycom-ds .dycom-ds__frame { display: block; border: 0; transform-origin: 0 0; background: var(--c5-white); }
+/* Inside a frame: no system chrome, no viewport-height minimums, sticky parts stick to the frame's own top. */
+.dycom-c5.dycom-ds--frame { min-height: 0; display: block; overflow: visible; }
+.dycom-ds--frame .dycom-ds__frame-root { min-height: 0; }
+.dycom-ds .dycom-ds__switcher--buttons { display: flex; margin-top: 24px; }
+.dycom-ds .dycom-ds__switcher--buttons button { min-height: 44px; padding: 0 16px; margin-right: -1px; border: 1px solid var(--c5-civic); background: var(--c5-white); color: var(--c5-civic); font-weight: 500; cursor: pointer; }
+.dycom-ds .dycom-ds__switcher--buttons button[aria-pressed="true"] { background: var(--c5-civic); color: var(--c5-white); }
+.dycom-ds .dycom-ds__switcher--buttons + .dycom-ds__stage { margin-top: 0; border-top: 0; }
+.dycom-ds .dycom-ds__stage-note { padding: 10px 16px; border-top: 1px solid var(--c5-rule); font-size: 13px; color: var(--c5-ink); background: var(--c5-white); }
+/* Simulated states: the same rules the live states apply, pinned on so they can be seen without a pointer. */
+.dycom-ds .dycom-ds__state-focus { outline: 3px solid var(--c5-green); outline-offset: 3px; }
+.dycom-ds .dycom-ds__state-label { display: block; font-size: 13px; color: var(--c5-ink); margin-bottom: 10px; font-family: var(--c5-font-display); text-transform: uppercase; letter-spacing: .06em; }
+.dycom-ds .dycom-ds__state { display: flex; flex-direction: column; align-items: start; }
+.dycom-ds .dycom-ds__state.is-hover .dycom-c5__button::after { transform: scaleX(1); }
+
+/* The header's ≥1440px nav sizing assumes the full viewport; inside the
+   content column it keeps the 14px size so the six groups stay on one line. */
+.dycom-ds .dycom-ds__stage .dycom-c5__nav-trigger { font-size: 14px; white-space: nowrap; }
+
+/* Focused examples: show one part of a chapter without clipping it. */
+.dycom-ds .dycom-ds__only-heading > section > :not(.dycom-c5__section-heading) { display: none; }
+.dycom-ds .dycom-ds__only-heading > section { padding-bottom: 0; }
+.dycom-ds .dycom-ds__only-heading .dycom-c5__section-heading { margin-bottom: var(--c5-section); }
+
+/* Tokens */
+.dycom-ds .dycom-ds__tokens { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 15px; }
+.dycom-ds .dycom-ds__tokens th, .dycom-ds .dycom-ds__tokens td { text-align: left; vertical-align: top; padding: 12px 16px 12px 0; border-bottom: 1px solid var(--c5-rule); }
+.dycom-ds .dycom-ds__tokens th { font-family: var(--c5-font-display); text-transform: uppercase; letter-spacing: .06em; font-weight: 400; font-size: 13px; color: var(--c5-civic); }
+.dycom-ds .dycom-ds__tokens td:first-child { white-space: nowrap; }
+.dycom-ds .dycom-ds__plan td:first-child { white-space: normal; }
+.dycom-ds .dycom-ds__plan td { font-size: 14px; line-height: 1.5; }
+.dycom-ds .dycom-ds__plan strong { color: var(--c5-civic); }
+.dycom-ds .dycom-ds__tokens .dycom-ds__value { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 14px; color: var(--c5-civic); }
+.dycom-ds .dycom-ds__swatch { display: inline-block; width: 28px; height: 28px; border: 1px solid var(--c5-rule); vertical-align: middle; margin-right: 10px; }
+.dycom-ds .dycom-ds__swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-top: 24px; }
+.dycom-ds .dycom-ds__swatch-card { border: 1px solid var(--c5-rule); }
+.dycom-ds .dycom-ds__swatch-card > div { height: 96px; }
+.dycom-ds .dycom-ds__swatch-card > p { padding: 12px 14px; font-size: 14px; line-height: 1.45; }
+.dycom-ds .dycom-ds__swatch-card strong { display: block; color: var(--c5-civic); }
+.dycom-ds .dycom-ds__swatch-card .dycom-ds__value { display: block; }
+
+/* Type specimens */
+.dycom-ds .dycom-ds__specimen { padding: 28px 0; border-bottom: 1px solid var(--c5-rule); display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 24px; align-items: baseline; }
+.dycom-ds .dycom-ds__specimen small { display: block; font-size: 13px; color: var(--c5-ink); line-height: 1.5; }
+.dycom-ds .dycom-ds__specimen small b { display: block; font-family: var(--c5-font-display); text-transform: uppercase; font-weight: 400; letter-spacing: .06em; color: var(--c5-civic); font-size: 13px; }
+
+/* Rules */
+.dycom-ds .dycom-ds__rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 28px; }
+.dycom-ds .dycom-ds__rules > div { border-top: 4px solid var(--c5-green); padding-top: 14px; }
+.dycom-ds .dycom-ds__rules > div.is-dont { border-top-color: var(--c5-rule); }
+.dycom-ds .dycom-ds__rules h3 { font-family: var(--c5-font-display); font-weight: 400; text-transform: uppercase; font-size: 15px; letter-spacing: .06em; margin: 0 0 10px; }
+.dycom-ds .dycom-ds__rules ul { margin: 0; padding-left: 18px; font-size: 15px; line-height: 1.55; }
+.dycom-ds .dycom-ds__rules li + li { margin-top: 6px; }
+
+/* Shape, spacing and motion demos */
+.dycom-ds .dycom-ds__spacing { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+.dycom-ds .dycom-ds__spacing > div { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 20px; align-items: center; font-size: 14px; }
+.dycom-ds .dycom-ds__spacing i { display: block; height: 18px; background: var(--c5-civic-soft); }
+.dycom-ds .dycom-ds__shape-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; margin-top: 24px; }
+.dycom-ds .dycom-ds__shape-grid > div { border: 1px solid var(--c5-rule); padding: 20px; font-size: 14px; text-align: center; color: var(--c5-civic); }
+.dycom-ds .dycom-ds__shape-grid i { display: block; margin: 0 auto 14px; width: 48px; height: 48px; background: var(--c5-civic); }
+.dycom-ds .dycom-ds__shape-grid i.is-ring { background: transparent; border: 2px solid var(--c5-green); }
+.dycom-ds .dycom-ds__shape-grid i.is-bad { background: var(--c5-rule); border-radius: 50%; }
+.dycom-ds .dycom-ds__shape-grid i.is-pill { background: var(--c5-rule); border-radius: 999px; width: 80px; height: 32px; }
+.dycom-ds .dycom-ds__motion-demo { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; }
+.dycom-ds .dycom-ds__motion-demo button { position: relative; min-height: 50px; padding: 0 20px; border: 1px solid var(--c5-civic); background: var(--c5-white); color: var(--c5-civic); font-weight: 500; }
+.dycom-ds .dycom-ds__motion-demo button::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 4px; background: var(--c5-green); transform: scaleX(0); transform-origin: right; transition: transform var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-ds__motion-demo button:hover::after, .dycom-ds .dycom-ds__motion-demo button[aria-pressed="true"]::after { transform: scaleX(1); transform-origin: left; }
+.dycom-ds .dycom-ds__signal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; margin-top: 24px; }
+.dycom-ds .dycom-ds__signal-grid > div { border: 1px solid var(--c5-rule); padding: 20px; font-size: 13px; color: var(--c5-ink); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.dycom-ds .dycom-ds__signal-grid .dycom-c5__signal { color: var(--c5-civic); }
+.dycom-ds .dycom-ds__signal-grid > div.is-dark { background: var(--c5-civic); color: var(--c5-white); }
+.dycom-ds .dycom-ds__signal-grid > div.is-dark .dycom-c5__signal { color: var(--c5-white); }
+.dycom-ds .dycom-ds__signal-grid > div.is-green .dycom-c5__signal { color: var(--c5-green); }
+.dycom-ds .dycom-ds__imagery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 24px; }
+.dycom-ds .dycom-ds__imagery figure { margin: 0; border: 1px solid var(--c5-rule); }
+.dycom-ds .dycom-ds__imagery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.dycom-ds .dycom-ds__imagery figcaption { padding: 10px 12px; font-size: 13px; color: var(--c5-ink); }
+.dycom-ds .dycom-ds__imagery figcaption b { display: block; color: var(--c5-civic); font-weight: 500; }
+.dycom-ds .dycom-ds__count { font-family: var(--c5-font-text); font-size: 14px; font-weight: 500; color: var(--c5-ink); margin-left: 8px; vertical-align: middle; }
+
+/* Overview */
+.dycom-ds .dycom-ds__overview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-top: 24px; }
+.dycom-ds .dycom-ds__overview-grid a { position: relative; display: flex; flex-direction: column; gap: 10px; min-height: 150px; padding: 22px 22px 48px; border: 1px solid var(--c5-rule); color: var(--c5-civic); transition: border-color var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-ds__overview-grid a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--c5-green); transform: scaleX(0); transform-origin: right; transition: transform var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-ds__overview-grid a:hover::after { transform: scaleX(1); transform-origin: left; }
+.dycom-ds .dycom-ds__overview-grid a:hover { border-color: var(--c5-civic); }
+.dycom-ds .dycom-ds__overview-grid strong { font-family: var(--c5-font-display); font-weight: 400; text-transform: uppercase; font-size: 17px; letter-spacing: .02em; }
+.dycom-ds .dycom-ds__overview-grid p { font-size: 14px; line-height: 1.5; color: var(--c5-ink); }
+.dycom-ds .dycom-ds__overview-grid svg { position: absolute; right: 18px; bottom: 16px; }
+.dycom-ds .dycom-ds__pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; margin-top: 32px; border: 1px solid var(--c5-rule); }
+.dycom-ds .dycom-ds__pillars > div { padding: 24px; border-right: 1px solid var(--c5-rule); }
+.dycom-ds .dycom-ds__pillars > div:last-child { border-right: 0; }
+.dycom-ds .dycom-ds__pillars strong { display: block; font-family: var(--c5-font-display); font-weight: 400; text-transform: uppercase; font-size: 15px; letter-spacing: .04em; color: var(--c5-civic); margin-bottom: 8px; }
+.dycom-ds .dycom-ds__pillars p { font-size: 14px; line-height: 1.5; }
+
+/* Company map styling options (in-page, no URLs) */
+.dycom-ds .dycom-ds__switcher { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 28px; }
+.dycom-ds .dycom-ds__switcher fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+.dycom-ds .dycom-ds__switcher legend { font-family: var(--c5-font-display); text-transform: uppercase; letter-spacing: .06em; font-size: 13px; color: var(--c5-civic); margin-bottom: 10px; }
+.dycom-ds .dycom-ds__switcher label { position: relative; display: flex; flex-direction: column; gap: 2px; min-height: 48px; padding: 10px 14px; border: 1px solid var(--c5-rule); margin-top: -1px; font-size: 15px; color: var(--c5-civic); cursor: pointer; transition: background-color var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-ds__switcher label input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.dycom-ds .dycom-ds__switcher label.is-active { background: var(--c5-civic); color: var(--c5-white); border-color: var(--c5-civic); z-index: 1; }
+.dycom-ds .dycom-ds__switcher label:hover:not(.is-active) { background: var(--c5-paper); }
+.dycom-ds .dycom-ds__switcher label:has(input:focus-visible) { outline: 3px solid var(--c5-green); outline-offset: 0; z-index: 2; }
+.dycom-ds .dycom-ds__switcher label span { font-weight: 500; }
+.dycom-ds .dycom-ds__switcher label small { font-size: 12px; opacity: .85; line-height: 1.4; }
+
+.dycom-ds .dycom-ds__unavailable { padding: 96px var(--c5-gutter); }
+
+/* Rail collapses to a Contents drawer below 1280px. */
+@media (max-width: 1279px) {
+  .dycom-ds .dycom-ds__body { grid-template-columns: minmax(0, 1fr); }
+  .dycom-ds .dycom-ds__rail { display: none; }
+  .dycom-ds .dycom-ds__top-actions button.dycom-ds__contents { display: inline-flex; }
+  .dycom-ds .dycom-ds__top-actions button.dycom-ds__rail-toggle { display: none; }
+  .dycom-ds .dycom-ds__switcher { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 767px) {
+  .dycom-ds .dycom-ds__top { height: 64px; }
+  .dycom-ds .dycom-ds__brand span { display: none; }
+  .dycom-ds .dycom-ds__page-head { padding-top: 36px; padding-bottom: 28px; }
+  .dycom-ds .dycom-ds__stage-body.is-padded { padding: 20px; }
+  .dycom-ds .dycom-ds__rules, .dycom-ds .dycom-ds__specimen, .dycom-ds .dycom-ds__spacing > div { grid-template-columns: minmax(0, 1fr); }
+  .dycom-ds .dycom-ds__tokens td:first-child { white-space: normal; }
+  /* Plan tables stack on phones: one block per row, each cell labelled. */
+  .dycom-ds .dycom-ds__plan thead { display: none; }
+  .dycom-ds .dycom-ds__plan tr { display: block; padding: 14px 0; border-bottom: 1px solid var(--c5-rule); }
+  .dycom-ds .dycom-ds__plan td { display: block; padding: 2px 0; border: 0; }
+  .dycom-ds .dycom-ds__plan td::before { content: attr(data-label); display: block; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--c5-ink); opacity: .7; margin-top: 6px; }
+  .dycom-ds .dycom-ds__plan td:first-child::before { margin-top: 0; }
+}

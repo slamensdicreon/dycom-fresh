@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  "references": [
+    {
+      "path": "lib/dycom-brand"
+    },
+    {
+      "path": "lib/dycom-network-map"
+    },
+    {
+      "path": "lib/review-access-react"
+    },
+    {
+      "path": "artifacts/dycom-concept-05"
+    }
+  ]
+}

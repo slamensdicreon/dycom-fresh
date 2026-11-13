@@ -1,0 +1,202 @@
+/* Undecided interactions: the five company-map explorations. Brand tokens only;
+   square corners throughout. Scoped under .dycom-ds like the rest of the DS. */
+
+.dycom-ds .dycom-x { position: relative; }
+.dycom-ds .dycom-x__pad { padding: clamp(16px, 3vw, 40px); }
+.dycom-ds .dycom-x__loading { min-height: 320px; display: grid; place-items: center; color: var(--c5-ink); font-size: 15px; }
+.dycom-ds .dycom-x__fallback { padding: 8px 0; }
+.dycom-ds .dycom-x__fallback h3 { font-family: var(--c5-font-display); text-transform: uppercase; font-weight: 400; font-size: 20px; letter-spacing: .02em; color: var(--c5-civic); margin-bottom: 10px; }
+.dycom-ds .dycom-x__fallback p { font-size: 15px; line-height: 1.55; max-width: 70ch; }
+.dycom-ds .dycom-x__gesture { margin-top: 18px; font-family: var(--c5-font-display); text-transform: uppercase; letter-spacing: .04em; font-size: 15px; color: var(--c5-civic); padding-left: 14px; border-left: 4px solid var(--c5-green); }
+
+/* Shared list styling inside explorations */
+.dycom-ds .dycom-x .dycom-c5__company-list { height: auto; max-height: 540px; overflow-y: auto; border-top: 1px solid var(--c5-rule); }
+.dycom-ds .dycom-x .dycom-c5__map-summary { display: flex; flex-direction: column; gap: 2px; padding: 0 0 16px; color: var(--c5-civic); }
+.dycom-ds .dycom-x .dycom-c5__map-summary strong { font-family: var(--c5-font-display); font-weight: 400; text-transform: uppercase; font-size: 22px; letter-spacing: .02em; }
+.dycom-ds .dycom-x .dycom-c5__map-summary span { font-size: 14px; color: var(--c5-ink); }
+
+/* Overview cards */
+.dycom-ds .dycom-x__cards { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.dycom-ds .dycom-x__card { position: relative; display: flex; flex-direction: column; gap: 10px; min-height: 260px; padding: 24px 24px 56px; border: 1px solid var(--c5-rule); color: var(--c5-civic); transition: border-color var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-x__card::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--c5-green); transform: scaleX(0); transform-origin: right; transition: transform var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-x__card:hover { border-color: var(--c5-civic); }
+.dycom-ds .dycom-x__card:hover::after { transform: scaleX(1); transform-origin: left; }
+.dycom-ds .dycom-x__card-number { font-family: var(--c5-font-display); font-size: 13px; letter-spacing: .08em; color: var(--c5-green); }
+.dycom-ds .dycom-x__card strong { font-family: var(--c5-font-display); font-weight: 400; text-transform: uppercase; font-size: 22px; letter-spacing: .02em; }
+.dycom-ds .dycom-x__card-gesture { font-weight: 500; font-size: 15px; }
+.dycom-ds .dycom-x__card p { font-size: 14px; line-height: 1.55; color: var(--c5-ink); }
+.dycom-ds .dycom-x__card small { margin-top: auto; font-size: 13px; color: var(--c5-ink); }
+.dycom-ds .dycom-x__card > svg { position: absolute; right: 20px; bottom: 18px; }
+.dycom-ds .dycom-x__compare-wrap { overflow-x: auto; margin-top: 24px; }
+.dycom-ds .dycom-x__compare { min-width: 900px; }
+.dycom-ds .dycom-x__compare th[scope="row"] { text-align: left; white-space: nowrap; vertical-align: top; }
+.dycom-ds .dycom-x__compare th[scope="row"] a { color: var(--c5-civic); text-decoration: underline; text-underline-offset: 3px; }
+.dycom-ds .dycom-x__compare td { font-size: 14px; line-height: 1.5; vertical-align: top; }
+.dycom-ds .dycom-x__compare ul, .dycom-ds .dycom-x__bends { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.5; }
+.dycom-ds .dycom-x__foot-link { margin-top: 28px; }
+.dycom-ds .dycom-x__weigh { margin-top: 0; }
+.dycom-ds .dycom-x__pager { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: stretch; margin: 48px 0 0; border-top: 1px solid var(--c5-rule); padding-top: 24px; }
+.dycom-ds .dycom-x__pager a { display: inline-flex; align-items: center; gap: 12px; min-height: 50px; color: var(--c5-civic); font-weight: 500; }
+.dycom-ds .dycom-x__pager a span { display: flex; flex-direction: column; }
+.dycom-ds .dycom-x__pager a small { font-size: 12px; font-weight: 400; text-transform: uppercase; letter-spacing: .06em; color: var(--c5-ink); }
+.dycom-ds .dycom-x__pager a.is-next { justify-self: end; text-align: right; }
+.dycom-ds .dycom-x__pager-all { justify-self: center; padding: 0 20px; border: 1px solid var(--c5-civic); }
+
+/* Shared: the real basemaps (street map, near you). Square controls in Civic Blue; the service's own glyphs are replaced. */
+.dycom-ds .dycom-x__map .maplibregl-ctrl-top-right { z-index: 2; }
+.dycom-ds .dycom-x__map .maplibregl-ctrl-group { border-radius: 0; box-shadow: none; border: 1px solid var(--c5-civic); background: var(--c5-white); }
+.dycom-ds .dycom-x__map .maplibregl-ctrl-group button { position: relative; width: 40px; height: 40px; border-radius: 0; background: var(--c5-white); color: var(--c5-civic); transition: background-color var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-x__map .maplibregl-ctrl-group button + button { border-top: 1px solid var(--c5-civic); }
+.dycom-ds .dycom-x__map .maplibregl-ctrl-group button:hover { background: var(--c5-paper); }
+.dycom-ds .dycom-x__map .maplibregl-ctrl-group button:focus-visible { outline: 3px solid var(--c5-green); outline-offset: -3px; box-shadow: none; }
+.dycom-ds .dycom-x__map .maplibregl-ctrl-group button .maplibregl-ctrl-icon { background-image: none; }
+.dycom-ds .dycom-x__map .maplibregl-ctrl-group button::before, .dycom-ds .dycom-x__map .maplibregl-ctrl-group button::after { content: ""; position: absolute; left: 50%; top: 50%; width: 14px; height: 2px; margin: -1px 0 0 -7px; background: var(--c5-civic); }
+.dycom-ds .dycom-x__map .maplibregl-ctrl-group button.maplibregl-ctrl-zoom-in::after { transform: rotate(90deg); }
+.dycom-ds .dycom-x__map .maplibregl-ctrl-group button.maplibregl-ctrl-zoom-out::after { display: none; }
+.dycom-ds .dycom-x__map .maplibregl-canvas { outline: none; }
+.dycom-ds .dycom-x__map .maplibregl-canvas-container.maplibregl-interactive { cursor: grab; }
+.dycom-ds .dycom-x__map .maplibregl-cooperative-gesture-screen { border-radius: 0; font-family: var(--c5-font-body); }
+.dycom-ds .dycom-x__map-attribution { position: absolute; right: 8px; bottom: 6px; z-index: 2; font-size: 11px; color: var(--c5-ink); background: rgba(255, 255, 255, .85); padding: 2px 6px; }
+.dycom-ds .dycom-x__map-loading { position: absolute; inset: 0; display: grid; place-items: center; font-size: 15px; color: var(--c5-ink); pointer-events: none; }
+.dycom-ds .dycom-x__pin { display: flex; align-items: center; justify-content: center; width: 16px; height: 16px; padding: 0; border: 2px solid var(--c5-white); background: var(--c5-civic); color: var(--c5-white); cursor: pointer; box-shadow: none; transition: background-color var(--c5-draw) var(--c5-ease), transform var(--c5-draw) var(--c5-ease), opacity var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-x__pin.is-cluster { width: 32px; height: 32px; }
+.dycom-ds .dycom-x__pin b { font-family: var(--c5-font-display); font-weight: 400; font-size: 13px; line-height: 1; }
+.dycom-ds .dycom-x__pin:not(.is-cluster) b { position: absolute; left: 100%; top: -6px; margin-left: 2px; color: var(--c5-civic); font-size: 12px; }
+.dycom-ds .dycom-x__pin:hover, .dycom-ds .dycom-x__pin.is-active, .dycom-ds .dycom-x__pin:focus-visible { background: var(--c5-green); color: var(--c5-civic-deep); outline: 2px solid var(--c5-green); outline-offset: 2px; }
+
+/* 05 State index */
+.dycom-ds .dycom-x__state { display: grid; grid-template-columns: minmax(0, 3fr) minmax(280px, 2fr); gap: 40px; padding: clamp(16px, 3vw, 40px); }
+.dycom-ds .dycom-x__state-stage { position: relative; overflow: hidden; }
+.dycom-ds .dycom-x__state-grid-wrap { transition: transform var(--c5-draw) var(--c5-ease), opacity var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-x__state.is-detail .dycom-x__state-grid-wrap { position: absolute; inset: 0 0 auto; transform: translateX(-100%); opacity: 0; pointer-events: none; }
+.dycom-ds .dycom-x__state-detail { position: relative; animation: dycom-x-detail-in var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-x__state-detail > h3 { font-family: var(--c5-font-display); text-transform: uppercase; font-weight: 400; font-size: 28px; letter-spacing: .02em; color: var(--c5-civic); margin-top: 16px; outline: none; }
+.dycom-ds .dycom-x__state-detail .dycom-c5__company-detail { padding: 16px 0 0; }
+.dycom-ds .dycom-x__state-back { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px 0 10px; border: 1px solid var(--c5-civic); background: var(--c5-white); color: var(--c5-civic); font: inherit; font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: none; transition: background-color var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-x__state-back:hover { background: var(--c5-paper); }
+.dycom-ds .dycom-x__state-back:focus-visible { outline: 3px solid var(--c5-green); outline-offset: 2px; }
+@keyframes dycom-x-detail-in { from { transform: translateX(32px); opacity: 0; } to { transform: none; opacity: 1; } }
+.dycom-ds[data-motion="off"] .dycom-x__state-grid-wrap, .dycom-ds[data-motion="off"] .dycom-x__state-detail { transition: none; animation: none; }
+@media (prefers-reduced-motion: reduce) { .dycom-ds .dycom-x__state-grid-wrap, .dycom-ds .dycom-x__state-detail { transition: none; animation: none; } }
+.dycom-ds .dycom-x__state-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 4px; aspect-ratio: 12 / 8; }
+.dycom-ds .dycom-x__tile { position: relative; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; padding: 6px; border: 1px solid var(--c5-rule); background: var(--c5-white); color: var(--c5-ink); font-size: clamp(9px, 1vw, 13px); font-weight: 500; line-height: 1; cursor: default; box-shadow: none; }
+.dycom-ds .dycom-x__tile.has-offices { background: var(--c5-civic); border-color: var(--c5-civic); color: var(--c5-white); cursor: pointer; transition: background-color var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-x__tile.has-offices b { font-family: var(--c5-font-display); font-weight: 400; font-size: clamp(12px, 1.6vw, 20px); align-self: flex-end; }
+.dycom-ds .dycom-x__tile.has-offices:hover, .dycom-ds .dycom-x__tile.has-offices.is-active { background: var(--c5-green); border-color: var(--c5-green); color: var(--c5-civic-deep); }
+.dycom-ds .dycom-x__tile:focus-visible { outline: 3px solid var(--c5-green); outline-offset: 2px; }
+.dycom-ds .dycom-x__state-key { display: flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 13px; color: var(--c5-ink); }
+.dycom-ds .dycom-x__state-key i { width: 14px; height: 14px; border: 1px solid var(--c5-rule); background: var(--c5-white); margin-left: 12px; }
+.dycom-ds .dycom-x__state-key i:first-child { margin-left: 0; }
+.dycom-ds .dycom-x__state-key i.has-offices { background: var(--c5-civic); border-color: var(--c5-civic); }
+.dycom-ds .dycom-x__state-panel h3 { font-family: var(--c5-font-display); text-transform: uppercase; font-weight: 400; font-size: 28px; letter-spacing: .02em; color: var(--c5-civic); }
+.dycom-ds .dycom-x__state-panel > p { font-size: 14px; color: var(--c5-ink); margin: 8px 0 16px; }
+
+/* 04 Near you */
+.dycom-ds .dycom-x__near { display: flex; flex-direction: column; gap: 20px; padding: clamp(16px, 3vw, 40px); }
+.dycom-ds .dycom-x__near-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.dycom-ds .dycom-x__near-bar label { font-family: var(--c5-font-display); text-transform: uppercase; letter-spacing: .03em; font-size: 20px; color: var(--c5-civic); margin-right: 8px; }
+.dycom-ds .dycom-x__near-bar input { flex: 1 1 220px; max-width: 360px; height: var(--c5-control, 50px); padding: 0 14px; border: 1px solid var(--c5-rule); color: var(--c5-civic); font: inherit; font-size: 15px; background: var(--c5-white); }
+.dycom-ds .dycom-x__near-bar input:focus-visible { outline: 3px solid var(--c5-green); outline-offset: 0; }
+.dycom-ds .dycom-x__near-locate { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0; border: 0; background: none; color: var(--c5-civic); font: inherit; font-size: 14px; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; box-shadow: none; }
+.dycom-ds .dycom-x__near-message { font-size: 14px; color: var(--c5-civic); padding-left: 12px; border-left: 3px solid var(--c5-green); }
+.dycom-ds .dycom-x__near-map { position: relative; height: 420px; background: var(--c5-paper); border: 1px solid var(--c5-rule); }
+.dycom-ds .dycom-x__near-canvas { position: absolute; inset: 0; }
+.dycom-ds .dycom-x__near-still { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px; background: var(--c5-paper); }
+.dycom-ds .dycom-x__near-still svg { display: block; width: auto; max-width: 100%; height: auto; max-height: 340px; }
+.dycom-ds .dycom-x__near-caption { margin-top: 10px; font-size: 13px; color: var(--c5-ink); text-align: center; }
+.dycom-ds .dycom-x__near-you { width: 28px; height: 28px; border: 3px solid var(--c5-green); background: none; pointer-events: none; }
+.dycom-ds .dycom-x__pin.is-ranked { width: 22px; height: 22px; }
+.dycom-ds .dycom-x__pin.is-ranked b { position: static; margin: 0; color: inherit; font-size: 11px; }
+.dycom-ds .dycom-x__pin.is-dim { opacity: .4; }
+.dycom-ds .dycom-x__pin.is-dim:hover, .dycom-ds .dycom-x__pin.is-dim.is-active { opacity: 1; }
+.dycom-ds .dycom-x__near-results h3 { font-family: var(--c5-font-display); text-transform: uppercase; font-weight: 400; font-size: 24px; letter-spacing: .02em; color: var(--c5-civic); margin-bottom: 14px; }
+.dycom-ds .dycom-x__near-empty p { font-size: 15px; line-height: 1.55; max-width: 60ch; }
+.dycom-ds .dycom-x__near-examples { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.dycom-ds .dycom-x__near-examples button { min-height: 40px; padding: 0 14px; border: 1px solid var(--c5-civic); background: var(--c5-white); color: var(--c5-civic); font: inherit; font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: none; transition: background-color var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-x__near-examples button:hover { background: var(--c5-paper); }
+.dycom-ds .dycom-x__near-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.dycom-ds .dycom-x__near-tile { display: flex; flex-direction: column; padding: 14px 16px 6px; border: 1px solid var(--c5-rule); background: var(--c5-white); transition: border-color var(--c5-draw) var(--c5-ease), box-shadow var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-x__near-tile.is-active { border-color: var(--c5-civic); box-shadow: inset 0 -4px 0 var(--c5-green); }
+.dycom-ds .dycom-x__near-tile-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; color: var(--c5-civic); }
+.dycom-ds .dycom-x__near-tile-head b { font-family: var(--c5-font-display); font-weight: 400; font-size: 22px; color: var(--c5-green); }
+.dycom-ds .dycom-x__near-tile-head span { font-size: 14px; font-weight: 500; }
+.dycom-ds .dycom-x__near-tile-place { font-size: 15px; font-weight: 500; color: var(--c5-civic); margin: 4px 0 6px; }
+.dycom-ds .dycom-x__near-tile-companies { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--c5-rule); }
+.dycom-ds .dycom-x__near-tile-companies li + li { border-top: 1px solid var(--c5-rule); }
+.dycom-ds .dycom-x__near-tile-companies button { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; min-height: 48px; padding: 6px 0; border: 0; background: none; color: var(--c5-civic); font: inherit; text-align: left; cursor: pointer; box-shadow: none; }
+.dycom-ds .dycom-x__near-tile-companies button > span { display: flex; flex-direction: column; font-size: 14px; font-weight: 500; }
+.dycom-ds .dycom-x__near-tile-companies button small { font-size: 12px; font-weight: 400; color: var(--c5-ink); }
+.dycom-ds .dycom-x__near-tile-companies button svg { flex: none; transition: transform var(--c5-draw) var(--c5-ease); }
+.dycom-ds .dycom-x__near-tile-companies button:hover svg { transform: translateX(4px); }
+.dycom-ds .dycom-x__near-tile-companies button:focus-visible { outline: 3px solid var(--c5-green); outline-offset: -3px; }
+.dycom-ds .dycom-x__near-more { margin-top: 16px; background: none; border: 0; padding: 0; font: inherit; cursor: pointer; box-shadow: none; }
+
+/* 02 Street map */
+.dycom-ds .dycom-x__street { display: grid; grid-template-columns: minmax(0, 3fr) minmax(300px, 2fr); min-height: 620px; }
+.dycom-ds .dycom-x__street-map { position: relative; min-height: 620px; background: var(--c5-paper); border-right: 1px solid var(--c5-rule); }
+.dycom-ds .dycom-x__street-canvas { position: absolute; inset: 0; }
+.dycom-ds .dycom-x__street-regions { position: absolute; left: 12px; top: 12px; display: flex; flex-wrap: wrap; gap: 0; border: 1px solid var(--c5-civic); background: var(--c5-white); z-index: 2; }
+.dycom-ds .dycom-x__street-regions button { min-height: 40px; padding: 0 12px; border: 0; border-right: 1px solid var(--c5-civic); background: var(--c5-white); color: var(--c5-civic); font: inherit; font-size: 13px; font-weight: 500; cursor: pointer; box-shadow: none; }
+.dycom-ds .dycom-x__street-regions button:last-child { border-right: 0; }
+.dycom-ds .dycom-x__street-regions button[aria-pressed="true"] { background: var(--c5-civic); color: var(--c5-white); }
+.dycom-ds .dycom-x__street-list { padding: 24px; display: flex; flex-direction: column; }
+.dycom-ds .dycom-x__street-list .dycom-c5__company-list { flex: 1; max-height: 520px; }
+
+/* 03 Relief model: the office control above a full-width stage; a floating tile beside the chosen post. */
+.dycom-ds .dycom-x__relief { display: flex; flex-direction: column; min-height: 640px; }
+.dycom-ds.dycom-ds--frame .dycom-x__relief { min-height: 100vh; } /* fills its fixed-height frame */
+.dycom-ds .dycom-x__relief-bar { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 32px; padding: 16px clamp(16px, 3vw, 40px) 20px; border-bottom: 1px solid var(--c5-rule); }
+.dycom-ds .dycom-x__relief-find { flex: 0 1 380px; margin-top: 0; }
+.dycom-ds .dycom-x__relief-find select { width: 100%; }
+.dycom-ds .dycom-x__relief-count { display: flex; flex-direction: column; gap: 2px; padding-bottom: 6px; color: var(--c5-civic); }
+.dycom-ds .dycom-x__relief-count strong { font-family: var(--c5-font-display); font-weight: 400; text-transform: uppercase; font-size: 20px; letter-spacing: .02em; }
+.dycom-ds .dycom-x__relief-count span { font-size: 13px; color: var(--c5-ink); }
+.dycom-ds .dycom-x__relief-scene { position: relative; flex: 1 1 auto; min-height: 460px; background: var(--c5-paper); }
+.dycom-ds .dycom-x__relief-canvas { position: absolute; inset: 0; }
+.dycom-ds .dycom-x__relief-canvas > div:not(.dycom-x__relief-tile) { position: absolute !important; inset: 0; } /* the renderer sets its wrapper to a relative percentage height inline, which a flexed box cannot resolve; pin it to the box instead */
+.dycom-ds .dycom-x__relief-scene canvas { display: block; touch-action: none; }
+.dycom-ds .dycom-x__relief-help { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 10px 16px; background: rgba(255, 255, 255, .9); border-top: 1px solid var(--c5-rule); font-size: 13px; color: var(--c5-ink); }
+.dycom-ds .dycom-x__relief-help strong { color: var(--c5-civic); font-weight: 500; }
+.dycom-ds .dycom-x__relief-help button { min-height: 36px; padding: 0 12px; border: 1px solid var(--c5-civic); background: var(--c5-white); color: var(--c5-civic); font: inherit; font-size: 13px; font-weight: 500; cursor: pointer; box-shadow: none; }
+.dycom-ds .dycom-x__relief-label { padding: 8px 10px; background: var(--c5-civic); color: var(--c5-white); font-family: var(--c5-font-body); font-size: 13px; font-weight: 500; line-height: 1.3; white-space: nowrap; }
+.dycom-ds .dycom-x__relief-label small { font-weight: 400; opacity: .85; }
+.dycom-ds .dycom-x__relief-tile { position: absolute; left: 0; top: 0; z-index: 3; width: 300px; max-width: calc(100% - 16px); background: var(--c5-white); border: 1px solid var(--c5-civic); color: var(--c5-civic); }
+.dycom-ds .dycom-x__relief-tile-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 6px 8px 14px; background: var(--c5-civic); color: var(--c5-white); }
+.dycom-ds .dycom-x__relief-tile-head strong { font-family: var(--c5-font-display); font-weight: 400; text-transform: uppercase; font-size: 15px; letter-spacing: .03em; }
+.dycom-ds .dycom-x__relief-tile-head button { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; background: none; color: var(--c5-white); cursor: pointer; box-shadow: none; }
+.dycom-ds .dycom-x__relief-tile-head button:focus-visible { outline: 3px solid var(--c5-green); outline-offset: -3px; }
+.dycom-ds .dycom-x__relief-tile ul { list-style: none; margin: 0; padding: 0 14px; }
+.dycom-ds .dycom-x__relief-tile li { padding: 12px 0; border-top: 1px solid var(--c5-rule); }
+.dycom-ds .dycom-x__relief-tile li:first-child { border-top: 0; }
+.dycom-ds .dycom-x__relief-tile li > strong { display: block; font-size: 15px; font-weight: 500; line-height: 1.3; }
+.dycom-ds .dycom-x__relief-tile li > small { display: block; margin-top: 2px; font-size: 13px; color: var(--c5-ink); }
+.dycom-ds .dycom-x__relief-tile-actions { display: flex; flex-wrap: wrap; gap: 0 16px; margin-top: 4px; }
+.dycom-ds .dycom-x__relief-tile-actions a, .dycom-ds .dycom-x__relief-tile-actions button { display: inline-flex; align-items: center; gap: 3px; min-height: 36px; padding: 0; border: 0; background: none; color: var(--c5-civic); font: inherit; font-size: 13px; font-weight: 500; text-decoration: underline; text-decoration-thickness: var(--c5-link-thickness); text-underline-offset: var(--c5-link-offset); cursor: pointer; box-shadow: none; }
+.dycom-ds .dycom-x__relief-tile-actions a:focus-visible, .dycom-ds .dycom-x__relief-tile-actions button:focus-visible { outline: 3px solid var(--c5-green); outline-offset: 2px; }
+
+@media (max-width: 1023px) {
+  .dycom-ds .dycom-x__state, .dycom-ds .dycom-x__street { grid-template-columns: minmax(0, 1fr); }
+  .dycom-ds .dycom-x__near-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dycom-ds .dycom-x__street-map { min-height: 52vh; border-right: 0; border-bottom: 1px solid var(--c5-rule); }
+  .dycom-ds .dycom-x__street { min-height: 0; }
+  .dycom-ds .dycom-x__pager { grid-template-columns: minmax(0, 1fr); }
+  .dycom-ds .dycom-x__pager a.is-next { justify-self: start; text-align: left; }
+  .dycom-ds .dycom-x__pager-all { justify-self: start; }
+}
+@media (max-width: 767px) {
+  /* The no-map-on-phones rule applies to the options that keep today's still atlas. */
+  .dycom-ds .dycom-x__near-map { display: none; }
+  .dycom-ds .dycom-x__near-bar label { flex: 1 0 100%; margin-right: 0; }
+  .dycom-ds .dycom-x__near-bar input { max-width: none; }
+  .dycom-ds .dycom-x__near-grid { grid-template-columns: minmax(0, 1fr); }
+  .dycom-ds .dycom-x__state-grid { gap: 2px; }
+  .dycom-ds .dycom-x__tile { padding: 3px; }
+  .dycom-ds .dycom-x__street-regions { position: static; border-left: 0; border-right: 0; border-top: 0; }
+  .dycom-ds .dycom-x__street-regions button { flex: 1 1 auto; font-size: 12px; padding: 0 8px; }
+  .dycom-ds .dycom-x__street-canvas { position: relative; height: 52vh; }
+  .dycom-ds .dycom-x__street-map { min-height: 0; display: flex; flex-direction: column; }
+  .dycom-ds .dycom-x__relief-find { flex-basis: 100%; }
+  .dycom-ds .dycom-x__relief-help { position: static; }
+  .dycom-ds .dycom-x__relief-scene { display: flex; flex-direction: column; min-height: 0; }
+  .dycom-ds .dycom-x__relief-canvas { position: relative; inset: auto; flex: 1 1 auto; min-height: 52vh; }
+}

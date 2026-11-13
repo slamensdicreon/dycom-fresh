@@ -1,0 +1,41 @@
+/* Focused readability and hero-control refinements for the editable V2 frame. */
+/* The brand film has its own band below the facts; the hero keeps only the
+   clear, accessible pause/play control for the background loop. */
+.dycom-c5.dycom-consolidated-v2 .dycom-c5__media-actions {
+  justify-content: flex-end;
+}
+
+/* Keep supporting copy comfortably legible instead of dropping to tiny labels. */
+.dycom-c5.dycom-consolidated-v2 .dycom-c5__pathway p,
+.dycom-c5.dycom-consolidated-v2 .dycom-c5__facts span,
+.dycom-c5.dycom-consolidated-v2 .dycom-c5__trade span span,
+.dycom-c5.dycom-consolidated-v2 .dycom-c5__investor-tiles p,
+.dycom-c5.dycom-consolidated-v2 .dycom-c5__resources a,
+.dycom-c5.dycom-consolidated-v2 .dycom-c5__footer-main nav a,
+.dycom-c5.dycom-consolidated-v2 .dycom-c5__footer-accordion-content a {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.dycom-c5.dycom-consolidated-v2 .dycom-c5__hero-eyebrow,
+.dycom-c5.dycom-consolidated-v2 .dycom-c5__who-intro > span {
+  font-size: 15px;
+}
+
+.dycom-c5.dycom-consolidated-v2 .dycom-c5__investor-tiles .dycom-c5__button {
+  font-size: 16px;
+}
+
+.dycom-c5.dycom-consolidated-v2 .dycom-c5__pathway > span,
+.dycom-c5.dycom-consolidated-v2 .dycom-c5__hero-copy .dycom-c5__button {
+  font-size: 16px;
+}
+
+
+@media (max-width: 767px) {
+  .dycom-c5.dycom-consolidated-v2 .dycom-c5__pathway p,
+    .dycom-c5.dycom-consolidated-v2 .dycom-c5__trade span span,
+  .dycom-c5.dycom-consolidated-v2 .dycom-c5__footer-accordion-content a {
+    font-size: 16px;
+  }
+}

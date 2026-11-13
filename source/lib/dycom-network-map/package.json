@@ -1,0 +1,34 @@
+{
+  "name": "@workspace/dycom-network-map",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.tsx",
+    "./styles.css": "./src/styles.css",
+    "./companies": "./src/companies.ts",
+    "./sample-jobs": "./src/sample-jobs.ts",
+    "./geometry": "./src/geometry.ts",
+    "./presentation": "./src/presentation.ts",
+    "./proximity": "./src/proximity.ts",
+    "./logos": "./src/logos.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "maplibre-gl": "^6.10.0",
+    "lucide-react": "catalog:"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@types/geojson": "^7946.0.16",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  }
+}

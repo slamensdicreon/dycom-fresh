@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/dycom-concept-05/"
+title = "Dycom Concept 05 — Consolidated"
+description = "The consolidated Dycom homepage and navigation concept built from the client's review feedback on Concepts 01–04: Concept 04's structure with the brand system corrections (square shapes, Civic Blue + Signal Green, Fjalla One headlines), a halftone operating-companies map, work tabs and process route, a careers drawer, investors and resources, one closing step. Access-gated for assigned Dycom reviewers inside the Icreon review workspace."
+version = "1.0.0"
+id = "artifacts/dycom-concept-05"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/dycom-concept-05/" ]
+localPort = 25825
+
+[services.development]
+run = "pnpm --filter @workspace/dycom-concept-05 run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/dycom-concept-05", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/dycom-concept-05/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25825"
+BASE_PATH = "/dycom-concept-05/"
