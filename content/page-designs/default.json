@@ -2,11 +2,24 @@
   "name": "Default page design",
   "placeholders": {
     "headless-header": [
-      { "componentName": "SiteHeader", "dataSource": "global/header" }
+      {
+        "componentName": "ResultsBar",
+        "dataSource": "global/results-bar"
+      },
+      {
+        "componentName": "SiteHeader",
+        "dataSource": "global/header"
+      }
     ],
     "headless-footer": [
-      { "componentName": "SiteFooter", "dataSource": "global/footer" },
-      { "componentName": "RolesDrawer", "dataSource": "global/roles-drawer" }
+      {
+        "componentName": "SiteFooter",
+        "dataSource": "global/footer"
+      },
+      {
+        "componentName": "RolesDrawer",
+        "dataSource": "global/roles-drawer"
+      }
     ]
   }
 }

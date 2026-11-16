@@ -1,0 +1,13 @@
+{
+  "templateName": "News Item",
+  "sortOrder": 0,
+  "fields": {
+    "Title": "Dycom Industries, Inc. to Host Fiscal 2027 Third Quarter Results Call on November 24, 2026",
+    "Date": "2026-11-13",
+    "DisplayDate": "November 13, 2026",
+    "Link": {
+      "$link": "/investors/news/",
+      "text": "Dycom Industries, Inc. to Host Fiscal 2027 Third Quarter Results Call on November 24, 2026"
+    }
+  }
+}

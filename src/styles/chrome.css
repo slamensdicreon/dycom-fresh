@@ -12,3 +12,33 @@
 
 /* Brand logos keep their aspect ratio at the fixed 144px width. */
 .dy .dy-brand img, .dy .dy-footer-lockup img, .dy .dy-dialog-brand img { width: 144px; height: auto; }
+
+/* ---- Results bar above the site header (Investors page review, Nov 11 2026) ----
+   Civic strip: signal mark, the latest results, Results release and Call replay, dismissible. */
+.dy .dy-results-bar {
+  display: flex; align-items: center; gap: 20px; min-height: 52px; padding: 8px var(--dy-gutter);
+  background: var(--dy-civic-deep); color: var(--dy-white);
+}
+.dy .dy-results-bar > .dy-signal { flex: none; width: 22px; height: 22px; color: var(--dy-green); }
+.dy .dy-results-bar p { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin: 0; flex: 1 1 auto; min-width: 0; font-size: 15px; color: var(--dy-white); }
+.dy .dy-results-bar p strong { font-weight: 600; color: var(--dy-white); }
+.dy .dy-results-bar p span { color: rgb(255 255 255 / 82%); }
+.dy .dy-results-bar nav { display: flex; flex: none; gap: 24px; margin-left: auto; }
+.dy .dy-results-bar nav a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--dy-white); font-size: 15px; font-weight: 500; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+.dy .dy-results-bar nav a svg { width: 16px; height: 16px; }
+.dy .dy-results-bar nav a:hover { color: var(--dy-green); }
+.dy .dy-results-bar-close { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 0; background: transparent; color: var(--dy-white); cursor: pointer; }
+.dy .dy-results-bar-close:hover { background: var(--dy-civic-soft); }
+.dy .dy-results-bar-close:focus-visible, .dy .dy-results-bar nav a:focus-visible { outline: 2px solid var(--dy-green); outline-offset: 2px; }
+
+/* The Investors menu's standing link to the latest results (SpotlightLink). */
+.dy .dy-mega-intro .dy-spotlight { margin-top: 4px; }
+.dy .dy-mobile-nav .dy-spotlight { margin-bottom: 8px; }
+
+@media (max-width: 767px) {
+  .dy .dy-results-bar { display: grid; grid-template-columns: 22px minmax(0, 1fr) 44px; grid-template-areas: "mark copy close" ". links links"; align-items: start; gap: 6px 16px; padding: 12px var(--dy-gutter); }
+  .dy .dy-results-bar > .dy-signal { grid-area: mark; margin-top: 1px; }
+  .dy .dy-results-bar p { grid-area: copy; flex-direction: column; align-items: start; gap: 2px; }
+  .dy .dy-results-bar nav { grid-area: links; }
+  .dy .dy-results-bar-close { grid-area: close; margin-top: -10px; }
+}

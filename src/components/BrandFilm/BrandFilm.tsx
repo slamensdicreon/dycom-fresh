@@ -12,6 +12,8 @@ import { useSiteUI } from 'lib/site-ui';
  * ends (Dycom content v0.1 §2.1). The film file is only requested after the first play.
  *
  * Datasource template: Brand Film — Eyebrow, Caption (the band's H2), PlayLabel, Video (file), Poster (image)
+ * One shared item: the homepage and the Investors page place the same datasource.
+ * Params: RenderingIdentifier, Height ("compact": a lower band, used on the Investors page)
  */
 type BrandFilmFields = {
   Eyebrow: TextField;
@@ -53,7 +55,7 @@ export const Default = ({ fields, params, rendering }: BrandFilmProps) => {
   return (
     <section
       id={params?.RenderingIdentifier || 'film'}
-      className="dy-film"
+      className={`dy-film${params?.Height === 'compact' ? ' dy-film--compact' : ''}`}
       aria-labelledby={titleId}
       data-started={started || undefined}
       data-playing={playing || undefined}

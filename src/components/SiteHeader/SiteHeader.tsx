@@ -24,7 +24,9 @@ import { Modal } from 'components/ui/Modal';
  *
  * Datasource template: Site Header — Logo, HomeLink, JobsLink, Groups (Navigation Group[])
  * Navigation Group — Label, Intro, Description, OverviewLink, ChapterLink (optional homepage
- *   anchor: on the homepage the overview link jumps to that chapter instead), Columns
+ *   anchor: on the homepage the overview link jumps to that chapter instead), SpotlightLink (optional
+ *   standing link under the overview link — Investors: "Latest results & call replay", review of
+ *   Nov 11, 2026), Columns
  * Navigation Column — Title, Links (Navigation Link[]); Navigation Link — Link
  */
 type NavLinkItem = Item & { fields: { Link: LinkField } };
@@ -36,6 +38,7 @@ type NavGroupItem = Item & {
     Description: TextField;
     OverviewLink: LinkField;
     ChapterLink?: LinkField;
+    SpotlightLink?: LinkField;
     Columns: NavColumnItem[];
   };
 };
@@ -142,6 +145,13 @@ function OverviewLink({ group, onHomepage, onNavigate }: { group: NavGroupItem; 
   return <SiteLink field={group.fields.OverviewLink} className="dy-text-link" onClick={onNavigate} />;
 }
 
+/** A group's standing link under the overview link (optional). */
+function SpotlightLink({ group, onNavigate }: { group: NavGroupItem; onNavigate: () => void }) {
+  const link = group.fields.SpotlightLink;
+  if (!link?.value?.href) return null;
+  return <SiteLink field={link} className="dy-text-link dy-spotlight" onClick={onNavigate} />;
+}
+
 function ColumnLinks({ column, onNavigate, className }: { column: NavColumnItem; onNavigate: () => void; className: string }) {
   return (
     <div className={className}>
@@ -227,6 +237,7 @@ export const Default = ({ fields, rendering }: SiteHeaderProps) => {
                   <Text tag="h3" field={g.fields.Intro} />
                   <Text tag="p" field={g.fields.Description} />
                   <OverviewLink group={g} onHomepage={onHomepage} onNavigate={() => setGroup(null)} />
+                  <SpotlightLink group={g} onNavigate={() => setGroup(null)} />
                 </div>
                 {g.fields.Columns?.map((col) => (
                   <ColumnLinks key={col.id} column={col} className="dy-mega-links" onNavigate={() => setGroup(null)} />
@@ -278,6 +289,7 @@ export const Default = ({ fields, rendering }: SiteHeaderProps) => {
                   {open && (
                     <div id={panelId} role="region" className="dy-accordion-content dy-accordion-content--static" data-state="open">
                       <OverviewLink group={g} onHomepage={onHomepage} onNavigate={() => setMobile(false)} />
+                      <SpotlightLink group={g} onNavigate={() => setMobile(false)} />
                       {g.fields.Columns?.map((col) => (
                         <ColumnLinks key={col.id} column={col} className="dy-mobile-col" onNavigate={() => setMobile(false)} />
                       ))}

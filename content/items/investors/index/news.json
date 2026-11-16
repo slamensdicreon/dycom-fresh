@@ -1,6 +1,6 @@
 {
   "templateName": "In-Page Link",
-  "sortOrder": 3,
+  "sortOrder": 2,
   "fields": {
     "Label": "News",
     "Link": {

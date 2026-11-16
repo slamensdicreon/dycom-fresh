@@ -14,6 +14,10 @@
         "href": ""
       }
     },
+    "SpotlightLink": {
+      "$link": "/investors/quarterly-reports/",
+      "text": "Latest results & call replay"
+    },
     "Columns": {
       "$children": "global/navigation/investors"
     }

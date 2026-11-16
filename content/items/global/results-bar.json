@@ -1,0 +1,14 @@
+{
+  "templateName": "Results Bar",
+  "fields": {
+    "Label": "Q2 2027 results",
+    "Text": "Fiscal 2027 second quarter results, published August 26, 2026.",
+    "ReleaseLink": { "$link": "/investors/quarterly-reports/", "text": "Results release" },
+    "ReplayLink": { "$link": "/investors/events-presentations/", "text": "Call replay" },
+    "ReleaseDate": "2026-08-26",
+    "WindowDays": 14,
+    "ForceShow": true,
+    "RegionLabel": "Latest results",
+    "DismissLabel": "Dismiss latest results"
+  }
+}

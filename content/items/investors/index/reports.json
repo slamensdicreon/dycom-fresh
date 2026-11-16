@@ -1,6 +1,6 @@
 {
   "templateName": "In-Page Link",
-  "sortOrder": 1,
+  "sortOrder": 3,
   "fields": {
     "Label": "Reports",
     "Link": {

@@ -1,0 +1,534 @@
+--- a/artifacts/dycom-concept-05/src/design-system/pages/patterns.tsx
++++ b/artifacts/dycom-concept-05/src/design-system/pages/patterns.tsx
+@@ -37,16 +37,18 @@
+       {head('templates/investors/')}
+       <Section id="template" title="Interior page template">
+         <Prose>
+-          <p>The Investors overview is the template every interior page follows. Its parts, in order:</p>
++          <p>The Investors overview is the template every interior page follows. Revised from Dycom’s Investors page review of November 11, 2026. Its parts, in order:</p>
+           <ul>
++            <li><strong>Results bar</strong> — a Civic strip above the header on every page for the two weeks after an earnings release: signal mark, the latest results, the release and the call replay, dismissible for the session. The review preview keeps it visible. The Investors menu carries a standing “Latest results &amp; call replay” link so the replay stays one click away permanently.</li>
+             <li><strong>Site header</strong> with the brand link returning home and <strong>Find a job</strong> opening the roles drawer.</li>
+             <li><strong>Photographic hero</strong> — a full-width photograph under a Civic shade, with the back link, all-caps H1, overview paragraph and a listing block (signal mark, “LISTED”, “NYSE: DY”) set over it.</li>
+-            <li><strong>In-page index</strong> — numbered jumps 01–05 with green draw-in underlines; a single column on phones.</li>
+-            <li><strong>Numbered section heads</strong> — green index numeral, H2, optional dated note.</li>
+-            <li><strong>Results band</strong> — the quarter’s metrics on rules over a photograph, then the results package as a document list beside the call replay.</li>
++            <li><strong>In-page index</strong> — five jumps with green draw-in underlines, no numerals; a single column on phones.</li>
++            <li><strong>Section heads</strong> — H2 with an optional green sub-line (the results head reads “Latest financial results” over “Q2 2027”) and an optional dated note. Section numbering was removed at Dycom’s request.</li>
++            <li><strong>Results band</strong> — the quarter’s metrics on rules over a photograph, then the results package as a document list beside the call replay (one sentence: when the call was held).</li>
++            <li><strong>Brand film</strong> — the homepage film band, so the page says who Dycom is and what it does before the calendar.</li>
++            <li><strong>Events and news</strong> — events under <strong>Upcoming / Past</strong> tabs (split by date at render time; an empty Upcoming list says so and points to email alerts) with square timeline nodes, beside news rows with date and title.</li>
+             <li><strong>Featured reports</strong> — three report cards, each with a portrait cover slot (Dycom photography stands in until the published cover artwork is supplied), label, title, detail and one outline action.</li>
+-            <li><strong>Timeline and news list</strong> — square timeline nodes with the most recent green; news rows with date and title.</li>
+-            <li><strong>Resource columns</strong> reused for the Investors group of the sitemap, then a closing photographic band with two actions and the global footer.</li>
++            <li><strong>Investor resources</strong> — three columns from the Investors group of the sitemap (Financials &amp; filings with SEC filings first, Governance, Shareholder resources including Stock information and Analyst coverage); the News &amp; events column stays in the menu only. Then a closing photographic band with two actions, a section of white space, and the global footer.</li>
+           </ul>
+         </Prose>
+         <Framed label="Investors page, embedded" src={src} fixed={{ desktop: 900, tablet: 900, phone: 844 }} note="The real Investors page in a frame; scroll inside it." />
+--- a/artifacts/dycom-concept-05/src/design-system/pages/site-plan.tsx
++++ b/artifacts/dycom-concept-05/src/design-system/pages/site-plan.tsx
+@@ -118,6 +118,8 @@
+       ['Investor news', 'investors/news/', 'T11', 'From a system'],
+       ['Investor news item', 'investors/news/…', 'T12', 'From a system'],
+       ['Events & presentations', 'investors/events-presentations/', 'T11', 'From a system'],
++      // Investors review, November 11, 2026: transcripts become HTML pages with proper markup, not PDFs.
++      ['Call transcript', 'investors/events-presentations/…/transcript/', 'T14', 'From a system'],
+       ['Analyst coverage', 'investors/analyst-coverage/', 'T14', 'Restructure'],
+       ['Shareholder services', 'investors/shareholder-services/', 'T14', 'Restructure'],
+       ['Investor FAQs', 'investors/faqs/', 'T14', 'Restructure'],
+--- a/artifacts/dycom-concept-05/src/v2/components/SiteHeader.tsx
++++ b/artifacts/dycom-concept-05/src/v2/components/SiteHeader.tsx
+@@ -1,10 +1,48 @@
+ import { useEffect, useRef, useState, type CSSProperties } from 'react';
+ import * as Accordion from '@radix-ui/react-accordion';
+-import { ArrowDown, ChevronDown, Globe, Menu } from 'lucide-react';
+-import { Action, IconButton, Modal, SiteLink } from './primitives';
++import { ArrowDown, ChevronDown, Globe, Menu, X } from 'lucide-react';
++import { Action, IconButton, Modal, Signal, SiteLink } from './primitives';
+ import { asset } from '../content';
+ import { navGroups } from '../site';
+-import { showChapter } from '../presentation';
++import { resultsBar } from '../investors';
++import { ALWAYS_SHOW_RESULTS_BAR, showChapter } from '../presentation';
++
++/**
++ * Results bar (reviewer request, November 2026): for the two weeks after an
++ * earnings release the latest results and the call replay sit above the header
++ * on every page, then the bar retires and the Investors page carries them
++ * again. Dismissing it lasts for the browser session. Outside the window the
++ * component renders nothing; the review preview forces it on (presentation.ts).
++ */
++const DISMISS_KEY = 'dycom-results-bar';
++
++function inResultsWindow(now = new Date()) {
++  const start = new Date(`${resultsBar.releaseIso}T00:00:00`);
++  const end = new Date(start);
++  end.setDate(end.getDate() + resultsBar.windowDays);
++  return now >= start && now < end;
++}
++
++export function ResultsBar() {
++  const [dismissed, setDismissed] = useState(() => {
++    try { return sessionStorage.getItem(DISMISS_KEY) === '1'; } catch { return false; }
++  });
++  if (dismissed || !(ALWAYS_SHOW_RESULTS_BAR || inResultsWindow())) return null;
++  const dismiss = () => {
++    setDismissed(true);
++    try { sessionStorage.setItem(DISMISS_KEY, '1'); } catch { /* private mode: the bar simply returns next load */ }
++  };
++  return (
++    <div className="dycom-c5__results-bar" role="region" aria-label="Latest results">
++      <Signal />
++      <p><strong>{resultsBar.label}</strong><span>{resultsBar.message}</span></p>
++      <nav aria-label="Latest results links">
++        {resultsBar.links.map(([label, href]) => <SiteLink key={label} href={href}>{label}</SiteLink>)}
++      </nav>
++      <button type="button" className="dycom-c5__results-bar-close" aria-label="Dismiss latest results" onClick={dismiss}><X size={18} aria-hidden="true" /></button>
++    </div>
++  );
++}
+ 
+ /**
+  * Language switch (reviewer request, November 2026): a globe beside "Find a job"
+@@ -84,6 +122,8 @@
+     return () => { document.removeEventListener('click', close); viewport.removeEventListener('change', onResize); };
+   }, []);
+   return (
++    <>
++    <ResultsBar />
+     <header
+       ref={header}
+       className="dycom-c5__header"
+@@ -112,6 +152,7 @@
+                 <div className="dycom-c5__mega-intro"><h3>{g.intro}</h3><p>{g.description}</p>{onHomepage && showChapter(g.section)
+                     ? <a href={`#${g.section}`} className="dycom-c5__text-link dycom-c5__jump" onClick={() => setGroup(null)}>{g.label}<ArrowDown size={17} aria-hidden="true" /></a>
+                     : <SiteLink href={g.root} className="dycom-c5__text-link" onClick={() => setGroup(null)}>{g.overview}</SiteLink>}
++                  {g.spotlight && <SiteLink href={g.spotlight[1]} className="dycom-c5__text-link dycom-c5__spotlight" onClick={() => setGroup(null)}>{g.spotlight[0]}</SiteLink>}
+                 </div>
+                 {g.columns.map((col) => (
+                   <div className="dycom-c5__mega-links" key={col.title}>
+@@ -141,6 +182,7 @@
+                   {onHomepage && showChapter(g.section)
+                     ? <a href={`#${g.section}`} className="dycom-c5__text-link dycom-c5__jump" onClick={() => setMobile(false)}>{g.label}<ArrowDown size={17} aria-hidden="true" /></a>
+                     : <SiteLink href={g.root} className="dycom-c5__text-link" onClick={() => setMobile(false)}>{g.overview}</SiteLink>}
++                  {g.spotlight && <SiteLink href={g.spotlight[1]} className="dycom-c5__text-link dycom-c5__spotlight" onClick={() => setMobile(false)}>{g.spotlight[0]}</SiteLink>}
+                   {g.columns.map((col) => (
+                     <div className="dycom-c5__mobile-col" key={col.title}>
+                       <h4>{col.title}</h4>
+@@ -154,5 +196,6 @@
+         </nav>
+       </Modal>
+     </header>
++    </>
+   );
+ }
+--- a/artifacts/dycom-concept-05/src/v2/_group.css
++++ b/artifacts/dycom-concept-05/src/v2/_group.css
+@@ -440,3 +440,31 @@
+   .dycom-consolidated-v2 .dycom-c5__hero-copy .dycom-c5__actions { flex-direction: column; }
+   .dycom-consolidated-v2 .dycom-c5__hero-copy .dycom-c5__button { width: max-content; max-width: 100%; }
+ }
++
++/* Results bar above the header: Civic Blue strip with the signal mark, the latest results and the call replay, dismissible. */
++.dycom-c5 .dycom-c5__results-bar {
++  display: flex; align-items: center; gap: 20px; min-height: 52px; padding: 8px var(--c5-gutter);
++  background: var(--c5-civic-deep); color: var(--c5-white);
++}
++.dycom-c5 .dycom-c5__results-bar > .dycom-c5__signal { flex: none; width: 22px; height: 22px; color: var(--c5-green); }
++.dycom-c5 .dycom-c5__results-bar p { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin: 0; flex: 1 1 auto; max-width: none; min-width: 0; font-size: 15px; color: var(--c5-white); }
++.dycom-c5 .dycom-c5__results-bar p strong { font-weight: 600; color: var(--c5-white); }
++.dycom-c5 .dycom-c5__results-bar p span { color: rgb(255 255 255 / 82%); }
++.dycom-c5 .dycom-c5__results-bar nav { display: flex; flex: none; gap: 24px; margin-left: auto; }
++.dycom-c5 .dycom-c5__results-bar nav a { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; color: var(--c5-white); font-size: 15px; font-weight: 500; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
++.dycom-c5 .dycom-c5__results-bar nav a:hover { color: var(--c5-green); }
++.dycom-c5 .dycom-c5__results-bar-close { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 0; background: transparent; color: var(--c5-white); cursor: pointer; }
++.dycom-c5 .dycom-c5__results-bar-close:hover { background: var(--c5-civic-soft); }
++.dycom-c5 .dycom-c5__results-bar-close:focus-visible, .dycom-c5 .dycom-c5__results-bar nav a:focus-visible { outline: 2px solid var(--c5-green); outline-offset: 2px; }
++
++/* The Investors menu's standing link to the latest results. */
++.dycom-c5 .dycom-c5__mega-intro .dycom-c5__spotlight { margin-top: 4px; }
++.dycom-c5 .dycom-c5__mobile-nav .dycom-c5__spotlight { margin-bottom: 8px; }
++
++@media (max-width: 767px) {
++  .dycom-c5 .dycom-c5__results-bar { display: grid; grid-template-columns: 22px minmax(0, 1fr) 36px; grid-template-areas: "mark copy close" ". links links"; align-items: start; gap: 6px 16px; padding: 12px var(--c5-gutter); }
++  .dycom-c5 .dycom-c5__results-bar > .dycom-c5__signal { grid-area: mark; margin-top: 1px; }
++  .dycom-c5 .dycom-c5__results-bar p { grid-area: copy; flex-direction: column; align-items: start; gap: 2px; }
++  .dycom-c5 .dycom-c5__results-bar nav { grid-area: links; }
++  .dycom-c5 .dycom-c5__results-bar-close { grid-area: close; margin-top: -8px; }
++}
+--- a/artifacts/dycom-concept-05/src/v2/investors.ts
++++ b/artifacts/dycom-concept-05/src/v2/investors.ts
+@@ -1,8 +1,14 @@
+ // Investors overview content for Concept 05 (docs/dycom-concept-05-requirements.md §6).
+ // Figures, titles and dates come from the evidence register in
+-// docs/dycom-investor-sources.md (official IR hub as rechecked October 19, 2026).
++// docs/dycom-investor-sources.md (official IR hub as rechecked November 16, 2026).
+ // Static snapshot, not a live feed: no quotes, prices or market data.
+ //
++// Revised for the Investors page review of November 11, 2026 (Dycom marketing
++// lead + IR reviewer): "Latest financial results" heading with the quarter as a
++// sub-line, no section numbers, call replay copy cut to one sentence, events
++// split Upcoming / Past, Events above Featured reports, Investor resources
++// trimmed (see the Investors group in site.ts), results bar in the header.
++//
+ // No outward links (client instruction, Oct 22 2026): every destination is a
+ // page of the future-state sitemap (src/lib/site.ts). The official PDFs and
+ // webcasts sit behind those pages, so cards name the material but link inward.
+@@ -28,8 +34,26 @@
+   scale: 'Serving the nation from hundreds of field offices with a workforce of more than 20,000 people, we remain unparalleled in scope and scale.',
+ };
+ 
++/**
++ * Results bar (reviewer request, November 2026): after an earnings call the
++ * latest results move into the header for two weeks, then return to the
++ * Investors page. The window is the release date plus fourteen days; the
++ * prototype shows the bar regardless so reviewers can see it (presentation.ts).
++ */
++export const resultsBar = {
++  label: 'Q2 2027 results',
++  message: 'Fiscal 2027 second quarter results, published August 26, 2026.',
++  releaseIso: '2026-08-26',
++  windowDays: 14,
++  links: [
++    ['Results release', page('investors/quarterly-reports')],
++    ['Call replay', page('investors/events-presentations')],
++  ] as [label: string, href: string][],
++};
++
+ export const quarter = {
+   short: 'Q2 2027',
++  heading: 'Latest financial results',
+   title: 'Fiscal 2027 second quarter results',
+   periodEnded: 'August 1, 2026',
+   published: 'August 26, 2026',
+@@ -60,6 +84,7 @@
+ export type EventItem = { id: string; date: string; iso: string; time?: string; title: string; webcast?: boolean };
+ 
+ export const events: EventItem[] = [
++  { id: 'q3-results', date: 'November 24, 2026', iso: '2026-11-24', time: '9:00 AM EST', title: 'Dycom Q3 2027 Results', webcast: true },
+   { id: 'da-davidson', date: 'September 24, 2026', iso: '2026-09-24', time: '9:00 AM EDT', title: 'D.A. Davidson 25th Annual Diversified Industrials & Services Conference', webcast: true },
+   { id: 'q2-presentation', date: 'September 2, 2026', iso: '2026-09-02', title: 'Dycom Q2 2027 Investor Presentation' },
+   { id: 'q2-results', date: 'August 26, 2026', iso: '2026-08-26', time: '9:00 AM EDT', title: 'Dycom Q2 2027 Results', webcast: true },
+@@ -69,10 +94,10 @@
+ export type NewsItem = { id: string; date: string; iso: string; title: string };
+ 
+ export const news: NewsItem[] = [
++  { id: 'q3-call', date: 'November 13, 2026', iso: '2026-11-13', title: 'Dycom Industries, Inc. to Host Fiscal 2027 Third Quarter Results Call on November 24, 2026' },
+   { id: 'conference-participation', date: 'September 10, 2026', iso: '2026-09-10', title: 'Dycom Industries, Inc. to Participate in Upcoming Institutional Investor Conference' },
+   { id: 'repurchase', date: 'August 26, 2026', iso: '2026-08-26', title: 'Dycom Announces Authorization of a New $150 Million Stock Repurchase Program' },
+   { id: 'q2-results', date: 'August 26, 2026', iso: '2026-08-26', title: 'Dycom Industries, Inc. Reports Record Fiscal 2027 Second Quarter Results' },
+-  { id: 'q2-call', date: 'August 14, 2026', iso: '2026-08-14', title: 'Dycom Industries, Inc. to Host Fiscal 2027 Second Quarter Results Call on August 26, 2026' },
+ ];
+ 
+ /** The Investors group of the sitemap, so the overview reaches every investor page once. */
+--- a/artifacts/dycom-concept-05/src/v2/Investors.tsx
++++ b/artifacts/dycom-concept-05/src/v2/Investors.tsx
+@@ -2,15 +2,23 @@
+ // review of the original Consolidated page: photography leads (hero, results
+ // band, report covers, closing band), the results metrics and package sit on
+ // rules instead of boxes, and featured reports carry a cover preview slot.
+-import { useState } from 'react';
++//
++// Revised again from the Investors page review of November 11, 2026:
++// "Latest financial results" heading with the quarter beneath it, no section
++// numbers (headings or jump bar), a brand-film band after the hero, Events
++// (Upcoming / Past tabs) and News above Featured reports, the call replay
++// copy cut to one sentence, the resources block retitled "Investor resources"
++// without its News & events column, and white space before the footer.
++import { useState, type KeyboardEvent } from 'react';
++import * as Tabs from '@radix-ui/react-tabs';
+ import { ArrowRight, FileText } from 'lucide-react';
+ import { SiteHeader } from './components/SiteHeader';
+ import { RolesDrawer } from './components/RolesDrawer';
+-import { SiteFooter } from './components/sections';
++import { BrandFilm, SiteFooter } from './components/sections';
+ import { Action, Signal, SiteLink } from './components/primitives';
+ import { emptyFilters, type Filters } from './jobs';
+ import { useMotionPreference } from './motion';
+-import { company, events, featuredReports, investorGroup, investorPages, news, quarter } from './investors';
++import { company, events, featuredReports, investorGroup, investorPages, news, quarter, type EventItem } from './investors';
+ import { photoProps, type PhotoId } from './photos';
+ import { V2_BASE as BASE } from './site';
+ import { usePageEffects } from '@/lib/router';
+@@ -20,12 +28,21 @@
+ 
+ const sections: [href: string, label: string][] = [
+   ['#results', 'Results'],
+-  ['#reports', 'Reports'],
+   ['#events', 'Events'],
+   ['#news', 'News'],
++  ['#reports', 'Reports'],
+   ['#resources', 'Resources'],
+ ];
+ 
++/** The page omits the News & events column of the Investors menu: Events and News have their own sections above. */
++const resourceColumns = investorGroup.columns.filter((col) => col.title !== 'News & events');
++
++/** Events split by date at render time, so a past event is never advertised as upcoming. */
++function splitEvents(all: EventItem[], now = new Date()) {
++  const today = now.toISOString().slice(0, 10);
++  return { upcoming: all.filter((e) => e.iso >= today).sort((a, b) => a.iso.localeCompare(b.iso)), past: all.filter((e) => e.iso < today) };
++}
++
+ // Cover previews: Dycom photography stands in until each report's published
+ // cover artwork is supplied; the slot is sized for a portrait cover.
+ const reportCovers: Record<string, PhotoId> = {
+@@ -34,15 +51,58 @@
+   'proxy-statement': 'z9b_1711',
+ };
+ 
+-function SectionHead({ index, id, title, note }: { index: string; id: string; title: string; note?: string }) {
++function SectionHead({ id, title, sub, note }: { id: string; title: string; sub?: string; note?: string }) {
+   return (
+     <div className="dycom-c5__irp-head">
+-      <h2 id={id}><span className="dycom-c5__irp-index" aria-hidden="true">{index}</span>{title}</h2>
++      <div>
++        <h2 id={id}>{title}</h2>
++        {sub && <span className="dycom-c5__irp-sub">{sub}</span>}
++      </div>
+       {note && <p>{note}</p>}
+     </div>
+   );
+ }
+ 
++function EventList({ items, empty }: { items: EventItem[]; empty: string }) {
++  if (!items.length) return <p className="dycom-c5__irp-empty">{empty}</p>;
++  return (
++    <ol className="dycom-c5__irp-timeline">
++      {items.map((e) => (
++        <li key={e.id}>
++          <time dateTime={e.iso}>{e.date}{e.time ? ` · ${e.time}` : ''}</time>
++          <strong>{e.title}</strong>
++          {e.webcast && <SiteLink href={investorPages.events} className="dycom-c5__text-link">Webcast</SiteLink>}
++        </li>
++      ))}
++    </ol>
++  );
++}
++
++/** Upcoming / Past tabs (reviewer request). Both panels stay mounted (hidden when inactive) so in-page search still finds past events. */
++function EventTabs() {
++  const { upcoming, past } = splitEvents(events);
++  const [tab, setTab] = useState<'upcoming' | 'past'>(upcoming.length ? 'upcoming' : 'past');
++  const onKey = (e: KeyboardEvent<HTMLElement>) => {
++    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
++    e.preventDefault();
++    const next = tab === 'upcoming' ? 'past' : 'upcoming';
++    setTab(next);
++    e.currentTarget.querySelector<HTMLButtonElement>(`[data-value="${next}"]`)?.focus();
++  };
++  return (
++    <Tabs.Root value={tab} onValueChange={(v) => setTab(v as 'upcoming' | 'past')} className="dycom-c5__irp-tabs">
++      <Tabs.List aria-label="Events" className="dycom-c5__irp-tablist" onKeyDown={onKey}>
++        <Tabs.Trigger value="upcoming" data-value="upcoming" className="dycom-c5__irp-tab">Upcoming</Tabs.Trigger>
++        <Tabs.Trigger value="past" data-value="past" className="dycom-c5__irp-tab">Past</Tabs.Trigger>
++      </Tabs.List>
++      <div className="dycom-c5__irp-tabpanels">
++        <Tabs.Content value="upcoming" forceMount className="dycom-c5__irp-tabpanel"><EventList items={upcoming} empty="No upcoming events are scheduled. Sign up for email alerts to hear about the next one." /></Tabs.Content>
++        <Tabs.Content value="past" forceMount className="dycom-c5__irp-tabpanel"><EventList items={past} empty="No past events to show." /></Tabs.Content>
++      </div>
++    </Tabs.Root>
++  );
++}
++
+ export default function Investors() {
+   const [motionOff, setMotionOff] = useMotionPreference();
+   const [rolesOpen, setRolesOpen] = useState(false);
+@@ -69,14 +129,14 @@
+           </div>
+         </div>
+         <nav className="dycom-c5__irp-jumps" aria-label="On this page">
+-          {sections.map(([href, label], i) => (
+-            <a href={href} key={href}><span><small>0{i + 1}</small>{label}</span><ArrowRight size={18} aria-hidden="true" /></a>
++          {sections.map(([href, label]) => (
++            <a href={href} key={href}><span>{label}</span><ArrowRight size={18} aria-hidden="true" /></a>
+           ))}
+         </nav>
+       </section>
+ 
+       <section id="results" className="dycom-c5__section" aria-labelledby="irp-results">
+-        <SectionHead index="01" id="irp-results" title={`${quarter.short} results`} note={quarter.note} />
++        <SectionHead id="irp-results" title={quarter.heading} sub={quarter.short} note={quarter.note} />
+         <div className="dycom-c5__irp-band dycom-c5__dark">
+           <img loading="lazy" {...photoProps('z9a_0525', '100vw', 'Green laser level lines crossing a data center floor')} />
+           <dl className="dycom-c5__irp-metrics">
+@@ -103,7 +163,7 @@
+           <div className="dycom-c5__irp-call">
+             <Signal />
+             <h3>Results call replay</h3>
+-            <p>Held {quarter.published}, {quarter.callTime}. The webcast replay, slides and transcript are kept with the event.</p>
++            <p>Held {quarter.published}, {quarter.callTime}.</p>
+             <div className="dycom-c5__actions">
+               <Action href={investorPages.events}>Open the event</Action>
+               <Action outline href={investorPages.news}>Results release</Action>
+@@ -112,41 +172,19 @@
+         </div>
+       </section>
+ 
+-      <section id="reports" className="dycom-c5__section dycom-c5__paper" aria-labelledby="irp-reports">
+-        <SectionHead index="02" id="irp-reports" title="Featured reports" note="Each report can carry a cover preview. Dycom photography stands in until the published cover artwork is supplied." />
+-        <div className="dycom-c5__irp-reports">
+-          {featuredReports.map((r) => (
+-            <article key={r.id} className="dycom-c5__irp-report">
+-              <div className="dycom-c5__irp-cover" aria-hidden="true">
+-                <img loading="lazy" {...photoProps(reportCovers[r.id], '(max-width: 767px) 100vw, 30vw', '')} />
+-                <span className="dycom-c5__irp-cover-plate"><Signal /><span>{r.title}</span></span>
+-              </div>
+-              <small>{r.label}</small>
+-              <h3>{r.title}</h3>
+-              <p>{r.detail}</p>
+-              <Action outline href={r.href}>Open report</Action>
+-            </article>
+-          ))}
+-        </div>
+-      </section>
++      {/* Who we are and what we do, as film (reviewer request): the brand film band shared with the homepage, after the
++          results so the page still opens on the numbers and no two dark bands sit together. */}
++      <BrandFilm motionOff={motionOff} />
+ 
+-      <section id="events" className="dycom-c5__section" aria-labelledby="irp-events">
++      <section id="events" className="dycom-c5__section dycom-c5__paper" aria-labelledby="irp-events">
+         <div className="dycom-c5__irp-columns">
+           <div>
+-            <SectionHead index="03" id="irp-events" title="Events" />
+-            <ol className="dycom-c5__irp-timeline">
+-              {events.map((e) => (
+-                <li key={e.id}>
+-                  <time dateTime={e.iso}>{e.date}{e.time ? ` · ${e.time}` : ''}</time>
+-                  <strong>{e.title}</strong>
+-                  {e.webcast && <SiteLink href={investorPages.events} className="dycom-c5__text-link">Webcast</SiteLink>}
+-                </li>
+-              ))}
+-            </ol>
++            <SectionHead id="irp-events" title="Events" />
++            <EventTabs />
+             <Action href={investorPages.events}>All events & presentations</Action>
+           </div>
+           <div id="news">
+-            <SectionHead index="04" id="irp-news" title="Investor news" />
++            <SectionHead id="irp-news" title="Investor news" />
+             <ul className="dycom-c5__irp-news">
+               {news.map((n) => (
+                 <li key={n.id}>
+@@ -162,10 +200,28 @@
+         </div>
+       </section>
+ 
++      <section id="reports" className="dycom-c5__section" aria-labelledby="irp-reports">
++        <SectionHead id="irp-reports" title="Featured reports" note="Each report can carry a cover preview. Dycom photography stands in until the published cover artwork is supplied." />
++        <div className="dycom-c5__irp-reports">
++          {featuredReports.map((r) => (
++            <article key={r.id} className="dycom-c5__irp-report">
++              <div className="dycom-c5__irp-cover" aria-hidden="true">
++                <img loading="lazy" {...photoProps(reportCovers[r.id], '(max-width: 767px) 100vw, 30vw', '')} />
++                <span className="dycom-c5__irp-cover-plate"><Signal /><span>{r.title}</span></span>
++              </div>
++              <small>{r.label}</small>
++              <h3>{r.title}</h3>
++              <p>{r.detail}</p>
++              <Action outline href={r.href}>Open report</Action>
++            </article>
++          ))}
++        </div>
++      </section>
++
+       <section id="resources" className="dycom-c5__section dycom-c5__paper" aria-labelledby="irp-resources">
+-        <SectionHead index="05" id="irp-resources" title="Filings, governance & shareholder resources" note="Every investor page of the site, in one place." />
++        <SectionHead id="irp-resources" title="Investor resources" note="Filings, governance and shareholder resources, in one place." />
+         <div className="dycom-c5__resources">
+-          {investorGroup.columns.map((col) => (
++          {resourceColumns.map((col) => (
+             <div key={col.title}>
+               <h3>{col.title}</h3>
+               {col.links.map(([label, href]) => <SiteLink href={href} key={label}>{label}</SiteLink>)}
+--- a/artifacts/dycom-concept-05/src/v2/investors-v2.css
++++ b/artifacts/dycom-concept-05/src/v2/investors-v2.css
+@@ -93,12 +93,44 @@
+ .dycom-consolidated-v2 .dycom-c5__irp-close > img { object-position: center 60%; }
+ .dycom-consolidated-v2 .dycom-c5__irp-close p { color: var(--c5-white); }
+ 
++
++/* Investors page review, November 11, 2026. */
++
++/* Section heads lost their numerals; the results head carries the quarter as a sub-line under the H2. */
++.dycom-consolidated-v2 .dycom-c5__irp-head > div { display: flex; flex-direction: column; align-items: start; gap: 8px; }
++.dycom-consolidated-v2 .dycom-c5__irp-head h2 { display: block; }
++.dycom-consolidated-v2 .dycom-c5__irp-sub { font-size: 15px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--c5-green); }
++
++/* Events: Upcoming / Past tabs. The list height follows the active tab (the Upcoming list is usually short). */
++.dycom-consolidated-v2 .dycom-c5__irp-tabs { width: 100%; }
++.dycom-consolidated-v2 .dycom-c5__irp-tablist { display: flex; gap: 0; margin: 0 0 28px; border-bottom: 1px solid var(--c5-rule); }
++.dycom-consolidated-v2 .dycom-c5__irp-tab {
++  position: relative; min-height: 48px; padding: 8px 20px; border: 0; background: transparent; font: inherit; font-size: 16px; font-weight: 500;
++  color: var(--c5-ink); cursor: pointer;
++}
++.dycom-consolidated-v2 .dycom-c5__irp-tab:first-child { padding-left: 0; }
++.dycom-consolidated-v2 .dycom-c5__irp-tab::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--c5-green); transform: scaleX(0); transform-origin: right; transition: transform var(--c5-draw) var(--c5-ease); }
++.dycom-consolidated-v2 .dycom-c5__irp-tab[data-state="active"] { color: var(--c5-civic); }
++.dycom-consolidated-v2 .dycom-c5__irp-tab[data-state="active"]::after, .dycom-consolidated-v2 .dycom-c5__irp-tab:hover::after { transform: scaleX(1); transform-origin: left; }
++.dycom-consolidated-v2 .dycom-c5__irp-tab:focus-visible { outline: 2px solid var(--c5-green); outline-offset: 2px; }
++.dycom-consolidated-v2 .dycom-c5__irp-tabpanels { width: 100%; }
++.dycom-consolidated-v2 .dycom-c5__irp-tabpanel[data-state="inactive"] { display: none; }
++.dycom-consolidated-v2 .dycom-c5__irp-tabpanel:focus-visible { outline: none; }
++.dycom-consolidated-v2 .dycom-c5__irp-empty { font-size: 16px; color: var(--c5-ink); max-width: 44ch; padding: 4px 0 20px; }
++
++/* The brand film on the Investors page sits a little lower than on the homepage. */
++.dycom-consolidated-v2.dycom-c5__irp .dycom-c5__film { max-height: min(600px, 72svh); }
++
++/* Breathing room between the closing band and the footer (reviewer request). */
++.dycom-consolidated-v2 .dycom-c5__irp-close { margin-bottom: var(--c5-section); }
++
+ @media (max-width: 1099px) {
+   .dycom-consolidated-v2 .dycom-c5__irp-package { grid-template-columns: 1fr; gap: 40px; }
+   .dycom-consolidated-v2 .dycom-c5__irp-reports { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+   .dycom-consolidated-v2 .dycom-c5__irp-report { grid-column: auto; }
+ }
+ @media (max-width: 767px) {
++  .dycom-consolidated-v2 .dycom-c5__irp-close { margin-bottom: 48px; }
+   .dycom-consolidated-v2 .dycom-c5__irp-hero-grid { padding: 48px 0 40px; }
+   .dycom-consolidated-v2 .dycom-c5__irp-photo::before { background: linear-gradient(0deg, rgb(3 11 58 / 94%), rgb(3 11 58 / 80%)); }
+   .dycom-consolidated-v2 .dycom-c5__irp-band { padding: 32px 24px; }
+--- a/artifacts/dycom-concept-05/src/v2/presentation.ts
++++ b/artifacts/dycom-concept-05/src/v2/presentation.ts
+@@ -40,3 +40,10 @@
+   if (!href.startsWith('#')) return href;
+   return showChapter(href.slice(1)) ? href : (JUMP_FALLBACK[href] ?? '#top');
+ };
++
++/**
++ * The header results bar normally shows only for the two weeks after an
++ * earnings release (investors.ts `resultsBar`). The review preview keeps it
++ * visible so reviewers can see the state; set to false to follow the window.
++ */
++export const ALWAYS_SHOW_RESULTS_BAR = true;
+--- a/artifacts/dycom-concept-05/src/v2/site.ts
++++ b/artifacts/dycom-concept-05/src/v2/site.ts
+@@ -17,7 +17,8 @@
+ 
+ export type NavColumn = { title: string; links: SiteLinkPair[] };
+ /** `section` is the homepage chapter this group describes; on the homepage the overview link jumps there instead of leaving the page. */
+-export type NavGroup = { label: string; root: string; overview: string; section: string; intro: string; description: string; columns: NavColumn[] };
++/** `spotlight` is one standing link shown under the overview link in the menu — the Investors group keeps the latest results and call replay there (reviewer request, November 2026). */
++export type NavGroup = { label: string; root: string; overview: string; section: string; intro: string; description: string; columns: NavColumn[]; spotlight?: SiteLinkPair };
+ 
+ export const serviceLinks: SiteLinkPair[] = [
+   ['Engineering', page('what-we-do/engineering')],
+@@ -113,11 +114,15 @@
+     overview: 'Investors overview',
+     intro: 'Local expertise. National scale.',
+     description: 'Dycom Industries, Inc. (NYSE: DY). Results, filings, governance and investor resources in one place.',
++    spotlight: ['Latest results & call replay', page('investors/quarterly-reports')],
+     columns: [
+-      { title: 'Financials & filings', links: [['Quarterly reports', page('investors/quarterly-reports')], ['Annual reports', page('investors/annual-reports')], ['SEC filings', page('investors/sec-filings')], ['Stock information', page('investors/stock-information')]] },
++      // Investors page review, November 11, 2026: SEC filings first; Stock information and Analyst coverage join Shareholder resources;
++      // Shareholder services and Document request are removed. The Investors page itself omits the News & events column (it has its own
++      // Events and News sections); the menu keeps it so every investor page stays reachable.
++      { title: 'Financials & filings', links: [['SEC filings', page('investors/sec-filings')], ['Quarterly reports', page('investors/quarterly-reports')], ['Annual reports', page('investors/annual-reports')]] },
+       { title: 'Governance', links: [['Governance overview', page('investors/governance')], ['Board of directors', page('investors/board-of-directors')], ['Board committees', page('investors/board-committees')], ['Governance documents', page('investors/governance-documents')]] },
+-      { title: 'News & events', links: [['Investor news', page('investors/news')], ['Events & presentations', page('investors/events-presentations')], ['Analyst coverage', page('investors/analyst-coverage')]] },
+-      { title: 'Shareholder resources', links: [['Shareholder services', page('investors/shareholder-services')], ['Investor FAQs', page('investors/faqs')], ['Document request', page('investors/document-request')], ['Email alerts', page('investors/email-alerts')], ['Contact Investor Relations', page('investors/contact')]] },
++      { title: 'News & events', links: [['Investor news', page('investors/news')], ['Events & presentations', page('investors/events-presentations')]] },
++      { title: 'Shareholder resources', links: [['Stock information', page('investors/stock-information')], ['Analyst coverage', page('investors/analyst-coverage')], ['Investor FAQs', page('investors/faqs')], ['Email alerts', page('investors/email-alerts')], ['Contact Investor Relations', page('investors/contact')]] },
+     ],
+   },
+ ];

@@ -5,9 +5,9 @@
     "Title": "Shareholder resources",
     "Links": {
       "$refs": [
-        "global/links/shareholder-services",
+        "global/links/stock-information",
+        "global/links/analyst-coverage",
         "global/links/faqs",
-        "global/links/document-request",
         "global/links/email-alerts",
         "global/links/investor-contact"
       ]

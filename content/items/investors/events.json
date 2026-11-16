@@ -8,6 +8,15 @@
     "AllLink": {
       "$link": "/investors/events-presentations/",
       "text": "All events & presentations"
+    },
+    "TabsLabel": "Events",
+    "UpcomingLabel": "Upcoming",
+    "PastLabel": "Past",
+    "UpcomingEmptyText": "No upcoming events are scheduled. Sign up for email alerts to hear about the next one.",
+    "PastEmptyText": "No past events to show.",
+    "EmptyLink": {
+      "$link": "/investors/email-alerts/",
+      "text": "Email alerts"
     }
   }
 }
