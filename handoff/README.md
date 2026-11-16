@@ -1,5 +1,9 @@
 > **Deprecated — reference only.** This folder is the Icreon design handoff of November 6, 2026, kept unchanged so the new site can be checked against it while the remaining pages are built. Nothing in the app reads from it. Do not build from `source/`; the live site is the Next.js app at the repository root (see `../README.md`). Delete this folder once every page in the sitemap is built.
 
+> **Requirements:** the current version is `../docs/requirements.md`. `reference/full-site-requirements.md` is the October 23 handoff copy and is superseded: its T07 Company profile and T14 Investor content templates are removed, templates are renumbered T01–T16, and its component gap list is replaced by the consolidated inventory.
+
+> **Update, November 16, 2026:** `investors-update-2026-11-16/` holds Icreon's Investors page update (Dycom's November 11 review): what changed, screenshots and the source patch. It supersedes the Investors page in `site/` and `source/` below.
+
 # Dycom — Final Design Direction
 
 Handoff package from Icreon, November 6, 2026: the approved homepage, global navigation, Investors overview page and Design System for the new dycomind.com, with the brief and the source code.

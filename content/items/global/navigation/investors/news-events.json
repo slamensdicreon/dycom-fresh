@@ -6,8 +6,7 @@
     "Links": {
       "$refs": [
         "global/links/investor-news",
-        "global/links/events-presentations",
-        "global/links/analyst-coverage"
+        "global/links/events-presentations"
       ]
     }
   }

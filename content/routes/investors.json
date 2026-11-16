@@ -30,23 +30,22 @@
         "componentName": "ResultsHighlights",
         "dataSource": "investors/results",
         "params": {
-          "RenderingIdentifier": "results",
-          "SectionNumber": "01"
+          "RenderingIdentifier": "results"
         }
       },
       {
-        "componentName": "FeaturedReports",
-        "dataSource": "investors/reports",
+        "componentName": "BrandFilm",
+        "dataSource": "home/brand-film",
         "params": {
-          "RenderingIdentifier": "reports",
-          "SectionNumber": "02",
-          "Surface": "paper"
+          "RenderingIdentifier": "film",
+          "Height": "compact"
         }
       },
       {
         "componentName": "SplitSection",
         "params": {
-          "RenderingIdentifier": "events-news"
+          "RenderingIdentifier": "events-news",
+          "Surface": "paper"
         },
         "placeholders": {
           "split-left": [
@@ -54,8 +53,7 @@
               "componentName": "EventsTimeline",
               "dataSource": "investors/events",
               "params": {
-                "RenderingIdentifier": "events",
-                "SectionNumber": "03"
+                "RenderingIdentifier": "events"
               }
             }
           ],
@@ -64,11 +62,17 @@
               "componentName": "NewsList",
               "dataSource": "investors/news",
               "params": {
-                "RenderingIdentifier": "news",
-                "SectionNumber": "04"
+                "RenderingIdentifier": "news"
               }
             }
           ]
+        }
+      },
+      {
+        "componentName": "FeaturedReports",
+        "dataSource": "investors/reports",
+        "params": {
+          "RenderingIdentifier": "reports"
         }
       },
       {
@@ -76,7 +80,6 @@
         "dataSource": "investors/resources",
         "params": {
           "RenderingIdentifier": "resources",
-          "SectionNumber": "05",
           "Surface": "paper"
         }
       },
@@ -84,7 +87,8 @@
         "componentName": "ClosingBand",
         "dataSource": "investors/closing",
         "params": {
-          "RenderingIdentifier": "stay-informed"
+          "RenderingIdentifier": "stay-informed",
+          "SpaceAfter": "1"
         }
       }
     ]

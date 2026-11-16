@@ -15,13 +15,15 @@ import { Signal } from 'components/ui/Signal';
  * provider feed — open decision D-IR — mapped onto the same fields; no live market data here.
  *
  * Datasource template: Results Highlights
- * Params: RenderingIdentifier (anchor), SectionNumber (e.g. "01")
+ * Params: RenderingIdentifier (anchor), SectionNumber (optional numeral, e.g. "01")
  */
 type Metric = Item & { fields: { Label: TextField; Value: TextField; Unit: TextField } };
 type ResultsDocument = Item & { fields: { Title: TextField; Kind: TextField; Link: LinkField } };
 
 type ResultsHighlightsFields = {
   Heading: TextField;
+  /** Sub-line under the heading — the quarter, e.g. "Q2 2027". */
+  Subheading?: TextField;
   Note: TextField;
   BackgroundImage: ImageField;
   Metrics: Metric[];
@@ -39,7 +41,7 @@ export const Default = ({ fields, params }: ResultsHighlightsProps) => {
   const id = params.RenderingIdentifier || 'results';
   return (
     <section id={id} className="dy-section" aria-labelledby={`${id}-title`}>
-      <SectionHead id={`${id}-title`} index={params.SectionNumber} heading={fields.Heading} note={fields.Note} />
+      <SectionHead id={`${id}-title`} index={params.SectionNumber} heading={fields.Heading} sub={fields.Subheading} note={fields.Note} />
       <div className="dy-irp-band dy-dark">
         <ContentSdkImage field={fields.BackgroundImage} fill sizes="100vw" alt="" />
         <dl className="dy-irp-metrics">

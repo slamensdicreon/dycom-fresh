@@ -29,3 +29,31 @@
   .dy .dy-notice-mark { width: 40px; height: 40px; }
   .dy .dy-notice-copy .dy-actions { flex-direction: column; align-items: stretch; width: 100%; }
 }
+
+/* ---- Investors page review, Nov 11 2026 ---- */
+/* Heads lost their numerals; the results head carries the quarter as a green sub-line under the H2. */
+.dy .dy-irp-head-title { display: flex; flex-direction: column; align-items: start; gap: 8px; }
+.dy .dy-irp-sub { font-size: 15px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--dy-green); }
+
+/* Events: Upcoming / Past tabs (square, Signal Green underline drawn in). */
+.dy .dy-irp-tabs { width: 100%; }
+.dy .dy-irp-tablist { display: flex; gap: 0; margin: 0 0 28px; border-bottom: 1px solid var(--dy-rule); }
+.dy .dy-irp-tab { position: relative; min-height: 48px; padding: 8px 20px; border: 0; background: transparent; font: inherit; font-size: 16px; font-weight: 500; color: var(--dy-ink); cursor: pointer; }
+.dy .dy-irp-tab:first-child { padding-left: 0; }
+.dy .dy-irp-tab::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--dy-green); transform: scaleX(0); transform-origin: right; transition: transform var(--dy-draw) var(--dy-ease); }
+.dy .dy-irp-tab[data-state="active"] { color: var(--dy-civic); }
+.dy .dy-irp-tab[data-state="active"]::after, .dy .dy-irp-tab:hover::after { transform: scaleX(1); transform-origin: left; }
+.dy .dy-irp-tab:focus-visible { outline: 2px solid var(--dy-green); outline-offset: 2px; }
+.dy .dy-irp-tabpanel:focus-visible { outline: 2px solid var(--dy-green); outline-offset: 4px; }
+.dy .dy-irp-empty { display: flex; flex-direction: column; align-items: start; gap: 10px; padding: 4px 0 24px; }
+.dy .dy-irp-empty p { font-size: 16px; color: var(--dy-ink); max-width: 44ch; }
+.dy[data-motion="off"] .dy-irp-tab::after { transition: none; }
+
+/* Brand film on the Investors page sits a little lower than on the homepage (param Height="compact"). */
+.dy-site .dy-film.dy-film--compact { max-height: min(600px, 72svh); }
+
+/* Breathing room between the closing band and the footer (ClosingBand param SpaceAfter="1"). */
+.dy .dy-irp-close.dy-space-after { margin-bottom: var(--dy-section); }
+@media (max-width: 767px) {
+  .dy .dy-irp-close.dy-space-after { margin-bottom: 48px; }
+}

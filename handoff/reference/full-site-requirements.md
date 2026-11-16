@@ -1,3 +1,5 @@
+> **Superseded, November 16, 2026.** The current requirements are `docs/requirements.md` at the repository root. This copy is kept as handed over; its template codes (T01–T18) and component gap list (C01–C38) no longer match the current system.
+
 # 01 — Full-site requirements for the new dycomind.com
 
 Prepared October 23, 2026. Citations resolve inside `sources/` (see `README.md` for the key: *NAV0001*–*FRM0012* Corporate Website requirements; *CC-n* Custom Components list; *Strategy*; *Audit*; *SF* SuccessFactors assessment; *Spec* the Consolidated-direction specification). Paths of built pieces are relative to the packaged prototypes.

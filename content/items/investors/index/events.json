@@ -1,6 +1,6 @@
 {
   "templateName": "In-Page Link",
-  "sortOrder": 2,
+  "sortOrder": 1,
   "fields": {
     "Label": "Events",
     "Link": {

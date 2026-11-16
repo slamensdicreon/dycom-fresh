@@ -108,6 +108,8 @@ const SITEMAP = [
   ['investors/governance-documents', 'Governance documents', 'investors'],
   ['investors/news', 'Investor news', 'investors'],
   ['investors/events-presentations', 'Events & presentations', 'investors'],
+  // Investors review, Nov 11, 2026: call transcripts become on-site HTML pages (from Notified), not PDFs.
+  ['investors/events-presentations/q2-2027-results/transcript', 'Q2 2027 results call transcript', 'investors'],
   ['investors/analyst-coverage', 'Analyst coverage', 'investors'],
   ['investors/shareholder-services', 'Shareholder services', 'investors'],
   ['investors/faqs', 'Investor FAQs', 'investors'],

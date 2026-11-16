@@ -7,6 +7,8 @@ import { ButtonLink } from 'components/ui/links';
  * over photography (Civic wash keeps the copy AA). Without an image it is a plain Civic band.
  *
  * Datasource template: Closing Band
+ * Params: RenderingIdentifier, SpaceAfter ("1": a section of white space before the footer —
+ *   Investors page review, Nov 11, 2026)
  */
 type ClosingBandProps = ComponentProps & {
   fields: { Heading: TextField; Text: TextField; BackgroundImage: ImageField; PrimaryLink: LinkField; SecondaryLink: LinkField };
@@ -16,7 +18,7 @@ export const Default = ({ fields, params }: ClosingBandProps) => {
   const id = params.RenderingIdentifier || 'closing';
   const hasImage = Boolean(fields.BackgroundImage?.value?.src);
   return (
-    <section id={id} className={`dy-section dy-irp-close dy-dark${hasImage ? ' dy-irp-photo' : ''}`} aria-labelledby={`${id}-title`}>
+    <section id={id} className={`dy-section dy-irp-close dy-dark${hasImage ? ' dy-irp-photo' : ''}${params.SpaceAfter === '1' ? ' dy-space-after' : ''}`} aria-labelledby={`${id}-title`}>
       {hasImage && <ContentSdkImage field={fields.BackgroundImage} fill sizes="100vw" alt="" />}
       <div>
         <Text tag="h2" id={`${id}-title`} field={fields.Heading} />
