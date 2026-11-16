@@ -8,6 +8,8 @@ It implements the approved Final Design Direction from the handoff in this repos
 
 ```
 /            the Next.js app (this README)
+docs/        current project documents — requirements.md is the living full-site requirements
+             (page inventory, templates T01–T16, component inventory, content, open decisions)
 handoff/     the Icreon design handoff of Nov 6, 2026 — brief, requirements, Dycom's source documents,
              the prototype's source and build, screenshots. Deprecated, reference only: nothing in the
              app reads from it. Delete it once every sitemap page is built.
@@ -97,7 +99,7 @@ Each component's `…Fields` type is its datasource template. The matching item 
 
 **Building the next page:**
 
-1. Replace its holding route in `content/routes/` with the real renderings. Reuse the interior renderings above and add new ones as the requirements' template catalogue calls for them (`handoff/reference/full-site-requirements.md` §2–3).
+1. Replace its holding route in `content/routes/` with the real renderings. Reuse the interior renderings above and add new ones as the requirements' template catalogue calls for them (`docs/requirements.md` §2 templates, §3 component inventory).
 2. Drop `"sitemap": false` so the page is listed in the sitemap.
 
 ## Connecting SitecoreAI

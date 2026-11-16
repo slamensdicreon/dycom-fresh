@@ -4,6 +4,8 @@ Conventions for anyone (human or agent) adding to this app. The README explains 
 
 Never build from `handoff/`: it is the deprecated design handoff, kept for reference.
 
+What to build is in `docs/requirements.md`: the page inventory, the templates (T01–T16) and the component inventory (§3). Name new renderings as §3 does, and reuse an inventory rendering before adding one.
+
 ## The one rule
 
 **Write every rendering exactly as it will run against SitecoreAI.** Components receive `{ rendering, params, fields }` from a Placeholder and read content only through `fields`. Nothing a content author would change lives in TSX. When Sitecore is connected, `content/` is replaced by Sitecore items and no component changes.
