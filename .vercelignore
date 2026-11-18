@@ -1,2 +1,3 @@
 # The design handoff is reference material; the deployed app never reads it.
 handoff/
+exports/

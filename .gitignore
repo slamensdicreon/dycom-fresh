@@ -9,3 +9,5 @@ next-env.d.ts
 .env.local
 .env*.local
 .DS_Store
+# Packages built for partners (scripts/notified-package)
+exports/

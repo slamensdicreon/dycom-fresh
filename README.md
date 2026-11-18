@@ -102,6 +102,10 @@ Each component's `…Fields` type is its datasource template. The matching item 
 1. Replace its holding route in `content/routes/` with the real renderings. Reuse the interior renderings above and add new ones as the requirements' template catalogue calls for them (`docs/requirements.md` §2 templates, §3 component inventory).
 2. Drop `"sitemap": false` so the page is listed in the sitemap.
 
+## Investors page package for Notified
+
+Notified, Dycom's investor-relations platform partner, hosts the investor pages. `npm run package:notified` builds the Investors overview as a standalone static package for them: one `index.html` with its CSS, fonts, images, film and plain JavaScript, plus an integration guide. The zip is written to `exports/`, which git ignores. Rebuild and resend it whenever the Investors page, the menus or the brand CSS change. Requirements and steps: `scripts/notified-package/README.md`.
+
 ## Connecting SitecoreAI
 
 1. **Create the site.** Create a headless SXA site named `dycom` (or set `NEXT_PUBLIC_DEFAULT_SITE_NAME`) with English as its language.

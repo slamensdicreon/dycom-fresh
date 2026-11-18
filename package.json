@@ -16,7 +16,8 @@
     "sitecore-tools:build": "sitecore-tools project build",
     "prepare-local": "npm-run-all --serial content:build sitecore-tools:generate-map sitecore-tools:build",
     "typecheck": "npm run prepare-local && tsc --noEmit",
-    "content:build:strict": "node scripts/build-local-content.mjs --strict"
+    "content:build:strict": "node scripts/build-local-content.mjs --strict",
+    "package:notified": "bash scripts/notified-package/build.sh"
   },
   "dependencies": {
     "@sitecore-content-sdk/analytics-core": "2.1.2",

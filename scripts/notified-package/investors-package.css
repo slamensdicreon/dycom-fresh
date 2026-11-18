@@ -1,0 +1,4 @@
+/* Package additions to dycom.css. The site renders menus only while open; this package keeps them
+   in the page and toggles the hidden attribute, so hidden must win over component display rules. */
+[hidden] { display: none !important; }
+dialog.dy-dialog:not([open]) { display: none; }
