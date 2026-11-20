@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Search with no results — system page</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="dycom-web.css">
+<link rel="stylesheet" href="tpl-d.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face { font-family: "Dycom Fjalla"; src: url("/_blob/0ac801cd8a8605a3b1b79be409f7f065") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Dycom Geist"; src: url("/_blob/571c400347b6b5435347cbda65060bfd") format("woff2"); font-weight: 100 900; font-display: swap; }
+body { margin: 0; }
+</style>
+</helmet>
+<div class="dy" style="width: 100%;">
+
+  <main>
+    <section class="dy-section" aria-labelledby="se-title">
+      <div class="dy-wrap" style="display: flex; flex-direction: column; gap: 40px;">
+        <form class="dy-search" role="search" aria-label="Site search">
+          <label for="se-q">Search dycomind.com</label>
+          <input id="se-q" type="search" value="drone surveys">
+          <button class="dy-btn" type="submit">Search<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3h12v12H3z"></path><path d="m15 15 6 6"></path></svg></button>
+        </form>
+        <div class="dy-empty">
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <h2 id="se-title" style="font-size: 40px;">No results for “drone surveys”</h2>
+            <ul class="dy-ticks dy-white">
+              <li>Check the spelling, or try fewer or different words.</li>
+              <li>Search for a service, a company or a document title.</li>
+              <li>Looking for a job? Job search has its own listings.</li>
+            </ul>
+            <div class="dy-actions"><a class="dy-btn" href="#open-roles">Search open roles<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
+          </div>
+          <div>
+            <div class="dy-group-title"><h3>Popular pages</h3></div>
+            <div class="dy-popular" style="grid-template-columns: 1fr 1fr;">
+          <a href="#">Who we are<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a href="#">What we do<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a href="#">Company directory<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a href="#">Investors<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a href="#">Resource Center<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a href="#">Contact Dycom<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":640}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

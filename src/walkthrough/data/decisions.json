@@ -1,0 +1,241 @@
+{
+ "openDecisions": [
+  {
+   "ID": "D1–D7",
+   "Decision": "Button shape, arrow meaning, secondary homepage sections, hero media, casing, map interaction depth, green proportion",
+   "Default in the prototype": "Square · `→`/`↗` · compact How we work, no Meet the people · film with still variant · all-caps H1+H2 · hover + click · accent only",
+   "Blocks": "Nothing (defaults are implemented); each is a token or component switch"
+  },
+  {
+   "ID": "D8",
+   "Decision": "Capability tiles → companies doing that work",
+   "Default in the prototype": "Tabs link to the map",
+   "Blocks": "T05 companies section, directory service filter"
+  },
+  {
+   "ID": "D9",
+   "Decision": "Trade tiles → explainer content",
+   "Default in the prototype": "No link",
+   "Blocks": "`careers/trades/` depth; Resource Center topics"
+  },
+  {
+   "ID": "D10",
+   "Decision": "\"Networks in everyday life\" as an interior section",
+   "Default in the prototype": "Cut",
+   "Blocks": "A possible T04 page"
+  },
+  {
+   "ID": "D11",
+   "Decision": "Resource Center wording",
+   "Default in the prototype": "Component kept, wording pending",
+   "Blocks": "Resource Center on T01 and T02"
+  },
+  {
+   "ID": "D12",
+   "Decision": "Company map interaction",
+   "Default in the prototype": "Atlas & directory; four alternatives built",
+   "Blocks": "T06 directory page, C35 map additions, MAP0005–MAP0009; the phone rule and no-auto-movement rule if a live map is chosen"
+  },
+  {
+   "ID": "D-BS",
+   "Decision": "Building Systems taxonomy (SVC0005)",
+   "Default in the prototype": "Not represented",
+   "Blocks": "Building Systems service pages, business segments content"
+  },
+  {
+   "ID": "D-CF",
+   "Decision": "Company facts owner and values",
+   "Default in the prototype": "Static figures",
+   "Blocks": "C16 counters everywhere"
+  },
+  {
+   "ID": "D-IR",
+   "Decision": "Investor content on-site from a feed, or links to the IR host (the strategy's \"link to IR microsite\" conflicts with the no-outward-links rule)",
+   "Default in the prototype": "Static snapshot, inward links",
+   "Blocks": "T10/T11/T12 Investors pages, T02 investor content pages, stock information, email alerts, call transcripts"
+  },
+  {
+   "ID": "D-PRI",
+   "Decision": "Priority of the careers pages the strategy names (MVP\\*)",
+   "Default in the prototype": "Treated as MVP",
+   "Blocks": "Sprint planning for T07–T09, veterans, why Dycom, students, talent network"
+  },
+  {
+   "ID": "D-SEG",
+   "Decision": "Business segments as a page or a section of Who we are",
+   "Default in the prototype": "Listed as a page",
+   "Blocks": "T04 vs T03"
+  }
+ ],
+ "dataDependencies": [
+  {
+   "Dependency": "Company → service tagging (D8, SVC0003)",
+   "What is missing": "The published directory names companies and home offices only; no company carries its service lines, industries, states served, segment, aliases or logo.",
+   "Pages blocked": "All T05 service pages (companies section), directory filters by service line"
+  },
+  {
+   "Dependency": "Company facts source (NAV0006)",
+   "What is missing": "Canonical employee, company and office counts and an owner. The prototype uses 20,000+ employees, ~40 companies, incorporated 1969, NYSE: DY.",
+   "Pages blocked": "T01, T03, T04 counters"
+  },
+  {
+   "Dependency": "Office locations (MAP0001, MAP0002)",
+   "What is missing": "The prototype maps 31 home offices for 39 companies; the strategy counts about 500 field offices. Addresses and coordinates for all of them.",
+   "Pages blocked": "T06 directory, clustering, nearest-first search"
+  },
+  {
+   "Dependency": "SuccessFactors fields (SF)",
+   "What is missing": "Compensation, posted date, shift, education, experience and certification are empty in the sample; pay-forward cards and \"decide with confidence\" facts need them structured. Validate population across the whole inventory; request the feed enhancements the assessment lists (§14).",
+   "Pages blocked": "T08 result cards, T09 facts block, T05 live counts"
+  },
+  {
+   "Dependency": "Investor-relations feed and market data",
+   "What is missing": "Which provider endpoints exist for news, events, filings, documents, stock data and alerts, and whether content may be rendered on-site.",
+   "Pages blocked": "Every Investors page below the overview; news pages; results bar; call transcripts"
+  },
+  {
+   "Dependency": "Search index, DAM, consent tool, forms recipients, analytics plan",
+   "What is missing": "Sitecore search configuration; DAM with stable URLs and accessibility flagging; consent vendor; routing recipients per inquiry type, company and state; event names for form start / success / error.",
+   "Pages blocked": "T16 search, T12 libraries, C05, T13 forms"
+  }
+ ],
+ "investorsReview": [
+  {
+   "Item": "New hero boilerplate on the Investors overview",
+   "Why it is open": "Marked for replacement; no text supplied.",
+   "What the site does meanwhile": "Keeps the current company description."
+  },
+  {
+   "Item": "\"Whole snapshot\" with stock price",
+   "Why it is open": "A live quote is IR-provider market data and the only live feed on the page; the standing rule is no market widgets on the overview. Needs the D-IR feed decision.",
+   "What the site does meanwhile": "Three GAAP figures from the published results release."
+  },
+  {
+   "Item": "Investor resources block on every interior investor page",
+   "Why it is open": "Confirmed as the direction.",
+   "What the site does meanwhile": "Applied on the overview; the T02 content pages carry it when built."
+  }
+ ],
+ "netNewContent": [
+  {
+   "Item": "Homepage copy (built; wording to be confirmed)",
+   "Supplier": "Icreon draft, Dycom approves"
+  },
+  {
+   "Item": "Business segments page or section (Communications, Building Systems)",
+   "Supplier": "Dycom (segment leads)"
+  },
+  {
+   "Item": "Subcontractor request page and form",
+   "Supplier": "Icreon (form), Dycom (routing recipients)"
+  },
+  {
+   "Item": "Explore the trades (explainers per trade)",
+   "Supplier": "Icreon draft from the homepage trades chapter; Dycom confirms"
+  },
+  {
+   "Item": "Why Dycom",
+   "Supplier": "Dycom (talent marketing)"
+  },
+  {
+   "Item": "Veterans",
+   "Supplier": "Dycom (talent marketing), Icreon structure"
+  },
+  {
+   "Item": "Talent network page and form",
+   "Supplier": "Icreon (form), Dycom recruiting system owner (destination)"
+  },
+  {
+   "Item": "404, search results, contact thank-you",
+   "Supplier": "Icreon"
+  },
+  {
+   "Item": "Resource Center index (`resources/`): one searchable list of the documents filed under the other groups",
+   "Supplier": "Icreon (structure from the V2 homepage resource columns), Dycom confirms the groups"
+  },
+  {
+   "Item": "Students & early careers (the net-new half)",
+   "Supplier": "Dycom"
+  },
+  {
+   "Item": "Operating strengths (`who-we-are/operating-strengths/`) and Our capabilities (`what-we-do/capabilities/`): the two pages the homepage's four-card column leads to",
+   "Supplier": "Dycom (content v0.1 names the destinations; copy to follow)"
+  },
+  {
+   "Item": "Building Systems service pages",
+   "Supplier": "Dycom, once the taxonomy is confirmed"
+  }
+ ],
+ "contentItems": [
+  {
+   "Item": "Shared promotional block (\"Connection with Intention\": Safety, People, Our Reach)",
+   "Status": "Consolidate from the repeated copy into one source",
+   "Supplier": "Icreon consolidates, Dycom approves"
+  },
+  {
+   "Item": "Company facts (employees, operating companies, field offices, founded, listing)",
+   "Status": "Reconcile the conflicting values",
+   "Supplier": "Dycom confirms the owner and values"
+  },
+  {
+   "Item": "Operating-company data for the directory and map (39 companies): name, logo, aliases, home office and field offices with coordinates, segment, service lines, industries, states served, website and careers URLs",
+   "Status": "New structured items (no profile pages)",
+   "Supplier": "Dycom (each operating company)"
+  },
+  {
+   "Item": "Results bar: label, one line, release and replay links, release date",
+   "Status": "Driven by the IR feed; retires 14 days after each release",
+   "Supplier": "IR provider; Dycom IR confirms"
+  },
+  {
+   "Item": "Investors overview hero paragraph",
+   "Status": "New boilerplate requested in the Nov 11 review; not yet supplied",
+   "Supplier": "Dycom IR"
+  },
+  {
+   "Item": "Testimonials (text and video)",
+   "Status": "New",
+   "Supplier": "Dycom"
+  },
+  {
+   "Item": "History / timeline entries",
+   "Status": "New",
+   "Supplier": "Dycom"
+  },
+  {
+   "Item": "Community notices",
+   "Status": "New (Resource Center topic)",
+   "Supplier": "Dycom (operating companies)"
+  },
+  {
+   "Item": "Social feed accounts",
+   "Status": "Configuration",
+   "Supplier": "Dycom"
+  },
+  {
+   "Item": "Hero film and stills",
+   "Status": "Built with the existing brand film and library",
+   "Supplier": "—"
+  },
+  {
+   "Item": "Recruitment-fraud guidance",
+   "Status": "Migrate from the current recruitment-process page",
+   "Supplier": "Dycom"
+  },
+  {
+   "Item": "Service capability icons (SVG)",
+   "Status": "New",
+   "Supplier": "Icreon"
+  },
+  {
+   "Item": "Resource Center wording",
+   "Status": "Open decision D11",
+   "Supplier": "Dycom"
+  },
+  {
+   "Item": "System-page copy (empty states, errors, success messages)",
+   "Status": "New",
+   "Supplier": "Icreon"
+  }
+ ]
+}

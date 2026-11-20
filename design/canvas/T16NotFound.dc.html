@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Page not found — system page</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="dycom-web.css">
+<link rel="stylesheet" href="tpl-d.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face { font-family: "Dycom Fjalla"; src: url("/_blob/0ac801cd8a8605a3b1b79be409f7f065") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Dycom Geist"; src: url("/_blob/571c400347b6b5435347cbda65060bfd") format("woff2"); font-weight: 100 900; font-display: swap; }
+body { margin: 0; }
+</style>
+</helmet>
+<div class="dy" style="width: 100%;">
+  <dc-import name="SiteHeader" hint-size="100%,88px"></dc-import>
+  <main>
+    <section class="dy-ihero dy-ihero--plain" aria-labelledby="nf-title">
+      <div class="dy-wrap dy-ihero-body">
+        <div class="dy-ihero-copy">
+          <span class="dy-eyebrow">Error 404</span>
+          <h1 id="nf-title">Page not found</h1>
+          <p>The page you were looking for has moved or no longer exists. Search the site, or start from one of the pages below.</p>
+        </div>
+        <div class="dy-listing">
+          <svg class="dy-mark" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="M0 0 H100 V100 H89 A89 89 0 0 0 0 11 Z"></path><path d="M0 50 H50 V100 H39 A39 39 0 0 0 0 61 Z"></path></svg>
+          <span class="dy-listing-label">Looking for a job?</span>
+          <div class="dy-listing-value" style="font-size: 44px;">Open roles</div>
+          <p>Search roles with our operating companies near you.</p>
+          <div class="dy-actions" style="margin-top: 16px;"><a class="dy-btn dy-btn--inverse" href="#open-roles">Find a job<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
+        </div>
+      </div>
+    </section>
+    <section class="dy-section" aria-labelledby="nf-search">
+      <div class="dy-wrap" style="display: flex; flex-direction: column; gap: 56px;">
+        <form class="dy-search" role="search" aria-labelledby="nf-search">
+          <label id="nf-search" for="nf-q">Search dycomind.com</label>
+          <input id="nf-q" type="search" placeholder="Pages, documents and news">
+          <button class="dy-btn" type="submit">Search<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3h12v12H3z"></path><path d="m15 15 6 6"></path></svg></button>
+        </form>
+        <div>
+          <div class="dy-group-title"><h3>Popular pages</h3></div>
+          <div class="dy-popular">
+          <a href="#">Who we are<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a href="#">What we do<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a href="#">Company directory<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a href="#">Investors<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a href="#">Resource Center<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          <a href="#">Contact Dycom<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1530}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

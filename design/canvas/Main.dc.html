@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dycom template system roadmap</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="dycom-web.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face { font-family: "Dycom Fjalla"; src: url("/_blob/0ac801cd8a8605a3b1b79be409f7f065") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Dycom Geist"; src: url("/_blob/571c400347b6b5435347cbda65060bfd") format("woff2"); font-weight: 100 900; font-display: swap; }
+body { margin: 0; }
+a { color: #041054; } a:hover { color: #00b609; }
+</style>
+</helmet>
+<div class="dy" style="width: 1440px; height: 1640px; padding: 80px 88px; display: flex; flex-direction: column; gap: 56px; background: #ffffff;">
+  <div style="display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 80px; align-items: end;">
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <span class="dy-eyebrow">dycomind.com · Template system</span>
+      <h1 style="font-size: 76px;">Sixteen templates.<br>One frame.</h1>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <p class="dy-lede" style="font-size: 18px;">The homepage and the Investors overview are built. Every other page on the future-state sitemap is one of fourteen templates, and every one of them inherits the interior frame that the Investors page proved.</p>
+      <p style="font-size: 16px;">We design them in the order they unlock the most of the sitemap, each with its job, its narrative, the components it needs and the content source behind every block.</p>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 360px minmax(0, 1fr); gap: 56px; align-items: start;">
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+      <h2 style="font-size: 26px;">The interior frame</h2>
+      <ol style="display: flex; flex-direction: column; border-top: 1px solid #041054;">
+        <li style="display: flex; gap: 14px; padding: 13px 0; border-bottom: 1px solid #c1c6c8; font-size: 15px;"><b style="color: #00b609; font-family: var(--display); font-weight: 400; width: 24px;">1</b><span><b style="color: #041054;">Site header</b> — six groups, Find a job</span></li>
+        <li style="display: flex; gap: 14px; padding: 13px 0; border-bottom: 1px solid #c1c6c8; font-size: 15px;"><b style="color: #00b609; font-family: var(--display); font-weight: 400; width: 24px;">2</b><span><b style="color: #041054;">Interior hero</b> — breadcrumb, H1, one-sentence answer, optional listing block</span></li>
+        <li style="display: flex; gap: 14px; padding: 13px 0; border-bottom: 1px solid #c1c6c8; font-size: 15px;"><b style="color: #00b609; font-family: var(--display); font-weight: 400; width: 24px;">3</b><span><b style="color: #041054;">In-page index</b> — optional, numbered jumps</span></li>
+        <li style="display: flex; gap: 14px; padding: 13px 0; border-bottom: 1px solid #c1c6c8; font-size: 15px;"><b style="color: #00b609; font-family: var(--display); font-weight: 400; width: 24px;">4</b><span><b style="color: #041054;">Numbered sections</b> — the template's own blocks</span></li>
+        <li style="display: flex; gap: 14px; padding: 13px 0; border-bottom: 1px solid #c1c6c8; font-size: 15px;"><b style="color: #00b609; font-family: var(--display); font-weight: 400; width: 24px;">5</b><span><b style="color: #041054;">Closing band</b> — one next step, never two</span></li>
+        <li style="display: flex; gap: 14px; padding: 13px 0; border-bottom: 1px solid #c1c6c8; font-size: 15px;"><b style="color: #00b609; font-family: var(--display); font-weight: 400; width: 24px;">6</b><span><b style="color: #041054;">Footer</b> — six columns, Motion control</span></li>
+      </ol>
+      <h2 style="font-size: 26px; margin-top: 16px;">Every template answers</h2>
+      <ul class="dy-ticks dy-white" style="display: flex; flex-direction: column;">
+        <li>Who arrives here, and from where</li>
+        <li>The one job the page must do</li>
+        <li>The story, beat by beat, in Dycom's words</li>
+        <li>Which blocks are required, which optional</li>
+        <li>Where each block's content comes from</li>
+        <li>What Dycom still has to supply</li>
+      </ul>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0;">
+      <div style="display: grid; grid-template-columns: 64px minmax(0, 220px) minmax(0, 1fr) 84px 130px; gap: 20px; padding: 0 0 12px; border-bottom: 2px solid #041054; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #354846;">
+        <span>Order</span><span>Template</span><span>Pages it serves</span><span>Pages</span><span>Status</span>
+      </div>
+      <sc-for list="{{rows}}" as="row" hint-placeholder-count="16">
+        <div style="display: grid; grid-template-columns: 64px minmax(0, 220px) minmax(0, 1fr) 84px 130px; gap: 20px; align-items: center; padding: 11px 0; border-bottom: 1px solid #c1c6c8;">
+          <span style="font-family: var(--display); font-size: 20px; color: #041054;">{{row.code}}</span>
+          <span style="font-size: 16px; font-weight: 600; color: #041054;">{{row.name}}</span>
+          <span style="font-size: 14px; line-height: 1.4;">{{row.pages}}</span>
+          <span style="font-size: 15px; font-weight: 600; color: #041054;">{{row.count}}</span>
+          <span style="{{row.badge}}">{{row.status}}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1640}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const built = 'display:inline-flex;align-items:center;justify-content:center;height:30px;padding:0 12px;font-size:13px;font-weight:600;background:#041054;color:#fff;';
+    const now = 'display:inline-flex;align-items:center;justify-content:center;height:30px;padding:0 12px;font-size:13px;font-weight:600;border:2px solid #00b609;color:#041054;';
+    const queued = 'display:inline-flex;align-items:center;justify-content:center;height:30px;padding:0 12px;font-size:13px;font-weight:500;border:1px solid #c1c6c8;color:#354846;';
+    const r = (code, name, pages, count, status) => ({ code, name, pages, count, status, badge: status === 'Built' ? built : status === 'Designed' ? now : queued });
+    return {
+      rows: [
+        r('T01', 'Homepage', 'The front door', '1', 'Built'),
+        r('T02', 'Investors', 'investors/ and the investor content pages: stock, governance, committees, analyst coverage, shareholder services, FAQs', '7', 'Built'),
+        r('T03', 'Section landing', 'Who we are, What we do, Our companies', '3', 'Designed'),
+        r('T04', 'Corporate topic', 'Values, safety, quality, sustainability, trades, veterans, benefits…', '19', 'Designed'),
+        r('T05', 'Service detail', 'The seven services, then Building Systems', '7+', 'Designed'),
+        r('T06', 'Company directory', 'companies/ — the map as a page', '1', 'Designed'),
+        r('T07', 'Careers landing', 'careers/ — "where do I fit"', '1', 'Designed'),
+        r('T08', 'Job search', 'careers/opportunities/', '1', 'Designed'),
+        r('T09', 'Job detail', 'One per open requisition', 'feed', 'Designed'),
+        r('T10', 'Resource listing', 'News, investor news, events, resources', '4', 'Designed'),
+        r('T11', 'Article / news detail', 'Every release and article', 'feed', 'Designed'),
+        r('T12', 'Document library', 'Reports, filings, handbook, hazard recognition', '7', 'Designed'),
+        r('T13', 'Contact & forms', 'Contact, subcontractors, talent network, IR', '6', 'Designed'),
+        r('T14', 'Legal / long-form', 'Privacy, terms, purchasing terms', '4', 'Designed'),
+        r('T15', 'People grid', 'Leadership, board of directors', '2', 'Designed'),
+        r('T16', 'System page', '404, search, confirmations', '5', 'Designed')
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

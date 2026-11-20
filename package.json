@@ -17,7 +17,8 @@
     "prepare-local": "npm-run-all --serial content:build sitecore-tools:generate-map sitecore-tools:build",
     "typecheck": "npm run prepare-local && tsc --noEmit",
     "content:build:strict": "node scripts/build-local-content.mjs --strict",
-    "package:notified": "bash scripts/notified-package/build.sh"
+    "package:notified": "bash scripts/notified-package/build.sh",
+    "walkthrough:build": "python3 scripts/walkthrough/build.py && node scripts/walkthrough/metrics.mjs"
   },
   "dependencies": {
     "@sitecore-content-sdk/analytics-core": "2.1.2",

@@ -1,0 +1,807 @@
+{
+ "note": "Final component inventory for T01-T16 (consolidated November 16, 2026). Source of the walkthrough's component pages and of docs/requirements.md section 3.",
+ "groups": [
+  {
+   "name": "Global — partial designs on every page",
+   "components": [
+    {
+     "name": "SiteHeader",
+     "refs": "NAV0001–0003",
+     "what": "Six mega-menu groups, phone sheet, language switch, Find a job. Menu spotlight link per group (Investors: Latest results & call replay, permanent).",
+     "templates": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T09",
+      "T10",
+      "T11",
+      "T12",
+      "T13",
+      "T14",
+      "T15",
+      "T16"
+     ],
+     "source": "Navigation items",
+     "status": "Built"
+    },
+    {
+     "name": "SiteFooter",
+     "refs": "NAV0007",
+     "what": "Six columns, phone accordions, utility row, Motion control, cookie preferences.",
+     "templates": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T09",
+      "T10",
+      "T11",
+      "T12",
+      "T13",
+      "T14",
+      "T15",
+      "T16"
+     ],
+     "source": "Navigation items",
+     "status": "Built"
+    },
+    {
+     "name": "RolesDrawer",
+     "refs": "Strategy",
+     "what": "Work / where / trade / company filters, results, role view, empty state.",
+     "templates": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T09",
+      "T10",
+      "T11",
+      "T12",
+      "T13",
+      "T14",
+      "T15",
+      "T16"
+     ],
+     "source": "Job feed + Trade items",
+     "status": "Built"
+    },
+    {
+     "name": "ResultsBar",
+     "refs": "Dycom IR review, Nov 11, 2026",
+     "what": "Earnings window: shows above the header on every page for 14 days after a results release; label, one line, Results release and Call replay links; dismissed for the session.",
+     "templates": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T09",
+      "T10",
+      "T11",
+      "T12",
+      "T13",
+      "T14",
+      "T15",
+      "T16"
+     ],
+     "source": "IR feed release date",
+     "status": "New"
+    },
+    {
+     "name": "AlertBanner",
+     "refs": "NAV0008 · CC-3",
+     "what": "Site-wide notice: severity, schedule, dismissible, site targeting.",
+     "templates": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T09",
+      "T10",
+      "T11",
+      "T12",
+      "T13",
+      "T14",
+      "T15",
+      "T16"
+     ],
+     "source": "Alert items",
+     "status": "Not designed"
+    },
+    {
+     "name": "HomepagePopup",
+     "refs": "NAV0009 · CC-5",
+     "what": "Scheduled modal, frequency cap, Esc and × close, focus return.",
+     "templates": [
+      "T01"
+     ],
+     "source": "Popup items",
+     "status": "Not designed"
+    },
+    {
+     "name": "ConsentBanner",
+     "refs": "CC-4",
+     "what": "The consent tool's banner and the preferences link.",
+     "templates": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T09",
+      "T10",
+      "T11",
+      "T12",
+      "T13",
+      "T14",
+      "T15",
+      "T16"
+     ],
+     "source": "Consent vendor",
+     "status": "Third-party"
+    }
+   ]
+  },
+  {
+   "name": "Heroes and page navigation",
+   "components": [
+    {
+     "name": "Hero",
+     "refs": "NAV0004 · CC-2",
+     "what": "Homepage: silent film loop or still. Carousel variant (CC-12) only if Dycom opts in.",
+     "templates": [
+      "T01"
+     ],
+     "source": "Datasource",
+     "status": "Built"
+    },
+    {
+     "name": "InteriorHero",
+     "refs": "C01 · NAV0011",
+     "what": "Breadcrumb, H1, one sentence. Variants: photo · plain · article · with search bar (jobs, site, resources) · with listing block. Holds the PageIndex.",
+     "templates": [
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T09",
+      "T10",
+      "T11",
+      "T12",
+      "T13",
+      "T14",
+      "T15",
+      "T16"
+     ],
+     "source": "Datasource",
+     "status": "Extend"
+    },
+    {
+     "name": "PageIndex",
+     "refs": "C08 · ABT0003",
+     "what": "In-page navigation: jump row under the hero (numbered or unnumbered — Investors drops the numerals), or sticky 'On this page' list (with print for legal).",
+     "templates": [
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T07",
+      "T14"
+     ],
+     "source": "Route sections",
+     "status": "Extend"
+    }
+   ]
+  },
+  {
+   "name": "Content blocks",
+   "components": [
+    {
+     "name": "RichTextSection",
+     "refs": "C22 · ABT0001",
+     "what": "Numbered section: heading, lede, rich text, tick list. Legal variant: numbered clauses migrated as-is.",
+     "templates": [
+      "T02",
+      "T04",
+      "T09",
+      "T14"
+     ],
+     "source": "Datasource",
+     "status": "New"
+    },
+    {
+     "name": "MediaText",
+     "refs": "C18 · CC-17",
+     "what": "50/50 photo or video beside text; left or right.",
+     "templates": [
+      "T04",
+      "T05",
+      "T07"
+     ],
+     "source": "Datasource",
+     "status": "New"
+    },
+    {
+     "name": "FeatureColumns",
+     "refs": "C17 · CC-11 · CC-19 · ABT0005",
+     "what": "2–4 columns with the signal mark, a brand pictogram or a photo; light or Civic. Serves the shared promo (Connection with Intention), pillars, capabilities, segments, values, Headway®/Rightway™, why Dycom.",
+     "templates": [
+      "T01",
+      "T03",
+      "T04",
+      "T05",
+      "T07"
+     ],
+     "source": "Datasource or shared item",
+     "status": "New"
+    },
+    {
+     "name": "ProcessSteps",
+     "refs": "—",
+     "what": "Numbered steps, horizontal or stacked.",
+     "templates": [
+      "T04",
+      "T05"
+     ],
+     "source": "Datasource",
+     "status": "New"
+    },
+    {
+     "name": "Lifecycle",
+     "refs": "—",
+     "what": "Five-stage process route with fixed-height panels; tabs on desktop, accordion on phones. Compact route variant for landings.",
+     "templates": [
+      "T01",
+      "T03"
+     ],
+     "source": "Stage items",
+     "status": "Built"
+    },
+    {
+     "name": "Statement",
+     "refs": "C09 · CC-8",
+     "what": "One sentence set large with the signal mark; quote variant with attribution; call-replay block (one line + two actions).",
+     "templates": [
+      "T01",
+      "T02",
+      "T04"
+     ],
+     "source": "Datasource",
+     "status": "Extend"
+    },
+    {
+     "name": "MetricBand",
+     "refs": "C16 · CC-10 · NAV0006",
+     "what": "Facts over a photo (Company Facts, one source), results metrics under a head with the quarter as a green sub-line, figure strip.",
+     "templates": [
+      "T01",
+      "T02",
+      "T03",
+      "T11"
+     ],
+     "source": "Company Facts or IR feed",
+     "status": "Extend"
+    },
+    {
+     "name": "Accordion",
+     "refs": "C07 · CC-7",
+     "what": "Text, links and buttons inside; FAQ schema option (Investor FAQs).",
+     "templates": [
+      "T02",
+      "T04"
+     ],
+     "source": "Child items",
+     "status": "New"
+    },
+    {
+     "name": "Video",
+     "refs": "C11 · CC-2 · CC-6",
+     "what": "Brand film band (plays in place, muted) — on the homepage and the Investors page, inline video, tagged video library with filters.",
+     "templates": [
+      "T01",
+      "T02",
+      "T05",
+      "T07"
+     ],
+     "source": "Media library + tags",
+     "status": "Extend"
+    },
+    {
+     "name": "InPageSlider",
+     "refs": "C14 · CC-13",
+     "what": "Image, video or text slides with title, description and link.",
+     "templates": [
+      "T07"
+     ],
+     "source": "Child items",
+     "status": "New"
+    },
+    {
+     "name": "Notice",
+     "refs": "C38",
+     "what": "Short notice with icon: recruitment fraud (shared item), map unavailable, consent blocked.",
+     "templates": [
+      "T06",
+      "T07",
+      "T09"
+     ],
+     "source": "Shared item",
+     "status": "New"
+    }
+   ]
+  },
+  {
+   "name": "Cards and collections",
+   "components": [
+    {
+     "name": "Pathways",
+     "refs": "NAV0005",
+     "what": "Four intent tiles on Civic.",
+     "templates": [
+      "T01"
+     ],
+     "source": "Child items",
+     "status": "Built"
+    },
+    {
+     "name": "TileGrid",
+     "refs": "C15 · CC-14 · C21",
+     "what": "Photo tiles, 3–4 up, optionally grouped: child pages (reads the nav group), related content, strength cards with buttons, services.",
+     "templates": [
+      "T01",
+      "T03",
+      "T04",
+      "T05",
+      "T11"
+     ],
+     "source": "Nav group or child items",
+     "status": "Extend"
+    },
+    {
+     "name": "LinkColumns",
+     "refs": "RES0001",
+     "what": "Titled link groups: investor resources, governance, popular pages, Resource Center.",
+     "templates": [
+      "T02",
+      "T12",
+      "T15",
+      "T16"
+     ],
+     "source": "Nav group or child items",
+     "status": "Built"
+    },
+    {
+     "name": "CoverCards",
+     "refs": "CC-23",
+     "what": "Report cards with cover image, label, title, action.",
+     "templates": [
+      "T02",
+      "T12"
+     ],
+     "source": "Documents (DAM)",
+     "status": "Built"
+    },
+    {
+     "name": "PeopleGrid",
+     "refs": "C36 · ABT0001",
+     "what": "Executive / board tabs, person cards, bio dialog.",
+     "templates": [
+      "T15"
+     ],
+     "source": "Person items",
+     "status": "New"
+    },
+    {
+     "name": "EventTimeline",
+     "refs": "C20 · CC-21",
+     "what": "Square-node timeline with Upcoming / Past tabs, split by event date at render; empty Upcoming state points to email alerts. History timeline (ABT0002) extends it.",
+     "templates": [
+      "T02",
+      "T10"
+     ],
+     "source": "IR feed or CMS",
+     "status": "Built"
+    }
+   ]
+  },
+  {
+   "name": "Search, lists and data",
+   "components": [
+    {
+     "name": "SearchFilterBar",
+     "refs": "C06 · C21 · C31 · C35 · NAV0010",
+     "what": "One search-and-filter bar: query (role + location for jobs), filter selects or year tabs, removable chips, live count, sort. Teaser variant for landings.",
+     "templates": [
+      "T03",
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T10",
+      "T12",
+      "T16"
+     ],
+     "source": "The list it filters",
+     "status": "New"
+    },
+    {
+     "name": "ResultList",
+     "refs": "C21 · RES0002",
+     "what": "Rows with item templates: news item, search result with snippet, company row. Author on/off.",
+     "templates": [
+      "T02",
+      "T03",
+      "T10",
+      "T16"
+     ],
+     "source": "IR feed, CMS or search index",
+     "status": "Extend"
+    },
+    {
+     "name": "JobList",
+     "refs": "C32",
+     "what": "Job result cards: company logo, location, type, travel, posted, trade tag, pay slot when the feed has pay. Compact 'similar roles' variant.",
+     "templates": [
+      "T08",
+      "T09"
+     ],
+     "source": "SuccessFactors feed",
+     "status": "New"
+    },
+    {
+     "name": "DocumentList",
+     "refs": "C23 · RES0004–0006",
+     "what": "Title, file type, size, date, language tag; aside variant.",
+     "templates": [
+      "T02",
+      "T04",
+      "T11",
+      "T12"
+     ],
+     "source": "DAM",
+     "status": "New"
+    },
+    {
+     "name": "DataTable",
+     "refs": "C37",
+     "what": "Responsive table; stacks into labelled blocks on phones (financial statements, board committees, analyst coverage).",
+     "templates": [
+      "T02",
+      "T11"
+     ],
+     "source": "CMS or IR feed",
+     "status": "New"
+    },
+    {
+     "name": "EmptyState",
+     "refs": "C34 · C38",
+     "what": "Zero results, closed role, page not found: says what happened, then ways forward (similar items, nearby companies, talent network).",
+     "templates": [
+      "T06",
+      "T08",
+      "T09",
+      "T10",
+      "T16"
+     ],
+     "source": "Rendering params",
+     "status": "New"
+    },
+    {
+     "name": "ArticleBody",
+     "refs": "C22 · RES0003",
+     "what": "Dateline, body, figure strip slot, aside (documents, contact, share); Article schema.",
+     "templates": [
+      "T11"
+     ],
+     "source": "IR feed or CMS",
+     "status": "New"
+    }
+   ]
+  },
+  {
+   "name": "Companies and careers",
+   "components": [
+    {
+     "name": "CompanyMap",
+     "refs": "MAP0002–0005 · MAP0009 · C29 · C35",
+     "what": "Atlas + directory + company card; the card leads to the company's own website ↗ and careers ↗. Modes: homepage chapter · full directory with filters · filtered to one service · pre-filtered to one company (for operating-company sites, MAP0009). No map below 768px.",
+     "templates": [
+      "T01",
+      "T03",
+      "T05",
+      "T06"
+     ],
+     "source": "Company items",
+     "status": "Extend"
+    },
+    {
+     "name": "CompanyDirectoryGrid",
+     "refs": "MAP0006–0008",
+     "what": "A–Z index, logo rows; the map's accessible list and fallback.",
+     "templates": [
+      "T06"
+     ],
+     "source": "Company items",
+     "status": "New"
+    },
+    {
+     "name": "TradeFinder",
+     "refs": "Strategy goal 1",
+     "what": "'Where do I fit': trades in plain language with open-role counts.",
+     "templates": [
+      "T07"
+     ],
+     "source": "Trade items + feed counts",
+     "status": "New"
+    },
+    {
+     "name": "RelatedCareers",
+     "refs": "C30 · SVC0004",
+     "what": "Trades for a service, live count, filtered drawer.",
+     "templates": [
+      "T05"
+     ],
+     "source": "Trade items + feed",
+     "status": "New"
+    },
+    {
+     "name": "JobDetail",
+     "refs": "C33",
+     "what": "Facts block, sticky apply hand-off ↗, description sections, trade question, company card, fraud notice.",
+     "templates": [
+      "T09"
+     ],
+     "source": "SuccessFactors feed (route)",
+     "status": "New"
+    }
+   ]
+  },
+  {
+   "name": "Forms, closing and layout",
+   "components": [
+    {
+     "name": "InquiryForm",
+     "refs": "C24–C26 · FRM0001–0012",
+     "what": "One forms engine: intent selector, conditional fields, validation, success, routing by type/company/state. Variants: contact, subcontractor, talent network, document request, email alerts. Placement left/right/top/bottom (C25).",
+     "templates": [
+      "T01",
+      "T13"
+     ],
+     "source": "Sitecore Forms",
+     "status": "Extend"
+    },
+    {
+     "name": "ContactOptions",
+     "refs": "FRM0001",
+     "what": "Other ways to reach us: headquarters, Investor Relations, suppliers, directory.",
+     "templates": [
+      "T13"
+     ],
+     "source": "Datasource",
+     "status": "New"
+    },
+    {
+     "name": "ClosingBand",
+     "refs": "C19 · CC-18",
+     "what": "One next step: photo split, photo band or plain Civic; one primary and one secondary action.",
+     "templates": [
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T10",
+      "T11",
+      "T12",
+      "T13",
+      "T14",
+      "T15"
+     ],
+     "source": "Datasource",
+     "status": "Extend"
+    },
+    {
+     "name": "SplitSection",
+     "refs": "—",
+     "what": "Layout container with two placeholders (main + aside, or two columns).",
+     "templates": [
+      "T02",
+      "T11"
+     ],
+     "source": "—",
+     "status": "Built"
+    }
+   ]
+  },
+  {
+   "name": "Required, not yet designed",
+   "components": [
+    {
+     "name": "Testimonials",
+     "refs": "C10 · CC-6",
+     "what": "Text and video testimonials, embeddable and on a standalone page.",
+     "templates": [
+      "T04",
+      "T07"
+     ],
+     "source": "Testimonial items",
+     "status": "Not designed"
+    },
+    {
+     "name": "ImageGallery",
+     "refs": "C12 · CC-9",
+     "what": "Gallery with lightbox.",
+     "templates": [
+      "T04"
+     ],
+     "source": "Media library",
+     "status": "Not designed"
+    },
+    {
+     "name": "SocialFeed",
+     "refs": "C27 · CC-16",
+     "what": "Third-party social feed.",
+     "templates": [
+      "T04",
+      "T07"
+     ],
+     "source": "Social accounts",
+     "status": "Not designed"
+    },
+    {
+     "name": "BusinessSegments",
+     "refs": "C28 · ABT0006 · SVC0005",
+     "what": "Communications / Building Systems — a FeatureColumns or tabs variant once the taxonomy is set.",
+     "templates": [
+      "T03",
+      "T04"
+     ],
+     "source": "Segment items",
+     "status": "Not designed"
+    }
+   ]
+  }
+ ],
+ "sharedParts": [
+  {
+   "name": "Button",
+   "notes": "Civic · outline · inverse · ghost-inverse; 50px; → or ↗"
+  },
+  {
+   "name": "Link",
+   "notes": "One underline style; → site pages, ↗ leaving the site"
+  },
+  {
+   "name": "SignalMark",
+   "notes": "The one permitted curve; never an arrow"
+  },
+  {
+   "name": "Icon",
+   "notes": "UI stroke icons + the six brand pictograms"
+  },
+  {
+   "name": "Eyebrow",
+   "notes": "Green caps label"
+  },
+  {
+   "name": "SectionHead",
+   "notes": "H2 + note; optional green index numeral or green sub-line"
+  },
+  {
+   "name": "Breadcrumb",
+   "notes": "NAV0011, on/off in the CMS"
+  },
+  {
+   "name": "Tag",
+   "notes": "Type, language, trade"
+  },
+  {
+   "name": "Chip",
+   "notes": "Removable filter (one style, replaces four)"
+  },
+  {
+   "name": "Field",
+   "notes": "Text, select, textarea, checkbox, square toggle; error text"
+  },
+  {
+   "name": "Tabs",
+   "notes": "Square, green underline (one style, replaces three)"
+  },
+  {
+   "name": "Disclosure",
+   "notes": "Accordion item, footer and phone menu"
+  },
+  {
+   "name": "Modal",
+   "notes": "Dialog and drawer; focus trap and return"
+  },
+  {
+   "name": "Pagination",
+   "notes": "One style, replaces three"
+  },
+  {
+   "name": "Share",
+   "notes": "Copy link, email, print — nothing leaves the site"
+  }
+ ],
+ "retired": [
+  {
+   "name": "WhoWeAre",
+   "becomes": "Homepage composite → decomposes into RichTextSection + FeatureColumns + MetricBand."
+  },
+  {
+   "name": "ResultsHighlights",
+   "becomes": "Investors composite → MetricBand + DocumentList + Statement."
+  },
+  {
+   "name": "Strengths",
+   "becomes": "→ TileGrid (cards with buttons)."
+  },
+  {
+   "name": "BrandStatement",
+   "becomes": "→ Statement."
+  },
+  {
+   "name": "BrandFilm",
+   "becomes": "→ Video (band variant)."
+  },
+  {
+   "name": "NewsList",
+   "becomes": "→ ResultList (news item)."
+  },
+  {
+   "name": "InPageIndex",
+   "becomes": "→ PageIndex (jump row)."
+  },
+  {
+   "name": "ContactForm",
+   "becomes": "→ InquiryForm (dark, intent toggle)."
+  },
+  {
+   "name": "ResourceColumns",
+   "becomes": "→ LinkColumns."
+  },
+  {
+   "name": "FeaturedReports",
+   "becomes": "→ CoverCards."
+  },
+  {
+   "name": "PageNotice",
+   "becomes": "Temporary holding page; removed as pages are built."
+  }
+ ],
+ "notes": {
+  "invTitle": "Component inventory — the final kit for T01–T16",
+  "invMerge": "CONSOLIDATION DECISIONS\n\nWhere templates solved the same problem separately, one component with variants:\n\n• 5 search bars (jobs, resources, site, companies, documents) → SearchFilterBar\n• 3 empty states + job recovery + map failure → EmptyState (+ Notice)\n• Strength cards, child-page tiles, related content, service tiles → TileGrid\n• Shared promo, pillars, capabilities, segments, values, Headway®/Rightway™, why Dycom → FeatureColumns\n• Jump row + sticky 'On this page' + legal index → PageIndex\n• Facts band + results metrics + figure strip → MetricBand\n• Brand statement + quote → Statement; brand film + inline video + video library → Video\n• News list + search results + company and service rows → ResultList\n• Photo split + photo band + plain closing → ClosingBand\n• Legal clauses → RichTextSection (numbered variant)\n• Homepage form, contact, subcontractor, talent network, document request, email alerts → InquiryForm\n• Article header and job-search header → InteriorHero variants\n• Company profile pages removed (Nov 16, 2026): the directory card and A–Z rows go to each company's website ↗; the map's pre-filtered mode stays for operating-company sites (MAP0009)",
+  "invRules": "RULES FOR THE KIT\n\n• A new page is built from this list. A genuinely new need becomes a variant of an existing rendering before it becomes a new one.\n• Every rendering reads only its datasource (or a feed through a provider) — Sitecore-ready, as the live site already is.\n• Shared content has ONE item: Company Facts, Connection with Intention, the recruitment-fraud notice, navigation, Trade and Company items.\n• One style per shared UI part: the four template stylesheets (tpl-a…d) fold into the brand stylesheet when built.",
+  "invNext": "STILL TO DESIGN\n\nRequired by Dycom's lists but not on any template yet: AlertBanner (NAV0008), HomepagePopup (NAV0009), Testimonials (CC-6, C10), ImageGallery (CC-9), SocialFeed (CC-16), BusinessSegments (ABT0006, waits on the Building Systems taxonomy). ConsentBanner comes from the consent vendor (CC-4).\n\nOptional: HeroCarousel (CC-12) only if Dycom opts in; HistoryTimeline (ABT0002) extends EventTimeline; a countdown counter (CC-10 example) extends MetricBand."
+ }
+}

@@ -10,6 +10,8 @@ It implements the approved Final Design Direction from the handoff in this repos
 /            the Next.js app (this README)
 docs/        current project documents — requirements.md is the living full-site requirements
              (page inventory, templates T01–T16, component inventory, content, open decisions)
+design/      the template design canvas (boards, styles, assets, notes) and the component inventory —
+             the source of the /walkthrough presentation and library
 handoff/     the Icreon design handoff of Nov 6, 2026 — brief, requirements, Dycom's source documents,
              the prototype's source and build, screenshots. Deprecated, reference only: nothing in the
              app reads from it. Delete it once every sitemap page is built.
@@ -44,7 +46,7 @@ There's no setup: import the repository in Vercel. The defaults are correct.
 - **Build command:** `npm run build`. It compiles `content/` in strict mode, generates the Sitecore component map and runs `next build`.
 - **Node.js version:** 24 (pinned in the project settings and in `engines` in `package.json`).
 
-**Environment variables:** none are needed while the site runs on local content. In that mode `robots.txt` disallows everything, so preview deployments stay out of search indexes. When SitecoreAI is ready, add the Edge variables from `.env.example` to the Vercel project; local content mode switches off on the next deploy.
+**Environment variables:** only `WALKTHROUGH_PASSWORD`, the shared password for `/walkthrough` (see below); without it production refuses everyone there. The site itself needs none while it runs on local content. In that mode `robots.txt` disallows everything, so preview deployments stay out of search indexes. When SitecoreAI is ready, add the Edge variables from `.env.example` to the Vercel project; local content mode switches off on the next deploy.
 
 **What the build produces:** every content page is pre-rendered as static HTML (51 today). `/api/jobs`, the sitemap, robots, llms.txt and the Sitecore editing routes are functions. The Sitecore proxy chain runs as middleware.
 
@@ -101,6 +103,15 @@ Each component's `…Fields` type is its datasource template. The matching item 
 
 1. Replace its holding route in `content/routes/` with the real renderings. Reuse the interior renderings above and add new ones as the requirements' template catalogue calls for them (`docs/requirements.md` §2 templates, §3 component inventory).
 2. Drop `"sitemap": false` so the page is listed in the sitemap.
+
+## Design walkthrough (/walkthrough)
+
+`/walkthrough/` is the steering-committee presentation and design library: the strategy, all sixteen templates with their designs live at desktop and phone width, the 47-component inventory and the open decisions. It is internal: behind one shared password, never indexed, and outside the Sitecore routing.
+
+- **Story mode** (`/walkthrough/`): full-screen slides. → / Space next, ← back, G chapter index, F full screen. Each slide has its own address (`/walkthrough/#/t05`).
+- **Library** (`/walkthrough/library/`): strategy, templates (`/templates/t03/` with every design, its job, narrative, Sitecore mapping and what Dycom owes), components with filters and the template matrix, decisions.
+- **Access:** set `WALKTHROUGH_PASSWORD` in the Vercel project (Production and Preview). People sign in at `/walkthrough/login/`; the cookie lasts 30 days, and changing the password signs everyone out. `src/proxy.ts` gates the pages and the design files, and the pages check again. Locally, with no password set, the walkthrough is open.
+- **Content:** everything is generated from `design/canvas/` (the template canvas, copied from the Claude design artifact), `design/component-inventory.json` and `docs/requirements.md`. After changing any of them, run `npm run walkthrough:build` and commit the results. It renders each canvas board to `public/walkthrough-assets/canvas/boards/` and writes `src/walkthrough/data/`. It needs Python 3 and Playwright with Chromium. Strategy copy is in `src/walkthrough/strategy.ts` (from the design brief); T01's notes are in `src/walkthrough/data.ts`.
 
 ## Investors page package for Notified
 

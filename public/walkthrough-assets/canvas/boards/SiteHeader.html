@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Site header</title>
+<link rel="stylesheet" href="../dycom-web.css">
+
+<style>
+@font-face { font-family: "Dycom Fjalla"; src: url("../assets/0ac801cd8a8605a3b1b79be409f7f065.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Dycom Geist"; src: url("../assets/571c400347b6b5435347cbda65060bfd.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+body { margin: 0; }
+</style>
+
+</head>
+<body>
+
+
+<header class="dy dy-header">
+  <div class="dy-wrap">
+    <a class="dy-header-logo" href="#top" aria-label="Dycom home"><img src="../assets/d4f5bc7d6e590f938fff0aa5e70f2f62.png" alt="Dycom"></a>
+    <nav class="dy-nav" aria-label="Main">
+      <sc-for list="{{groups}}" as="g" hint-placeholder-count="6">
+        <button type="button" class="{{g.cls}}" aria-expanded="false">{{g.label}}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button>
+      </sc-for>
+    </nav>
+    <div class="dy-header-tools">
+      <button type="button" class="dy-icon-btn" aria-label="Language: English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></button>
+      <a class="dy-btn" href="#open-roles">Find a job<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+      <button type="button" class="dy-icon-btn dy-menu-btn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg></button>
+    </div>
+  </div>
+</header>
+
+<script>
+// Design board: links and buttons are illustrative, so nothing navigates away from the board.
+document.addEventListener('click', function (e) { if (e.target.closest('a, button')) e.preventDefault(); });
+</script>
+</body>
+</html>

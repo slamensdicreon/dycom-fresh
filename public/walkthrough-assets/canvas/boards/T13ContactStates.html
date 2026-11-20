@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Contact form states</title>
+<link rel="stylesheet" href="../dycom-web.css"><link rel="stylesheet" href="../tpl-d.css">
+
+<style>
+@font-face { font-family: "Dycom Fjalla"; src: url("../assets/0ac801cd8a8605a3b1b79be409f7f065.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Dycom Geist"; src: url("../assets/571c400347b6b5435347cbda65060bfd.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+body { margin: 0; }
+</style>
+
+</head>
+<body>
+
+
+<div class="dy" style="width: 100%; background: #ffffff;">
+  <div class="dy-wrap" style="padding-top: 72px; padding-bottom: 88px;">
+    <div class="dy-states">
+
+      <!-- A. Inline validation (FRM0006): summary first, each field names its own fix; values are kept -->
+      <div>
+        <div class="dy-state-cap"><b>A</b>Inline validation</div>
+        <form class="dy-f-panel" aria-labelledby="st-a" novalidate>
+          <h2 id="st-a" style="font-size: 32px;">Send an inquiry</h2>
+          <div class="dy-f-alert" role="alert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3h18v18H3z"></path><path d="M12 7v6"></path><path d="M12 16.5v.5"></path></svg>
+            <div><b>Two fields need attention</b><ul><li><a href="#st-a-email">Email address</a></li><li><a href="#st-a-loc">Project location</a></li></ul></div>
+          </div>
+          <div class="dy-f-grid">
+            <div class="dy-f-field"><label for="st-a-name">Your name</label><input id="st-a-name" type="text" value="Jordan Ellis"></div>
+            <div class="dy-f-field is-invalid"><label for="st-a-email">Email address</label><input id="st-a-email" type="email" value="jordan.ellis@" aria-invalid="true" aria-describedby="st-a-email-err"><span class="dy-f-error" id="st-a-email-err"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 3h18v18H3z"></path><path d="M12 7v6"></path><path d="M12 16.5v.5"></path></svg>Enter an email address like name@company.com</span></div>
+            <div class="dy-f-field"><label for="st-a-org">Organization</label><input id="st-a-org" type="text" value="Northfield Electric Cooperative"></div>
+            <div class="dy-f-field is-invalid"><label for="st-a-loc">Project location</label><input id="st-a-loc" type="text" placeholder="City, state" aria-invalid="true" aria-describedby="st-a-loc-err"><span class="dy-f-error" id="st-a-loc-err"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 3h18v18H3z"></path><path d="M12 7v6"></path><path d="M12 16.5v.5"></path></svg>Tell us the city and state where the work is</span></div>
+          </div>
+          <div class="dy-f-foot"><button class="dy-btn dy-btn--inverse" type="submit">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></div>
+        </form>
+      </div>
+
+      <!-- B. Success (FRM0006): confirms the route, recaps what was sent, offers one next step -->
+      <div>
+        <div class="dy-state-cap"><b>B</b>Sent</div>
+        <div class="dy-f-panel" role="status">
+          <div class="dy-f-sent">
+            <svg class="dy-mark" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="M0 0 H100 V100 H89 A89 89 0 0 0 0 11 Z"></path><path d="M0 50 H50 V100 H39 A39 39 0 0 0 0 61 Z"></path></svg>
+            <h3>Thank you.</h3>
+            <p>Your inquiry is with our customer team, who will share it with the operating company nearest the work. We reply within [response time].</p>
+            <dl class="dy-f-recap">
+              <dt>Inquiry</dt><dd>Customer or project</dd>
+              <dt>Project location</dt><dd>Columbia, Missouri</dd>
+              <dt>Reply to</dt><dd>jordan.ellis@northfield.coop</dd>
+            </dl>
+            <div class="dy-actions">
+              <a class="dy-btn dy-btn--inverse" href="#">Find the company near you<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+              <button class="dy-btn dy-btn--ghost-inverse" type="button">Send another inquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- C. Careers: no form; the drawer is the single careers action -->
+      <div>
+        <div class="dy-state-cap"><b>C</b>Careers selected</div>
+        <div class="dy-f-panel">
+          <fieldset class="dy-f-fieldset">
+            <legend class="dy-f-legend">What is your inquiry about?</legend>
+            <div class="dy-f-intents">
+              <label class="dy-f-chip"><input type="radio" name="st-c">Customer or project</label>
+              <label class="dy-f-chip is-on"><input type="radio" name="st-c" checked>Careers</label>
+              <label class="dy-f-chip"><input type="radio" name="st-c">Supplier or subcontractor</label>
+              <label class="dy-f-chip"><input type="radio" name="st-c">Investor</label>
+              <label class="dy-f-chip"><input type="radio" name="st-c">Community or resident</label>
+              <label class="dy-f-chip"><input type="radio" name="st-c">Media</label>
+              <label class="dy-f-chip"><input type="radio" name="st-c">Other</label>
+            </div>
+          </fieldset>
+          <p class="dy-f-prompt">Tell us your trade and where you want to work, and we’ll show you open roles with our operating companies.</p>
+          <div class="dy-f-grid">
+            <div class="dy-f-field"><label for="st-c-trade">Trade</label><div class="dy-f-select"><select id="st-c-trade"><option value="">Not sure yet</option></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div></div>
+            <div class="dy-f-field"><label for="st-c-loc">Where</label><input id="st-c-loc" type="text" placeholder="City, state or ZIP"></div>
+          </div>
+          <div class="dy-f-foot"><a class="dy-btn dy-btn--inverse" href="#open-roles">See open roles<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
+        </div>
+      </div>
+
+      <!-- D. Subcontractor request (FRM0011, C26): the same engine, its own fields and routing -->
+      <div>
+        <div class="dy-state-cap"><b>D</b>Subcontractor request</div>
+        <form class="dy-f-panel" aria-labelledby="st-d">
+          <h2 id="st-d" style="font-size: 32px;">Work with a Dycom company</h2>
+          <div class="dy-f-grid">
+            <div class="dy-f-field"><label for="st-d-co">Company name</label><input id="st-d-co" type="text" autocomplete="organization"></div>
+            <div class="dy-f-field"><label for="st-d-svc">Service line</label><div class="dy-f-select"><select id="st-d-svc"><option value="">Select one</option></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div></div>
+            <div class="dy-f-field dy-f-field--full"><label for="st-d-reg">Regions served</label><input id="st-d-reg" type="text" placeholder="States or metro areas"></div>
+            <div class="dy-f-field"><label for="st-d-name">Contact name</label><input id="st-d-name" type="text" autocomplete="name"></div>
+            <div class="dy-f-field"><label for="st-d-email">Email address</label><input id="st-d-email" type="email" autocomplete="email"></div>
+          </div>
+          <div class="dy-f-foot"><button class="dy-btn dy-btn--inverse" type="submit">Send request<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+// Design board: links and buttons are illustrative, so nothing navigates away from the board.
+document.addEventListener('click', function (e) { if (e.target.closest('a, button')) e.preventDefault(); });
+</script>
+</body>
+</html>

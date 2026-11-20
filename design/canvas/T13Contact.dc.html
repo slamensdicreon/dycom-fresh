@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contact — contact and forms</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="dycom-web.css">
+<link rel="stylesheet" href="tpl-d.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face { font-family: "Dycom Fjalla"; src: url("/_blob/0ac801cd8a8605a3b1b79be409f7f065") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Dycom Geist"; src: url("/_blob/571c400347b6b5435347cbda65060bfd") format("woff2"); font-weight: 100 900; font-display: swap; }
+body { margin: 0; }
+</style>
+</helmet>
+<div class="dy" style="width: 100%;">
+  <dc-import name="SiteHeader" current="Who we are" hint-size="100%,88px"></dc-import>
+
+  <main>
+    <section class="dy-ihero" aria-labelledby="t15-title">
+      <img class="dy-ihero-photo" src="/_blob/3f614c063c34348898d3f2db75c8d3bb" alt="">
+      <div class="dy-ihero-shade" aria-hidden="true"></div>
+      <div class="dy-wrap dy-ihero-body" style="padding-bottom: 80px;">
+        <div class="dy-ihero-copy">
+          <nav class="dy-crumbs" aria-label="Breadcrumb"><a href="#">Home</a><span aria-hidden="true">/</span><a href="#">Who we are</a><span aria-hidden="true">/</span><span aria-current="page">Contact</span></nav>
+          <h1 id="t15-title">Contact Dycom</h1>
+          <p>Tell us what you need. We route every inquiry to the right team, at Dycom or at the operating company nearest the work.</p>
+        </div>
+        <div class="dy-listing">
+          <svg class="dy-mark" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="M0 0 H100 V100 H89 A89 89 0 0 0 0 11 Z"></path><path d="M0 50 H50 V100 H39 A39 39 0 0 0 0 61 Z"></path></svg>
+          <span class="dy-listing-label">Looking for a job?</span>
+          <div class="dy-listing-value">Open roles</div>
+          <p>Applications go through our open roles, not this form. <a href="#open-roles" style="color: #ffffff; text-decoration: underline; text-underline-offset: 4px;">Find a job</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="dy-section" aria-label="Contact options">
+      <div class="dy-wrap dy-contact">
+        <!-- Other ways to reach us -->
+        <div class="dy-reach">
+          <div class="dy-head-title"><span class="dy-index">01</span><h2 style="font-size: 36px;">Reach us</h2></div>
+          <div class="dy-reach-block">
+            <h3>Dycom Industries, Inc.</h3>
+            <address>[Street address]<br>Palm Beach Gardens, Florida [ZIP]<br>[Main phone]</address>
+            <a class="dy-link" href="#">[General inquiries email]</a>
+          </div>
+          <div class="dy-reach-block">
+            <h3>Investors</h3>
+            <p>Results, filings, shareholder services and email alerts.</p>
+            <a class="dy-link" href="#">Contact Investor Relations<svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          </div>
+          <div class="dy-reach-block">
+            <h3>Suppliers and subcontractors</h3>
+            <p>Work with a Dycom company, or read our purchasing terms.</p>
+            <a class="dy-link" href="#">Subcontractor request<svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          </div>
+          <div class="dy-reach-block">
+            <h3>An operating company</h3>
+            <p>Every Dycom company has its own local team. Find the one that serves your area.</p>
+            <a class="dy-link" href="#">Company directory<svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+          </div>
+        </div>
+
+        <!-- Inquiry form with type selector (FRM0001): fields and routing change with the type -->
+        <form class="dy-f-panel" aria-labelledby="t15-form">
+          <div class="dy-head-title"><span class="dy-index">02</span><h2 id="t15-form" style="font-size: 36px;">Send an inquiry</h2></div>
+          <fieldset class="dy-f-fieldset">
+            <legend class="dy-f-legend">What is your inquiry about?</legend>
+            <div class="dy-f-intents">
+              <label class="dy-f-chip is-on"><input type="radio" name="t15-type" checked>Customer or project</label>
+              <label class="dy-f-chip"><input type="radio" name="t15-type">Careers</label>
+              <label class="dy-f-chip"><input type="radio" name="t15-type">Supplier or subcontractor</label>
+              <label class="dy-f-chip"><input type="radio" name="t15-type">Investor</label>
+              <label class="dy-f-chip"><input type="radio" name="t15-type">Community or resident</label>
+              <label class="dy-f-chip"><input type="radio" name="t15-type">Media</label>
+              <label class="dy-f-chip"><input type="radio" name="t15-type">Other</label>
+            </div>
+          </fieldset>
+          <p class="dy-f-prompt">Tell us where the work is and what kind of network it is, and we’ll connect you with the local team.</p>
+          <div class="dy-f-grid">
+            <div class="dy-f-field"><label for="t15-name">Your name</label><input id="t15-name" type="text" autocomplete="name" required></div>
+            <div class="dy-f-field"><label for="t15-email">Email address</label><input id="t15-email" type="email" autocomplete="email" required></div>
+            <div class="dy-f-field"><label for="t15-phone">Phone <small>Optional</small></label><input id="t15-phone" type="tel" autocomplete="tel"></div>
+            <div class="dy-f-field"><label for="t15-org">Organization</label><input id="t15-org" type="text" autocomplete="organization" required></div>
+            <div class="dy-f-field"><label for="t15-loc">Project location</label><input id="t15-loc" type="text" placeholder="City, state" required></div>
+            <div class="dy-f-field"><label for="t15-work">Type of work</label><div class="dy-f-select"><select id="t15-work" required><option value="">Select one</option></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div></div>
+            <div class="dy-f-field"><label for="t15-timing">Timing</label><div class="dy-f-select"><select id="t15-timing" required><option value="">Select one</option></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div></div>
+            <div class="dy-f-field dy-f-field--full"><label for="t15-msg">Tell us about the project <small>Optional</small></label><textarea id="t15-msg" placeholder="Scope, route miles, number of sites, or anything else that helps us prepare."></textarea></div>
+          </div>
+          <label class="dy-f-check"><input type="checkbox" required><span>I agree that Dycom may use these details to respond to my inquiry, as described in the <a href="#">privacy policy</a>.</span></label>
+          <div class="dy-f-foot">
+            <button class="dy-btn dy-btn--inverse" type="submit">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+            <p class="dy-f-note">This form is protected against spam.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="dy-cta" aria-labelledby="t15-cta">
+      <img src="/_blob/34a0cf8fce5542da036f469495730efd" alt="">
+      <div class="dy-cta-body">
+        <h2 id="t15-cta">Find the company near you.</h2>
+        <p>Our operating companies are local employers and local partners, with their own teams in your area.</p>
+        <div class="dy-actions">
+          <a class="dy-btn dy-btn--inverse" href="#">Find a company<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2800}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-import { NextFetchEvent, type NextRequest } from 'next/server';
+import { NextFetchEvent, NextResponse, type NextRequest } from 'next/server';
 import {
   defineProxy,
   AppRouterMultisiteProxy,
@@ -12,12 +12,38 @@ import sites from '.sitecore/sites.json';
 import scConfig from 'sitecore.config';
 import { routing } from './i18n/routing';
 import client from './lib/sitecore-client';
+import { WALKTHROUGH_COOKIE, isWalkthroughAuthorized } from './walkthrough/auth';
+
+/**
+ * /walkthrough (the steering-committee presentation and design library) and its rendered design
+ * boards are not Sitecore pages: they skip the Sitecore proxies, require the walkthrough password
+ * cookie, and are never indexed. The pages check the cookie again in their layout.
+ */
+function walkthroughGate(req: NextRequest): NextResponse {
+  const { pathname, search } = req.nextUrl;
+  const open = pathname === '/walkthrough/login/' || pathname === '/walkthrough/login';
+  let res: NextResponse;
+  if (open || isWalkthroughAuthorized(req.cookies.get(WALKTHROUGH_COOKIE)?.value)) {
+    res = NextResponse.next();
+  } else if (pathname.startsWith('/walkthrough-assets/')) {
+    res = new NextResponse('Sign in to the walkthrough first.', { status: 401 });
+  } else {
+    const login = new URL('/walkthrough/login/', req.url);
+    login.searchParams.set('next', pathname + search);
+    res = NextResponse.redirect(login);
+  }
+  res.headers.set('X-Robots-Tag', 'noindex, nofollow');
+  res.headers.set('Cache-Control', 'private, no-store');
+  return res;
+}
 
 // Proxy chain copied unchanged from Sitecore's App Router starter. Without Edge credentials the
 // Preview, BotTracking, Redirects and Personalize proxies skip themselves; Locale and Multisite
 // still run, rewriting `/investors` to `/dycom/en/investors` from `.sitecore/sites.json`.
 
 export default function proxy(req: NextRequest, event: NextFetchEvent) {
+  if (req.nextUrl.pathname.startsWith('/walkthrough')) return walkthroughGate(req);
+
   // PreviewProxy authorizes preview requests
   const preview = new PreviewProxy({
     client: client,
@@ -121,6 +147,8 @@ export const config = {
    */
   matcher: [
     '/',
+    // Every walkthrough file, including the design boards' images, styles and thumbnails.
+    '/walkthrough-assets/:path*',
     '/((?!api/|sitemap|robots|_next/|healthz|sitecore/api/|-/|.*[.](?:svg|png|jpe?g|gif|webp|avif|ico|woff2?|ttf|otf|eot|css|js|map|webmanifest)$).*)',
   ],
 };
