@@ -1,0 +1,91 @@
+/* First-pass designs for components no template board draws yet. Built from dycom-web.css; these
+   rules only add what that sheet does not have. For review — not yet approved by Dycom. */
+.fp-label { position: absolute; top: 12px; right: 12px; z-index: 5; font: 600 12px/1 var(--body); color: var(--civic); background: #fff; border: 1px dashed var(--civic); padding: 6px 8px; }
+.fp-stage { position: relative; }
+
+/* AlertBanner */
+.fp-alert { display: flex; align-items: center; gap: 16px; padding: 14px var(--gutter); font-size: 15px; font-weight: 500; }
+.fp-alert .dy-mark { width: 22px; height: 22px; flex: none; color: var(--green); }
+.fp-alert p { flex: 1; }
+.fp-alert b { font-weight: 700; margin-right: 6px; }
+.fp-alert a { text-decoration: underline !important; text-underline-offset: 4px; font-weight: 600; white-space: nowrap; }
+.fp-alert button { flex: none; width: 44px; height: 44px; display: grid; place-items: center; background: none; border: 0; color: inherit; cursor: pointer; }
+.fp-alert--info { background: var(--civic); color: #fff; }
+.fp-alert--urgent { background: #fff; color: var(--civic); box-shadow: inset 6px 0 0 #a1001a; border-bottom: 1px solid var(--rule); }
+.fp-alert--urgent .dy-mark { color: #a1001a; }
+.fp-caption { padding: 10px var(--gutter) 22px; font-size: 13px; color: var(--ink); }
+
+/* HomepagePopup + ConsentBanner backdrop */
+.fp-backdrop { position: relative; min-height: 640px; overflow: hidden; background: var(--civic-deep); }
+.fp-backdrop > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .55; filter: blur(2px); }
+.fp-scrim { position: absolute; inset: 0; background: rgba(3, 11, 58, .55); }
+.fp-dialog { position: relative; margin: 72px auto; width: min(760px, calc(100% - 32px)); background: #fff; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); }
+.fp-dialog img { width: 100%; height: 100%; object-fit: cover; min-height: 360px; }
+.fp-dialog-body { position: relative; padding: 40px 36px 36px; display: flex; flex-direction: column; gap: 16px; border-top: 4px solid var(--green); }
+.fp-dialog-body h2 { font-size: 34px; }
+.fp-close { position: absolute; top: 8px; right: 8px; width: 44px; height: 44px; display: grid; place-items: center; background: none; border: 0; color: var(--civic); }
+.fp-consent { position: absolute; left: 0; right: 0; bottom: 0; background: #fff; border-top: 4px solid var(--civic); padding: 24px var(--gutter); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px 40px; align-items: center; }
+.fp-consent h3 { font-size: 19px; margin-bottom: 6px; }
+.fp-consent p { font-size: 15px; max-width: 70ch; }
+
+/* Testimonials */
+.fp-quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.fp-quote { display: flex; flex-direction: column; gap: 18px; border-top: 2px solid var(--civic); padding-top: 22px; }
+.fp-quote blockquote { margin: 0; font-size: 19px; line-height: 1.5; color: var(--civic); font-weight: 500; }
+.fp-who { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 14px; align-items: center; }
+.fp-who img { width: 64px; height: 64px; object-fit: cover; }
+.fp-who b { display: block; color: var(--civic); }
+.fp-who span { font-size: 14px; }
+.fp-quote--video .dy-media img { aspect-ratio: 4 / 3; }
+
+/* ImageGallery */
+.fp-gallery { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: repeat(2, 220px); gap: 12px; }
+.fp-gallery figure { margin: 0; position: relative; overflow: hidden; }
+.fp-gallery figure:first-child { grid-row: span 2; }
+.fp-gallery img { width: 100%; height: 100%; object-fit: cover; }
+.fp-gallery figcaption { position: absolute; left: 0; bottom: 0; background: rgba(3, 11, 58, .82); color: #fff; font-size: 13px; padding: 6px 10px; }
+.fp-gallery-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; gap: 16px; flex-wrap: wrap; }
+
+/* SocialFeed */
+.fp-posts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.fp-post { display: flex; flex-direction: column; gap: 12px; border: 1px solid var(--rule); background: #fff; }
+.fp-post img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.fp-post div { padding: 0 16px 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; }
+.fp-post small { font-size: 13px; font-weight: 600; color: var(--ink); }
+
+/* BusinessSegments */
+.fp-segs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.fp-seg { display: flex; flex-direction: column; background: var(--civic); color: #fff; }
+.fp-seg img { width: 100%; aspect-ratio: 16 / 8; object-fit: cover; }
+.fp-seg div { padding: 28px 28px 32px; display: flex; flex-direction: column; gap: 14px; }
+.fp-seg h3 { color: #fff; font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 32px; }
+.fp-seg p { color: var(--night-dim); font-weight: 500; }
+.fp-seg ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.fp-seg li { border: 1px solid rgba(255, 255, 255, .45); padding: 6px 12px; font-size: 14px; font-weight: 600; }
+
+/* DataTable */
+.fp-table-wrap { overflow-x: auto; }
+.fp-table { width: 100%; border-collapse: collapse; font-size: 16px; }
+.fp-table th, .fp-table td { text-align: left; padding: 14px 16px 14px 0; border-bottom: 1px solid var(--rule); }
+.fp-table thead th { font-size: 14px; font-weight: 600; color: var(--ink); border-bottom: 2px solid var(--civic); }
+.fp-table tbody th { color: var(--civic); font-weight: 600; }
+.fp-chair { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--civic); }
+.fp-chair::before { content: ''; width: 12px; height: 12px; background: var(--green); }
+.fp-member::before { content: ''; display: inline-block; width: 12px; height: 12px; border: 2px solid var(--civic); }
+
+@media (max-width: 760px) {
+  .fp-dialog { grid-template-columns: 1fr; margin: 40px auto; }
+  .fp-dialog img { min-height: 0; aspect-ratio: 16 / 9; }
+  .fp-consent { grid-template-columns: 1fr; }
+  .fp-quotes, .fp-posts, .fp-segs { grid-template-columns: 1fr; }
+  .fp-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 120px 120px; }
+  .fp-gallery figure:first-child { grid-column: span 2; grid-row: auto; }
+  .fp-alert { display: grid; grid-template-columns: 22px minmax(0, 1fr) 44px; gap: 4px 12px; align-items: start; }
+  .fp-alert a { grid-column: 2; }
+  .fp-alert button { grid-column: 3; grid-row: 1; margin-top: -10px; }
+  .fp-table thead { display: none; }
+  .fp-table tr { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+  .fp-table th, .fp-table td { border: 0; padding: 0; }
+  .fp-table tbody th { grid-column: span 2; }
+  .fp-table td::before { content: attr(data-label); display: block; font-size: 13px; color: var(--ink); }
+}

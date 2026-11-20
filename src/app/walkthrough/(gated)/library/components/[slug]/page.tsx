@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { componentBySlug, components, STATUS_MEANING, templateByCode, thumbSrc } from 'src/walkthrough/data';
+import { componentBySlug, components, STATUS_MEANING, templateByCode } from 'src/walkthrough/data';
+import { previews } from 'src/walkthrough/component-previews';
+import { ComponentViewer } from 'src/walkthrough/library/ComponentViewer';
 import { lib, StatusTag } from 'src/walkthrough/ui/sections';
 
 type Params = { params: Promise<{ slug: string }> };
@@ -38,13 +40,14 @@ export default async function ComponentPage({ params }: Params) {
           </p>
         </div>
       </div>
+      {previews[c.name] && (
+        <section className="wt-section" aria-label={`${c.name}, shown on its own`}>
+          <ComponentViewer name={c.name} preview={previews[c.name]} />
+        </section>
+      )}
       <dl className="wt-facts">
         <div>
-          <dt>Requirements and handoff refs</dt>
-          <dd>{c.refs}</dd>
-        </div>
-        <div>
-          <dt>Content source</dt>
+          <dt>Content comes from</dt>
           <dd>{c.source}</dd>
         </div>
         <div>
@@ -52,33 +55,23 @@ export default async function ComponentPage({ params }: Params) {
           <dd>{c.group}</dd>
         </div>
         <div>
-          <dt>Used by</dt>
-          <dd>{c.templates.length === 16 ? 'Every template' : `${c.templates.length} template${c.templates.length > 1 ? 's' : ''}`}</dd>
+          <dt>Requirement references</dt>
+          <dd>{c.refs}</dd>
         </div>
       </dl>
       <section className="wt-section" aria-labelledby="where">
-        <h2 id="where">Where it is used</h2>
-        <div className="wt-tcards">
-          {used.map((t) => {
-            const board = t.views[0]?.board;
-            return (
-              <Link key={t.code} href={lib.template(t.slug)} className="wt-tcard">
-                {board ? (
-                  <span className="wt-tcard-thumb" style={{ backgroundImage: `url('${thumbSrc(board)}')` }} aria-hidden="true" />
-                ) : (
-                  <span className="wt-tcard-thumb wt-tcard-thumb--live" aria-hidden="true">
-                    Live on the site
-                  </span>
-                )}
-                <span className="wt-tcard-body">
-                  <span className="wt-code">{t.code}</span>
-                  <h3>{t.name}</h3>
-                  <span className="wt-small">{t.pagesServed}</span>
-                </span>
+        <h2 id="where">Used on {c.templates.length === 16 ? 'every template' : `${used.length} template${used.length > 1 ? 's' : ''}`}</h2>
+        <ul className="wt-used">
+          {used.map((t) => (
+            <li key={t.code}>
+              <Link href={lib.template(t.slug)}>
+                <span className="wt-code">{t.code}</span>
+                <span>{t.name}</span>
+                <span className="wt-small">{t.pagesServed}</span>
               </Link>
-            );
-          })}
-        </div>
+            </li>
+          ))}
+        </ul>
       </section>
       {siblings.length > 0 && (
         <section className="wt-section" aria-labelledby="related">
