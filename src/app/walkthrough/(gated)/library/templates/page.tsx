@@ -10,7 +10,6 @@ export default function TemplatesPage() {
     <div className="wt-page">
       <div className="wt-page-head">
         <div>
-          <p className="wt-eyebrow">Templates</p>
           <h1>Sixteen templates</h1>
         </div>
         <p className="wt-lede">Every page of the future-state sitemap is one of these. Each has one job, a narrative in Dycom’s words, a Sitecore mapping and a list of what Dycom still owes — and its designs, live, at desktop and phone width.</p>

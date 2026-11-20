@@ -13,7 +13,6 @@ export default function ComponentsPage() {
     <div className="wt-page">
       <div className="wt-page-head">
         <div>
-          <p className="wt-eyebrow">Component inventory</p>
           <h1>{components.length} renderings, one kit</h1>
         </div>
         <p className="wt-lede">The consolidated list of Sitecore renderings that build all sixteen templates, with the {sharedParts.length} shared parts they are made from. A new page is built from this list.</p>

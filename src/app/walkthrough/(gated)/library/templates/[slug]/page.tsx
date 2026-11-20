@@ -38,12 +38,14 @@ export default async function TemplatePage({ params }: Params) {
             <span aria-hidden="true">/</span>
             <span>{t.code}</span>
           </p>
-          <p className="wt-eyebrow">
-            {t.code} · {t.status}
-          </p>
-          <h1>{t.name}</h1>
+          <h1>
+            <span className="wt-code">{t.code}</span> {t.name}
+          </h1>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          <p>
+            <StatusTag status={t.status === 'Built' ? 'Built' : 'Designed'} />
+          </p>
           {t.headline && <p className="wt-lede">{t.headline.charAt(0).toUpperCase() + t.headline.slice(1)}.</p>}
           <p>
             <strong style={{ color: 'var(--civic)' }}>Pages it serves:</strong> {t.pagesServed}

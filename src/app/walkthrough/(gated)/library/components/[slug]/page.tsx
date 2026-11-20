@@ -29,7 +29,6 @@ export default async function ComponentPage({ params }: Params) {
             <span aria-hidden="true">/</span>
             <span>{c.group}</span>
           </p>
-          <p className="wt-eyebrow">Rendering</p>
           <h1>{c.name}</h1>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
