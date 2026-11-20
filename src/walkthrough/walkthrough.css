@@ -357,6 +357,19 @@
 .wt-slide-subhead { font-size: 18px; color: var(--civic); }
 .wt-dark .wt-button--inverse, .wt-dark .wt-button--inverse:hover { color: var(--civic); }
 
+/* component previews */
+.wt-preview-box { position: relative; background: var(--paper); border: 1px solid var(--rule); overflow: hidden; }
+.wt-preview-crop { position: relative; overflow: hidden; margin: 0 auto; }
+.wt-preview-crop iframe { position: absolute; top: 0; left: 0; border: 0; transform-origin: 0 0; background: #fff; transition: opacity .2s ease; }
+.wt-preview-loading { position: absolute; inset: 0; display: grid; place-items: center; font-size: 14px; color: var(--ink); }
+.wt-preview-phone-col { max-width: 420px; }
+.wt-preview--phone .wt-preview-box { background: var(--civic-deep); border-color: var(--civic-deep); }
+.wt-used { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--civic); }
+.wt-used a { display: grid; grid-template-columns: 56px minmax(0, 260px) minmax(0, 1fr); gap: 16px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: var(--civic); font-weight: 600; }
+.wt-used a:hover { background: var(--paper); }
+.wt-used .wt-small { font-weight: 400; }
+@media (max-width: 700px) { .wt-used a { grid-template-columns: 48px minmax(0, 1fr); } .wt-used .wt-small { grid-column: 2; } }
+
 /* where we need your input */
 .wt-choices { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-top: 2px solid var(--civic); }
 .wt-choices > li { display: grid; grid-template-columns: 40px minmax(0, 5fr) minmax(0, 4fr) minmax(0, 4fr); gap: 0 28px; padding: 16px 0; border-bottom: 1px solid var(--rule); align-items: start; font-size: 15px; line-height: 1.45; }

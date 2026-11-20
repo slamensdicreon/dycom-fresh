@@ -47,19 +47,24 @@ NAV_LABELS = ["Who we are", "What we do", "Our companies", "People &amp; careers
 CHEVRON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>'
 
 
+def expand_nav(body: str, current: str = "") -> str:
+    """The site header's six menu items are an sc-for loop in its board; expand it."""
+    if "<sc-for" not in body:
+        return body
+    cur = current.replace("&amp;", "&")
+    items = "".join(
+        f'<button type="button" class="dy-nav-item{" is-current" if label.replace("&amp;", "&") == cur else ""}">{label}{CHEVRON}</button>'
+        for label in NAV_LABELS
+    )
+    return re.sub(r"<sc-for.*?</sc-for>", items, body, flags=re.S)
+
+
 def resolve_imports(html: str) -> str:
     """Inline <dc-import> boards (the shared header and footer). The header's sc-for loop is expanded here."""
     def imp(m):
         name = m.group(1)
         current = re.search(r'current="([^"]*)"', m.group(0))
-        body = inner(source(name))
-        if "<sc-for" in body:
-            cur = (current.group(1) if current else "").replace("&amp;", "&")
-            items = "".join(
-                f'<button type="button" class="dy-nav-item{" is-current" if label.replace("&amp;", "&") == cur else ""}">{label}{CHEVRON}</button>'
-                for label in NAV_LABELS
-            )
-            body = re.sub(r"<sc-for.*?</sc-for>", items, body, flags=re.S)
+        body = expand_nav(inner(source(name)), (current.group(1) if current else ""))
         return resolve_imports(body)
     return re.sub(r'<dc-import name="(\w+)"[^>]*></dc-import>', imp, html)
 
@@ -90,7 +95,7 @@ def render(name: str) -> None:
 {styles}
 </head>
 <body>
-{resolve_imports(inner(text))}
+{resolve_imports(expand_nav(inner(text)))}
 <script>
 // Design board: links and buttons are illustrative, so nothing navigates away from the board.
 document.addEventListener('click', function (e) {{ if (e.target.closest('a, button')) e.preventDefault(); }});
@@ -181,6 +186,36 @@ for name in ("SiteHeader", "SiteFooter"):
     "templates": templates,
     "overviewNotes": overview_notes,
 }, indent=1, ensure_ascii=False) + "\n")
+
+# ---------- first-pass component designs (components no template board draws yet)
+FIRST = REPO / "design" / "first-pass"
+shutil.copy(FIRST / "first-pass.css", OUT / "first-pass.css")
+FONTS = f"""<style>
+@font-face {{ font-family: "Dycom Fjalla"; src: url("../assets/{assets['0ac801cd8a8605a3b1b79be409f7f065']}") format("woff2"); font-weight: 400; font-display: swap; }}
+@font-face {{ font-family: "Dycom Geist"; src: url("../assets/{assets['571c400347b6b5435347cbda65060bfd']}") format("woff2"); font-weight: 100 900; font-display: swap; }}
+body {{ margin: 0; }}
+</style>"""
+first_pass = []
+for frag in sorted(FIRST.glob("*.html")):
+    first_pass.append(frag.stem)
+    (OUT / "boards" / f"FirstPass-{frag.stem}.html").write_text(f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>{frag.stem} — first design</title>
+<link rel="stylesheet" href="../dycom-web.css">
+<link rel="stylesheet" href="../first-pass.css">
+{FONTS}
+</head>
+<body>
+{frag.read_text()}
+<script>document.addEventListener('click', function (e) {{ if (e.target.closest('a, button')) e.preventDefault(); }});</script>
+</body>
+</html>
+""")
+print(f"first-pass designs: {', '.join(first_pass)}")
 
 # ---------- docs/requirements.md (the page inventory gives each sitemap page its template)
 req = (REPO / "docs" / "requirements.md").read_text()

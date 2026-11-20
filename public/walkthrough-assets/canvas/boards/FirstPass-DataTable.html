@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>DataTable — first design</title>
+<link rel="stylesheet" href="../dycom-web.css">
+<link rel="stylesheet" href="../first-pass.css">
+<style>
+@font-face { font-family: "Dycom Fjalla"; src: url("../assets/0ac801cd8a8605a3b1b79be409f7f065.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Dycom Geist"; src: url("../assets/571c400347b6b5435347cbda65060bfd.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+body { margin: 0; }
+</style>
+</head>
+<body>
+<section class="dy dy-section"><div class="dy-wrap">
+  <div class="dy-head" style="margin-bottom:32px"><div class="dy-head-title"><h2>Board committees</h2></div><p class="dy-head-note">Committee membership, from Dycom’s board listing.</p></div>
+  <div class="fp-table-wrap"><table class="fp-table">
+    <thead><tr><th scope="col">Director</th><th scope="col">Audit</th><th scope="col">Compensation</th><th scope="col">Corporate governance</th><th scope="col">Finance</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">[Director name]</th><td data-label="Audit"><span class="fp-chair">Chair</span></td><td data-label="Compensation"><span class="fp-member"></span></td><td data-label="Corporate governance"></td><td data-label="Finance"></td></tr>
+      <tr><th scope="row">[Director name]</th><td data-label="Audit"><span class="fp-member"></span></td><td data-label="Compensation"><span class="fp-chair">Chair</span></td><td data-label="Corporate governance"></td><td data-label="Finance"><span class="fp-member"></span></td></tr>
+      <tr><th scope="row">[Director name]</th><td data-label="Audit"></td><td data-label="Compensation"><span class="fp-member"></span></td><td data-label="Corporate governance"><span class="fp-chair">Chair</span></td><td data-label="Finance"></td></tr>
+      <tr><th scope="row">[Director name]</th><td data-label="Audit"><span class="fp-member"></span></td><td data-label="Compensation"></td><td data-label="Corporate governance"><span class="fp-member"></span></td><td data-label="Finance"><span class="fp-chair">Chair</span></td></tr>
+    </tbody>
+  </table></div>
+  <p class="dy-small" style="margin-top:16px">Chair <span class="fp-chair" style="margin:0 12px 0 4px"></span> Member <span class="fp-member" style="margin-left:4px"></span> · On phones each row becomes a labelled block.</p>
+</div></section>
+
+<script>document.addEventListener('click', function (e) { if (e.target.closest('a, button')) e.preventDefault(); });</script>
+</body>
+</html>

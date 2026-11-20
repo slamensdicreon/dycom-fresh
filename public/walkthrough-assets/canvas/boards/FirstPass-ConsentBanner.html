@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ConsentBanner — first design</title>
+<link rel="stylesheet" href="../dycom-web.css">
+<link rel="stylesheet" href="../first-pass.css">
+<style>
+@font-face { font-family: "Dycom Fjalla"; src: url("../assets/0ac801cd8a8605a3b1b79be409f7f065.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Dycom Geist"; src: url("../assets/571c400347b6b5435347cbda65060bfd.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+body { margin: 0; }
+</style>
+</head>
+<body>
+<div class="dy fp-backdrop" style="min-height: 480px;">
+  <img src="/media/photography/web/z9a_0525-1000.webp" alt="">
+  <div class="fp-scrim" style="background: rgba(3,11,58,.35)"></div>
+  <div class="fp-consent" role="region" aria-label="Cookie choices">
+    <div><h3>Your privacy choices</h3><p>We use essential cookies to run this site and, with your consent, analytics cookies to improve it. You can change your choice at any time from Cookie preferences in the footer.</p></div>
+    <div class="dy-actions"><a class="dy-btn" href="#">Accept all</a><a class="dy-btn dy-btn--outline" href="#">Essential only</a><a class="dy-link" style="align-self:center" href="#">Preferences</a></div>
+  </div>
+</div>
+
+<script>document.addEventListener('click', function (e) { if (e.target.closest('a, button')) e.preventDefault(); });</script>
+</body>
+</html>
