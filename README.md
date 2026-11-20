@@ -115,13 +115,13 @@ While the new site is a private preview, the whole deployment sits behind one 4-
 
 ## Design walkthrough (/walkthrough)
 
-`/walkthrough/` is the steering-committee presentation and design library: the strategy, all sixteen templates with their designs live at desktop and phone width, the 47-component inventory and the open decisions. It is internal: behind the site PIN like everything else, never indexed, and outside the Sitecore routing.
+`/walkthrough/` is the steering-committee presentation and design library: the strategy, all sixteen templates with their designs live at desktop and phone width, and the 47-component inventory. It is internal: behind the site PIN like everything else, never indexed, and outside the Sitecore routing.
 
 - **Story mode** (`/walkthrough/`): full-screen slides. → / Space next, ← back, G chapter index, F full screen. Each slide has its own address (`/walkthrough/#/t05`).
-- **Library** (`/walkthrough/library/`): strategy, templates (`/templates/t03/` with every design, its job, narrative, Sitecore mapping and what Dycom owes), components with filters and the template matrix, decisions.
+- **Library** (`/walkthrough/library/`): strategy, templates (`/templates/t03/` with every design, what the page does and the story it tells), components with filters and the template matrix.
 - **Component pages** show the component on its own: the preview loads the page it lives on (a canvas board, a first-pass design, or the live homepage for built pieces) and crops to that element, at desktop and phone width. Where each component is shown from is `src/walkthrough/component-previews.ts`. Components no template board draws yet (alert banner, homepage pop-up, consent banner, testimonials, image gallery, social feed, business segments, data table) have first designs in `design/first-pass/`, labelled for review.
 - **Access:** the site PIN (below) covers it; the walkthrough layout checks the PIN cookie again. **Lock** in the library header locks the browser again.
-- **Content:** everything is generated from `design/canvas/` (the template canvas, copied from the Claude design artifact), `design/component-inventory.json` and `docs/requirements.md`. After changing any of them, run `npm run walkthrough:build` and commit the results. It renders each canvas board to `public/walkthrough-assets/canvas/boards/` and writes `src/walkthrough/data/`. It needs Python 3 and Playwright with Chromium. Strategy copy is in `src/walkthrough/strategy.ts` (from the design brief); T01's notes are in `src/walkthrough/data.ts`. “Where we need your input” is written by hand for Dycom’s marketing and communications leaders in `src/walkthrough/input.ts`; keep it in step with `docs/requirements.md` §4–5 as decisions are made.
+- **Content:** everything is generated from `design/canvas/` (the template canvas, copied from the Claude design artifact), `design/component-inventory.json` and `docs/requirements.md`. After changing any of them, run `npm run walkthrough:build` and commit the results. It renders each canvas board to `public/walkthrough-assets/canvas/boards/` and writes `src/walkthrough/data/`. It needs Python 3 and Playwright with Chromium. Strategy copy is in `src/walkthrough/strategy.ts` (from the design brief); T01's notes are in `src/walkthrough/data.ts`.
 
 ## Investors page package for Notified
 

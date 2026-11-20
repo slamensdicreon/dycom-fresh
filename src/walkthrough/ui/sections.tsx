@@ -19,7 +19,6 @@ export const lib = {
   template: (slug: string) => `/walkthrough/library/templates/${slug}/`,
   components: '/walkthrough/library/components/',
   component: (slug: string) => `/walkthrough/library/components/${slug}/`,
-  decisions: '/walkthrough/library/decisions/',
   story: '/walkthrough/',
 };
 

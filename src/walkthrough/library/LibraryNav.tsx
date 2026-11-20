@@ -8,7 +8,6 @@ const ITEMS = [
   { href: lib.strategy, label: 'Purpose' },
   { href: lib.templates, label: 'Templates' },
   { href: lib.components, label: 'Components' },
-  { href: lib.decisions, label: 'Your input' },
 ];
 
 export function LibraryNav() {
