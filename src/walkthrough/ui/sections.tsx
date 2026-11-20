@@ -8,7 +8,7 @@ import {
   templates,
   type Row,
 } from '../data';
-import { brandRules, interiorFrame, palette, productRules } from '../strategy';
+import { interiorFrame, productRules } from '../strategy';
 
 /** Sections shared by story mode and the library. No hooks, so both server and client can use them. */
 
@@ -38,34 +38,6 @@ export function TemplateChip({ code, linked = true }: { code: string | null; lin
     <Link href={lib.template(code.toLowerCase())} className="wt-chip">
       {code}
     </Link>
-  );
-}
-
-export function Palette() {
-  return (
-    <ul className="wt-palette">
-      {palette.map((c) => (
-        <li key={c.hex}>
-          <span className="wt-swatch" style={{ background: c.hex }} />
-          <strong>{c.name}</strong>
-          <code>{c.hex}</code>
-          <span>{c.role}</span>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-export function BrandRules() {
-  return (
-    <div className="wt-rules">
-      {brandRules.map((r) => (
-        <div key={r.title}>
-          <h4>{r.title}</h4>
-          <p>{r.body}</p>
-        </div>
-      ))}
-    </div>
   );
 }
 

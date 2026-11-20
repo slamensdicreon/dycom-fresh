@@ -15,7 +15,7 @@ export default function LibraryHome() {
           <h1>Everything behind the new dycomind.com</h1>
         </div>
         <p className="wt-lede">
-          The strategy, the sixteen templates with their live designs, the component kit that builds them, and the decisions still open — in one place, for the teams who will build, govern and grow the site.
+          The purpose of the site, the sixteen templates with their live designs, the component kit that builds them, and the decisions still open — in one place, for the teams who will build, govern and grow the site.
         </p>
       </div>
       <div className="wt-cards">
@@ -27,9 +27,9 @@ export default function LibraryHome() {
         </Link>
         <Link href={lib.strategy} className="wt-card">
           <p className="wt-eyebrow">Why</p>
-          <h3>Strategy & narrative</h3>
-          <p>The platform, “Scale is Local”, the audiences, what Dycom’s documents taught us, and the rules every page keeps.</p>
-          <span className="wt-card-go">Read the strategy →</span>
+          <h3>Purpose & experience</h3>
+          <p>What the site is for, who it serves, the experience rules every page keeps, the sitemap and the shared frame.</p>
+          <span className="wt-card-go">Read it →</span>
         </Link>
         <Link href={lib.templates} className="wt-card">
           <p className="wt-eyebrow">What</p>

@@ -1,25 +1,10 @@
 /**
- * Strategy and narrative for the walkthrough. Sources: the Final Design Direction brief
- * (handoff/brief/, November 6, 2026) §1–§3 and §5–§6, Dycom's Digital Experience Strategy as
- * summarised there, and docs/requirements.md. Keep wording faithful to those documents.
+ * Purpose and experience for the walkthrough: what the site is for, who it serves and the
+ * experience rules every page keeps. Timeline, company history and brand guidelines are left out
+ * on purpose — the steering committee knows them. Sources: the Final Design Direction brief
+ * (handoff/brief/, November 6, 2026) §2 and §6, Dycom's Digital Experience Strategy as summarised
+ * there, and docs/requirements.md. Keep wording faithful to those documents.
  */
-
-export const platform = {
-  ambition:
-    'Dycom is replatforming dycomind.com onto SitecoreAI as a shared digital experience platform — design system, content model, component library, integration layer, analytics and multi-brand governance — that its operating-company sites will later inherit.',
-  milestones: [
-    { date: 'February 1, 2027', label: 'Corporate launch', note: 'dycomind.com on SitecoreAI' },
-    { date: 'May 30, 2027', label: 'First operating-company launches', note: 'Inheriting the same platform' },
-  ],
-};
-
-export const company = [
-  { figure: '1969', label: 'Incorporated' },
-  { figure: 'NYSE: DY', label: 'One public company' },
-  { figure: '~40', label: 'Operating companies' },
-  { figure: '20,000+', label: 'Employees' },
-  { figure: '50', label: 'States' },
-];
 
 export const tension = {
   statement:
@@ -69,52 +54,6 @@ export const audiences = [
   'Suppliers and subcontractors',
   'Community members',
   'Content authors',
-];
-
-export const learned = [
-  {
-    source: 'Website Content Audit',
-    finding: 'The same corporate block repeated on most pages; company facts that conflict page to page (20,000 vs 21,000 employees; “approximately 40” vs “41” companies); operating companies disconnected from careers.',
-    response: 'Every current page placed once in the future-state sitemap; facts stated once from one source; the company card carries the careers action.',
-  },
-  {
-    source: 'Corporate Website requirements',
-    finding: 'A primary-navigation Resource Center, company facts from one managed source, shared blocks authored once, a company map with ZIP / city search and a list fallback.',
-    response: 'Resource Center became the sixth navigation group; the map searches by place and ranks by distance; the directory stands in for the map on phones.',
-  },
-  {
-    source: 'SuccessFactors feed assessment',
-    finding: 'Which job facts the feed provides as structured fields today and which are buried in free text.',
-    response: 'Job filters are limited to facts the feed can supply: work, location, trade, company.',
-  },
-  {
-    source: 'Brand Guidelines, film and photography',
-    finding: 'Colour, type, the signal mark and real Dycom crews, places and materials.',
-    response: 'The whole visual system — and nothing on the site is stock.',
-  },
-];
-
-export const lessons = [
-  { title: 'Dycom’s facts need an owner', body: 'The audit, the site, the content template and the investor materials disagree on employee and company counts. One managed source; nothing hard-coded.' },
-  { title: 'The operating companies are the product', body: 'Everything a visitor wants — a job, a crew, a contact — is delivered by an operating company. The map, directory and company card sit at the centre.' },
-  { title: 'Only outward-facing copy on the page', body: 'No “sample”, “prototype” or requirement language anywhere a visitor can see it. Provenance lives in documents like this one.' },
-];
-
-export const palette = [
-  { name: 'Civic Blue', hex: '#041054', role: 'Leads every page' },
-  { name: 'Signal Green', hex: '#00B609', role: 'The single accent — never a fill' },
-  { name: 'San Joaquin Gray', hex: '#354846', role: 'Body text' },
-  { name: 'Fargo Gray', hex: '#C1C6C8', role: 'Rules and borders' },
-  { name: 'Paper', hex: '#F4F5F7', role: 'Quiet backgrounds' },
-];
-
-export const brandRules = [
-  { title: 'Square by rule', body: 'No circles, pills or rounded corners anywhere. The signal mark is the only curve, and it is never an arrow.' },
-  { title: 'Two typefaces', body: 'Fjalla One for H1 and H2, in capitals. Geist for everything else. No italics, nothing below 13px.' },
-  { title: 'Arrows mean something', body: '→ for pages on the site and jumps within a page. ↗ only when leaving the site, for an operating company’s own website.' },
-  { title: 'Green is an accent', body: 'Highlight words, focus rings, active bars, the map pulse — under 10% of any screen.' },
-  { title: 'Real photography only', body: 'Dycom’s own crews, places and materials; the hero film is silent.' },
-  { title: 'Motion is optional', body: 'Highlights draw in over 0.4s; reduced-motion settings and the footer Motion control remove all of it.' },
 ];
 
 export const productRules = [
