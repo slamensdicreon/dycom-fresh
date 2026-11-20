@@ -31,7 +31,6 @@
 .wt :focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
 :where(.wt) code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .88em; background: var(--paper); padding: 1px 5px; color: var(--civic); }
 .wt .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.wt-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--green-ink); }
 .wt-small { font-size: 14px; color: var(--ink); }
 .wt-code { font-family: var(--display); color: var(--green-ink); margin-right: 4px; }
 .wt-num { font-variant-numeric: tabular-nums; }
@@ -298,8 +297,7 @@
 /* dark slides */
 .wt-slide.wt-dark { background-color: var(--civic); color: rgba(255, 255, 255, .86); }
 .wt-dark h1, .wt-dark h2, .wt-dark h3, .wt-dark h4, .wt-dark strong { color: var(--white); }
-.wt-dark .wt-eyebrow { color: var(--green); }
-.wt-dark .wt-lede { color: rgba(255, 255, 255, .86); }
+.wt-dark .wt-dark .wt-lede, .wt-slide.wt-dark .wt-lede { color: rgba(255, 255, 255, .86); }
 .wt-dark a { color: var(--white); }
 .wt-slide--photo { background-size: cover; background-position: center; }
 .wt-slide--photo::before { content: ''; position: fixed; inset: 0; pointer-events: none; }
@@ -432,8 +430,7 @@
 }
 @media (min-width: 1001px) and (max-height: 780px) {
   .wt-slide h2 { font-size: 34px; }
-  .wt-slide .wt-eyebrow { font-size: 12px; }
-  .wt-slide-head { gap: 6px; }
+  .wt-slide   .wt-slide-head { gap: 6px; }
   .wt-slide .wt-note-body { font-size: 13px; }
   .wt-slide .wt-learned > div { padding: 10px 14px; gap: 4px; font-size: 13px; }
   .wt-slide .wt-lessons p, .wt-slide .wt-rules p { font-size: 13px; }
