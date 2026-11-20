@@ -22,9 +22,9 @@ export default function LibraryLayout({ children }: { children: React.ReactNode 
             <Link href={lib.story} className="wt-present">
               Present <span aria-hidden="true">→</span>
             </Link>
-            <form method="post" action="/api/walkthrough/logout/">
+            <form method="post" action="/api/site-pin/lock/">
               <button type="submit" className="wt-link-button">
-                Sign out
+                Lock
               </button>
             </form>
           </div>

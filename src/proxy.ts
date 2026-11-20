@@ -12,29 +12,45 @@ import sites from '.sitecore/sites.json';
 import scConfig from 'sitecore.config';
 import { routing } from './i18n/routing';
 import client from './lib/sitecore-client';
-import { WALKTHROUGH_COOKIE, isWalkthroughAuthorized } from './walkthrough/auth';
+import { PIN_COOKIE, isPinAuthorized, isPinConfigured, safeNext } from './lib/site-pin';
+import { pinScreenHtml } from './lib/pin-screen';
 
 /**
- * /walkthrough (the steering-committee presentation and design library) and its rendered design
- * boards are not Sitecore pages: they skip the Sitecore proxies, require the walkthrough password
- * cookie, and are never indexed. The pages check the cookie again in their layout.
+ * Site PIN gate — runs before everything else. Until the PIN cookie is set, every request is
+ * refused: pages get the PIN screen (src/lib/pin-screen.ts) at their own address, so the page opens
+ * after unlocking; files and API routes get a 401. Only the PIN screen's assets, the PIN route,
+ * robots.txt, the icon and the Sitecore editing routes (which carry their own secret) pass.
  */
-function walkthroughGate(req: NextRequest): NextResponse {
-  const { pathname, search } = req.nextUrl;
-  const open = pathname === '/walkthrough/login/' || pathname === '/walkthrough/login';
-  let res: NextResponse;
-  if (open || isWalkthroughAuthorized(req.cookies.get(WALKTHROUGH_COOKIE)?.value)) {
-    res = NextResponse.next();
-  } else if (pathname.startsWith('/walkthrough-assets/')) {
-    res = new NextResponse('Sign in to the walkthrough first.', { status: 401 });
-  } else {
-    const login = new URL('/walkthrough/login/', req.url);
-    login.searchParams.set('next', pathname + search);
-    res = NextResponse.redirect(login);
-  }
+const PIN_OPEN = /^\/(gate-assets\/|api\/site-pin(\/|$)|robots\.txt$|icon\.png$|favicon\.ico$|api\/editing\/|healthz)/;
+
+/** Requests the Sitecore proxies never handled (the old matcher's exclusions): files, API, internals. */
+const NOT_SITECORE = /^\/(api\/|sitemap|robots|_next\/|healthz|sitecore\/api\/|-\/|walkthrough-assets\/)|\.(svg|png|jpe?g|gif|webp|avif|ico|woff2?|ttf|otf|eot|css|js|map|webmanifest|mp4|txt|xml|json|html)$/;
+
+function noIndex(res: NextResponse): NextResponse {
   res.headers.set('X-Robots-Tag', 'noindex, nofollow');
-  res.headers.set('Cache-Control', 'private, no-store');
   return res;
+}
+
+function pinScreen(next: string, error?: string): NextResponse {
+  const html = pinScreenHtml({
+    next: safeNext(next),
+    error: error === 'locked' ? 'locked' : error ? 'wrong' : undefined,
+    configured: isPinConfigured(),
+  });
+  const res = new NextResponse(html, { status: 401, headers: { 'Content-Type': 'text/html; charset=utf-8' } });
+  res.headers.set('Cache-Control', 'private, no-store');
+  return noIndex(res);
+}
+
+function pinGate(req: NextRequest): NextResponse {
+  const { pathname, search } = req.nextUrl;
+  const wantsPage = req.method === 'GET' && !NOT_SITECORE.test(pathname) && (req.headers.get('accept') ?? '').includes('text/html');
+  if (!wantsPage) {
+    const res = new NextResponse('Locked. Enter the site PIN first.', { status: 401, headers: { 'Content-Type': 'text/plain' } });
+    res.headers.set('Cache-Control', 'private, no-store');
+    return noIndex(res);
+  }
+  return pinScreen(pathname + search);
 }
 
 // Proxy chain copied unchanged from Sitecore's App Router starter. Without Edge credentials the
@@ -42,7 +58,25 @@ function walkthroughGate(req: NextRequest): NextResponse {
 // still run, rewriting `/investors` to `/dycom/en/investors` from `.sitecore/sites.json`.
 
 export default function proxy(req: NextRequest, event: NextFetchEvent) {
-  if (req.nextUrl.pathname.startsWith('/walkthrough')) return walkthroughGate(req);
+  const { pathname } = req.nextUrl;
+  const unlocked = isPinAuthorized(req.cookies.get(PIN_COOKIE)?.value);
+  // /gate/ is the PIN screen's own address (the no-script form returns here); once unlocked it
+  // forwards to where the visitor was going.
+  if (/^\/gate\/?$/.test(pathname)) {
+    const next = req.nextUrl.searchParams.get('next');
+    if (unlocked) return NextResponse.redirect(new URL(safeNext(next), req.url));
+    return pinScreen(next ?? '/', req.nextUrl.searchParams.get('error') ?? undefined);
+  }
+  if (PIN_OPEN.test(pathname)) return noIndex(NextResponse.next());
+  if (!unlocked) return pinGate(req);
+
+  // The walkthrough is not a Sitecore page; its files and pages skip the Sitecore proxies.
+  if (pathname.startsWith('/walkthrough')) {
+    const res = noIndex(NextResponse.next());
+    res.headers.set('Cache-Control', 'private, no-store');
+    return res;
+  }
+  if (NOT_SITECORE.test(pathname)) return NextResponse.next();
 
   // PreviewProxy authorizes preview requests
   const preview = new PreviewProxy({
@@ -137,18 +171,9 @@ export default function proxy(req: NextRequest, event: NextFetchEvent) {
 
 export const config = {
   /*
-   * Match all paths except for:
-   * 1. API route handlers
-   * 2. /_next (Next.js internals)
-   * 3. /sitecore/api (Sitecore API routes)
-   * 4. /- (Sitecore media)
-   * 5. /healthz (Health check)
-   * 6. static files inside /public (images, fonts, css, js, etc.)
+   * Run on everything except Next.js build output (/_next/static, HMR), so the PIN gate covers
+   * every page, API route, image and file. Requests the Sitecore proxies never handled (files, API
+   * routes, /_next/image, sitemap, robots, /sitecore/api, /-/ media) skip them after the gate.
    */
-  matcher: [
-    '/',
-    // Every walkthrough file, including the design boards' images, styles and thumbnails.
-    '/walkthrough-assets/:path*',
-    '/((?!api/|sitemap|robots|_next/|healthz|sitecore/api/|-/|.*[.](?:svg|png|jpe?g|gif|webp|avif|ico|woff2?|ttf|otf|eot|css|js|map|webmanifest)$).*)',
-  ],
+  matcher: ['/', '/((?!_next/static|_next/webpack-hmr).*)'],
 };
