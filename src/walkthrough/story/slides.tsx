@@ -1,0 +1,560 @@
+'use client';
+import Link from 'next/link';
+import {
+  boardHeight,
+  boardSrc,
+  components,
+  componentsFor,
+  decisions,
+  inventoryNotes,
+  templates,
+  type Template,
+} from '../data';
+import {
+  audiences,
+  businessNeeds,
+  company,
+  experienceGoals,
+  intents,
+  learned,
+  lessons,
+  platform,
+  templateQuestions,
+  tension,
+} from '../strategy';
+import { BoardFrame } from '../ui/BoardFrame';
+import { NoteBody } from '../ui/NoteBody';
+import {
+  BrandRules,
+  ComponentMatrix,
+  InteriorFrame,
+  KitGroups,
+  lib,
+  Palette,
+  ProductRules,
+  RowsTable,
+  SitemapColumns,
+  StatusBreakdown,
+  StatusTag,
+  TemplateTable,
+} from '../ui/sections';
+
+export type SlideCtx = { goTo: (id: string) => void };
+export type Slide = {
+  id: string;
+  chapter: string;
+  title: string;
+  className?: string;
+  photo?: string;
+  render: (ctx: SlideCtx) => React.ReactNode;
+};
+
+const photo = (name: string) => `/media/photography/web/${name}-2000.webp`;
+const CH = {
+  open: 'Opening',
+  strategy: '1 · Strategy & narrative',
+  templates: '2 · Templates',
+  components: '3 · Components',
+  decisions: '4 · Decisions & what’s owed',
+  close: 'Close',
+};
+
+function Head({ eyebrow, title, lede }: { eyebrow?: string; title: React.ReactNode; lede?: React.ReactNode }) {
+  return (
+    <div className="wt-slide-head">
+      {eyebrow && <p className="wt-eyebrow">{eyebrow}</p>}
+      <h2>{title}</h2>
+      {lede && <p className="wt-lede">{lede}</p>}
+    </div>
+  );
+}
+
+function Divider({ n, title, points }: { n: string; title: string; points: string[] }) {
+  return (
+    <>
+      <span className="wt-divider-n">{n}</span>
+      <h1>{title}</h1>
+      <ul>
+        {points.map((p) => (
+          <li key={p}>{p}</li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+function TemplateSlide({ t }: { t: Template }) {
+  const view = t.views[0];
+  const src = view.live ?? boardSrc(view.board!);
+  const job = t.notes.find((n) => n.kind === 'job');
+  const used = componentsFor(t.code);
+  const extra = t.views.length - 1;
+  return (
+    <div className="wt-tslide">
+      <div className="wt-tslide-copy">
+        <span className="wt-tslide-code">{t.code}</span>
+        <h2>{t.name}</h2>
+        {t.headline && <p className="wt-tslide-headline">{t.headline.charAt(0).toUpperCase() + t.headline.slice(1)}.</p>}
+        <div className="wt-tslide-meta">
+          <StatusTag status={t.status === 'Built' ? 'Built' : 'New'} />
+          <span>
+            <strong style={{ color: 'var(--civic)' }}>{t.pageCount === 'feed' ? 'Feed-driven' : `${t.pageCount} page${t.pageCount === '1' ? '' : 's'}`}</strong> · {t.pagesServed}
+          </span>
+        </div>
+        {job && (
+          <div className="wt-note" data-kind="job">
+            <p className="wt-note-label">The job</p>
+            <NoteBody text={job.body} />
+          </div>
+        )}
+        <p className="wt-small">
+          {used.length} renderings from the inventory{extra > 0 ? ` · ${extra} more design${extra > 1 ? 's' : ''} (states and variants) in the library` : ''}.
+        </p>
+        <div className="wt-tslide-more">
+          <Link href={lib.template(t.slug)} className="wt-button wt-button--outline" target="_blank">
+            Open in the library <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
+      </div>
+      <div className={`wt-tslide-boards${view.phone ? '' : ' wt-tslide-boards--single'}`}>
+        <div>
+          <p className="wt-board-label">
+            <span>{view.title}</span>
+            <span>Desktop · 1440</span>
+          </p>
+          <BoardFrame src={src} width={1440} height={boardHeight(view.board, 1440)} title={`${t.code} ${t.name}: ${view.title}`} eager />
+        </div>
+        {view.phone && (
+          <div>
+            <p className="wt-board-label">
+              <span>Phone · 390</span>
+            </p>
+            <BoardFrame src={src} width={390} height={boardHeight(view.board, 390)} title={`${t.code} ${t.name}: ${view.title}, phone`} eager />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+const statusCount = (s: string) => components.filter((c) => c.status === s).length;
+
+export const slides: Slide[] = [
+  // ---------------------------------------------------------------- opening
+  {
+    id: 'cover',
+    chapter: CH.open,
+    title: 'The design system, walked through',
+    className: 'wt-dark wt-cover',
+    photo: photo('z9a_4064'),
+    render: () => (
+      <>
+        <p className="wt-eyebrow">dycomind.com · Steering committee</p>
+        <h1>The design system, walked through</h1>
+        <p className="wt-lede">The strategy behind the new dycomind.com, the sixteen templates that build every page, the components they share — and the decisions we need from Dycom.</p>
+        <div className="wt-cover-meta">
+          <div>
+            <strong>For</strong>Dycom steering committee and leadership
+          </div>
+          <div>
+            <strong>From</strong>Icreon
+          </div>
+          <div>
+            <strong>Design status</strong>
+            {templates.length} templates · {components.length} components
+          </div>
+        </div>
+      </>
+    ),
+  },
+  {
+    id: 'agenda',
+    chapter: CH.open,
+    title: 'Today',
+    render: ({ goTo }) => (
+      <>
+        <Head eyebrow="Today" title="Four parts, one system" lede="The direction leadership approved — homepage, navigation, Investors — has been extended into a complete page system. We walk it in the order it was built: why, what, how, and what we still need." />
+        <ol className="wt-agenda">
+          {[
+            ['strategy', 'Strategy & narrative', 'Who the site serves, the tension it resolves, the rules it keeps.'],
+            ['templates', 'Templates', 'Sixteen templates, each with one job and its story — live, desktop and phone.'],
+            ['components', 'Components', `${components.length} renderings that build every template, and how they were consolidated.`],
+            ['decisions', 'Decisions & what’s owed', 'Open decisions, the data the build needs, and what Dycom supplies.'],
+          ].map(([id, name, line], i) => (
+            <li key={id}>
+              <button type="button" onClick={() => goTo(id)}>
+                <span className="wt-agenda-n">{i + 1}</span>
+                <strong>{name}</strong>
+                <span>{line}</span>
+              </button>
+            </li>
+          ))}
+        </ol>
+      </>
+    ),
+  },
+  // ---------------------------------------------------------------- strategy
+  {
+    id: 'strategy',
+    chapter: CH.strategy,
+    title: 'Chapter 1 · Strategy & narrative',
+    className: 'wt-dark wt-divider',
+    photo: photo('z9b_1711'),
+    render: () => <Divider n="01" title="Strategy & narrative" points={['The platform', 'Scale is Local', 'Who the site serves', 'Brand and product rules', 'The sitemap and the frame']} />,
+  },
+  {
+    id: 'platform',
+    chapter: CH.strategy,
+    title: 'The platform ambition',
+    className: 'wt-dark',
+    render: () => (
+      <>
+        <Head eyebrow="Why we are rebuilding" title="One platform, then every operating company" lede={platform.ambition} />
+        <div className="wt-milestones">
+          {platform.milestones.map((m) => (
+            <div key={m.date}>
+              <strong>{m.date}</strong>
+              {m.label} — {m.note}
+            </div>
+          ))}
+        </div>
+        <div className="wt-stats" style={{ marginTop: 'auto' }}>
+          {company.map((c) => (
+            <div key={c.label}>
+              <strong>{c.figure}</strong>
+              <span>{c.label}</span>
+            </div>
+          ))}
+        </div>
+      </>
+    ),
+  },
+  {
+    id: 'scale-is-local',
+    chapter: CH.strategy,
+    title: 'Scale is Local',
+    className: 'wt-dark wt-divider',
+    photo: photo('z9a_0525'),
+    render: () => (
+      <>
+        <p className="wt-eyebrow">The tension the site resolves</p>
+        <p className="wt-lede" style={{ maxWidth: '58ch' }}>{tension.statement}</p>
+        <p className="wt-quote">
+          Scale is <em>Local</em>
+        </p>
+        <p className="wt-lede" style={{ maxWidth: '58ch' }}>{tension.resolution}</p>
+      </>
+    ),
+  },
+  {
+    id: 'needs-goals',
+    chapter: CH.strategy,
+    title: 'What the site must do',
+    render: () => (
+      <>
+        <Head eyebrow="From Dycom’s Digital Experience Strategy" title="What the site must do" />
+        <div className="wt-twolists">
+          <div>
+            <h3>Business needs</h3>
+            <ol>
+              {businessNeeds.map((n) => (
+                <li key={n}>{n}</li>
+              ))}
+            </ol>
+          </div>
+          <div>
+            <h3>Experience goals</h3>
+            <ol>
+              {experienceGoals.map((n) => (
+                <li key={n}>{n}</li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </>
+    ),
+  },
+  {
+    id: 'audiences',
+    chapter: CH.strategy,
+    title: 'Who the site serves',
+    render: () => (
+      <>
+        <Head eyebrow="Audiences" title="Thirteen audiences, four front doors" lede="The strategy defines thirteen user types. The homepage routes the four largest intents in one band, and the closing form asks “What brings you here?” with the same four answers." />
+        <div className="wt-intents">
+          {intents.map((i) => (
+            <div key={i.name}>
+              <strong>{i.name}</strong>
+              <span>{i.line}</span>
+            </div>
+          ))}
+        </div>
+        <ul className="wt-audiences" aria-label="The thirteen user types">
+          {audiences.map((a) => (
+            <li key={a}>{a}</li>
+          ))}
+        </ul>
+      </>
+    ),
+  },
+  {
+    id: 'learned',
+    chapter: CH.strategy,
+    title: 'What Dycom’s documents taught us',
+    render: () => (
+      <>
+        <Head eyebrow="Discovery" title="What Dycom’s own documents taught us" />
+        <div className="wt-learned">
+          {learned.map((l) => (
+            <div key={l.source}>
+              <h4>{l.source}</h4>
+              <p>{l.finding}</p>
+              <p>{l.response}</p>
+            </div>
+          ))}
+        </div>
+        <div className="wt-lessons">
+          {lessons.map((l) => (
+            <div key={l.title}>
+              <h4>{l.title}</h4>
+              <p>{l.body}</p>
+            </div>
+          ))}
+        </div>
+      </>
+    ),
+  },
+  {
+    id: 'brand',
+    chapter: CH.strategy,
+    title: 'Brand rules in force',
+    render: () => (
+      <>
+        <Head eyebrow="Confirmed in review" title="Brand rules in force" lede="Dycom’s 2026 brand guidelines, applied without exception on every template." />
+        <Palette />
+        <BrandRules />
+      </>
+    ),
+  },
+  {
+    id: 'product-rules',
+    chapter: CH.strategy,
+    title: 'Product rules',
+    render: () => (
+      <>
+        <Head eyebrow="Confirmed in review" title="Product rules every page keeps" />
+        <ProductRules />
+      </>
+    ),
+  },
+  {
+    id: 'sitemap',
+    chapter: CH.strategy,
+    title: 'The future-state sitemap',
+    render: () => (
+      <>
+        <Head eyebrow="Navigation" title="Six groups. Every page placed once." lede="The menu is the future-state sitemap: every current page placed once, under the group a visitor would look for it in. Each page is tagged with the template that builds it." />
+        <SitemapColumns compact linked={false} />
+      </>
+    ),
+  },
+  {
+    id: 'frame',
+    chapter: CH.strategy,
+    title: 'The interior frame',
+    render: () => (
+      <div className="wt-slide-grid">
+        <div className="wt-slide-col">
+          <Head eyebrow="One frame" title="Every interior page shares one frame" lede="The Investors page proved it. Every interior template inherits these six parts, so a visitor always knows where they are and what to do next." />
+          <h3 style={{ fontSize: 15, letterSpacing: '.12em', textTransform: 'uppercase', marginTop: 8 }}>Every template answers</h3>
+          <ul className="wt-questions">
+            {templateQuestions.map((q) => (
+              <li key={q}>{q}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="wt-slide-col">
+          <InteriorFrame />
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: 'sixteen',
+    chapter: CH.strategy,
+    title: 'Sixteen templates',
+    render: () => (
+      <>
+        <Head eyebrow="The system" title="Sixteen templates build the whole site" lede="Two are built and live. Fourteen are designed, desktop and phone, with their narrative and content sources — ready to build." />
+        <TemplateTable />
+      </>
+    ),
+  },
+  // ---------------------------------------------------------------- templates
+  {
+    id: 'templates',
+    chapter: CH.templates,
+    title: 'Chapter 2 · Templates',
+    className: 'wt-dark wt-divider',
+    photo: photo('z9b_2139'),
+    render: () => <Divider n="02" title="The templates" points={['One job each', 'The story, beat by beat', 'Live designs — desktop and phone', 'Scroll each design to read it']} />,
+  },
+  ...templates.map(
+    (t): Slide => ({
+      id: t.slug,
+      chapter: CH.templates,
+      title: `${t.code} ${t.name}`,
+      render: () => <TemplateSlide t={t} />,
+    }),
+  ),
+  // ---------------------------------------------------------------- components
+  {
+    id: 'components',
+    chapter: CH.components,
+    title: 'Chapter 3 · Components',
+    className: 'wt-dark wt-divider',
+    photo: photo('z9b_6665'),
+    render: () => <Divider n="03" title="The components" points={[`${components.length} renderings`, 'One component per job', 'Which template uses what', 'What is left to design']} />,
+  },
+  {
+    id: 'kit',
+    chapter: CH.components,
+    title: 'The kit',
+    render: () => (
+      <>
+        <Head
+          eyebrow="Component inventory"
+          title={`${components.length} renderings build every page`}
+          lede={`Reviewing all sixteen templates together, we consolidated everything they need into one kit. ${statusCount('Built') + statusCount('Extend')} renderings already exist in the site or grow from one that does; ${statusCount('New')} are designed and new; ${statusCount('Not designed')} are required by Dycom’s lists but not yet designed.`}
+        />
+        <StatusBreakdown />
+        <KitGroups />
+      </>
+    ),
+  },
+  {
+    id: 'consolidation',
+    chapter: CH.components,
+    title: 'Consolidation decisions',
+    render: () => (
+      <div className="wt-slide-grid wt-slide-grid--even">
+        <div className="wt-slide-col">
+          <Head eyebrow="One component per job" title="Where templates solved the same problem, one component" />
+          <div className="wt-note" data-kind="mapping">
+            <NoteBody text={inventoryNotes.invMerge.split('\n\n').slice(1).join('\n\n')} />
+          </div>
+        </div>
+        <div className="wt-slide-col">
+          <div className="wt-note" data-kind="job">
+            <p className="wt-note-label">Rules for the kit</p>
+            <NoteBody text={inventoryNotes.invRules.split('\n\n').slice(1).join('\n\n')} />
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: 'matrix',
+    chapter: CH.components,
+    title: 'Which template uses what',
+    render: () => (
+      <>
+        <Head eyebrow="The matrix" title="Which template uses what" lede="Columns are templates T01–T16. Blue: built or extended; green: new; grey: third-party." />
+        <ComponentMatrix linkComponents={false} />
+      </>
+    ),
+  },
+  {
+    id: 'still-to-design',
+    chapter: CH.components,
+    title: 'Still to design',
+    render: () => (
+      <div className="wt-slide-grid wt-slide-grid--even">
+        <div className="wt-slide-col">
+          <Head eyebrow="Gaps" title="Required, not yet designed" lede="Each sits in Dycom’s requirements or Custom Components list but has no template that needs it yet." />
+        </div>
+        <div className="wt-slide-col">
+          <div className="wt-note" data-kind="open">
+            <NoteBody text={inventoryNotes.invNext.split('\n\n').slice(1).join('\n\n')} />
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  // ---------------------------------------------------------------- decisions
+  {
+    id: 'decisions',
+    chapter: CH.decisions,
+    title: 'Chapter 4 · Decisions & what’s owed',
+    className: 'wt-dark wt-divider',
+    photo: photo('z9a_5195'),
+    render: () => <Divider n="04" title="Decisions & what’s owed" points={['Open decisions', 'Data the build needs', 'Content Dycom supplies', 'Investors review items']} />,
+  },
+  {
+    id: 'open-decisions',
+    chapter: CH.decisions,
+    title: 'Open decisions',
+    render: () => (
+      <>
+        <Head eyebrow="For this committee" title="Open decisions and the pages they block" lede="Each has a working default so design and build continue; none is settled." />
+        <RowsTable rows={decisions.openDecisions.filter((r) => r.ID !== 'D1–D7')} columns={['ID', 'Decision', 'Default in the prototype', 'Blocks']} rowHeader="ID" />
+      </>
+    ),
+  },
+  {
+    id: 'data-needed',
+    chapter: CH.decisions,
+    title: 'Data the build needs',
+    render: () => (
+      <>
+        <Head eyebrow="Dependencies" title="Data the build needs that does not exist yet" />
+        <RowsTable rows={decisions.dataDependencies} columns={['Dependency', 'What is missing', 'Pages blocked']} rowHeader="Dependency" />
+      </>
+    ),
+  },
+  {
+    id: 'content-owed',
+    chapter: CH.decisions,
+    title: 'Content Dycom supplies',
+    render: () => (
+      <>
+        <Head eyebrow="What’s owed" title="New content and who supplies it" />
+        <RowsTable rows={decisions.netNewContent} columns={['Item', 'Supplier']} rowHeader="Item" />
+      </>
+    ),
+  },
+  {
+    id: 'investors-review',
+    chapter: CH.decisions,
+    title: 'Open from the Investors review',
+    render: () => (
+      <>
+        <Head eyebrow="Investors review · November 11, 2026" title="Still open from the Investors review" />
+        <RowsTable rows={decisions.investorsReview} columns={['Item', 'Why it is open', 'What the site does meanwhile']} rowHeader="Item" />
+      </>
+    ),
+  },
+  // ---------------------------------------------------------------- close
+  {
+    id: 'close',
+    chapter: CH.close,
+    title: 'Next',
+    className: 'wt-dark wt-cover',
+    photo: photo('z9b_1711'),
+    render: () => (
+      <>
+        <p className="wt-eyebrow">After today</p>
+        <h1>Everything stays here</h1>
+        <p className="wt-lede">The library keeps every template, design, component and decision in one place for the teams building and governing the site. Use it to review, to onboard, and to settle the open decisions.</p>
+        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <Link href={lib.home} className="wt-button wt-button--inverse">
+            Open the library <span aria-hidden="true">→</span>
+          </Link>
+          <Link href={lib.decisions} className="wt-button wt-button--outline" style={{ color: '#fff', borderColor: '#fff' }}>
+            Decisions & what’s owed <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </>
+    ),
+  },
+];

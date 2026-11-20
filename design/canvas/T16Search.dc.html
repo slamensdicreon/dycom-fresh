@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Search results — system page</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="dycom-web.css">
+<link rel="stylesheet" href="tpl-d.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face { font-family: "Dycom Fjalla"; src: url("/_blob/0ac801cd8a8605a3b1b79be409f7f065") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Dycom Geist"; src: url("/_blob/571c400347b6b5435347cbda65060bfd") format("woff2"); font-weight: 100 900; font-display: swap; }
+body { margin: 0; }
+</style>
+</helmet>
+<div class="dy" style="width: 100%;">
+  <dc-import name="SiteHeader" hint-size="100%,88px"></dc-import>
+  <main>
+    <section class="dy-ihero dy-ihero--plain" aria-labelledby="sr-title">
+      <div class="dy-wrap" style="padding-top: 56px; padding-bottom: 56px; display: flex; flex-direction: column; gap: 28px;">
+        <h1 id="sr-title" style="color: #ffffff;">Search</h1>
+        <form class="dy-search" role="search" aria-label="Site search">
+          <label for="sr-q">Search dycomind.com</label>
+          <input id="sr-q" type="search" value="fiber splicing">
+          <button class="dy-btn dy-btn--ghost-inverse" type="submit">Search<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3h12v12H3z"></path><path d="m15 15 6 6"></path></svg></button>
+        </form>
+      </div>
+    </section>
+    <section class="dy-section" aria-labelledby="sr-count">
+      <div class="dy-wrap" style="display: flex; flex-direction: column; gap: 32px;">
+        <div class="dy-jobs-callout">
+          <b>Looking for fiber splicing jobs?</b>
+          <a class="dy-btn" href="#open-roles?trade=Fiber%20splicing">Search open roles<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+        </div>
+        <div>
+          <div class="dy-results-head">
+            <p id="sr-count" style="font-size: 17px; color: #041054;"><b>[N] results</b> for “fiber splicing”</p>
+            <div class="dy-filter-tabs" role="group" aria-label="Filter results">
+              <button type="button" aria-pressed="true">All</button>
+              <button type="button" aria-pressed="false">Pages</button>
+              <button type="button" aria-pressed="false">Documents</button>
+              <button type="button" aria-pressed="false">News</button>
+            </div>
+          </div>
+          <ul class="dy-results">
+          <li><a href="#"><span class="dy-tag">Page</span><b>Wireline construction</b><cite>dycomind.com › What we do › Wireline construction</cite><p>Crews place aerial strand on poles or conduit beneath streets, then pull and <strong>splice fiber</strong> route by route, building the wired networks that bring connections to homes and businesses.</p></a></li>
+          <li><a href="#"><span class="dy-tag">Page</span><b>Explore the trades</b><cite>dycomind.com › People &amp; careers › Explore the trades</cite><p>From underground construction to <strong>fiber splicing</strong> and utility locating: the skilled work our crews do, and how people learn it.</p></a></li>
+          <li><a href="#"><span class="dy-tag">Document</span><b>Hazard Recognition and Resolution</b><cite>dycomind.com › Resource Center › Hazard recognition · PDF</cite><p>[Matching passage from the document text, with the search term highlighted]</p></a></li>
+          <li><a href="#"><span class="dy-tag">Page</span><b>What we do</b><cite>dycomind.com › What we do</cite><p>Crews place aerial strand or underground conduit, pull and <strong>splice fiber</strong>, and build and upgrade wireless sites.</p></a></li>
+          </ul>
+        </div>
+        <nav class="dy-pages" aria-label="Results pages">
+          <span aria-current="page">1</span><a href="#">2</a><a href="#">3</a><a href="#" style="gap: 8px; display: inline-flex;">Next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+        </nav>
+      </div>
+    </section>
+  </main>
+  <dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2210}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

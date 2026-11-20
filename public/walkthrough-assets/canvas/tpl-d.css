@@ -1,0 +1,152 @@
+/* Templates T13–T16 (contact & forms, legal, people grid, system pages). Loaded after dycom-web.css.
+   Same rules: square, Civic Blue leads, Signal Green accent only, Geist body, Fjalla One caps for H1/H2. */
+
+/* Compact interior hero without photography (legal, system pages) */
+.dy-ihero--plain .dy-ihero-body { padding-top: 64px; padding-bottom: 64px; }
+.dy-ihero--plain h1 { font-size: clamp(44px, 5vw, 72px); }
+
+/* ---- Forms (C24): transparent fields ruled in white on Civic Blue, as the live closing form ---- */
+.dy-f-panel { background: var(--civic); color: var(--white); padding: clamp(28px, 4vw, 56px); display: flex; flex-direction: column; gap: 28px; }
+.dy-f-panel h2, .dy-f-panel h3 { color: var(--white); }
+.dy-f-panel p { color: var(--night-dim); font-weight: 500; }
+.dy-f-fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.dy-f-legend { padding: 0; margin-bottom: 14px; font-size: 18px; font-weight: 600; color: var(--white); }
+.dy-f-intents { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-left: 1px solid rgba(255,255,255,.55); border-top: 1px solid rgba(255,255,255,.55); }
+.dy-f-chip { position: relative; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 52px; padding: 8px 12px; border-right: 1px solid rgba(255,255,255,.55); border-bottom: 1px solid rgba(255,255,255,.55); font-size: 15px; font-weight: 500; color: var(--white); cursor: pointer; }
+.dy-f-chip input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.dy-f-chip.is-on { background: var(--white); color: var(--civic); font-weight: 600; box-shadow: inset 0 -3px 0 var(--green); }
+.dy-f-prompt { font-size: 17px; color: var(--white) !important; }
+.dy-f-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px 28px; }
+.dy-f-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.dy-f-field--full { grid-column: 1 / -1; }
+.dy-f-field label, .dy-f-label { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; font-weight: 500; color: var(--white); }
+.dy-f-field label small, .dy-f-label small { font-size: 13px; font-weight: 400; color: var(--night-dim); }
+.dy-f-field input, .dy-f-field select, .dy-f-field textarea { width: 100%; height: 42px; padding: 0 0 4px; border: 0; border-bottom: 1px solid rgba(255,255,255,.55); background: transparent; color: var(--white); font: inherit; font-size: 16px; -webkit-appearance: none; appearance: none; }
+.dy-f-field textarea { height: 96px; padding-top: 6px; resize: vertical; line-height: 1.5; }
+.dy-f-field ::placeholder { color: var(--night-dim); opacity: 1; }
+.dy-f-select { position: relative; }
+.dy-f-select svg { position: absolute; right: 2px; bottom: 14px; width: 16px; height: 16px; color: var(--white); pointer-events: none; }
+.dy-f-select select { color: var(--night-dim); padding-right: 28px; }
+.dy-f-field input.is-focus { border-bottom: 2px solid var(--green); }
+.dy-f-check { display: flex; gap: 14px; align-items: flex-start; font-size: 15px; color: var(--white); }
+.dy-f-check input { -webkit-appearance: none; appearance: none; flex: none; width: 22px; height: 22px; margin: 1px 0 0; border: 1px solid rgba(255,255,255,.8); background: transparent; }
+.dy-f-check input:checked { background: var(--green); border-color: var(--green); }
+.dy-f-check a { text-decoration: underline; text-underline-offset: 4px; }
+.dy-f-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+.dy-f-note { font-size: 14px !important; }
+
+/* Validation (FRM0006): text and icon carry the error, never colour alone */
+.dy-f-field.is-invalid input, .dy-f-field.is-invalid select { border-bottom: 2px solid #ffb3aa; }
+.dy-f-error { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; font-weight: 600; color: #ffb3aa; }
+.dy-f-error svg { flex: none; width: 16px; height: 16px; margin-top: 2px; }
+.dy-f-alert { display: flex; gap: 14px; padding: 18px 20px; background: var(--civic-deep); border-top: 3px solid #ffb3aa; }
+.dy-f-alert svg { flex: none; width: 22px; height: 22px; color: #ffb3aa; }
+.dy-f-alert b { display: block; color: var(--white); font-size: 16px; margin-bottom: 6px; }
+.dy-f-alert a { color: var(--white); text-decoration: underline; text-underline-offset: 4px; font-size: 15px; }
+.dy-f-alert ul { display: flex; flex-direction: column; gap: 4px; }
+
+/* Success state */
+.dy-f-sent { display: flex; flex-direction: column; gap: 18px; }
+.dy-f-sent .dy-mark { width: 44px; height: 44px; color: var(--green); }
+.dy-f-sent h3 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 40px; line-height: 1.06; }
+.dy-f-recap { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 10px 20px; padding: 18px 0; border-top: 1px solid var(--night-line); border-bottom: 1px solid var(--night-line); font-size: 15px; }
+.dy-f-recap dt { color: var(--night-dim); }
+.dy-f-recap dd { margin: 0; color: var(--white); font-weight: 500; }
+
+/* Contact page layout: other ways to reach us beside the form (C25: form right) */
+.dy-contact { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 64px; align-items: start; }
+.dy-reach { display: flex; flex-direction: column; gap: 32px; }
+.dy-reach-block { border-top: 2px solid var(--civic); padding-top: 18px; display: flex; flex-direction: column; gap: 8px; }
+.dy-reach-block h3 { font-size: 20px; }
+.dy-reach-block address { font-style: normal; font-size: 16px; line-height: 1.6; }
+
+/* States board */
+.dy-states { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
+.dy-state-cap { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
+.dy-state-cap b { font-family: var(--display); font-weight: 400; font-size: 16px; letter-spacing: 0; color: var(--green); }
+
+/* ---- Legal / long-form (T14) ---- */
+.dy-legal-meta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.dy-legal section { display: flex; flex-direction: column; gap: 14px; max-width: 72ch; }
+.dy-legal h2 { font-family: var(--body); font-weight: 600; text-transform: none; font-size: 24px; letter-spacing: 0; line-height: 1.25; }
+.dy-legal h2 span { color: var(--green); font-family: var(--display); font-weight: 400; margin-right: 10px; }
+.dy-ph { padding: 16px 18px; background: var(--paper); border: 1px dashed var(--rule); font-size: 15px; color: var(--ink); }
+.dy-legal .dy-topic-body { gap: 56px; }
+.dy-toc-tools { display: flex; flex-direction: column; gap: 10px; padding-top: 20px; }
+
+/* ---- People grid (T15, C36) ---- */
+.dy-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--rule); margin-bottom: 40px; }
+.dy-tab { min-height: 52px; padding: 0 22px; background: none; border: 0; font-family: var(--body); font-size: 16px; font-weight: 500; color: var(--civic); cursor: pointer; }
+.dy-tab[aria-selected="true"] { font-weight: 600; box-shadow: inset 0 -3px 0 var(--green); }
+.dy-people { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px 32px; }
+.dy-person { display: flex; flex-direction: column; gap: 10px; }
+.dy-portrait { position: relative; aspect-ratio: 4 / 5; width: 100%; background: var(--paper); border-top: 3px solid var(--green); display: grid; place-items: center; }
+.dy-portrait .dy-mark { width: 44px; height: 44px; color: var(--rule); }
+.dy-portrait span { position: absolute; left: 14px; bottom: 12px; font-size: 13px; font-weight: 600; color: var(--ink); }
+.dy-person b { font-size: 20px; font-weight: 600; color: var(--civic); }
+.dy-person small { font-size: 15px; color: var(--ink); }
+.dy-person .dy-btn { align-self: flex-start; margin-top: 6px; }
+
+/* Bio dialog shown open */
+.dy-scrim { position: relative; background: rgba(3, 11, 58, .72); }
+.dy-bio { position: relative; width: min(880px, 100%); margin: 0 auto; background: var(--white); color: var(--ink); }
+.dy-bio-head { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 18px 24px 18px 32px; border-bottom: 1px solid var(--rule); }
+.dy-bio-head h2 { font-size: 28px; }
+.dy-bio-close { display: inline-grid; place-items: center; width: 48px; height: 48px; border: 1px solid var(--civic); background: none; color: var(--civic); cursor: pointer; }
+.dy-bio-body { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 32px; padding: 32px; }
+.dy-bio-body .dy-prose { gap: 12px; }
+
+/* ---- System pages (T16): search, results, 404 ---- */
+.dy-search { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0; max-width: 760px; }
+.dy-search label { grid-column: 1 / -1; font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+.dy-search input { height: 56px; border: 1px solid var(--civic); border-right: 0; padding: 0 18px; font: inherit; font-size: 17px; color: var(--civic); background: var(--white); min-width: 0; }
+.dy-search .dy-btn { min-height: 56px; }
+.dy-night .dy-search label { color: var(--white); }
+.dy-night .dy-search input { border-color: var(--white); }
+.dy-jobs-callout { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding: 22px 28px; background: var(--paper); border-top: 3px solid var(--green); }
+.dy-jobs-callout b { font-size: 18px; color: var(--civic); }
+.dy-filter-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.dy-filter-tabs button { min-height: 44px; padding: 0 16px; border: 1px solid var(--rule); background: var(--white); font-family: var(--body); font-size: 15px; font-weight: 500; color: var(--civic); cursor: pointer; }
+.dy-filter-tabs button[aria-pressed="true"] { border-color: var(--civic); background: var(--civic); color: var(--white); }
+.dy-results li { border-top: 1px solid var(--rule); }
+.dy-results li:last-child { border-bottom: 1px solid var(--rule); }
+.dy-results a { display: flex; flex-direction: column; gap: 6px; padding: 24px 0; }
+.dy-results .dy-tag { align-self: flex-start; }
+.dy-results b { font-size: 21px; font-weight: 600; color: var(--civic); }
+.dy-results cite { font-style: normal; font-size: 14px; color: var(--ink); }
+.dy-results p { font-size: 16px; max-width: 80ch; }
+.dy-results strong { font-weight: 700; color: var(--civic); box-shadow: inset 0 -2px 0 var(--green); }
+.dy-pages { display: flex; gap: 6px; align-items: center; }
+.dy-pages a, .dy-pages span { display: inline-grid; place-items: center; min-width: 44px; height: 44px; padding: 0 12px; border: 1px solid var(--rule); font-size: 15px; font-weight: 600; color: var(--civic); }
+.dy-pages [aria-current] { background: var(--civic); border-color: var(--civic); color: var(--white); }
+.dy-popular { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 32px; }
+.dy-popular a { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 56px; border-bottom: 1px solid var(--rule); font-size: 17px; font-weight: 600; color: var(--civic); }
+.dy-results-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 24px; }
+.dy-empty { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: start; }
+
+@media (max-width: 1099px) {
+  .dy-contact { grid-template-columns: 1fr; gap: 48px; }
+  .dy-people { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dy-states { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+  .dy-f-intents { grid-template-columns: 1fr 1fr; }
+  .dy-f-chip { font-size: 14px; }
+  .dy-f-grid { grid-template-columns: 1fr; }
+  .dy-f-recap { grid-template-columns: 1fr; gap: 2px; }
+  .dy-people { grid-template-columns: 1fr 1fr; gap: 28px 16px; }
+  .dy-person b { font-size: 17px; }
+  .dy-bio-body { grid-template-columns: 1fr; padding: 24px; }
+  .dy-search { grid-template-columns: 1fr; }
+  .dy-search input { border-right: 1px solid var(--civic); }
+  .dy-popular { grid-template-columns: 1fr; }
+  .dy-empty { grid-template-columns: 1fr; gap: 32px; }
+  .dy-tabs { overflow-x: auto; }
+  .dy-tab { padding: 0 14px; white-space: nowrap; }
+}
+
+/* Search bar on the dark hero */
+.dy-ihero .dy-search label { color: var(--white); }
+.dy-ihero .dy-search input { border-color: var(--white); }
+.dy-ihero .dy-listing .dy-btn { color: var(--civic) !important; }
+.dy-popular svg, .dy-pages svg { width: 18px; height: 18px; flex: none; }

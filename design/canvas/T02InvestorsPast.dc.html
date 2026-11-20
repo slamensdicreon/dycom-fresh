@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Investors — past events tab</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="dycom-web.css">
+<link rel="stylesheet" href="tpl-c.css">
+<link rel="stylesheet" href="tpl-e.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face { font-family: "Dycom Fjalla"; src: url("/_blob/0ac801cd8a8605a3b1b79be409f7f065") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Dycom Geist"; src: url("/_blob/571c400347b6b5435347cbda65060bfd") format("woff2"); font-weight: 100 900; font-display: swap; }
+body { margin: 0; }
+</style>
+</helmet>
+<div class="dy" style="width: 1440px; background: #f4f5f7;">
+    <!-- Events (Upcoming / Past, split by event date at render) beside Investor news -->
+    <section id="events" class="dy-section dy-paper" aria-label="Events and investor news">
+      <div class="dy-wrap dye-split">
+        <div>
+          <h2>Events</h2>
+            <div class="dye-tabs" role="tablist" aria-label="Events">
+              <button type="button" role="tab" aria-selected="false">Upcoming</button>
+              <button type="button" role="tab" aria-selected="true">Past</button>
+            </div>
+            <ol class="dye-events" role="tabpanel" aria-label="Past events">
+              <li class="is-next"><time datetime="2026-09-24">September 24, 2026 · 9:00 AM EDT</time><b>D.A. Davidson 25th Annual Diversified Industrials &amp; Services Conference</b><a class="dy-link" href="#">Webcast<svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+              <li><time datetime="2026-09-02">September 2, 2026</time><b>Dycom Q2 2027 Investor Presentation</b></li>
+              <li><time datetime="2026-08-26">August 26, 2026 · 9:00 AM EDT</time><b>Dycom Q2 2027 Results</b><a class="dy-link" href="#">Webcast<svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+              <li><time datetime="2026-06-02">June 2, 2026</time><b>Dycom Q1 2027 Investor Presentation</b></li>
+            </ol>
+          <div class="dy-actions" style="margin-top: 12px;"><a class="dy-btn" href="#">All events &amp; presentations<svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
+        </div>
+        <div id="news">
+          <h2>Investor news</h2>
+          <ul class="dye-news"><li><a href="#"><time datetime="2026-11-13">November 13, 2026</time><b>Dycom Industries, Inc. to Host Fiscal 2027 Third Quarter Results Call on November 24, 2026</b><svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="#041054" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></li><li><a href="#"><time datetime="2026-09-10">September 10, 2026</time><b>Dycom Industries, Inc. to Participate in Upcoming Institutional Investor Conference</b><svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="#041054" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></li><li><a href="#"><time datetime="2026-08-26">August 26, 2026</time><b>Dycom Announces Authorization of a New $150 Million Stock Repurchase Program</b><svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="#041054" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></li><li><a href="#"><time datetime="2026-08-26">August 26, 2026</time><b>Dycom Industries, Inc. Reports Record Fiscal 2027 Second Quarter Results</b><svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="#041054" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></li></ul>
+          <div class="dy-actions" style="margin-top: 28px;"><a class="dy-btn" href="#">All investor news<svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
+        </div>
+      </div>
+    </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":830}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

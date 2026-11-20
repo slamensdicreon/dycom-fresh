@@ -1,0 +1,1335 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Inventory.dc.html": {
+      "h": 5910,
+      "page": "inventory",
+      "title": "Component inventory \u2014 47 renderings, 15 shared parts, 16 templates",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "h": 1640,
+      "page": "overview",
+      "title": "Template system \u00b7 roadmap",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "SiteFooter.dc.html": {
+      "h": 560,
+      "page": "overview",
+      "title": "Global \u00b7 site footer",
+      "w": 1440,
+      "x": 0,
+      "y": 2088
+    },
+    "SiteHeader.dc.html": {
+      "h": 88,
+      "page": "overview",
+      "title": "Global \u00b7 site header",
+      "w": 1440,
+      "x": 0,
+      "y": 1880
+    },
+    "T03WhatWeDo.dc.html": {
+      "expand": "fill",
+      "h": 5340,
+      "page": "t03",
+      "title": "T03 \u00b7 What we do \u2014 desktop 1440",
+      "w": 1440,
+      "x": 1990,
+      "y": 0
+    },
+    "T03WhatWeDoPhone.dc.html": {
+      "h": 8000,
+      "page": "t03",
+      "title": "T03 \u00b7 What we do \u2014 phone 390",
+      "w": 390,
+      "x": 3510,
+      "y": 0
+    },
+    "T03WhoWeAre.dc.html": {
+      "expand": "fill",
+      "h": 5800,
+      "page": "t03",
+      "title": "T03 \u00b7 Who we are \u2014 desktop 1440",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "T03WhoWeArePhone.dc.html": {
+      "h": 8000,
+      "page": "t03",
+      "title": "T03 \u00b7 Who we are \u2014 phone 390",
+      "w": 390,
+      "x": 1520,
+      "y": 0
+    },
+    "T04Safety.dc.html": {
+      "expand": "fill",
+      "h": 5100,
+      "page": "t04",
+      "title": "T04 \u00b7 Headway\u00ae safety \u2014 desktop 1440",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "T04SafetyPhone.dc.html": {
+      "h": 7720,
+      "page": "t04",
+      "title": "T04 \u00b7 Headway\u00ae safety \u2014 phone 390",
+      "w": 390,
+      "x": 1520,
+      "y": 0
+    },
+    "T04Sustainability.dc.html": {
+      "expand": "fill",
+      "h": 3620,
+      "page": "t04",
+      "title": "T04 \u00b7 Sustainability \u2014 desktop 1440",
+      "w": 1440,
+      "x": 1990,
+      "y": 0
+    },
+    "T05ProjectManagement.dc.html": {
+      "expand": "fill",
+      "h": 2550,
+      "page": "t05",
+      "title": "T05 \u00b7 Project management \u2014 desktop 1440 (thin)",
+      "w": 1440,
+      "x": 1990,
+      "y": 0
+    },
+    "T05Wireline.dc.html": {
+      "expand": "fill",
+      "h": 4580,
+      "page": "t05",
+      "title": "T05 \u00b7 Wireline construction \u2014 desktop 1440 (deep)",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "T05WirelinePhone.dc.html": {
+      "h": 7080,
+      "page": "t05",
+      "title": "T05 \u00b7 Wireline construction \u2014 phone 390",
+      "w": 390,
+      "x": 1520,
+      "y": 0
+    },
+    "T06Directory.dc.html": {
+      "expand": "fill",
+      "h": 3430,
+      "page": "t06",
+      "title": "T06 \u00b7 Our companies \u2014 desktop 1440",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "T06DirectoryPhone.dc.html": {
+      "h": 4410,
+      "page": "t06",
+      "title": "T06 \u00b7 Our companies \u2014 phone 390",
+      "w": 390,
+      "x": 1520,
+      "y": 0
+    },
+    "T07Careers.dc.html": {
+      "expand": "fill",
+      "h": 5040,
+      "page": "t07",
+      "title": "T07 \u00b7 Careers \u2014 desktop 1440",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "T07CareersPhone.dc.html": {
+      "h": 7480,
+      "page": "t07",
+      "title": "T07 \u00b7 Careers \u2014 phone 390",
+      "w": 390,
+      "x": 1520,
+      "y": 0
+    },
+    "T08Search.dc.html": {
+      "expand": "fill",
+      "h": 2590,
+      "page": "t08",
+      "title": "T08 \u00b7 Open roles, fiber splicing in Georgia \u2014 desktop 1440",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "T08SearchEmpty.dc.html": {
+      "expand": "fill",
+      "h": 1720,
+      "page": "t08",
+      "title": "T08 \u00b7 No results, recovery \u2014 desktop 1440",
+      "w": 1440,
+      "x": 1990,
+      "y": 0
+    },
+    "T08SearchPhone.dc.html": {
+      "h": 3430,
+      "page": "t08",
+      "title": "T08 \u00b7 Open roles \u2014 phone 390",
+      "w": 390,
+      "x": 1520,
+      "y": 0
+    },
+    "T09Job.dc.html": {
+      "expand": "fill",
+      "h": 2680,
+      "page": "t09",
+      "title": "T09 \u00b7 Fiber Splicer, CableCom \u2014 desktop 1440",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "T09JobExpired.dc.html": {
+      "expand": "fill",
+      "h": 1540,
+      "page": "t09",
+      "title": "T09 \u00b7 Role closed, recovery \u2014 desktop 1440",
+      "w": 1440,
+      "x": 1990,
+      "y": 0
+    },
+    "T09JobPhone.dc.html": {
+      "h": 4300,
+      "page": "t09",
+      "title": "T09 \u00b7 Job detail \u2014 phone 390",
+      "w": 390,
+      "x": 1520,
+      "y": 0
+    },
+    "T10Events.dc.html": {
+      "expand": "fill",
+      "h": 1740,
+      "page": "t10",
+      "title": "T10 \u00b7 Events & presentations \u2014 timeline variant, desktop 1440",
+      "w": 1440,
+      "x": 1990,
+      "y": 0
+    },
+    "T10Listing.dc.html": {
+      "expand": "fill",
+      "h": 2900,
+      "page": "t10",
+      "title": "T10 \u00b7 Investor news \u2014 desktop 1440",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "T10ListingPhone.dc.html": {
+      "h": 4080,
+      "page": "t10",
+      "title": "T10 \u00b7 Investor news \u2014 phone 390",
+      "w": 390,
+      "x": 1520,
+      "y": 0
+    },
+    "T11Article.dc.html": {
+      "expand": "fill",
+      "h": 2990,
+      "page": "t11",
+      "title": "T11 \u00b7 Q2 2027 results release \u2014 desktop 1440",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "T11ArticlePhone.dc.html": {
+      "h": 4680,
+      "page": "t11",
+      "title": "T11 \u00b7 Q2 2027 results release \u2014 phone 390",
+      "w": 390,
+      "x": 1520,
+      "y": 0
+    },
+    "T12Library.dc.html": {
+      "expand": "fill",
+      "h": 3140,
+      "page": "t12",
+      "title": "T12 \u00b7 Annual reports \u2014 desktop 1440",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "T12LibraryPhone.dc.html": {
+      "h": 4040,
+      "page": "t12",
+      "title": "T12 \u00b7 Annual reports \u2014 phone 390",
+      "w": 390,
+      "x": 1520,
+      "y": 0
+    },
+    "T13Contact.dc.html": {
+      "expand": "fill",
+      "h": 2800,
+      "page": "t13",
+      "title": "T13 \u00b7 Contact \u2014 desktop 1440",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "T13ContactPhone.dc.html": {
+      "h": 4350,
+      "page": "t13",
+      "title": "T13 \u00b7 Contact \u2014 phone 390",
+      "w": 390,
+      "x": 1520,
+      "y": 0
+    },
+    "T13ContactStates.dc.html": {
+      "h": 1500,
+      "page": "t13",
+      "title": "T13 \u00b7 Form states: validation, sent, careers, subcontractor",
+      "w": 1440,
+      "x": 1990,
+      "y": 0
+    },
+    "T14Legal.dc.html": {
+      "expand": "fill",
+      "h": 3540,
+      "page": "t14",
+      "title": "T14 \u00b7 Privacy policy \u2014 desktop 1440",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "T14LegalPhone.dc.html": {
+      "h": 5080,
+      "page": "t14",
+      "title": "T14 \u00b7 Privacy policy \u2014 phone 390",
+      "w": 390,
+      "x": 1520,
+      "y": 0
+    },
+    "T15People.dc.html": {
+      "expand": "fill",
+      "h": 3260,
+      "page": "t15",
+      "title": "T15 \u00b7 Leadership \u2014 desktop 1440",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "T15PeopleBio.dc.html": {
+      "h": 660,
+      "page": "t15",
+      "title": "T15 \u00b7 Bio dialog open",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "T16NotFound.dc.html": {
+      "expand": "fill",
+      "h": 1530,
+      "page": "t16",
+      "title": "T16 \u00b7 Page not found \u2014 desktop 1440",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "T16Search.dc.html": {
+      "expand": "fill",
+      "h": 2210,
+      "page": "t16",
+      "title": "T16 \u00b7 Search results \u2014 desktop 1440",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "T16SearchEmpty.dc.html": {
+      "h": 640,
+      "page": "t16",
+      "title": "T16 \u00b7 Search, no results",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "T02Investors.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 5180,
+      "title": "T02 \u00b7 Investors overview \u2014 desktop 1440 (updated Nov 16, 2026)",
+      "page": "t02",
+      "expand": "fill"
+    },
+    "T02InvestorsPhone.dc.html": {
+      "x": 1520,
+      "y": 0,
+      "w": 390,
+      "h": 7950,
+      "title": "T02 \u00b7 Investors overview \u2014 phone 390",
+      "page": "t02"
+    },
+    "T02InvestorsPast.dc.html": {
+      "x": 1990,
+      "y": 0,
+      "w": 1440,
+      "h": 830,
+      "title": "T02 \u00b7 Events, Past tab selected",
+      "page": "t02"
+    },
+    "T02InvestorsMenu.dc.html": {
+      "x": 1990,
+      "y": 950,
+      "w": 1440,
+      "h": 580,
+      "title": "T02 \u00b7 Investors menu with the results spotlight",
+      "page": "t02"
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-11-13T18:05:00Z",
+    "v": 1
+  },
+  "designSystems": [
+    {
+      "artifact": "https://claude.ai/artifact/3VsumQDQ4HuXo4bpS44USd",
+      "copiedAt": "2026-11-13T18:05:00Z",
+      "namespace": "dycom",
+      "title": "Dycom Design System",
+      "version": "1792503519-01cd"
+    }
+  ],
+  "launch": {
+    "page": "overview",
+    "view": "canvas"
+  },
+  "noteOrder": [
+    "ovTitle",
+    "ovChrome",
+    "t03Title",
+    "t03Job",
+    "t03Narrative",
+    "t03Rules",
+    "t03Open",
+    "t03WhatNote",
+    "t04Title",
+    "t04Job",
+    "t04Narrative",
+    "t04Kit",
+    "t04Open",
+    "t05Title",
+    "t05Job",
+    "t05Narrative",
+    "t05Open",
+    "t06Title",
+    "t06N0",
+    "t06N1",
+    "t06N2",
+    "t06N3",
+    "t07Title",
+    "t07N0",
+    "t07N1",
+    "t07N2",
+    "t07N3",
+    "t08Title",
+    "t08N0",
+    "t08N1",
+    "t08N2",
+    "t08N3",
+    "t09Title",
+    "t09N0",
+    "t09N1",
+    "t09N2",
+    "t09N3",
+    "t10Title",
+    "t10N0",
+    "t10N1",
+    "t10N2",
+    "t10N3",
+    "t11Title",
+    "t11N0",
+    "t11N1",
+    "t11N2",
+    "t11N3",
+    "t12Title",
+    "t12N0",
+    "t12N1",
+    "t12N2",
+    "t12N3",
+    "t13Title",
+    "t13N0",
+    "t13N1",
+    "t13N2",
+    "t13N3",
+    "t14Title",
+    "t14N0",
+    "t14N1",
+    "t14N2",
+    "t14N3",
+    "t15Title",
+    "t15N0",
+    "t15N1",
+    "t15N2",
+    "t15N3",
+    "t16Title",
+    "t16N0",
+    "t16N1",
+    "t16N2",
+    "t16N3",
+    "invTitle",
+    "invMerge",
+    "invRules",
+    "invNext",
+    "t02Title",
+    "t02N0",
+    "t02N1",
+    "t02N2",
+    "t02N3"
+  ],
+  "notes": {
+    "invMerge": {
+      "fill": "orange",
+      "page": "inventory",
+      "size": 24,
+      "text": "CONSOLIDATION DECISIONS\n\nWhere templates solved the same problem separately, one component with variants:\n\n\u2022 5 search bars (jobs, resources, site, companies, documents) \u2192 SearchFilterBar\n\u2022 3 empty states + job recovery + map failure \u2192 EmptyState (+ Notice)\n\u2022 Strength cards, child-page tiles, related content, service tiles \u2192 TileGrid\n\u2022 Shared promo, pillars, capabilities, segments, values, Headway\u00ae/Rightway\u2122, why Dycom \u2192 FeatureColumns\n\u2022 Jump row + sticky 'On this page' + legal index \u2192 PageIndex\n\u2022 Facts band + results metrics + figure strip \u2192 MetricBand\n\u2022 Brand statement + quote \u2192 Statement; brand film + inline video + video library \u2192 Video\n\u2022 News list + search results + company and service rows \u2192 ResultList\n\u2022 Photo split + photo band + plain closing \u2192 ClosingBand\n\u2022 Legal clauses \u2192 RichTextSection (numbered variant)\n\u2022 Homepage form, contact, subcontractor, talent network, document request, email alerts \u2192 InquiryForm\n\u2022 Article header and job-search header \u2192 InteriorHero variants\n\u2022 Company profile pages removed (Nov 16, 2026): the directory card and A\u2013Z rows go to each company's website \u2197; the map's pre-filtered mode stays for operating-company sites (MAP0009)",
+      "w": 520,
+      "x": 1520,
+      "y": 0
+    },
+    "invNext": {
+      "fill": "pink",
+      "page": "inventory",
+      "size": 24,
+      "text": "STILL TO DESIGN\n\nRequired by Dycom's lists but not on any template yet: AlertBanner (NAV0008), HomepagePopup (NAV0009), Testimonials (CC-6, C10), ImageGallery (CC-9), SocialFeed (CC-16), BusinessSegments (ABT0006, waits on the Building Systems taxonomy). ConsentBanner comes from the consent vendor (CC-4).\n\nOptional: HeroCarousel (CC-12) only if Dycom opts in; HistoryTimeline (ABT0002) extends EventTimeline; a countdown counter (CC-10 example) extends MetricBand.",
+      "w": 520,
+      "x": 1520,
+      "y": 1760
+    },
+    "invRules": {
+      "fill": "blue",
+      "page": "inventory",
+      "size": 24,
+      "text": "RULES FOR THE KIT\n\n\u2022 A new page is built from this list. A genuinely new need becomes a variant of an existing rendering before it becomes a new one.\n\u2022 Every rendering reads only its datasource (or a feed through a provider) \u2014 Sitecore-ready, as the live site already is.\n\u2022 Shared content has ONE item: Company Facts, Connection with Intention, the recruitment-fraud notice, navigation, Trade and Company items.\n\u2022 One style per shared UI part: the four template stylesheets (tpl-a\u2026d) fold into the brand stylesheet when built.",
+      "w": 520,
+      "x": 1520,
+      "y": 1080
+    },
+    "invTitle": {
+      "kind": "title1",
+      "maxW": 1440,
+      "page": "inventory",
+      "text": "Component inventory \u2014 the final kit for T01\u2013T16",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "ovChrome": {
+      "kind": "title1",
+      "maxW": 1440,
+      "page": "overview",
+      "text": "Global chrome \u2014 on every template, unchanged from the live site",
+      "w": 240,
+      "x": 0,
+      "y": 1720
+    },
+    "ovTitle": {
+      "kind": "title1",
+      "maxW": 1440,
+      "page": "overview",
+      "text": "Dycom page templates \u2014 designed in order, T03 \u2192 T16",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t03Job": {
+      "fill": "blue",
+      "page": "t03",
+      "size": 24,
+      "text": "THE JOB\n\nA visitor clicked a group's overview link (Who we are, What we do). They have chosen a topic, not a page. The landing must:\n\n1. Confirm where they are (breadcrumb, H1, one-sentence answer).\n2. Tell the section's story in a few beats, in Dycom's voice.\n3. Route them to every child page \u2014 the mega-menu columns, as tiles.\n4. Prove it (facts from the one managed source).\n5. Close with one next step.\n\nUsed by: who-we-are/, what-we-do/ (and companies/ if separated from the directory). Careers gets its own landing (T07).",
+      "w": 480,
+      "x": -560,
+      "y": 0
+    },
+    "t03Narrative": {
+      "fill": "green",
+      "page": "t03",
+      "size": 24,
+      "text": "NARRATIVE \u2014 WHO WE ARE\n\nHero: who Dycom is, in one sentence. Incorporated 1969, NYSE: DY.\n01 Purpose: to connect America; the six values, stated once (they repeat on two pages today \u2014 audit \u00a77).\n02 Explore: the section's pages as tiles, grouped as the menu groups them.\n03 How we work: Headway\u00ae and Rightway\u2122 \u2014 the two programmes in everything Dycom publishes.\n04 By the numbers: the facts band, from the Company Facts source.\n05 Connection with Intention: the shared block, authored once (ABT0005).\n06 News, then one closing step: the company near you.",
+      "w": 480,
+      "x": -560,
+      "y": 760
+    },
+    "t03Open": {
+      "fill": "pink",
+      "page": "t03",
+      "size": 24,
+      "text": "OPEN FOR DYCOM\n\n\u2022 One line per value \u2014 the values have names but no published definitions.\n\u2022 'Connection with Intention' copy: consolidated here from the repeated block; Dycom to approve the wording.\n\u2022 Leadership tile links to people pages that need photos and bios (T15).\n\u2022 Company facts: 20,000+ vs 21,000+, ~40 vs 41 \u2014 needs one owner (D-CF).\n\u2022 Electrical contracting has no service page yet (brief open item 9).",
+      "w": 480,
+      "x": -560,
+      "y": 2260
+    },
+    "t03Rules": {
+      "fill": "orange",
+      "page": "t03",
+      "size": 24,
+      "text": "SITECORE MAPPING\n\nInteriorHero (+ Breadcrumb) \u00b7 InPageIndex \u00b7 SectionIntro (new) \u00b7 ChildPageTiles (new, reads the nav group so menu and tiles never disagree) \u00b7 FeaturePair (new) \u00b7 CompanyFacts (shared datasource) \u00b7 SharedPromo (shared datasource) \u00b7 NewsList (IR feed) \u00b7 CtaCallout (new).\n\nNew components to build: C02 breadcrumb, C15 tile card, C16 counters, C19 CTA callout.",
+      "w": 480,
+      "x": -560,
+      "y": 1520
+    },
+    "t03Title": {
+      "kind": "title1",
+      "maxW": 3900,
+      "page": "t03",
+      "text": "T03 \u00b7 Section landing \u2014 one template, two sections",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t03WhatNote": {
+      "fill": "teal",
+      "page": "t03",
+      "text": "Same template, different section: What we do swaps the purpose block for the lifecycle route and adds 'Who we build for' and a directory teaser (C29) \u2014 optional sections switched on in the CMS.",
+      "w": 900,
+      "x": 1990,
+      "y": -150
+    },
+    "t04Job": {
+      "fill": "blue",
+      "page": "t04",
+      "size": 24,
+      "text": "THE JOB\n\nOne topic, told fully: the page a visitor reads, not scans. 19 pages use it \u2014 values, operating strengths, safety, quality, sustainability, business segments, the trades, why Dycom, students, veterans, recruitment process, life, benefits, capabilities.\n\nIt must:\n1. State the topic in one sentence (hero).\n2. Let a long page be navigated \u2014 the sticky 'On this page' list (C08), numbered sections.\n3. Mix the right blocks for the topic from one kit.\n4. End in related pages and one next step.",
+      "w": 480,
+      "x": -560,
+      "y": 0
+    },
+    "t04Kit": {
+      "fill": "orange",
+      "page": "t04",
+      "size": 24,
+      "text": "THE KIT (required \u2192 optional)\n\nRequired: InteriorHero \u00b7 TopicNav (sticky, C08) \u00b7 numbered TopicSection with rich text \u00b7 Related (C21 related-content) \u00b7 Closing.\n\nOptional per page: listing block \u00b7 process steps \u00b7 50/50 media (CC-17) \u00b7 document list (C23) \u00b7 statement/quote (C09) \u00b7 accordion (C07) \u00b7 pillars (shared promo, 3\u20134 up) \u00b7 counters (C16) \u00b7 video (C11) \u00b7 timeline (C20) \u00b7 form (C25).\n\nSustainability shows the light end: no listing block, three sections, a report download.",
+      "w": 480,
+      "x": -560,
+      "y": 1420
+    },
+    "t04Narrative": {
+      "fill": "green",
+      "page": "t04",
+      "size": 24,
+      "text": "NARRATIVE \u2014 HEADWAY\u00ae SAFETY\n\nThe audit names Safety the deepest page on today's site; ABT0003 asks for accordions and in-page anchors.\n\nHero: what Headway\u00ae is, and the one fact that defines it \u2014 anyone can stop the work.\n01 Safety before schedule \u2014 the four commitments.\n02 Before work starts \u2014 the job-task assessment, as four steps.\n03 Training and mentoring \u2014 50/50 media block.\n04 Hazard recognition \u2014 document list, English and Spanish (RES0004).\n05 Stop-work authority \u2014 the statement, set large.\n06 Safety resources \u2014 accordion by audience (CC-7), including 811 for communities.\nRelated \u2192 closing: find open roles.",
+      "w": 480,
+      "x": -560,
+      "y": 700
+    },
+    "t04Open": {
+      "fill": "pink",
+      "page": "t04",
+      "size": 24,
+      "text": "OPEN FOR DYCOM\n\n\u2022 Hazard guide file sizes and dates come from the DAM (RES0005\u20130006).\n\u2022 Job-task assessment steps are an Icreon draft \u2014 confirm against Headway\u00ae.\n\u2022 Training copy: confirm the mentoring model.\n\u2022 Sustainability: report year and file; pillars are three (brief) plus Business practices (ABT0004 lists four) \u2014 confirm the framing.\n\u2022 Environment pillar copy is limited to what Dycom has published (site restoration).",
+      "w": 480,
+      "x": -560,
+      "y": 2140
+    },
+    "t04Title": {
+      "kind": "title1",
+      "maxW": 3430,
+      "page": "t04",
+      "text": "T04 \u00b7 Corporate topic \u2014 the long-form story page",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t05Job": {
+      "fill": "blue",
+      "page": "t05",
+      "size": 24,
+      "text": "THE JOB\n\nA customer or candidate wants to know: do you do this work, who does it near me, and can I work in it? Seven services (SVC0001\u20130005) plus Building Systems later.\n\nSVC0002 sets the stack: introduction \u00b7 capabilities with icons \u00b7 media \u00b7 operating companies providing the service \u00b7 related projects (optional) \u00b7 contact \u00b7 related careers.",
+      "w": 480,
+      "x": -560,
+      "y": 0
+    },
+    "t05Narrative": {
+      "fill": "green",
+      "page": "t05",
+      "size": 24,
+      "text": "NARRATIVE \u2014 WIRELINE (DEEP)\n\nHero: what the service is, in Dycom's lifecycle words; listing block places it in the lifecycle (stage 03 of 05) so every service reads as part of one journey.\n01 What we build \u2014 four capabilities with the brand's own pictograms (CC-11).\n02 In the field \u2014 the current page's video, migrated, beside how a route gets built.\n03 Our wireline companies \u2014 the directory pre-filtered to this service (SVC0003, C29).\n04 Careers \u2014 the trades in this service, a live count from the job feed and a filtered drawer (SVC0004, C30).\nRelated services \u2192 contact.\n\nProject management (thin) switches media, careers and related off \u2014 the audit found it thin today.",
+      "w": 480,
+      "x": -560,
+      "y": 560
+    },
+    "t05Open": {
+      "fill": "pink",
+      "page": "t05",
+      "size": 24,
+      "text": "BLOCKED ON DATA\n\n\u2022 Company \u2192 service tagging does not exist (D8, SVC0003). The companies module is designed; its rows are marked placeholders until Dycom tags each company.\n\u2022 Live role count needs the feed's department \u2192 trade mapping (C30).\n\u2022 Pictograms: the brand set has six. Aerial and splicing borrow the closest (antenna, arrows); two new pictograms should be drawn to the same spec.\n\u2022 Wireline video: migrate the current page's video to the DAM.\n\u2022 Electrical contracting / Building Systems: taxonomy pending (SVC0005).",
+      "w": 480,
+      "x": -560,
+      "y": 1300
+    },
+    "t05Title": {
+      "kind": "title1",
+      "maxW": 3430,
+      "page": "t05",
+      "text": "T05 \u00b7 Service detail \u2014 one template, deep and thin",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t06N0": {
+      "fill": "blue",
+      "page": "t06",
+      "size": 24,
+      "text": "THE JOB\n\ncompanies/ \u2014 the map as a page (MAP0001\u2013MAP0008). A customer, candidate or neighbour wants the company for their area, or one they have heard of.\n\n1. Say what the companies are: local names, one national group.\n2. Search by place or name; filter by company, service line, state.\n3. Show where they are: the map, with the selected company's card.\n4. List every company A\u2013Z \u2014 the map's accessible equivalent and its fallback when the map fails or is blocked by consent.\n5. One next step.",
+      "w": 480,
+      "x": -560,
+      "y": 0
+    },
+    "t06N1": {
+      "fill": "green",
+      "page": "t06",
+      "size": 24,
+      "text": "NARRATIVE \u2014 OUR COMPANIES\n\nHero: local employers, one national group; listing block '~40 companies' with Dycom's 'over 500 field offices' line.\n01 Find a company: search, filters, result count, Use my location; the Civic map exactly as on the homepage, with the company card open \u2014 logo first, home office, website \u2197, careers \u2197, View open roles. There are no company profile pages: the card and the A\u2013Z rows lead to each company's own website.\n02 All companies A\u2013Z: letter index, logo rows, list-works-without-the-map notice.\nClosing: not sure which company to call?\nPhones: no map (brief rule); a row opens the card as a dialog.",
+      "w": 480,
+      "x": -560,
+      "y": 760
+    },
+    "t06N2": {
+      "fill": "orange",
+      "page": "t06",
+      "size": 24,
+      "text": "SITECORE MAPPING\n\nInteriorHero (+ listing) \u00b7 CompanyFinder (search + filters, C35 \u2014 reads the Company items) \u00b7 CompanyMap (the homepage component) with CompanyCard (MAP0002, MAP0004) \u00b7 CompanyDirectoryGrid (A\u2013Z, logo, list fallback \u2014 MAP0006\u20130008) \u00b7 CtaCallout.\n\nNew: filter bar, A\u2013Z index, logo row, map-failure notice (C38).",
+      "w": 480,
+      "x": -560,
+      "y": 1520
+    },
+    "t06N3": {
+      "fill": "pink",
+      "page": "t06",
+      "size": 24,
+      "text": "OPEN FOR DYCOM\n\n\u2022 Service-line filter needs company \u2192 service tagging (D8, SVC0003).\n\u2022 State filter uses home-office states until states served are supplied (MAP0001).\n\u2022 '~40' in the hero vs 38 listed (Texstar held back) \u2014 brief open items 3\u20134.\n\u2022 Clustering for ~500 field offices (MAP0002) waits on field-office data.\n\u2022 List view as the phone default (MAP0006) is already true by the no-map rule.",
+      "w": 480,
+      "x": -560,
+      "y": 2280
+    },
+    "t06Title": {
+      "kind": "title1",
+      "maxW": 1910,
+      "page": "t06",
+      "text": "T06 \u00b7 Company directory \u2014 the map as a page",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t07N0": {
+      "fill": "blue",
+      "page": "t07",
+      "size": 24,
+      "text": "THE JOB\n\nThe front door for every candidate. Most don't know Dycom's job titles.\n1. Search first: role, then location (C31).\n2. Answer 'where do I fit?' in plain-language trades, not SAP department names.\n3. Show what working here is like: video, benefits, why Dycom.\n4. Earn trust: recruitment-fraud guidance on the page.\n5. Never dead-end: the talent network.",
+      "w": 480,
+      "x": -560,
+      "y": 0
+    },
+    "t07N1": {
+      "fill": "green",
+      "page": "t07",
+      "size": 24,
+      "text": "NARRATIVE \u2014 CAREERS\n\nHero: skilled work with a local employer, search bar, popular searches.\n01 Where do I fit? Eight trades, each with a one-line explainer and an open-role count.\n02 Life at Dycom: video library filtered by tag (CC-6), led by the brand film.\n03 Benefits: in-page slider (CC-13), one slide per category.\n04 Why Dycom: local employer, trained on the job, room to grow; Veterans and Students.\n05 Apply safely: the fraud notice.\nClosing: join the talent network.\n\nRole counts and roles shown come from the sample SuccessFactors-shaped feed, not live vacancies.",
+      "w": 480,
+      "x": -560,
+      "y": 760
+    },
+    "t07N2": {
+      "fill": "orange",
+      "page": "t07",
+      "size": 24,
+      "text": "SITECORE MAPPING\n\nInteriorHero with JobSearchBar (C01, C31) \u00b7 InPageIndex \u00b7 TradeFinder (reads the Trade items \u2014 the drawer's source; counts from the jobs provider) \u00b7 VideoLibrary (C11) \u00b7 InPageSlider (C14) \u00b7 SharedPromo \u00b7 TrustNotice (new shared datasource, reused on T09 and the recruitment-process page) \u00b7 CtaCallout (talent network, C19).\n\nThe hero search button keeps the homepage hero's Signal Green fill \u2014 confirm under the three-fill button rule.",
+      "w": 480,
+      "x": -560,
+      "y": 1520
+    },
+    "t07N3": {
+      "fill": "pink",
+      "page": "t07",
+      "size": 24,
+      "text": "OPEN FOR DYCOM\n\n\u2022 Benefit categories and copy \u2014 bracketed until the Benefits page migrates.\n\u2022 Employee story videos, titles and tags (CC-6).\n\u2022 Fraud guidance is an Icreon draft from today's recruitment-process page \u2014 confirm wording.\n\u2022 'Room to grow', 'Trained on the job' \u2014 confirm against Dycom's career-path story.\n\u2022 Trade counts must come from the live feed.",
+      "w": 480,
+      "x": -560,
+      "y": 2280
+    },
+    "t07Title": {
+      "kind": "title1",
+      "maxW": 1910,
+      "page": "t07",
+      "text": "T07 \u00b7 Careers landing \u2014 the front door for candidates",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t08N0": {
+      "fill": "blue",
+      "page": "t08",
+      "size": 24,
+      "text": "THE JOB\n\nSearch like a job seeker: role and location first, plain-language filters, an honest count, never a dead end. Filters only on facts SuccessFactors supplies as fields: trade (department \u2192 trade on the Trade items), company (facility), state, employment type (shifttype), travel, trainee (from the title).",
+      "w": 480,
+      "x": -560,
+      "y": 0
+    },
+    "t08N1": {
+      "fill": "green",
+      "page": "t08",
+      "size": 24,
+      "text": "NARRATIVE \u2014 FIBER SPLICING IN GEORGIA\n\nCompact Civic band: breadcrumb, 'Open roles', search pre-filled.\nLeft: filters with counts. Right: result count read to screen readers, sort (recent, nearest), removable chips.\nResult cards (C32): title, company logo and name, city/state/ZIP, type, travel, posted, trade tag, trainee tag, pay slot shown only when the feed has pay.\nPagination \u00b7 talent network \u00b7 'Looking for something else?' \u2192 site search (NAV0010).\nNo-results board (C34): says what was searched, maps the word to a trade ('cable splicer' \u2192 Fiber splicing), widen the search, nearest similar roles and companies, talent network.\nPhone: filters behind 'Filters (2)'.\n\nRoles shown are from the sample feed.",
+      "w": 480,
+      "x": -560,
+      "y": 760
+    },
+    "t08N2": {
+      "fill": "orange",
+      "page": "t08",
+      "size": 24,
+      "text": "SITECORE MAPPING\n\nJobSearchPage (one rendering; data from JobsProvider \u2192 /api/jobs, which the SuccessFactors feed replaces) \u00b7 FilterPanel \u00b7 ResultCard (C32) \u00b7 Pagination (C38) \u00b7 ZeroResultsRecovery (C34; synonyms per Trade item) \u00b7 TalentNetworkInline.\nSearch state lives in the URL: shareable, and indexable per trade and state.",
+      "w": 480,
+      "x": -560,
+      "y": 1520
+    },
+    "t08N3": {
+      "fill": "pink",
+      "page": "t08",
+      "size": 24,
+      "text": "OPEN FOR DYCOM\n\n\u2022 Pay is empty in the feed; the pay-forward slot stays bracketed until compensation is populated (SF assessment \u00a714).\n\u2022 Remote/hybrid filter (user type 3) has no feed field.\n\u2022 Synonym lists per trade.\n\u2022 Page size; default sort when a location is given.\n\u2022 Feed facility names must map to company items.",
+      "w": 480,
+      "x": -560,
+      "y": 2280
+    },
+    "t08Title": {
+      "kind": "title1",
+      "maxW": 3430,
+      "page": "t08",
+      "text": "T08 \u00b7 Job search \u2014 role and location first, never a dead end",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t09N0": {
+      "fill": "blue",
+      "page": "t09",
+      "size": 24,
+      "text": "THE JOB\n\nDecide with confidence, then apply from a phone. One requisition: the facts a candidate needs, the employer named and linked, a clean hand-off to apply, and fraud guidance where the decision happens.",
+      "w": 480,
+      "x": -560,
+      "y": 0
+    },
+    "t09N1": {
+      "fill": "green",
+      "page": "t09",
+      "size": 24,
+      "text": "NARRATIVE \u2014 FIBER SPLICER, CABLECOM\n\nCivic band: breadcrumb, H1, company logo and link, location, type, posted.\nMain: about the role (feed description); what you'll do, what you bring, physical requirements, benefits \u2014 bracketed until structured; a good question to ask (from the Trade item); about the company: more roles there, its website \u2197; apply safely.\nSticky apply card: 'Apply on CableCom's careers site \u2197' + the standard facts block (C33); pay and schedule '[From the feed when available]'.\nSimilar roles.\nExpired board: same header, 'This role has closed', similar roles, more at the company, talent network \u2014 never a 404.",
+      "w": 480,
+      "x": -560,
+      "y": 760
+    },
+    "t09N2": {
+      "fill": "orange",
+      "page": "t09",
+      "size": 24,
+      "text": "SITECORE MAPPING\n\nJobDetail (route from the feed: careers/opportunities/{id}, not an authored item) \u00b7 JobFactsBlock (C33) \u00b7 ApplyHandoff (feed URL, \u2197) \u00b7 TradeQuestion \u00b7 CompanyCard (compact, from the directory) \u00b7 TrustNotice (shared with T07) \u00b7 SimilarRoles \u00b7 ExpiredState (C34: keeps the URL, noindex, recovers).",
+      "w": 480,
+      "x": -560,
+      "y": 1520
+    },
+    "t09N3": {
+      "fill": "pink",
+      "page": "t09",
+      "size": 24,
+      "text": "OPEN FOR DYCOM\n\n\u2022 Apply destination: SAP RMK apply URL vs the company careers page; can it be same-domain (strategy goal 2)?\n\u2022 Description sections need structured fields or a parsing rule.\n\u2022 Request feed enhancements for pay, schedule, physical requirements, benefits.\n\u2022 'About 10 minutes on a phone' is a placeholder \u2014 measure it.\n\u2022 How long closed roles stay reachable; 410 vs 200 + noindex.",
+      "w": 480,
+      "x": -560,
+      "y": 2280
+    },
+    "t09Title": {
+      "kind": "title1",
+      "maxW": 3430,
+      "page": "t09",
+      "text": "T09 \u00b7 Job detail \u2014 decide with confidence, apply from a phone",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t10N0": {
+      "fill": "blue",
+      "page": "t10",
+      "size": 24,
+      "text": "THE JOB\n\nFind one item in a growing archive. Used by News, Investor news, Events & presentations and the Resource Center index (RES0001). Search, narrow with filters, see what is filtered, page through, never dead-end.",
+      "w": 480,
+      "x": -560,
+      "y": 0
+    },
+    "t10N1": {
+      "fill": "green",
+      "page": "t10",
+      "size": 24,
+      "text": "NARRATIVE \u2014 INVESTOR NEWS\n\nHero: what the archive holds; listing block \u2192 the latest results (Q2 2027).\nSearch, then filters (type, topic, year, sort) with removable chips and a live count.\nResults: date, title, optional summary, type \u00b7 topic tag. Pagination.\nZero-result state: say what found nothing, Clear filters, cross-link to SEC filings.\nClosing: email alerts or Investor Relations.\nEvents & presentations is the timeline variant: Upcoming / Past, dated nodes, webcast and materials beside each event.",
+      "w": 480,
+      "x": -560,
+      "y": 760
+    },
+    "t10N2": {
+      "fill": "orange",
+      "page": "t10",
+      "size": 24,
+      "text": "SITECORE MAPPING\n\nInteriorHero \u00b7 ResourceSearch (facets from the content model: type, topic, service line, operating company, year \u2014 RES0001) \u00b7 ResultList (author on/off, RES0002) \u00b7 Pagination + EmptyState (C38) \u00b7 EventTimeline (variant) \u00b7 ClosingBand.\nInvestor items render on-site from the IR feed (D-IR); News and Resource Center items are CMS content.",
+      "w": 480,
+      "x": -560,
+      "y": 1520
+    },
+    "t10N3": {
+      "fill": "pink",
+      "page": "t10",
+      "size": 24,
+      "text": "OPEN FOR DYCOM\n\n\u2022 Topic taxonomy for news (Icreon draft).\n\u2022 How far back the feed goes.\n\u2022 Whether items carry summaries.\n\u2022 D-IR: confirm rendering the IR feed on-site.",
+      "w": 480,
+      "x": -560,
+      "y": 2280
+    },
+    "t10Title": {
+      "kind": "title1",
+      "maxW": 3430,
+      "page": "t10",
+      "text": "T10 \u00b7 Resource listing \u2014 find one item in a growing archive",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t11N0": {
+      "fill": "blue",
+      "page": "t11",
+      "size": 24,
+      "text": "THE JOB\n\nRead one release or article in full, trust it, act on it. Used by News, Investor news and Resource Center articles (RES0003). Render the feed's text exactly, carry Article structured data (sitemap, llms.txt), keep the documents beside it, lead on to related items.",
+      "w": 480,
+      "x": -560,
+      "y": 0
+    },
+    "t11N1": {
+      "fill": "green",
+      "page": "t11",
+      "size": 24,
+      "text": "NARRATIVE \u2014 Q2 2027 RESULTS RELEASE\n\nArticle hero: no photograph; type and date above an H1 sized for long titles.\nDateline and lede, then the three GAAP figures as a strip ($2.006 billion, $115.6 million, $3.81).\nRelease body, outlook, results call and financial tables come from the IR feed exactly as issued \u2014 bracketed here, never retyped.\nAbout Dycom and forward-looking statements.\nSticky aside: the four results documents, IR contact, share (copy link, email, print \u2014 nothing leaves the site).\nClosing: more investor news.",
+      "w": 480,
+      "x": -560,
+      "y": 760
+    },
+    "t11N2": {
+      "fill": "orange",
+      "page": "t11",
+      "size": 24,
+      "text": "SITECORE MAPPING\n\nInteriorHero (article variant) \u00b7 ArticleBody (semantic HTML + Article schema, C22) \u00b7 FigureStrip (optional) \u00b7 DataTable (C37) \u00b7 DocumentList (aside variant, C23) \u00b7 ContactBlock \u00b7 Share \u00b7 RelatedContent (C38). Author block on/off for Resource Center articles (RES0002).",
+      "w": 480,
+      "x": -560,
+      "y": 1520
+    },
+    "t11N3": {
+      "fill": "pink",
+      "page": "t11",
+      "size": 24,
+      "text": "OPEN FOR DYCOM\n\n\u2022 Body, outlook, tables and forward-looking statements come from the IR feed.\n\u2022 IR contact block content.\n\u2022 Whether the feed delivers structured tables or only HTML/PDF.\n\u2022 Boilerplate says 'telecommunications' where the current hub says 'telecom' (brief rule) \u2014 confirm.",
+      "w": 480,
+      "x": -560,
+      "y": 2280
+    },
+    "t11Title": {
+      "kind": "title1",
+      "maxW": 1910,
+      "page": "t11",
+      "text": "T11 \u00b7 Article / news detail \u2014 read it, trust it, act on it",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t12N0": {
+      "fill": "blue",
+      "page": "t12",
+      "size": 24,
+      "text": "THE JOB\n\nGet the right official document fast. Seven pages: annual and quarterly reports, SEC filings, governance documents, hazard recognition, employee handbook, benefit plan disclosures. CC-23 asks for 'a more elegant version' of today's annual reports page; RES0004\u20130006 set what each document shows and require stable DAM URLs.",
+      "w": 480,
+      "x": -560,
+      "y": 0
+    },
+    "t12N1": {
+      "fill": "green",
+      "page": "t12",
+      "size": 24,
+      "text": "NARRATIVE \u2014 ANNUAL REPORTS\n\nHero: what the library holds; listing block = next fixed date (annual meeting May 28, 2026).\nLatest reports: cover cards across years.\nFull list: year tabs and document type; each row title, type, size, date, tag; PDFs open in a new tab.\nAccessibility route: request another format.\nRelated financials and filings. Closing: printed copies or contact IR.",
+      "w": 480,
+      "x": -560,
+      "y": 760
+    },
+    "t12N2": {
+      "fill": "orange",
+      "page": "t12",
+      "size": 24,
+      "text": "SITECORE MAPPING\n\nInteriorHero \u00b7 CoverGrid (CC-23) \u00b7 YearTabs + type filter \u00b7 DocumentList (C23: title, type, size, updated, language) \u00b7 LinkGroup \u00b7 ClosingBand.\nFiles from the DAM with stable URLs (RES0005); untagged PDFs flagged at upload (RES0006).",
+      "w": 480,
+      "x": -560,
+      "y": 1520
+    },
+    "t12N3": {
+      "fill": "pink",
+      "page": "t12",
+      "size": 24,
+      "text": "OPEN FOR DYCOM\n\n\u2022 Published cover artwork \u2014 Dycom photography stands in.\n\u2022 File sizes and dates from the DAM.\n\u2022 How many years stay online.\n\u2022 One library for proxy and annual reports, or split (the sitemap lists Annual reports and SEC filings separately)?",
+      "w": 480,
+      "x": -560,
+      "y": 2280
+    },
+    "t12Title": {
+      "kind": "title1",
+      "maxW": 1910,
+      "page": "t12",
+      "text": "T12 \u00b7 Document library \u2014 the right official document, fast",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t13N0": {
+      "fill": "blue",
+      "page": "t13",
+      "size": 24,
+      "text": "THE JOB\n\nThe way in for every question that is not a job application. Six pages: contact, subcontractor request, talent network, document request, email alerts, contact IR.\n1. Say what it's for; send job seekers to open roles first.\n2. Ask who they are, then only what that inquiry needs (FRM0001).\n3. Fail kindly: name each fix, keep the values (FRM0006).\n4. Confirm where the inquiry went.",
+      "w": 480,
+      "x": -560,
+      "y": 0
+    },
+    "t13N1": {
+      "fill": "green",
+      "page": "t13",
+      "size": 24,
+      "text": "NARRATIVE \u2014 CONTACT\n\nHero: Contact Dycom; listing block answers the commonest wrong turn: applications go through open roles.\n01 Reach us: headquarters, Investor Relations, suppliers and subcontractors, company directory.\n02 Send an inquiry: seven types (FRM0001), open on Customer or project; fields follow the live closing form; consent; quiet bot check (FRM0007).\nStates board: A validation (summary + per-field fixes, aria-invalid + text) \u00b7 B sent (route, recap, next step) \u00b7 C Careers opens the drawer instead of a form \u00b7 D subcontractor request (FRM0011) on the same engine. Values filled in on the states board are illustrative.",
+      "w": 480,
+      "x": -560,
+      "y": 760
+    },
+    "t13N2": {
+      "fill": "orange",
+      "page": "t13",
+      "size": 24,
+      "text": "SITECORE MAPPING\n\nInteriorHero \u00b7 ContactOptions \u00b7 InquiryForm on Sitecore Forms (C24): type selector, conditional fields, routing by type/company/state (FRM0002), origin + UTMs (FRM0003), validation and success/redirect (FRM0006), bot check (FRM0007), storage/export (FRM0008), email per type and company (FRM0009), analytics (FRM0012).\nFormPlacement left/right/top/bottom (C25, FRM0005). Variants: subcontractor, talent network, document request, email alerts (C26). CRM push later (FRM0010).",
+      "w": 480,
+      "x": -560,
+      "y": 1520
+    },
+    "t13N3": {
+      "fill": "pink",
+      "page": "t13",
+      "size": 24,
+      "text": "OPEN FOR DYCOM\n\n\u2022 One public email \u2014 today's page shows info@dycominc.com and info@dycomind.com.\n\u2022 HQ street address, main phone, media contact.\n\u2022 Routing recipients per type, company and state.\n\u2022 Reply-time promise.\n\u2022 Keep Media and Other as separate types?\n\u2022 Error tint is drawn from Ochlockonee Red (the palette has no error colour) \u2014 confirm; errors always carry text and an icon.",
+      "w": 480,
+      "x": -560,
+      "y": 2280
+    },
+    "t13Title": {
+      "kind": "title1",
+      "maxW": 3430,
+      "page": "t13",
+      "text": "T13 \u00b7 Contact & forms \u2014 one engine, every inquiry",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t14N0": {
+      "fill": "blue",
+      "page": "t14",
+      "size": 24,
+      "text": "THE JOB\n\nLong binding text that must stay exact and findable. Four pages: privacy, terms of use, inventory terms, fleet terms. 'Last updated' first, jump to a numbered clause, print cleanly \u2014 and never paraphrase: the text migrates as-is.",
+      "w": 480,
+      "x": -560,
+      "y": 0
+    },
+    "t14N1": {
+      "fill": "green",
+      "page": "t14",
+      "size": 24,
+      "text": "NARRATIVE \u2014 PRIVACY POLICY\n\nPlain Civic hero, no photograph: the date leads.\nSticky 'In this policy' index of twelve numbered clauses, with Print.\nEach clause: numbered heading + migrated body (headings show the expected structure; real headings come from the current policy).\nClosing: questions, Contact Dycom, Cookie preferences (NAV0007).",
+      "w": 480,
+      "x": -560,
+      "y": 760
+    },
+    "t14N2": {
+      "fill": "orange",
+      "page": "t14",
+      "size": 24,
+      "text": "SITECORE MAPPING\n\nInteriorHero (plain, last-updated block) \u00b7 LegalIndex (sticky, C08) \u00b7 LegalClause (numbered rich text) \u00b7 print stylesheet \u00b7 ClosingBand.\nContent: CMS rich text migrated as-is, keeping each page's date (audit \u00a79).",
+      "w": 480,
+      "x": -560,
+      "y": 1520
+    },
+    "t14N3": {
+      "fill": "pink",
+      "page": "t14",
+      "size": 24,
+      "text": "OPEN FOR DYCOM\n\n\u2022 Privacy policy (June 17, 2025) still mentions Flash Player Help \u2014 a content-owner fix will change the date.\n\u2022 Terms of use last updated February 18, 2021.\n\u2022 Fleet and inventory terms (August 19, 2026): confirm clause numbers carry over.\n\u2022 Cookie preferences waits on the consent tool (CC-4).",
+      "w": 480,
+      "x": -560,
+      "y": 2280
+    },
+    "t14Title": {
+      "kind": "title1",
+      "maxW": 1910,
+      "page": "t14",
+      "text": "T14 \u00b7 Legal / long-form \u2014 exact, findable, printable",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t15N0": {
+      "fill": "blue",
+      "page": "t15",
+      "size": 24,
+      "text": "THE JOB\n\nWho leads Dycom, findable by every audience. Leadership under Who we are, the board under Investors. A face, a name and a title at a glance; a full biography without leaving the page; executive officers and the board in one place.",
+      "w": 480,
+      "x": -560,
+      "y": 0
+    },
+    "t15N1": {
+      "fill": "green",
+      "page": "t15",
+      "size": 24,
+      "text": "NARRATIVE \u2014 LEADERSHIP\n\nHero: Leadership, one sentence.\nTabs: Executive officers / Board of directors (square, green underline, arrow keys).\nPeople cards: portrait, name, title, Read bio \u2192 dialog. The second board shows the dialog open with focus trapped and returned.\nGovernance links, then closing: find open roles.\nNo real names are shown, on purpose.",
+      "w": 480,
+      "x": -560,
+      "y": 760
+    },
+    "t15N2": {
+      "fill": "orange",
+      "page": "t15",
+      "size": 24,
+      "text": "SITECORE MAPPING\n\nInteriorHero \u00b7 PeopleTabs (optional) \u00b7 PeopleGrid \u00b7 PersonCard (C36) \u00b7 BioDialog (the existing Modal) \u00b7 LinkColumns \u00b7 ClosingBand.\nPerson datasource: Name, Title, Portrait, Bio, Group (executive | board), ordered in the CMS \u2014 shared with the board committees page (T02).",
+      "w": 480,
+      "x": -560,
+      "y": 1520
+    },
+    "t15N3": {
+      "fill": "pink",
+      "page": "t15",
+      "size": 24,
+      "text": "OPEN FOR DYCOM\n\n\u2022 Names, titles, portraits and bios for executives and directors.\n\u2022 Portrait style: one consistent, square-cropped shoot.\n\u2022 Committee memberships (also for the board committees page under T02).",
+      "w": 480,
+      "x": -560,
+      "y": 2280
+    },
+    "t15Title": {
+      "kind": "title1",
+      "maxW": 2960,
+      "page": "t15",
+      "text": "T15 \u00b7 People grid \u2014 who leads Dycom",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t16N0": {
+      "fill": "blue",
+      "page": "t16",
+      "size": 24,
+      "text": "THE JOB\n\nThe pages nobody plans to visit: 404, search results, confirmations. Never dead-end; keep site search separate from job search but cross-linked (NAV0010); popular links and a job-search entry on the 404 (NAV0012).",
+      "w": 480,
+      "x": -560,
+      "y": 0
+    },
+    "t16N1": {
+      "fill": "green",
+      "page": "t16",
+      "size": 24,
+      "text": "NARRATIVE \u2014 404 AND SEARCH\n\n404: 'Page not found', one sentence, the job seeker's way out in the listing block, then site search and popular pages.\nSearch: query in the hero bar; 'Looking for fiber splicing jobs?' \u2192 open roles by trade; count; All / Pages / Documents / News; results with type, title, path and highlighted snippet; pagination.\nNo results: why, what to try, job search, popular pages.\nConfirmation pages reuse the T13 success state.",
+      "w": 480,
+      "x": -560,
+      "y": 760
+    },
+    "t16N2": {
+      "fill": "orange",
+      "page": "t16",
+      "size": 24,
+      "text": "SITECORE MAPPING\n\nInteriorHero (plain) \u00b7 SearchBar (C06) \u00b7 JobsCrossLink \u00b7 ResultFilters \u00b7 ResultList \u00b7 Pagination + EmptyState (C38) \u00b7 PopularLinks (CMS, NAV0012).\nSitecore Search indexes pages, documents and news \u2014 not jobs. Confirmations use the related-content module that replaces today's repeated investor links (audit \u00a710).",
+      "w": 480,
+      "x": -560,
+      "y": 1520
+    },
+    "t16N3": {
+      "fill": "pink",
+      "page": "t16",
+      "size": 24,
+      "text": "OPEN FOR DYCOM\n\n\u2022 Sitecore Search configuration and indexed types.\n\u2022 Popular-pages list (revisit from analytics).\n\u2022 Document snippets need text extraction from the DAM.\n\u2022 Result count shown as '[N]'.",
+      "w": 480,
+      "x": -560,
+      "y": 2280
+    },
+    "t16Title": {
+      "kind": "title1",
+      "maxW": 4480,
+      "page": "t16",
+      "text": "T16 \u00b7 System pages \u2014 never a dead end",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t02Title": {
+      "x": 0,
+      "y": -300,
+      "text": "T02 \u00b7 Investors overview \u2014 built, updated from Dycom's Nov 11 review",
+      "kind": "title1",
+      "maxW": 3430,
+      "page": "t02"
+    },
+    "t02N0": {
+      "x": -560,
+      "y": 0,
+      "w": 480,
+      "fill": "blue",
+      "size": "m",
+      "page": "t02",
+      "text": "THE JOB\n\nThe interior frame the whole site inherits, and the investor's front door. Since Nov 16, 2026 it also serves the investor content pages \u2014 stock information, governance, board committees, analyst coverage, shareholder services and FAQs \u2014 with the same kit (rich text, data table, accordion, document list, Investor resources); there is no separate investor-content template. An analyst or shareholder arrives after a results release or from the Investors menu.\n1. Open on the latest numbers.\n2. Keep the call replay one click away \u2014 and permanently in the menu.\n3. Show what's next (Upcoming events) and what was said (news).\n4. Reach every investor page once, through Investor resources.\n5. Never send the visitor off-site: the IR provider's material renders on-site."
+    },
+    "t02N1": {
+      "x": -560,
+      "y": 760,
+      "w": 480,
+      "fill": "green",
+      "size": "m",
+      "page": "t02",
+      "text": "NARRATIVE \u2014 INVESTORS (updated Nov 16, 2026 from Dycom's Nov 11 review)\n\nResults bar above the header on every page for 14 days after earnings: the release and the call replay.\nHero: company description, NYSE: DY listing block; unnumbered jump row.\nLatest financial results, Q2 2027 as a green sub-line: three GAAP figures over photography, the four-document package, the replay in one line.\nBrand film band \u2014 after the results, so the page opens on the numbers.\nEvents (Upcoming / Past, split by date) beside Investor news (four latest).\nFeatured reports.\nInvestor resources: filings, governance, shareholder resources (News & events dropped \u2014 it has its own sections).\nStay informed, then white space before the footer.\nMenu: permanent 'Latest results & call replay'."
+    },
+    "t02N2": {
+      "x": -560,
+      "y": 1520,
+      "w": 480,
+      "fill": "orange",
+      "size": "m",
+      "page": "t02",
+      "text": "SITECORE MAPPING (built in the site)\n\nResultsBar (new, global, header partial design; release date, window and links from one shared item, later the IR feed) \u00b7 InteriorHero + listing \u00b7 PageIndex (ShowNumbers off) \u00b7 SectionHead with sub-line \u00b7 MetricBand \u00b7 DocumentList \u00b7 Statement (replay block) \u00b7 Video (homepage film item, compact) \u00b7 SplitSection \u2192 EventTimeline (Upcoming/Past, empty state) + ResultList (news) \u00b7 CoverCards \u00b7 LinkColumns (reads the Investors navigation columns) \u00b7 ClosingBand (SpaceAfter).\nSiteHeader: SpotlightLink per navigation group.\nFigures, events and news \u2192 IR feed (D-IR)."
+    },
+    "t02N3": {
+      "x": -560,
+      "y": 2280,
+      "w": 480,
+      "fill": "pink",
+      "size": "m",
+      "page": "t02",
+      "text": "OPEN FOR DYCOM\n\n\u2022 New hero boilerplate \u2014 marked for replacement, no text supplied; the current description stays.\n\u2022 'Whole snapshot' with a stock price \u2014 live market data from the IR provider conflicts with no outward links / no market widgets; needs a provider and on-site rendering decision.\n\u2022 Investor resources on every interior investor page \u2014 confirmed direction, applied when those templates are built.\nBuild notes: call transcripts become HTML pages (Notified to supply); gated webcasts expose VideoObject/Event metadata; link-level analytics + Google tag on the governance column.\nResults bar is forced on for review (ForceShow) \u2014 switch off to follow the 14-day window."
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Inventory.dc.html",
+    "T02Investors.dc.html",
+    "T02InvestorsPhone.dc.html",
+    "T02InvestorsPast.dc.html",
+    "T02InvestorsMenu.dc.html",
+    "SiteHeader.dc.html",
+    "SiteFooter.dc.html",
+    "T03WhoWeAre.dc.html",
+    "T03WhoWeArePhone.dc.html",
+    "T03WhatWeDo.dc.html",
+    "T03WhatWeDoPhone.dc.html",
+    "T04Safety.dc.html",
+    "T04SafetyPhone.dc.html",
+    "T04Sustainability.dc.html",
+    "T05Wireline.dc.html",
+    "T05WirelinePhone.dc.html",
+    "T05ProjectManagement.dc.html",
+    "T06Directory.dc.html",
+    "T06DirectoryPhone.dc.html",
+    "T07Careers.dc.html",
+    "T07CareersPhone.dc.html",
+    "T08Search.dc.html",
+    "T08SearchPhone.dc.html",
+    "T08SearchEmpty.dc.html",
+    "T09Job.dc.html",
+    "T09JobPhone.dc.html",
+    "T09JobExpired.dc.html",
+    "T10Listing.dc.html",
+    "T10ListingPhone.dc.html",
+    "T10Events.dc.html",
+    "T11Article.dc.html",
+    "T11ArticlePhone.dc.html",
+    "T12Library.dc.html",
+    "T12LibraryPhone.dc.html",
+    "T13Contact.dc.html",
+    "T13ContactPhone.dc.html",
+    "T13ContactStates.dc.html",
+    "T14Legal.dc.html",
+    "T14LegalPhone.dc.html",
+    "T15People.dc.html",
+    "T15PeopleBio.dc.html",
+    "T16NotFound.dc.html",
+    "T16Search.dc.html",
+    "T16SearchEmpty.dc.html"
+  ],
+  "pages": [
+    {
+      "id": "overview",
+      "name": "Overview & roadmap"
+    },
+    {
+      "id": "inventory",
+      "name": "Component inventory"
+    },
+    {
+      "id": "t02",
+      "name": "T02 \u00b7 Investors overview"
+    },
+    {
+      "id": "t03",
+      "name": "T03 \u00b7 Section landing"
+    },
+    {
+      "id": "t04",
+      "name": "T04 \u00b7 Corporate topic"
+    },
+    {
+      "id": "t05",
+      "name": "T05 \u00b7 Service detail"
+    },
+    {
+      "id": "t06",
+      "name": "T06 \u00b7 Company directory"
+    },
+    {
+      "id": "t07",
+      "name": "T07 \u00b7 Careers landing"
+    },
+    {
+      "id": "t08",
+      "name": "T08 \u00b7 Job search"
+    },
+    {
+      "id": "t09",
+      "name": "T09 \u00b7 Job detail"
+    },
+    {
+      "id": "t10",
+      "name": "T10 \u00b7 Resource listing"
+    },
+    {
+      "id": "t11",
+      "name": "T11 \u00b7 Article / news detail"
+    },
+    {
+      "id": "t12",
+      "name": "T12 \u00b7 Document library"
+    },
+    {
+      "id": "t13",
+      "name": "T13 \u00b7 Contact & forms"
+    },
+    {
+      "id": "t14",
+      "name": "T14 \u00b7 Legal / long-form"
+    },
+    {
+      "id": "t15",
+      "name": "T15 \u00b7 People grid"
+    },
+    {
+      "id": "t16",
+      "name": "T16 \u00b7 System pages"
+    }
+  ],
+  "title": "Dycom Page Templates"
+}

@@ -1,0 +1,484 @@
+{
+ "groups": [
+  {
+   "label": "Who we are",
+   "intro": "The people connecting America.",
+   "description": "Our operating companies share a commitment to people, safe work, quality and responsible business practices.",
+   "overview": {
+    "text": "Who we are overview",
+    "href": "/who-we-are/",
+    "template": "T03"
+   },
+   "columns": [
+    {
+     "title": "About Dycom",
+     "links": [
+      {
+       "text": "Purpose & values",
+       "href": "/who-we-are/values/",
+       "template": "T04"
+      },
+      {
+       "text": "Leadership",
+       "href": "/who-we-are/leadership/",
+       "template": "T15"
+      },
+      {
+       "text": "Sustainability",
+       "href": "/sustainability/",
+       "template": "T04"
+      },
+      {
+       "text": "News",
+       "href": "/news/",
+       "template": "T10"
+      }
+     ]
+    },
+    {
+     "title": "How we work",
+     "links": [
+      {
+       "text": "Headway® safety",
+       "href": "/how-we-work/safety/",
+       "template": "T04"
+      },
+      {
+       "text": "Rightway™ quality",
+       "href": "/how-we-work/quality/",
+       "template": "T04"
+      },
+      {
+       "text": "Hazard recognition",
+       "href": "/how-we-work/hazard-recognition/",
+       "template": "T12"
+      },
+      {
+       "text": "Contact",
+       "href": "/contact/",
+       "template": "T13"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "label": "What we do",
+   "intro": "Plan. Build. Maintain.",
+   "description": "Engineering and project management, wireline and wireless construction, locating, fulfillment, maintenance and restoration.",
+   "overview": {
+    "text": "All services",
+    "href": "/what-we-do/",
+    "template": "T03"
+   },
+   "columns": [
+    {
+     "title": "Plan & design",
+     "links": [
+      {
+       "text": "Engineering",
+       "href": "/what-we-do/engineering/",
+       "template": "T05"
+      },
+      {
+       "text": "Project management",
+       "href": "/what-we-do/project-management/",
+       "template": "T05"
+      }
+     ]
+    },
+    {
+     "title": "Build & connect",
+     "links": [
+      {
+       "text": "Wireline construction",
+       "href": "/what-we-do/wireline-construction/",
+       "template": "T05"
+      },
+      {
+       "text": "Wireless construction",
+       "href": "/what-we-do/wireless-construction/",
+       "template": "T05"
+      },
+      {
+       "text": "Fulfillment",
+       "href": "/what-we-do/fulfillment/",
+       "template": "T05"
+      }
+     ]
+    },
+    {
+     "title": "Maintain & protect",
+     "links": [
+      {
+       "text": "Utility locating",
+       "href": "/what-we-do/locating/",
+       "template": "T05"
+      },
+      {
+       "text": "Maintenance & restoration",
+       "href": "/what-we-do/maintenance-restoration/",
+       "template": "T05"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "label": "Our companies",
+   "intro": "Scale is local.",
+   "description": "Identifiable companies with their own names, people and websites, connected by one national group.",
+   "overview": {
+    "text": "All companies",
+    "href": "/companies/",
+    "template": "T06"
+   },
+   "columns": [
+    {
+     "title": "Find a company",
+     "links": [
+      {
+       "text": "Company directory",
+       "href": "/companies/",
+       "template": "T06"
+      },
+      {
+       "text": "Contact a company",
+       "href": "/contact/",
+       "template": "T13"
+      }
+     ]
+    },
+    {
+     "title": "Suppliers",
+     "links": [
+      {
+       "text": "Inventory terms of purchase",
+       "href": "/suppliers/inventory-terms-of-purchase/",
+       "template": "T14"
+      },
+      {
+       "text": "Fleet terms of purchase",
+       "href": "/suppliers/fleet-terms-of-purchase/",
+       "template": "T14"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "label": "People & careers",
+   "intro": "Skilled work with a local employer.",
+   "description": "Get to know the trades and the questions to ask, then search current openings.",
+   "overview": {
+    "text": "Careers overview",
+    "href": "/careers/",
+    "template": "T07"
+   },
+   "columns": [
+    {
+     "title": "Join us",
+     "links": [
+      {
+       "text": "Open roles",
+       "href": "/careers/opportunities/",
+       "template": "T08"
+      },
+      {
+       "text": "Explore the trades",
+       "href": "/careers/trades/",
+       "template": "T04"
+      },
+      {
+       "text": "Our recruitment process",
+       "href": "/careers/recruitment-process/",
+       "template": "T04"
+      }
+     ]
+    },
+    {
+     "title": "Life at Dycom",
+     "links": [
+      {
+       "text": "Life & development",
+       "href": "/careers/life/",
+       "template": "T04"
+      },
+      {
+       "text": "Benefits",
+       "href": "/careers/benefits/",
+       "template": "T04"
+      }
+     ]
+    },
+    {
+     "title": "For employees",
+     "links": [
+      {
+       "text": "Employee handbook",
+       "href": "/careers/employee-handbook/",
+       "template": "T12"
+      },
+      {
+       "text": "Benefit plan disclosures",
+       "href": "/careers/benefit-plan-disclosures/",
+       "template": "T12"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "label": "Resource Center",
+   "intro": "The documents people rely on.",
+   "description": "Reports, safety and employee materials, purchasing terms and candidate guides, gathered in one searchable place.",
+   "overview": {
+    "text": "All resources",
+    "href": "/resources/",
+    "template": "T10"
+   },
+   "columns": [
+    {
+     "title": "Corporate reports",
+     "links": [
+      {
+       "text": "Safety, People and Environment",
+       "href": "/sustainability/",
+       "template": "T04"
+      },
+      {
+       "text": "Reports, filings and governance",
+       "href": "/investors/sec-filings/",
+       "template": "T12"
+      },
+      {
+       "text": "Company purpose and values",
+       "href": "/who-we-are/values/",
+       "template": "T04"
+      }
+     ]
+    },
+    {
+     "title": "Safety & employees",
+     "links": [
+      {
+       "text": "Hazard recognition",
+       "href": "/how-we-work/hazard-recognition/",
+       "template": "T12"
+      },
+      {
+       "text": "Employee handbook",
+       "href": "/careers/employee-handbook/",
+       "template": "T12"
+      },
+      {
+       "text": "Benefit plan disclosures",
+       "href": "/careers/benefit-plan-disclosures/",
+       "template": "T12"
+      }
+     ]
+    },
+    {
+     "title": "Suppliers",
+     "links": [
+      {
+       "text": "Inventory terms of purchase",
+       "href": "/suppliers/inventory-terms-of-purchase/",
+       "template": "T14"
+      },
+      {
+       "text": "Fleet terms of purchase",
+       "href": "/suppliers/fleet-terms-of-purchase/",
+       "template": "T14"
+      }
+     ]
+    },
+    {
+     "title": "Candidates",
+     "links": [
+      {
+       "text": "Our recruitment process",
+       "href": "/careers/recruitment-process/",
+       "template": "T04"
+      },
+      {
+       "text": "Benefits",
+       "href": "/careers/benefits/",
+       "template": "T04"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "label": "Investors",
+   "intro": "Local expertise. National scale.",
+   "description": "Dycom Industries, Inc. (NYSE: DY). Results, filings, governance and investor resources in one place.",
+   "overview": {
+    "text": "Investors overview",
+    "href": "/investors/",
+    "template": "T02"
+   },
+   "columns": [
+    {
+     "title": "Financials & filings",
+     "links": [
+      {
+       "text": "SEC filings",
+       "href": "/investors/sec-filings/",
+       "template": "T12"
+      },
+      {
+       "text": "Quarterly reports",
+       "href": "/investors/quarterly-reports/",
+       "template": "T12"
+      },
+      {
+       "text": "Annual reports",
+       "href": "/investors/annual-reports/",
+       "template": "T12"
+      }
+     ]
+    },
+    {
+     "title": "Governance",
+     "links": [
+      {
+       "text": "Governance overview",
+       "href": "/investors/governance/",
+       "template": "T02"
+      },
+      {
+       "text": "Board of directors",
+       "href": "/investors/board-of-directors/",
+       "template": "T15"
+      },
+      {
+       "text": "Board committees",
+       "href": "/investors/board-committees/",
+       "template": "T02"
+      },
+      {
+       "text": "Governance documents",
+       "href": "/investors/governance-documents/",
+       "template": "T12"
+      }
+     ]
+    },
+    {
+     "title": "News & events",
+     "links": [
+      {
+       "text": "Investor news",
+       "href": "/investors/news/",
+       "template": "T10"
+      },
+      {
+       "text": "Events & presentations",
+       "href": "/investors/events-presentations/",
+       "template": "T10"
+      }
+     ]
+    },
+    {
+     "title": "Shareholder resources",
+     "links": [
+      {
+       "text": "Stock information",
+       "href": "/investors/stock-information/",
+       "template": "T02"
+      },
+      {
+       "text": "Analyst coverage",
+       "href": "/investors/analyst-coverage/",
+       "template": "T02"
+      },
+      {
+       "text": "Investor FAQs",
+       "href": "/investors/faqs/",
+       "template": "T02"
+      },
+      {
+       "text": "Email alerts",
+       "href": "/investors/email-alerts/",
+       "template": "T13"
+      },
+      {
+       "text": "Contact Investor Relations",
+       "href": "/investors/contact/",
+       "template": "T13"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "pageTemplates": {
+  "/": "T01",
+  "/who-we-are/": "T03",
+  "/who-we-are/operating-strengths/": "T04",
+  "/who-we-are/values/": "T04",
+  "/who-we-are/leadership/": "T15",
+  "/who-we-are/business-segments/": "T04",
+  "/sustainability/": "T04",
+  "/news/": "T10",
+  "/news/{slug}": "T11",
+  "/how-we-work/safety/": "T04",
+  "/how-we-work/quality/": "T04",
+  "/how-we-work/hazard-recognition/": "T12",
+  "/contact/": "T13",
+  "/what-we-do/": "T03",
+  "/what-we-do/capabilities/": "T04",
+  "/what-we-do/engineering/": "T05",
+  "/what-we-do/project-management/": "T05",
+  "/what-we-do/wireline-construction/": "T05",
+  "/what-we-do/wireless-construction/": "T05",
+  "/what-we-do/fulfillment/": "T05",
+  "/what-we-do/locating/": "T05",
+  "/what-we-do/maintenance-restoration/": "T05",
+  "/companies/": "T06",
+  "/suppliers/inventory-terms-of-purchase/": "T14",
+  "/suppliers/fleet-terms-of-purchase/": "T14",
+  "/suppliers/subcontractor-request/": "T13",
+  "/careers/": "T07",
+  "/careers/opportunities/": "T08",
+  "/careers/opportunities/{id}": "T09",
+  "/careers/trades/": "T04",
+  "/careers/why-dycom/": "T04",
+  "/careers/students-early-careers/": "T04",
+  "/careers/veterans/": "T04",
+  "/careers/recruitment-process/": "T04",
+  "/careers/life/": "T04",
+  "/careers/benefits/": "T04",
+  "/careers/talent-network/": "T13",
+  "/careers/employee-handbook/": "T12",
+  "/careers/benefit-plan-disclosures/": "T12",
+  "/investors/": "T02",
+  "/investors/quarterly-reports/": "T12",
+  "/investors/annual-reports/": "T12",
+  "/investors/sec-filings/": "T12",
+  "/investors/stock-information/": "T02",
+  "/investors/governance/": "T02",
+  "/investors/board-of-directors/": "T15",
+  "/investors/board-committees/": "T02",
+  "/investors/governance-documents/": "T12",
+  "/investors/news/": "T10",
+  "/investors/news/{slug}": "T11",
+  "/investors/events-presentations/": "T10",
+  "/investors/events-presentations/{event}/transcript/": "T11",
+  "/investors/analyst-coverage/": "T02",
+  "/investors/shareholder-services/": "T02",
+  "/investors/faqs/": "T02",
+  "/investors/document-request/": "T13",
+  "/investors/email-alerts/": "T13",
+  "/investors/contact/": "T13",
+  "/privacy-policy/": "T14",
+  "/terms-of-use/": "T14",
+  "/404": "T16",
+  "/search/": "T16",
+  "/resources/": "T10",
+  "/contact/thank-you/": "T16",
+  "/investors/email-alerts/thank-you/": "T16",
+  "/investors/preferences-updated/": "T16"
+ }
+}

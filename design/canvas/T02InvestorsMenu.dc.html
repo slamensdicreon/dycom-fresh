@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Investors menu with the results spotlight</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="dycom-web.css">
+<link rel="stylesheet" href="tpl-c.css">
+<link rel="stylesheet" href="tpl-e.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face { font-family: "Dycom Fjalla"; src: url("/_blob/0ac801cd8a8605a3b1b79be409f7f065") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Dycom Geist"; src: url("/_blob/571c400347b6b5435347cbda65060bfd") format("woff2"); font-weight: 100 900; font-display: swap; }
+body { margin: 0; }
+</style>
+</helmet>
+<div class="dy" style="width: 1440px; background: #f4f5f7; padding-bottom: 48px;">
+  <!-- ResultsBar (new, global): shows on every page for 14 days after a results release, driven by the IR feed's release date; dismissed for the session -->
+  <aside class="dy dye-bar" aria-label="Latest results">
+    <div class="dy-wrap">
+      <svg class="dy-mark" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="M0 0 H100 V100 H89 A89 89 0 0 0 0 11 Z"></path><path d="M0 50 H50 V100 H39 A39 39 0 0 0 0 61 Z"></path></svg>
+      <b>Q2 2027 results</b>
+      <p>Fiscal 2027 second quarter results, published August 26, 2026.</p>
+      <div class="dye-bar-links"><a href="#">Results release<svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a><a href="#">Call replay<svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
+      <button type="button" class="dye-bar-close" aria-label="Close the results bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg></button>
+    </div>
+  </aside>
+  <dc-import name="SiteHeader" current="Investors" hint-size="100%,88px"></dc-import>
+  <div class="dy-wrap">
+    <div class="dye-menu" role="region" aria-label="Investors menu">
+      <div class="dye-menu-intro">
+        <h3>Local expertise. National scale.</h3>
+        <p>Dycom Industries, Inc. (NYSE: DY). Results, filings, governance and investor resources in one place.</p>
+        <a class="dy-link" href="#">Investors overview<svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+        <div class="dye-spot"><span>Always here</span><a class="dy-link" href="#">Latest results &amp; call replay<svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
+      </div>
+      <div class="dye-menu-cols">
+        <div><h4>Financials &amp; filings</h4><ul><li><a href="#">SEC filings</a></li><li><a href="#">Quarterly reports</a></li><li><a href="#">Annual reports</a></li></ul></div>
+        <div><h4>Governance</h4><ul><li><a href="#">Governance overview</a></li><li><a href="#">Board of directors</a></li><li><a href="#">Board committees</a></li><li><a href="#">Governance documents</a></li></ul></div>
+        <div><h4>News &amp; events</h4><ul><li><a href="#">Investor news</a></li><li><a href="#">Events &amp; presentations</a></li></ul></div>
+        <div><h4>Shareholder resources</h4><ul><li><a href="#">Stock information</a></li><li><a href="#">Analyst coverage</a></li><li><a href="#">Investor FAQs</a></li><li><a href="#">Email alerts</a></li><li><a href="#">Contact Investor Relations</a></li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":580}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

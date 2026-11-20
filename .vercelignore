@@ -1,3 +1,5 @@
 # The design handoff is reference material; the deployed app never reads it.
 handoff/
 exports/
+# Walkthrough sources; the generated output in public/ and src/ is what deploys.
+design/

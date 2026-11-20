@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Leadership — bio dialog open</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="dycom-web.css">
+<link rel="stylesheet" href="tpl-d.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face { font-family: "Dycom Fjalla"; src: url("/_blob/0ac801cd8a8605a3b1b79be409f7f065") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Dycom Geist"; src: url("/_blob/571c400347b6b5435347cbda65060bfd") format("woff2"); font-weight: 100 900; font-display: swap; }
+body { margin: 0; }
+</style>
+</helmet>
+<div class="dy" style="width: 100%;">
+  <div class="dy-scrim" style="padding: 96px 24px;">
+    <section class="dy-bio" role="dialog" aria-modal="true" aria-labelledby="bio-name">
+      <div class="dy-bio-head">
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <h2 id="bio-name">[Name]</h2>
+          <span style="font-size: 16px; font-weight: 500;">[Title]</span>
+        </div>
+        <button class="dy-bio-close" type="button" aria-label="Close biography"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg></button>
+      </div>
+      <div class="dy-bio-body">
+        <div class="dy-portrait"><svg class="dy-mark" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="M0 0 H100 V100 H89 A89 89 0 0 0 0 11 Z"></path><path d="M0 50 H50 V100 H39 A39 39 0 0 0 0 61 Z"></path></svg><span>[Portrait]</span></div>
+        <div class="dy-prose">
+          <p class="dy-ph">[Biography — role and responsibilities at Dycom, supplied by Dycom]</p>
+          <p class="dy-ph">[Career history before Dycom]</p>
+          <p class="dy-ph">[Education and board service]</p>
+          <div class="dy-actions" style="margin-top: 8px;"><button class="dy-btn dy-btn--outline" type="button">Back to leadership</button></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":660}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

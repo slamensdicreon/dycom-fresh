@@ -1,0 +1,141 @@
+/* T02 Investors overview (Nov 16, 2026 update) — builds on dycom-web.css and tpl-c.css */
+
+/* Results bar (earnings window, every page) */
+.dye-bar { background: var(--civic-deep); color: var(--white); }
+.dye-bar .dy-wrap { display: flex; align-items: center; gap: 18px; min-height: 52px; }
+.dye-bar .dy-mark { width: 20px; height: 20px; color: var(--green); flex: none; }
+.dye-bar b { font-size: 14px; font-weight: 700; white-space: nowrap; }
+.dye-bar p { font-size: 14px; color: var(--night-dim); flex: 1 1 auto; min-width: 0; }
+.dye-bar-links { display: flex; gap: 28px; align-items: center; }
+.dye-bar-links a { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--white); text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; white-space: nowrap; }
+.dye-bar-links svg { width: 15px; height: 15px; }
+.dye-bar-close { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 0; background: none; color: var(--white); cursor: pointer; margin-right: -12px; }
+.dye-bar-close svg { width: 18px; height: 18px; }
+
+/* Hero listing and unnumbered jump row */
+.dye-back { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; color: var(--white); }
+.dye-back svg { width: 15px; height: 15px; }
+.dy-jumps.dye-jumps a b { display: none; }
+
+/* Section head with a green sub-line (no numerals) */
+.dye-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 64px; align-items: end; margin-bottom: 40px; }
+.dye-head h2 { font-size: clamp(34px, 3.6vw, 48px); }
+.dye-sub { display: block; margin-top: 10px; font-size: 14px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--green); }
+.dye-head p { justify-self: end; max-width: 46ch; font-size: 15px; }
+
+/* Metrics over photography (MetricBand) */
+.dye-metrics { position: relative; overflow: hidden; background: var(--civic-deep); }
+.dye-metrics img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .35; }
+.dye-metrics dl { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; padding: 56px 56px; }
+.dye-metrics div { padding: 0 32px; border-left: 1px solid var(--night-line); }
+.dye-metrics div:first-child { padding-left: 0; border-left: 0; }
+.dye-metrics dt { font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--white); }
+.dye-metrics dd { margin: 10px 0 0; font-family: var(--display); font-size: clamp(48px, 5vw, 72px); line-height: 1; color: var(--green); }
+.dye-metrics dd small { display: block; margin-top: 12px; font-family: var(--body); font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--white); }
+
+/* Documents beside the replay block */
+.dye-results-foot { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 56px; margin-top: 40px; align-items: start; }
+.dye-docs li { border-top: 1px solid var(--rule); }
+.dye-docs li:last-child { border-bottom: 1px solid var(--rule); }
+.dye-docs a { display: grid; grid-template-columns: 24px minmax(0, 1fr) 20px; gap: 16px; align-items: center; padding: 18px 0; }
+.dye-docs svg.dye-file { width: 22px; height: 22px; color: var(--green); }
+.dye-docs b { display: block; font-size: 17px; font-weight: 600; color: var(--civic); }
+.dye-docs small { display: block; font-size: 14px; margin-top: 2px; }
+.dye-replay { border-left: 3px solid var(--green); padding: 4px 0 4px 28px; display: flex; flex-direction: column; gap: 14px; }
+.dye-replay .dy-mark { width: 32px; height: 32px; color: var(--green); }
+.dye-replay h3 { font-size: 24px; }
+
+/* Brand film band (Video, band variant) */
+.dye-film { position: relative; min-height: 560px; display: flex; align-items: flex-end; background: var(--civic-deep); color: var(--white); overflow: hidden; }
+.dye-film img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.dye-film::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(3,11,58,.85) 0%, rgba(3,11,58,.2) 60%); }
+.dye-film .dy-wrap { position: relative; z-index: 1; padding-top: 80px; padding-bottom: 72px; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+.dye-film h2 { color: var(--white); max-width: 14ch; }
+.dye-play { display: inline-flex; align-items: center; gap: 16px; background: none; border: 0; padding: 0; color: var(--white); font: inherit; font-size: 16px; font-weight: 600; cursor: pointer; }
+.dye-play span { display: inline-grid; place-items: center; width: 72px; height: 72px; background: var(--green); color: var(--civic); }
+.dye-play svg { width: 28px; height: 28px; }
+
+/* Events beside news */
+.dye-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 72px; align-items: start; }
+.dye-split h2 { margin-bottom: 28px; }
+.dye-tabs { display: flex; gap: 8px; border-bottom: 1px solid var(--rule); margin-bottom: 24px; }
+.dye-tabs button { min-height: 44px; padding: 0 14px; border: 0; background: none; font: inherit; font-size: 16px; font-weight: 500; color: var(--civic); cursor: pointer; }
+.dye-tabs button:first-child { padding-left: 0; }
+.dye-tabs button[aria-selected="true"] { font-weight: 600; box-shadow: inset 0 -3px 0 var(--green); }
+.dye-events li { position: relative; padding: 0 0 26px 28px; border-left: 2px solid var(--rule); }
+.dye-events li:last-child { border-left-color: transparent; }
+.dye-events li::before { content: ""; position: absolute; left: -7px; top: 3px; width: 12px; height: 12px; background: var(--civic); }
+.dye-events li.is-next::before { background: var(--green); }
+.dye-events time { display: block; font-size: 13px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); }
+.dye-events b { display: block; margin-top: 6px; font-size: 18px; font-weight: 600; color: var(--civic); }
+.dye-events .dy-link { margin-top: 8px; font-size: 15px; }
+.dye-empty { padding: 18px 20px; background: var(--white); border-top: 3px solid var(--green); font-size: 15px; }
+.dye-news li { border-top: 1px solid var(--rule); }
+.dye-news li:last-child { border-bottom: 1px solid var(--rule); }
+.dye-news a { display: grid; grid-template-columns: minmax(0, 1fr) 20px; gap: 6px 18px; padding: 18px 0; }
+.dye-news time { grid-column: 1 / -1; font-size: 13px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); }
+.dye-news b { font-size: 17px; font-weight: 600; color: var(--civic); line-height: 1.35; }
+.dye-news svg { align-self: center; }
+
+/* Featured reports (CoverCards) */
+.dye-reports { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.dye-report { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.dye-report-art { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: var(--civic); }
+.dye-report-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.dye-report-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(3,11,58,.85) 0%, rgba(3,11,58,0) 55%); }
+.dye-report-art div { position: absolute; z-index: 1; left: 18px; bottom: 18px; display: flex; flex-direction: column; gap: 8px; }
+.dye-report-art .dy-mark { width: 24px; height: 24px; color: var(--green); }
+.dye-report-art strong { font-family: var(--display); font-weight: 400; font-size: 22px; line-height: 1.05; text-transform: uppercase; color: var(--white); }
+.dye-report .dy-eyebrow { font-size: 12px; }
+.dye-report h3 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 26px; line-height: 1.05; }
+.dye-report p { font-size: 15px; }
+
+/* Investor resources (LinkColumns, filtered) */
+.dye-cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+.dye-cols h3 { font-size: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--rule); margin-bottom: 4px; }
+.dye-cols li { border-bottom: 1px solid var(--rule); }
+.dye-cols a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 15px; color: var(--civic); }
+
+/* Closing photo band, then white space before the footer */
+.dye-closing { position: relative; overflow: hidden; background: var(--civic-deep); color: var(--white); }
+.dye-closing img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .4; }
+.dye-closing .dy-wrap { position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 28px; padding-top: 72px; padding-bottom: 72px; }
+.dye-closing h2 { color: var(--white); }
+.dye-closing p { color: var(--night-dim); font-weight: 500; max-width: 52ch; margin-top: 8px; }
+.dye-gap { height: var(--section); background: var(--white); }
+
+/* Mega menu board */
+.dye-menu { background: var(--white); border: 1px solid var(--rule); box-shadow: 0 12px 32px rgba(4,16,84,.12); display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 40px; padding: 32px 40px 36px; }
+.dye-menu-intro { border-right: 1px solid var(--rule); padding-right: 32px; display: flex; flex-direction: column; gap: 14px; }
+.dye-menu-intro h3 { font-size: 22px; line-height: 1.25; }
+.dye-menu-intro p { font-size: 15px; }
+.dye-spot { display: flex; flex-direction: column; gap: 6px; border-top: 3px solid var(--green); padding-top: 12px; margin-top: 4px; }
+.dye-spot .dy-link { align-self: flex-start; }
+.dye-spot span { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
+.dye-menu-cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+.dye-menu-cols h4 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 14px; letter-spacing: .02em; color: var(--civic); margin: 0 0 8px; padding-bottom: 8px; border-bottom: 1px solid var(--civic); }
+.dye-menu-cols li { border-bottom: 1px solid var(--rule); }
+.dye-menu-cols a { display: block; padding: 10px 0; font-size: 15px; font-weight: 500; color: var(--civic); }
+
+@media (max-width: 1099px) {
+  .dye-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dye-split { grid-template-columns: 1fr; gap: 64px; }
+}
+@media (max-width: 767px) {
+  .dye-bar .dy-wrap { flex-wrap: wrap; gap: 6px 14px; padding-top: 10px; padding-bottom: 10px; }
+  .dye-bar p { flex-basis: calc(100% - 60px); order: 3; font-size: 13px; }
+  .dye-bar-links { order: 4; gap: 20px; width: 100%; }
+  .dye-bar-close { margin-left: auto; }
+  .dye-head { grid-template-columns: 1fr; gap: 14px; margin-bottom: 28px; }
+  .dye-head p { justify-self: start; }
+  .dye-metrics dl { grid-template-columns: 1fr; padding: 32px 24px; gap: 0; }
+  .dye-metrics div { padding: 20px 0; border-left: 0; border-top: 1px solid var(--night-line); }
+  .dye-metrics div:first-child { padding-top: 0; border-top: 0; }
+  .dye-results-foot { grid-template-columns: 1fr; gap: 40px; }
+  .dye-film { min-height: 360px; }
+  .dye-film .dy-wrap { padding-top: 56px; padding-bottom: 48px; }
+  .dye-play span { width: 56px; height: 56px; }
+  .dye-reports { grid-template-columns: 1fr; gap: 32px; }
+  .dye-cols { grid-template-columns: 1fr; gap: 32px; }
+  .dye-closing .dy-wrap { padding-top: 56px; padding-bottom: 56px; }
+}

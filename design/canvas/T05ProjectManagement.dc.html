@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project management — service detail</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="dycom-web.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face { font-family: "Dycom Fjalla"; src: url("/_blob/0ac801cd8a8605a3b1b79be409f7f065") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Dycom Geist"; src: url("/_blob/571c400347b6b5435347cbda65060bfd") format("woff2"); font-weight: 100 900; font-display: swap; }
+body { margin: 0; }
+</style>
+</helmet>
+<div class="dy" style="width: 100%;">
+  <dc-import name="SiteHeader" current="What we do" hint-size="100%,88px"></dc-import>
+
+  <main>
+    <section class="dy-ihero" aria-labelledby="pm-title">
+      <img class="dy-ihero-photo" src="/_blob/a8f85b0e0ef93b3ba47b644ff0411fe5" alt="">
+      <div class="dy-ihero-shade" aria-hidden="true"></div>
+      <div class="dy-wrap dy-ihero-body">
+        <div class="dy-ihero-copy">
+          <nav class="dy-crumbs" aria-label="Breadcrumb"><a href="#">Home</a><span aria-hidden="true">/</span><a href="#">What we do</a><span aria-hidden="true">/</span><span aria-current="page">Project management</span></nav>
+          <h1 id="pm-title">Project management</h1>
+          <p>One accountable plan, from the first survey to the final record, so every stage of a network project is coordinated, sequenced and reported.</p>
+        </div>
+        <div class="dy-listing">
+          <svg class="dy-mark" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="M0 0 H100 V100 H89 A89 89 0 0 0 0 11 Z"></path><path d="M0 50 H50 V100 H39 A39 39 0 0 0 0 61 Z"></path></svg>
+          <span class="dy-listing-label">Lifecycle stage 01 of 05</span>
+          <div class="dy-listing-value">Design &amp; engineering</div>
+          <p>And carried through every stage that follows.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="dy-section" aria-labelledby="pm-caps">
+      <div class="dy-wrap">
+        <div class="dy-head">
+          <div class="dy-head-title"><span class="dy-index">01</span><h2 id="pm-caps">How we manage the work</h2></div>
+          <p class="dy-head-note">Local knowledge at the planning stage prevents surprises later.</p>
+        </div>
+        <ul class="dy-caps dy-caps--3">
+          <li><img src="/_blob/71a17b34fd67e97e48989d93a3f2a0f9" alt=""><h3>Plan and sequence</h3><p>Routes, permits and resources set out in one schedule before crews mobilize.</p></li>
+          <li><img src="/_blob/89abf90fa290d0e0247747d262a731a8" alt=""><h3>Coordinate the crews</h3><p>Engineering, locating, construction and restoration teams working to the same plan.</p></li>
+          <li><img src="/_blob/d6658468bd7da0c846834d8ca4e5dd77" alt=""><h3>Track and report</h3><p>Progress and as-built records kept current for the customer and the teams who come next.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="dy-section dy-paper" aria-labelledby="pm-cos">
+      <div class="dy-wrap">
+        <div class="dy-head">
+          <div class="dy-head-title"><span class="dy-index">02</span><h2 id="pm-cos">Our project management companies</h2></div>
+          <p class="dy-head-note">Local operating companies that manage network projects. Search for the one nearest your project.</p>
+        </div>
+        <div class="dy-finder">
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div class="dy-field"><label for="pm-search">City, state, ZIP or company</label><input id="pm-search" type="search" placeholder="e.g. Tampa or 30022"></div>
+            <a class="dy-link" href="#">Use my location</a>
+          </div>
+          <ul class="dy-rows">
+            <li><a href="#"><b>[Operating company tagged: Project management]</b><small>[City, ST]</small><svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="#041054" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+            <li><a href="#"><b>[Operating company tagged: Project management]</b><small>[City, ST]</small><svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="#041054" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+            <li><a href="#"><b>[Operating company tagged: Project management]</b><small>[City, ST]</small><svg class="dy-arrow" viewBox="0 0 24 24" fill="none" stroke="#041054" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="dy-cta" aria-labelledby="pm-cta">
+      <img src="/_blob/c926d88cee6e48a85ac40e6ec161c469" alt="">
+      <div class="dy-cta-body">
+        <h2 id="pm-cta">Start with the plan.</h2>
+        <p>Tell us where the work is and what kind of network it is, and we will connect you with the local team.</p>
+        <div class="dy-actions">
+          <a class="dy-btn dy-btn--inverse" href="#">Contact Dycom<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2550}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
