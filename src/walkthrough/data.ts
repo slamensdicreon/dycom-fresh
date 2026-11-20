@@ -1,7 +1,6 @@
 import canvas from './data/canvas.json';
 import metrics from './data/board-metrics.json';
 import inventory from './data/component-inventory.json';
-import decisionsData from './data/decisions.json';
 import sitemapData from './data/sitemap.json';
 
 /**
@@ -125,7 +124,6 @@ export const STATUS_MEANING: Record<string, string> = {
 export const statusCounts = STATUSES.map((s) => ({ status: s, count: components.filter((c) => c.status === s).length }));
 
 export type Row = Record<string, string>;
-export const decisions = decisionsData as Record<'openDecisions' | 'dataDependencies' | 'investorsReview' | 'netNewContent' | 'contentItems', Row[]>;
 
 export type SitemapLink = { text: string; href: string; template: string | null };
 export const sitemap = sitemapData as {

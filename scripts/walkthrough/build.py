@@ -3,12 +3,11 @@
 Inputs (all in the repo):
   design/canvas/            the template design canvas: *.dc.html boards, styles, canvas.json, assets/
   design/component-inventory.json   the consolidated component inventory
-  docs/requirements.md      the living requirements (decisions and what Dycom supplies)
+  docs/requirements.md      the living requirements (page inventory → each page's template)
 
 Outputs:
   public/walkthrough-assets/canvas/   boards rendered as standalone HTML, with their CSS and assets
   src/walkthrough/data/canvas.json    templates, boards and canvas notes, in walkthrough order
-  src/walkthrough/data/decisions.json decision and dependency tables from docs/requirements.md
 
 Run with `npm run walkthrough:build` (this script, then metrics.mjs for board heights and thumbnails).
 Standard library only.
@@ -183,42 +182,12 @@ for name in ("SiteHeader", "SiteFooter"):
     "overviewNotes": overview_notes,
 }, indent=1, ensure_ascii=False) + "\n")
 
-# ---------- decisions from docs/requirements.md
-
-
-def table_after(md: str, heading: str) -> list[dict]:
-    start = md.index(heading)
-    lines = md[start:].split("\n")[1:]
-    rows_, header = [], None
-    for line in lines:
-        if line.startswith("#"):
-            break
-        if not line.startswith("|"):
-            if header and rows_:
-                break
-            continue
-        cells = [c.strip() for c in line.strip().strip("|").split(" | ")]
-        if header is None:
-            header = cells
-        elif set(line.replace("|", "").strip()) <= {"-", " "}:
-            continue
-        else:
-            rows_.append(dict(zip(header, cells)))
-    return rows_
-
-
+# ---------- docs/requirements.md (the page inventory gives each sitemap page its template)
 req = (REPO / "docs" / "requirements.md").read_text()
-decisions = {
-    "openDecisions": table_after(req, "### 5.2 Open decisions and the pages they block"),
-    "dataDependencies": table_after(req, "### 5.1 Data the build needs that does not exist yet"),
-    "investorsReview": table_after(req, "### 5.3 Open with Dycom from the Investors review"),
-    "netNewContent": table_after(req, "### 4.4 Net-new"),
-    "contentItems": table_after(req, "### 4.5 Content items that are not pages"),
-}
-(DATA / "decisions.json").write_text(json.dumps(decisions, indent=1, ensure_ascii=False) + "\n")
+(DATA / "decisions.json").unlink(missing_ok=True)
 
 print(f"templates {len(templates)} · boards {len(list((OUT / 'boards').iterdir()))} · "
-      + " · ".join(f"{k} {len(v)}" for k, v in decisions.items()))
+      + "")
 
 # ---------- sitemap (navigation content) with each page's template from the page inventory
 items = REPO / "content" / "items"

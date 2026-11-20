@@ -1,39 +1,51 @@
 import type { Metadata } from 'next';
-import { decisions } from 'src/walkthrough/data';
-import { RowsTable } from 'src/walkthrough/ui/sections';
+import { investorsReview, keyChoices, smallerChoices } from 'src/walkthrough/input';
+import { ChoiceList, ContentSplit, NeedsGrid } from 'src/walkthrough/ui/input';
 
-export const metadata: Metadata = { title: 'Decisions & what’s owed' };
+export const metadata: Metadata = { title: 'Where we need your input' };
 
-export default function DecisionsPage() {
+export default function InputPage() {
   return (
     <div className="wt-page">
       <div className="wt-page-head">
         <div>
-          <h1>What we need from Dycom</h1>
+          <h1>Where we need your input</h1>
         </div>
         <p className="wt-lede">
-          Every open decision has a working default, so design and build continue; none is settled. These tables come from the living requirements (<code>docs/requirements.md</code> §4–5) and change as decisions are made.
+          The site has a working answer for every open question, so design and build keep moving. These are the choices, facts and stories only Dycom can provide.
         </p>
       </div>
-      <section className="wt-section" aria-labelledby="open">
-        <h2 id="open">Open decisions and the pages they block</h2>
-        <RowsTable rows={decisions.openDecisions} columns={['ID', 'Decision', 'Default in the prototype', 'Blocks']} rowHeader="ID" />
+      <section className="wt-section" aria-labelledby="key">
+        <div className="wt-section-head">
+          <h2 id="key">Choices only Dycom can make</h2>
+          <p>Each shapes what visitors see.</p>
+        </div>
+        <ChoiceList items={keyChoices} />
+      </section>
+      <section className="wt-section" aria-labelledby="smaller">
+        <div className="wt-section-head">
+          <h2 id="smaller">Smaller choices, already answered for now</h2>
+          <p>Quick confirmations. The site works as described until Dycom says otherwise.</p>
+        </div>
+        <ChoiceList items={smallerChoices} />
+      </section>
+      <section className="wt-section" aria-labelledby="info">
+        <div className="wt-section-head">
+          <h2 id="info">Information only Dycom holds</h2>
+          <p>The facts that make the site specific to Dycom, and keep it accurate after launch.</p>
+        </div>
+        <NeedsGrid />
+      </section>
+      <section className="wt-section" aria-labelledby="content">
+        <div className="wt-section-head">
+          <h2 id="content">Content to write and approve</h2>
+          <p>Some stories only Dycom can tell. For the rest, Icreon drafts in Dycom’s voice and Dycom approves.</p>
+        </div>
+        <ContentSplit />
       </section>
       <section className="wt-section" aria-labelledby="ir">
-        <h2 id="ir">Open from the Investors review (November 11, 2026)</h2>
-        <RowsTable rows={decisions.investorsReview} columns={['Item', 'Why it is open', 'What the site does meanwhile']} rowHeader="Item" />
-      </section>
-      <section className="wt-section" aria-labelledby="data">
-        <h2 id="data">Data the build needs that does not exist yet</h2>
-        <RowsTable rows={decisions.dataDependencies} columns={['Dependency', 'What is missing', 'Pages blocked']} rowHeader="Dependency" />
-      </section>
-      <section className="wt-section" aria-labelledby="new">
-        <h2 id="new">New content and who supplies it</h2>
-        <RowsTable rows={decisions.netNewContent} columns={['Item', 'Supplier']} rowHeader="Item" />
-      </section>
-      <section className="wt-section" aria-labelledby="items">
-        <h2 id="items">Content that is not a page</h2>
-        <RowsTable rows={decisions.contentItems} columns={['Item', 'Status', 'Supplier']} rowHeader="Item" />
+        <h2 id="ir">Still open from the Investors review</h2>
+        <ChoiceList items={investorsReview} numbered={false} />
       </section>
     </div>
   );

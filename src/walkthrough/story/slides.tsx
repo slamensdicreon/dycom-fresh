@@ -5,7 +5,6 @@ import {
   boardSrc,
   components,
   componentsFor,
-  decisions,
   inventoryNotes,
   templates,
   type Template,
@@ -19,6 +18,8 @@ import {
   tension,
 } from '../strategy';
 import { BoardFrame } from '../ui/BoardFrame';
+import { ChoiceList, ContentSplit, NeedsGrid } from '../ui/input';
+import { investorsReview, keyChoices, smallerChoices } from '../input';
 import { NoteBody } from '../ui/NoteBody';
 import {
   ComponentMatrix,
@@ -26,7 +27,6 @@ import {
   KitGroups,
   lib,
   ProductRules,
-  RowsTable,
   SitemapColumns,
   StatusBreakdown,
   StatusTag,
@@ -49,7 +49,7 @@ const CH = {
   strategy: '1 · Purpose & experience',
   templates: '2 · Templates',
   components: '3 · Components',
-  decisions: '4 · Decisions & what’s owed',
+  decisions: '4 · Where we need your input',
   close: 'Close',
 };
 
@@ -143,7 +143,7 @@ export const slides: Slide[] = [
     render: () => (
       <>
         <h1>The design system, walked through</h1>
-        <p className="wt-lede">The strategy behind the new dycomind.com, the sixteen templates that build every page, the components they share — and the decisions we need from Dycom.</p>
+        <p className="wt-lede">The strategy behind the new dycomind.com, the sixteen templates that build every page, the components they share — and where we need Dycom’s input.</p>
         <div className="wt-cover-meta">
           <div>
             <strong>For</strong>Dycom steering committee and leadership
@@ -171,7 +171,7 @@ export const slides: Slide[] = [
             ['strategy', 'Purpose & experience', 'What the site is for, who it serves, and the experience every page keeps.'],
             ['templates', 'Templates', 'Sixteen templates, each with one job and its story — live, desktop and phone.'],
             ['components', 'Components', `${components.length} renderings that build every template, and how they were consolidated.`],
-            ['decisions', 'Decisions & what’s owed', 'Open decisions, the data the build needs, and what Dycom supplies.'],
+            ['decisions', 'Where we need your input', 'The choices only Dycom can make, and the information and content that bring the site to life.'],
           ].map(([id, name, line], i) => (
             <li key={id}>
               <button type="button" onClick={() => goTo(id)}>
@@ -405,56 +405,67 @@ export const slides: Slide[] = [
       </div>
     ),
   },
-  // ---------------------------------------------------------------- decisions
+  // ---------------------------------------------------------------- your input
   {
     id: 'decisions',
     chapter: CH.decisions,
-    title: 'Chapter 4 · Decisions & what’s owed',
+    title: 'Chapter 4 · Where we need your input',
     className: 'wt-dark wt-divider',
     photo: photo('z9a_5195'),
-    render: () => <Divider n="04" title="Decisions & what’s owed" points={['Open decisions', 'Data the build needs', 'Content Dycom supplies', 'Investors review items']} />,
+    render: () => <Divider n="04" title="Where we need your input" points={['Choices only Dycom can make', 'Information Dycom holds', 'Content to write and approve']} />,
   },
   {
-    id: 'open-decisions',
+    id: 'key-choices',
     chapter: CH.decisions,
-    title: 'Open decisions',
+    title: 'Choices only Dycom can make',
     render: () => (
       <>
-        <Head title="Open decisions and the pages they block" lede="Each has a working default so design and build continue; none is settled." />
-        <RowsTable rows={decisions.openDecisions.filter((r) => r.ID !== 'D1–D7')} columns={['ID', 'Decision', 'Default in the prototype', 'Blocks']} rowHeader="ID" />
+        <Head title="Choices only Dycom can make" lede="Each has a working answer on the site today, so nothing waits — but each is Dycom’s call, and each shapes what visitors see." />
+        <ChoiceList items={keyChoices} />
       </>
     ),
   },
   {
-    id: 'data-needed',
+    id: 'smaller-choices',
     chapter: CH.decisions,
-    title: 'Data the build needs',
+    title: 'Smaller choices',
     render: () => (
       <>
-        <Head title="Data the build needs that does not exist yet" />
-        <RowsTable rows={decisions.dataDependencies} columns={['Dependency', 'What is missing', 'Pages blocked']} rowHeader="Dependency" />
+        <Head title="Smaller choices, already answered for now" lede="Quick confirmations. The site works as described until Dycom says otherwise." />
+        <ChoiceList items={smallerChoices} />
       </>
     ),
   },
   {
-    id: 'content-owed',
+    id: 'information',
     chapter: CH.decisions,
-    title: 'Content Dycom supplies',
+    title: 'Information Dycom holds',
     render: () => (
       <>
-        <Head title="New content and who supplies it" />
-        <RowsTable rows={decisions.netNewContent} columns={['Item', 'Supplier']} rowHeader="Item" />
+        <Head title="Information only Dycom holds" lede="The facts that make the site specific to Dycom — and keep it accurate after launch." />
+        <NeedsGrid />
+      </>
+    ),
+  },
+  {
+    id: 'content',
+    chapter: CH.decisions,
+    title: 'Content to write and approve',
+    render: () => (
+      <>
+        <Head title="Content to write and approve" lede="Some stories only Dycom can tell. For the rest, Icreon drafts in Dycom’s voice and Dycom approves." />
+        <ContentSplit />
       </>
     ),
   },
   {
     id: 'investors-review',
     chapter: CH.decisions,
-    title: 'Open from the Investors review',
+    title: 'From the Investors review',
     render: () => (
       <>
         <Head title="Still open from the Investors review" />
-        <RowsTable rows={decisions.investorsReview} columns={['Item', 'Why it is open', 'What the site does meanwhile']} rowHeader="Item" />
+        <ChoiceList items={investorsReview} numbered={false} />
       </>
     ),
   },
@@ -468,13 +479,13 @@ export const slides: Slide[] = [
     render: () => (
       <>
         <h1>Everything stays here</h1>
-        <p className="wt-lede">The library keeps every template, design, component and decision in one place for the teams building and governing the site. Use it to review, to onboard, and to settle the open decisions.</p>
+        <p className="wt-lede">The library keeps every template, design, component and open question in one place for the teams building and governing the site. Use it to review, to onboard, and to settle the open questions.</p>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
           <Link href={lib.home} className="wt-button wt-button--inverse">
             Open the library <span aria-hidden="true">→</span>
           </Link>
           <Link href={lib.decisions} className="wt-button wt-button--outline" style={{ color: '#fff', borderColor: '#fff' }}>
-            Decisions & what’s owed <span aria-hidden="true">→</span>
+            Where we need your input <span aria-hidden="true">→</span>
           </Link>
         </div>
       </>
