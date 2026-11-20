@@ -43,18 +43,6 @@
 .wt-button--inverse { background: var(--white); color: var(--civic); border-color: var(--white); }
 .wt-button--inverse:hover { background: var(--paper); color: var(--civic); border-color: var(--paper); }
 
-/* ---------- login */
-.wt-login { min-height: 100vh; display: grid; place-items: center; padding: 32px var(--gutter); background: var(--civic) url('/media/photography/web/z9b_6665-2000.webp') center / cover; position: relative; }
-.wt-login::before { content: ''; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(4, 16, 84, .96), rgba(4, 16, 84, .82)); }
-.wt-login-panel { position: relative; width: min(520px, 100%); background: var(--white); padding: clamp(28px, 5vw, 48px); display: flex; flex-direction: column; gap: 16px; border-top: 6px solid var(--green); }
-.wt-login-panel h1 { font-size: clamp(34px, 5vw, 46px); }
-.wt-login-lede { font-size: 17px; }
-.wt-login-form { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
-.wt-login-form label { font-weight: 600; color: var(--civic); font-size: 15px; }
-.wt-login-form input[type='password'] { height: 50px; border: 1px solid var(--civic); padding: 0 14px; font: 17px var(--body); color: var(--civic); }
-.wt-login-form .wt-button { align-self: flex-start; margin-top: 8px; }
-.wt-login-error { color: #a1001a; font-weight: 600; font-size: 15px; }
-
 /* ---------- library shell */
 .wt-lib-header { position: sticky; top: 0; z-index: 20; background: var(--civic); color: var(--white); }
 .wt-lib-header-inner { max-width: 1440px; margin: 0 auto; padding: 0 var(--gutter); min-height: 64px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }

@@ -4,7 +4,9 @@ Conventions for anyone (human or agent) adding to this app. The README explains 
 
 Never build from `handoff/`: it is the deprecated design handoff, kept for reference.
 
-`/walkthrough` (src/walkthrough, src/app/walkthrough) is the internal design walkthrough, not part of the site: its data is generated (`npm run walkthrough:build`), never hand-edited, and it must stay behind the password gate in `src/proxy.ts`.
+`/walkthrough` (src/walkthrough, src/app/walkthrough) is the internal design walkthrough, not part of the site: its data is generated (`npm run walkthrough:build`), never hand-edited, and it must stay behind the site PIN gate in `src/proxy.ts`.
+
+The whole deployment is behind a 4-digit site PIN (`SITE_PIN`, gate at the top of `src/proxy.ts`, screen in `src/lib/pin-screen.ts`). New routes are covered automatically; don't add exceptions to `PIN_OPEN` without a reason.
 
 What to build is in `docs/requirements.md`: the page inventory, the templates (T01–T16) and the component inventory (§3). Name new renderings as §3 does, and reuse an inventory rendering before adding one.
 
