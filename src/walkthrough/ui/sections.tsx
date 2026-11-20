@@ -115,7 +115,7 @@ export function TemplateTable() {
               </Link>
             </th>
             <td>{t.pagesServed}</td>
-            <td className="wt-num">{t.pageCount}</td>
+            <td className="wt-num">{t.pageCount === 'feed' ? 'Automatic' : t.pageCount}</td>
             <td>
               <span className="wt-status" data-status={t.status === 'Built' ? 'Built' : 'Designed'}>
                 {t.status}

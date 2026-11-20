@@ -49,7 +49,7 @@ export default async function TemplatePage({ params }: Params) {
           {t.headline && <p className="wt-lede">{t.headline.charAt(0).toUpperCase() + t.headline.slice(1)}.</p>}
           <p>
             <strong style={{ color: 'var(--civic)' }}>Pages it serves:</strong> {t.pagesServed}
-            {t.pageCount !== 'feed' ? ` (${t.pageCount})` : ' (one per feed item)'}
+            {t.pageCount !== 'feed' ? ` (${t.pageCount})` : ' (created automatically)'}
           </p>
           <p>
             <Link href={`${lib.story}#/${t.slug}`}>See it in story mode →</Link>
@@ -63,7 +63,7 @@ export default async function TemplatePage({ params }: Params) {
       </section>
 
       <section className="wt-section" aria-labelledby="story">
-        <h2 id="story">The job and the story</h2>
+        <h2 id="story">What it does, and the story it tells</h2>
         <div className="wt-notes">
           {notes.map((n) => (
             <div key={n.key} className="wt-note" data-kind={n.kind}>
@@ -80,17 +80,12 @@ export default async function TemplatePage({ params }: Params) {
             </div>
           ))}
         </div>
-        {notes.some((n) => n.kind === 'mapping') && t.code !== 'T01' && (
-          <p className="wt-small">
-            The Sitecore mapping notes were written as each template was designed; the final rendering names are the consolidated kit below.
-          </p>
-        )}
       </section>
 
       <section className="wt-section" aria-labelledby="kit">
         <div className="wt-section-head">
-          <h2 id="kit">Components ({used.length})</h2>
-          <p>The renderings from the final inventory that build this template.</p>
+          <h2 id="kit">Building blocks ({used.length})</h2>
+          <p>For the build team: the components from the shared kit that make this page.</p>
         </div>
         <div className="wt-comp-group">
           {used.map((c) => (
