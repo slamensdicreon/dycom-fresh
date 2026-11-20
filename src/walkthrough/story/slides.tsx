@@ -53,10 +53,9 @@ const CH = {
   close: 'Close',
 };
 
-function Head({ eyebrow, title, lede }: { eyebrow?: string; title: React.ReactNode; lede?: React.ReactNode }) {
+function Head({ title, lede }: { title: React.ReactNode; lede?: React.ReactNode }) {
   return (
     <div className="wt-slide-head">
-      {eyebrow && <p className="wt-eyebrow">{eyebrow}</p>}
       <h2>{title}</h2>
       {lede && <p className="wt-lede">{lede}</p>}
     </div>
@@ -167,7 +166,7 @@ export const slides: Slide[] = [
     title: 'Today',
     render: ({ goTo }) => (
       <>
-        <Head eyebrow="Today" title="Four parts, one system" lede="The direction leadership approved — homepage, navigation, Investors — has been extended into a complete page system. We walk it in the order it was built: why, what, how, and what we still need." />
+        <Head title="Four parts, one system" lede="The direction leadership approved — homepage, navigation, Investors — has been extended into a complete page system. We walk it in the order it was built: why, what, how, and what we still need." />
         <ol className="wt-agenda">
           {[
             ['strategy', 'Purpose & experience', 'What the site is for, who it serves, and the experience every page keeps.'],
@@ -204,7 +203,6 @@ export const slides: Slide[] = [
     photo: photo('z9a_0525'),
     render: () => (
       <>
-        <p className="wt-eyebrow">The purpose of the site</p>
         <p className="wt-lede" style={{ maxWidth: '58ch' }}>{tension.statement}</p>
         <p className="wt-quote">
           Scale is <em>Local</em>
@@ -219,7 +217,7 @@ export const slides: Slide[] = [
     title: 'What the site must do',
     render: () => (
       <>
-        <Head eyebrow="From Dycom’s Digital Experience Strategy" title="What the site must do" />
+        <Head title="What the site must do" />
         <div className="wt-twolists">
           <div>
             <h3>Business needs</h3>
@@ -247,7 +245,7 @@ export const slides: Slide[] = [
     title: 'Who the site serves',
     render: () => (
       <>
-        <Head eyebrow="Audiences" title="Thirteen audiences, four front doors" lede="The strategy defines thirteen user types. The homepage routes the four largest intents in one band, and the closing form asks “What brings you here?” with the same four answers." />
+        <Head title="Thirteen audiences, four front doors" lede="The strategy defines thirteen user types. The homepage routes the four largest intents in one band, and the closing form asks “What brings you here?” with the same four answers." />
         <div className="wt-intents">
           {intents.map((i) => (
             <div key={i.name}>
@@ -270,7 +268,7 @@ export const slides: Slide[] = [
     title: 'Experience rules',
     render: () => (
       <>
-        <Head eyebrow="The experience" title="Experience rules every page keeps" lede="What every visitor can rely on, on every template." />
+        <Head title="Experience rules every page keeps" lede="What every visitor can rely on, on every template." />
         <ProductRules />
       </>
     ),
@@ -281,7 +279,7 @@ export const slides: Slide[] = [
     title: 'The future-state sitemap',
     render: () => (
       <>
-        <Head eyebrow="Navigation" title="Six groups. Every page placed once." lede="The menu is the future-state sitemap: every current page placed once, under the group a visitor would look for it in. Each page is tagged with the template that builds it." />
+        <Head title="Six groups. Every page placed once." lede="The menu is the future-state sitemap: every current page placed once, under the group a visitor would look for it in. Each page is tagged with the template that builds it." />
         <SitemapColumns compact linked={false} />
       </>
     ),
@@ -293,8 +291,8 @@ export const slides: Slide[] = [
     render: () => (
       <div className="wt-slide-grid">
         <div className="wt-slide-col">
-          <Head eyebrow="One frame" title="Every interior page shares one frame" lede="The Investors page proved it. Every interior template inherits these six parts, so a visitor always knows where they are and what to do next." />
-          <h3 style={{ fontSize: 15, letterSpacing: '.12em', textTransform: 'uppercase', marginTop: 8 }}>Every template answers</h3>
+          <Head title="Every interior page shares one frame" lede="The Investors page proved it. Every interior template inherits these six parts, so a visitor always knows where they are and what to do next." />
+          <h3 className="wt-slide-subhead">Every template answers six questions</h3>
           <ul className="wt-questions">
             {templateQuestions.map((q) => (
               <li key={q}>{q}</li>
@@ -313,7 +311,7 @@ export const slides: Slide[] = [
     title: 'Sixteen templates',
     render: () => (
       <>
-        <Head eyebrow="The system" title="Sixteen templates build the whole site" lede="Two are built and live. Fourteen are designed, desktop and phone, with their narrative and content sources — ready to build." />
+        <Head title="Sixteen templates build the whole site" lede="Two are built and live. Fourteen are designed, desktop and phone, with their narrative and content sources — ready to build." />
         <TemplateTable />
       </>
     ),
@@ -351,7 +349,6 @@ export const slides: Slide[] = [
     render: () => (
       <>
         <Head
-          eyebrow="Component inventory"
           title={`${components.length} renderings build every page`}
           lede={`Reviewing all sixteen templates together, we consolidated everything they need into one kit. ${statusCount('Built') + statusCount('Extend')} renderings already exist in the site or grow from one that does; ${statusCount('New')} are designed and new; ${statusCount('Not designed')} are required by Dycom’s lists but not yet designed.`}
         />
@@ -367,7 +364,7 @@ export const slides: Slide[] = [
     render: () => (
       <div className="wt-slide-grid wt-slide-grid--even">
         <div className="wt-slide-col">
-          <Head eyebrow="One component per job" title="Where templates solved the same problem, one component" />
+          <Head title="Where templates solved the same problem, one component" />
           <div className="wt-note" data-kind="mapping">
             <NoteBody text={inventoryNotes.invMerge.split('\n\n').slice(1).join('\n\n')} />
           </div>
@@ -387,7 +384,7 @@ export const slides: Slide[] = [
     title: 'Which template uses what',
     render: () => (
       <>
-        <Head eyebrow="The matrix" title="Which template uses what" lede="Columns are templates T01–T16. Blue: built or extended; green: new; grey: third-party." />
+        <Head title="Which template uses what" lede="Columns are templates T01–T16. Blue: built or extended; green: new; grey: third-party." />
         <ComponentMatrix linkComponents={false} />
       </>
     ),
@@ -399,7 +396,7 @@ export const slides: Slide[] = [
     render: () => (
       <div className="wt-slide-grid wt-slide-grid--even">
         <div className="wt-slide-col">
-          <Head eyebrow="Gaps" title="Required, not yet designed" lede="Each sits in Dycom’s requirements or Custom Components list but has no template that needs it yet." />
+          <Head title="Required, not yet designed" lede="Each sits in Dycom’s requirements or Custom Components list but has no template that needs it yet." />
         </div>
         <div className="wt-slide-col">
           <div className="wt-note" data-kind="open">
@@ -424,7 +421,7 @@ export const slides: Slide[] = [
     title: 'Open decisions',
     render: () => (
       <>
-        <Head eyebrow="For this committee" title="Open decisions and the pages they block" lede="Each has a working default so design and build continue; none is settled." />
+        <Head title="Open decisions and the pages they block" lede="Each has a working default so design and build continue; none is settled." />
         <RowsTable rows={decisions.openDecisions.filter((r) => r.ID !== 'D1–D7')} columns={['ID', 'Decision', 'Default in the prototype', 'Blocks']} rowHeader="ID" />
       </>
     ),
@@ -435,7 +432,7 @@ export const slides: Slide[] = [
     title: 'Data the build needs',
     render: () => (
       <>
-        <Head eyebrow="Dependencies" title="Data the build needs that does not exist yet" />
+        <Head title="Data the build needs that does not exist yet" />
         <RowsTable rows={decisions.dataDependencies} columns={['Dependency', 'What is missing', 'Pages blocked']} rowHeader="Dependency" />
       </>
     ),
@@ -446,7 +443,7 @@ export const slides: Slide[] = [
     title: 'Content Dycom supplies',
     render: () => (
       <>
-        <Head eyebrow="What’s owed" title="New content and who supplies it" />
+        <Head title="New content and who supplies it" />
         <RowsTable rows={decisions.netNewContent} columns={['Item', 'Supplier']} rowHeader="Item" />
       </>
     ),
@@ -457,7 +454,7 @@ export const slides: Slide[] = [
     title: 'Open from the Investors review',
     render: () => (
       <>
-        <Head eyebrow="Investors review · November 11, 2026" title="Still open from the Investors review" />
+        <Head title="Still open from the Investors review" />
         <RowsTable rows={decisions.investorsReview} columns={['Item', 'Why it is open', 'What the site does meanwhile']} rowHeader="Item" />
       </>
     ),
@@ -471,7 +468,6 @@ export const slides: Slide[] = [
     photo: photo('z9b_1711'),
     render: () => (
       <>
-        <p className="wt-eyebrow">After today</p>
         <h1>Everything stays here</h1>
         <p className="wt-lede">The library keeps every template, design, component and decision in one place for the teams building and governing the site. Use it to review, to onboard, and to settle the open decisions.</p>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
