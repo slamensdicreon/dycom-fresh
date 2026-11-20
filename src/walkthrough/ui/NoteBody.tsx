@@ -19,17 +19,17 @@ export function NoteBody({ text, limit }: { text: string; limit?: number }) {
         const items: string[] = [];
         while (i < lines.length && /^\d+\.\s/.test(lines[i])) items.push(lines[i++].replace(/^\d+\.\s+/, ''));
         out.push(<ol key={`${bi}-${i}`} className="wt-olist">{items.map((t, k) => <li key={k}>{t}</li>)}</ol>);
-      } else if (/^(\d\d|Hero|Closing|Intro)[\s:]/.test(line)) {
+      } else if (/^(\d\d|Hero|Closing|Intro|Alongside)[\s:]/.test(line)) {
         const items: string[] = [];
-        while (i < lines.length && /^(\d\d|Hero|Closing|Intro)[\s:]/.test(lines[i])) items.push(lines[i++]);
+        while (i < lines.length && /^(\d\d|Hero|Closing|Intro|Alongside)[\s:]/.test(lines[i])) items.push(lines[i++]);
         out.push(
           <ol key={`${bi}-${i}`} className="wt-beats">
             {items.map((t, k) => {
-              const m = t.match(/^(\d\d|Hero|Closing|Intro):?\s+(.*)$/);
+              const m = t.match(/^(\d\d|Hero|Closing|Intro|Alongside):?\s+(.*)$/);
               return (
                 <li key={k}>
                   <span className="wt-beat-mark">{m ? m[1] : ''}</span>
-                  <span>{m ? m[2] : t}</span>
+                  <span>{m ? m[2].charAt(0).toUpperCase() + m[2].slice(1) : t}</span>
                 </li>
               );
             })}
@@ -37,7 +37,7 @@ export function NoteBody({ text, limit }: { text: string; limit?: number }) {
         );
       } else {
         const para: string[] = [];
-        while (i < lines.length && !/^([•·-]\s|\d+\.\s|(\d\d|Hero|Closing|Intro)[\s:])/.test(lines[i])) para.push(lines[i++]);
+        while (i < lines.length && !/^([•·-]\s|\d+\.\s|(\d\d|Hero|Closing|Intro|Alongside)[\s:])/.test(lines[i])) para.push(lines[i++]);
         out.push(
           <p key={`${bi}-${i}`}>
             {para.map((t, k) => (
@@ -55,10 +55,10 @@ export function NoteBody({ text, limit }: { text: string; limit?: number }) {
 }
 
 export const NOTE_LABEL: Record<string, string> = {
-  job: 'The job',
-  narrative: 'Narrative',
+  job: 'What the page does',
+  narrative: 'The story',
   mapping: 'Sitecore mapping',
-  open: 'Open for Dycom',
+  open: 'What we need from Dycom',
   aside: 'Note',
 };
 

@@ -2,9 +2,9 @@
 import Link from 'next/link';
 import {
   boardHeight,
+  pageCountLabel,
   boardSrc,
   components,
-  componentsFor,
   inventoryNotes,
   templates,
   type Template,
@@ -80,7 +80,6 @@ function TemplateSlide({ t }: { t: Template }) {
   const view = t.views[0];
   const src = view.live ?? boardSrc(view.board!);
   const job = t.notes.find((n) => n.kind === 'job');
-  const used = componentsFor(t.code);
   const extra = t.views.length - 1;
   return (
     <div className="wt-tslide">
@@ -91,17 +90,17 @@ function TemplateSlide({ t }: { t: Template }) {
         <div className="wt-tslide-meta">
           <StatusTag status={t.status === 'Built' ? 'Built' : 'New'} />
           <span>
-            <strong style={{ color: 'var(--civic)' }}>{t.pageCount === 'feed' ? 'Feed-driven' : `${t.pageCount} page${t.pageCount === '1' ? '' : 's'}`}</strong> · {t.pagesServed}
+            <strong style={{ color: 'var(--civic)' }}>{pageCountLabel(t.pageCount)}</strong> · {t.pagesServed}
           </span>
         </div>
         {job && (
           <div className="wt-note" data-kind="job">
-            <p className="wt-note-label">The job</p>
+            <p className="wt-note-label">What the page does</p>
             <NoteBody text={job.body} />
           </div>
         )}
         <p className="wt-small">
-          {used.length} renderings from the inventory{extra > 0 ? ` · ${extra} more design${extra > 1 ? 's' : ''} (states and variants) in the library` : ''}.
+          {extra > 0 ? `${extra} more design${extra > 1 ? 's' : ''} — other pages and states — in the library.` : 'The full story and what we need from Dycom are in the library.'}
         </p>
         <div className="wt-tslide-more">
           <Link href={lib.template(t.slug)} className="wt-button wt-button--outline" target="_blank">

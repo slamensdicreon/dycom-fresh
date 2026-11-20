@@ -2,12 +2,14 @@ import canvas from './data/canvas.json';
 import metrics from './data/board-metrics.json';
 import inventory from './data/component-inventory.json';
 import sitemapData from './data/sitemap.json';
+import { templateNotes } from './template-notes';
 
 /**
  * Walkthrough data. Everything here is generated from the design canvas (design/canvas), the
  * component inventory (design/component-inventory.json) and docs/requirements.md by
  * `npm run walkthrough:build` — edit those sources, not the JSON. The one exception is T01, which
- * has no canvas board (it is built and live), so its notes are written here from the design brief.
+ * has no canvas board (it is built and live). Every template's notes come from template-notes.ts,
+ * written for Dycom's marketing and communications leaders.
  */
 
 export type NoteKind = 'job' | 'narrative' | 'mapping' | 'open' | 'aside';
@@ -44,55 +46,40 @@ const T01: Template = {
   pageCount: '1',
   status: 'Built',
   views: [{ board: null, live: '/', title: 'Homepage — live on the site', phone: true }],
-  notes: [
-    {
-      key: 't01Job',
-      kind: 'job',
-      heading: 'THE JOB',
-      body:
-        'One continuous argument: Dycom is the people connecting America; its strength is that it is local everywhere; here is the company near you; here is how the work is done; tell us what you need.\n\n' +
-        '1. State the thesis — "Scale is Local" — before anything else.\n' +
-        '2. Route the four largest intents in one band: Career Seekers, Customers, Investors, Communities.\n' +
-        '3. Make "local" concrete: the map, the directory and the company card are the centre of the page.\n' +
-        '4. End with one next step: "What brings you here?"',
-    },
-    {
-      key: 't01Narrative',
-      kind: 'narrative',
-      heading: 'NARRATIVE — HOMEPAGE',
-      body:
-        'Hero: silent film loop, "Scale is Local", one sentence in Dycom\'s words.\n' +
-        'Pathways: four intents on Civic Blue.\n' +
-        'Who we are · What we build: the people connecting America, the four lines of work, the facts band.\n' +
-        'Our people at work: the brand film, played in place.\n' +
-        'Our companies: the atlas, city / state / ZIP search ranked by distance, the company card led by its own logo.\n' +
-        'The four strengths: Scale is Local · Built to Deliver · Where Skill Meets Scale · Shaping What\'s Next.\n' +
-        'Brand statement · Expertise for the entire lifecycle (five stages, fixed height).\n' +
-        'Closing: "Let\'s get to work" — four intents, one form.',
-    },
-    {
-      key: 't01Mapping',
-      kind: 'mapping',
-      heading: 'SITECORE MAPPING (built in the site)',
-      body:
-        'Hero · Pathways · WhoWeAre · BrandFilm · CompanyDirectory (map + directory + card) · Strengths · BrandStatement · Lifecycle · ContactForm, framed by SiteHeader, SiteFooter, RolesDrawer and the ResultsBar. Each reads only its Sitecore datasource; in the component inventory the homepage composites decompose into the shared renderings.',
-    },
-    {
-      key: 't01Open',
-      kind: 'open',
-      heading: 'OPEN FOR DYCOM',
-      body:
-        '• Brand statement copy — a sentence from Dycom\'s company description stands in.\n' +
-        '• SEO fields: description, keywords and share image.\n' +
-        '• Employee count wording ("20,000+" vs "20K") and the owner of all company facts.\n' +
-        '• "Over 500 field offices" while the map plots 39 home offices.\n' +
-        '• Lifecycle stages 4 and 5 — "Maintain & restore" beside "Maintain & respond".\n' +
-        '• Which held-back chapters return with the interior pages.',
-    },
-  ],
+  notes: [],
 };
 
-export const templates: Template[] = [T01, ...(canvas.templates as Template[]).filter((t) => t.code !== 'T01')];
+/** Plain descriptions of the pages each template serves (the canvas uses working shorthand). */
+const PAGES_SERVED: Record<string, string> = {
+  T02: 'The Investors page, plus stock information, governance, board committees, analyst coverage, shareholder services and FAQs',
+  T06: 'Our companies — the map as a full page',
+  T07: 'Careers — “where do I fit?”',
+  T08: 'Open roles',
+  T09: 'One page for every open role',
+  T11: 'Every news release and article',
+  T13: 'Contact, subcontractors, talent network, investor contact',
+  T16: 'Page not found, search, confirmations',
+};
+
+/** How many pages a template serves, in words: some are created automatically, one per item. */
+export const pageCountLabel = (count: string) => (count === 'feed' ? 'Created automatically' : `${count} page${count === '1' ? '' : 's'}`);
+
+/** Notes for Dycom's marketing and communications leaders replace the canvas's working notes. */
+function withAudienceNotes(t: Template): Template {
+  const n = templateNotes[t.code];
+  if (!n) return t;
+  return {
+    ...t,
+    pagesServed: PAGES_SERVED[t.code] ?? t.pagesServed,
+    notes: [
+      { key: `${t.slug}-does`, kind: 'job', heading: '', body: n.does },
+      { key: `${t.slug}-story`, kind: 'narrative', heading: `Story — ${n.example}`, body: n.story },
+      { key: `${t.slug}-dycom`, kind: 'open', heading: '', body: n.fromDycom.map((x) => `• ${x}`).join('\n') },
+    ],
+  };
+}
+
+export const templates: Template[] = [T01, ...(canvas.templates as Template[]).filter((t) => t.code !== 'T01')].map(withAudienceNotes);
 export const templateByCode = (code: string) => templates.find((t) => t.code === code);
 
 export const boardSrc = (board: string) => `/walkthrough-assets/canvas/boards/${board}.html`;
