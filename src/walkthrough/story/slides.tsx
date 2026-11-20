@@ -13,24 +13,18 @@ import {
 import {
   audiences,
   businessNeeds,
-  company,
   experienceGoals,
   intents,
-  learned,
-  lessons,
-  platform,
   templateQuestions,
   tension,
 } from '../strategy';
 import { BoardFrame } from '../ui/BoardFrame';
 import { NoteBody } from '../ui/NoteBody';
 import {
-  BrandRules,
   ComponentMatrix,
   InteriorFrame,
   KitGroups,
   lib,
-  Palette,
   ProductRules,
   RowsTable,
   SitemapColumns,
@@ -52,7 +46,7 @@ export type Slide = {
 const photo = (name: string) => `/media/photography/web/${name}-2000.webp`;
 const CH = {
   open: 'Opening',
-  strategy: '1 · Strategy & narrative',
+  strategy: '1 · Purpose & experience',
   templates: '2 · Templates',
   components: '3 · Components',
   decisions: '4 · Decisions & what’s owed',
@@ -176,7 +170,7 @@ export const slides: Slide[] = [
         <Head eyebrow="Today" title="Four parts, one system" lede="The direction leadership approved — homepage, navigation, Investors — has been extended into a complete page system. We walk it in the order it was built: why, what, how, and what we still need." />
         <ol className="wt-agenda">
           {[
-            ['strategy', 'Strategy & narrative', 'Who the site serves, the tension it resolves, the rules it keeps.'],
+            ['strategy', 'Purpose & experience', 'What the site is for, who it serves, and the experience every page keeps.'],
             ['templates', 'Templates', 'Sixteen templates, each with one job and its story — live, desktop and phone.'],
             ['components', 'Components', `${components.length} renderings that build every template, and how they were consolidated.`],
             ['decisions', 'Decisions & what’s owed', 'Open decisions, the data the build needs, and what Dycom supplies.'],
@@ -197,37 +191,10 @@ export const slides: Slide[] = [
   {
     id: 'strategy',
     chapter: CH.strategy,
-    title: 'Chapter 1 · Strategy & narrative',
+    title: 'Chapter 1 · Purpose & experience',
     className: 'wt-dark wt-divider',
     photo: photo('z9b_1711'),
-    render: () => <Divider n="01" title="Strategy & narrative" points={['The platform', 'Scale is Local', 'Who the site serves', 'Brand and product rules', 'The sitemap and the frame']} />,
-  },
-  {
-    id: 'platform',
-    chapter: CH.strategy,
-    title: 'The platform ambition',
-    className: 'wt-dark',
-    render: () => (
-      <>
-        <Head eyebrow="Why we are rebuilding" title="One platform, then every operating company" lede={platform.ambition} />
-        <div className="wt-milestones">
-          {platform.milestones.map((m) => (
-            <div key={m.date}>
-              <strong>{m.date}</strong>
-              {m.label} — {m.note}
-            </div>
-          ))}
-        </div>
-        <div className="wt-stats" style={{ marginTop: 'auto' }}>
-          {company.map((c) => (
-            <div key={c.label}>
-              <strong>{c.figure}</strong>
-              <span>{c.label}</span>
-            </div>
-          ))}
-        </div>
-      </>
-    ),
+    render: () => <Divider n="01" title="Purpose & experience" points={['What the site is for', 'Who it serves', 'Experience rules', 'The sitemap and the frame']} />,
   },
   {
     id: 'scale-is-local',
@@ -237,7 +204,7 @@ export const slides: Slide[] = [
     photo: photo('z9a_0525'),
     render: () => (
       <>
-        <p className="wt-eyebrow">The tension the site resolves</p>
+        <p className="wt-eyebrow">The purpose of the site</p>
         <p className="wt-lede" style={{ maxWidth: '58ch' }}>{tension.statement}</p>
         <p className="wt-quote">
           Scale is <em>Local</em>
@@ -298,51 +265,12 @@ export const slides: Slide[] = [
     ),
   },
   {
-    id: 'learned',
-    chapter: CH.strategy,
-    title: 'What Dycom’s documents taught us',
-    render: () => (
-      <>
-        <Head eyebrow="Discovery" title="What Dycom’s own documents taught us" />
-        <div className="wt-learned">
-          {learned.map((l) => (
-            <div key={l.source}>
-              <h4>{l.source}</h4>
-              <p>{l.finding}</p>
-              <p>{l.response}</p>
-            </div>
-          ))}
-        </div>
-        <div className="wt-lessons">
-          {lessons.map((l) => (
-            <div key={l.title}>
-              <h4>{l.title}</h4>
-              <p>{l.body}</p>
-            </div>
-          ))}
-        </div>
-      </>
-    ),
-  },
-  {
-    id: 'brand',
-    chapter: CH.strategy,
-    title: 'Brand rules in force',
-    render: () => (
-      <>
-        <Head eyebrow="Confirmed in review" title="Brand rules in force" lede="Dycom’s 2026 brand guidelines, applied without exception on every template." />
-        <Palette />
-        <BrandRules />
-      </>
-    ),
-  },
-  {
     id: 'product-rules',
     chapter: CH.strategy,
-    title: 'Product rules',
+    title: 'Experience rules',
     render: () => (
       <>
-        <Head eyebrow="Confirmed in review" title="Product rules every page keeps" />
+        <Head eyebrow="The experience" title="Experience rules every page keeps" lede="What every visitor can rely on, on every template." />
         <ProductRules />
       </>
     ),

@@ -5,7 +5,7 @@ import { lib } from '../ui/sections';
 
 const ITEMS = [
   { href: lib.home, label: 'Overview', exact: true },
-  { href: lib.strategy, label: 'Strategy' },
+  { href: lib.strategy, label: 'Purpose' },
   { href: lib.templates, label: 'Templates' },
   { href: lib.components, label: 'Components' },
   { href: lib.decisions, label: 'Decisions' },
