@@ -72,7 +72,7 @@ const SCRIPT = `
   function submit(){var pin=val();if(busy||!/^\\d{4}$/.test(pin))return;busy=true;fs.disabled=true;sync();say('checking');
     fetch('/api/site-pin/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({pin:pin}),credentials:'same-origin'})
       .then(function(r){return r.json().catch(function(){return{}}).then(function(d){return{r:r,d:d}})})
-      .then(function(x){if(x.r.ok&&x.d.ok){say('ok');var p=location.pathname;location.replace(p==='/gate/'||p==='/gate'?nextUrl:location.href);return}reset(x.d.error==='locked'?'locked':x.r.status===401?'wrong':'error')})
+      .then(function(x){if(x.r.ok&&x.d.ok){say('ok');var p=location.pathname;if(p==='/gate/'||p==='/gate')location.replace(nextUrl);else location.reload();return}reset(x.d.error==='locked'?'locked':x.r.status===401?'wrong':'error')})
       .catch(function(){reset('error')});}
   boxes.forEach(function(b,i){
     b.addEventListener('input',function(){var v=b.value.replace(/\\D/g,'');if(v.length>1){b.value='';fill(v,i);return}b.value=v;sync();if(st.className.indexOf('err')>-1&&!fs.disabled)say('');if(v&&i<3)focus(i+1);if(val().length===4)submit()});
