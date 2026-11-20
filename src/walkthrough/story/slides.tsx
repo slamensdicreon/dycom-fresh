@@ -142,7 +142,6 @@ export const slides: Slide[] = [
     photo: photo('z9a_4064'),
     render: () => (
       <>
-        <p className="wt-eyebrow">dycomind.com · Steering committee</p>
         <h1>The design system, walked through</h1>
         <p className="wt-lede">The strategy behind the new dycomind.com, the sixteen templates that build every page, the components they share — and the decisions we need from Dycom.</p>
         <div className="wt-cover-meta">
