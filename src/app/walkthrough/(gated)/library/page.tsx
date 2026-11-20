@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { components, decisions, templates } from 'src/walkthrough/data';
+import { components, templates } from 'src/walkthrough/data';
+import { keyChoices, smallerChoices } from 'src/walkthrough/input';
 import { lib, StatusBreakdown } from 'src/walkthrough/ui/sections';
 
 export const metadata: Metadata = { title: 'Library' };
 
 export default function LibraryHome() {
-  const openCount = decisions.openDecisions.length - 1 + decisions.investorsReview.length;
+  const openCount = keyChoices.length + smallerChoices.length;
   return (
     <div className="wt-page">
       <div className="wt-page-head">
@@ -14,7 +15,7 @@ export default function LibraryHome() {
           <h1>Everything behind the new dycomind.com</h1>
         </div>
         <p className="wt-lede">
-          The purpose of the site, the sixteen templates with their live designs, the component kit that builds them, and the decisions still open — in one place, for the teams who will build, govern and grow the site.
+          The purpose of the site, the sixteen templates with their live designs, the component kit that builds them, and where Dycom’s input is needed — in one place, for the teams who will build, govern and grow the site.
         </p>
       </div>
       <div className="wt-cards">
@@ -39,9 +40,9 @@ export default function LibraryHome() {
           <span className="wt-card-go">Browse components →</span>
         </Link>
         <Link href={lib.decisions} className="wt-card">
-          <h3>Decisions & what’s owed</h3>
-          <p>{openCount} open decisions and review items, the data the build needs, and the content Dycom supplies.</p>
-          <span className="wt-card-go">See decisions →</span>
+          <h3>Where we need your input</h3>
+          <p>{openCount} choices only Dycom can make, the information Dycom holds, and the content to write and approve.</p>
+          <span className="wt-card-go">See what’s needed →</span>
         </Link>
       </div>
       <section className="wt-section">
