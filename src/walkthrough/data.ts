@@ -74,7 +74,6 @@ function withAudienceNotes(t: Template): Template {
     notes: [
       { key: `${t.slug}-does`, kind: 'job', heading: '', body: n.does },
       { key: `${t.slug}-story`, kind: 'narrative', heading: `Story — ${n.example}`, body: n.story },
-      { key: `${t.slug}-dycom`, kind: 'open', heading: '', body: n.fromDycom.map((x) => `• ${x}`).join('\n') },
     ],
   };
 }

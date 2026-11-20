@@ -58,7 +58,6 @@ export const NOTE_LABEL: Record<string, string> = {
   job: 'What the page does',
   narrative: 'The story',
   mapping: 'Sitecore mapping',
-  open: 'What we need from Dycom',
   aside: 'Note',
 };
 

@@ -1,13 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { components, templates } from 'src/walkthrough/data';
-import { keyChoices, smallerChoices } from 'src/walkthrough/input';
 import { lib, StatusBreakdown } from 'src/walkthrough/ui/sections';
 
 export const metadata: Metadata = { title: 'Library' };
 
 export default function LibraryHome() {
-  const openCount = keyChoices.length + smallerChoices.length;
   return (
     <div className="wt-page">
       <div className="wt-page-head">
@@ -15,7 +13,7 @@ export default function LibraryHome() {
           <h1>Everything behind the new dycomind.com</h1>
         </div>
         <p className="wt-lede">
-          The purpose of the site, the sixteen templates with their live designs, the component kit that builds them, and where Dycom’s input is needed — in one place, for the teams who will build, govern and grow the site.
+          The purpose of the site, the sixteen templates with their live designs, and the component kit that builds them — in one place, for the teams who will build, govern and grow the site.
         </p>
       </div>
       <div className="wt-cards">
@@ -38,11 +36,6 @@ export default function LibraryHome() {
           <h3>{components.length} components</h3>
           <p>The consolidated kit: what each rendering does, its variants, its data source, its status and which templates use it.</p>
           <span className="wt-card-go">Browse components →</span>
-        </Link>
-        <Link href={lib.decisions} className="wt-card">
-          <h3>Where we need your input</h3>
-          <p>{openCount} choices only Dycom can make, the information Dycom holds, and the content to write and approve.</p>
-          <span className="wt-card-go">See what’s needed →</span>
         </Link>
       </div>
       <section className="wt-section">

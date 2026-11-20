@@ -18,8 +18,6 @@ import {
   tension,
 } from '../strategy';
 import { BoardFrame } from '../ui/BoardFrame';
-import { ChoiceList, ContentSplit, NeedsGrid } from '../ui/input';
-import { investorsReview, keyChoices, smallerChoices } from '../input';
 import { NoteBody } from '../ui/NoteBody';
 import {
   ComponentMatrix,
@@ -49,7 +47,6 @@ const CH = {
   strategy: '1 · Purpose & experience',
   templates: '2 · Templates',
   components: '3 · Components',
-  decisions: '4 · Where we need your input',
   close: 'Close',
 };
 
@@ -100,7 +97,7 @@ function TemplateSlide({ t }: { t: Template }) {
           </div>
         )}
         <p className="wt-small">
-          {extra > 0 ? `${extra} more design${extra > 1 ? 's' : ''} — other pages and states — in the library.` : 'The full story and what we need from Dycom are in the library.'}
+          {extra > 0 ? `${extra} more design${extra > 1 ? 's' : ''} — other pages and states — in the library.` : 'The full story is in the library.'}
         </p>
         <div className="wt-tslide-more">
           <Link href={lib.template(t.slug)} className="wt-button wt-button--outline" target="_blank">
@@ -142,7 +139,7 @@ export const slides: Slide[] = [
     render: () => (
       <>
         <h1>The design system, walked through</h1>
-        <p className="wt-lede">The strategy behind the new dycomind.com, the sixteen templates that build every page, the components they share — and where we need Dycom’s input.</p>
+        <p className="wt-lede">The purpose behind the new dycomind.com, the sixteen templates that build every page, and the components they share.</p>
         <div className="wt-cover-meta">
           <div>
             <strong>For</strong>Dycom steering committee and leadership
@@ -164,13 +161,12 @@ export const slides: Slide[] = [
     title: 'Today',
     render: ({ goTo }) => (
       <>
-        <Head title="Four parts, one system" lede="The direction leadership approved — homepage, navigation, Investors — has been extended into a complete page system. We walk it in the order it was built: why, what, how, and what we still need." />
+        <Head title="Three parts, one system" lede="The direction leadership approved — homepage, navigation, Investors — has been extended into a complete page system. We walk it in the order it was built: why, what and how." />
         <ol className="wt-agenda">
           {[
             ['strategy', 'Purpose & experience', 'What the site is for, who it serves, and the experience every page keeps.'],
             ['templates', 'Templates', 'Sixteen templates, each with one job and its story — live, desktop and phone.'],
             ['components', 'Components', `${components.length} renderings that build every template, and how they were consolidated.`],
-            ['decisions', 'Where we need your input', 'The choices only Dycom can make, and the information and content that bring the site to life.'],
           ].map(([id, name, line], i) => (
             <li key={id}>
               <button type="button" onClick={() => goTo(id)}>
@@ -404,70 +400,6 @@ export const slides: Slide[] = [
       </div>
     ),
   },
-  // ---------------------------------------------------------------- your input
-  {
-    id: 'decisions',
-    chapter: CH.decisions,
-    title: 'Chapter 4 · Where we need your input',
-    className: 'wt-dark wt-divider',
-    photo: photo('z9a_5195'),
-    render: () => <Divider n="04" title="Where we need your input" points={['Choices only Dycom can make', 'Information Dycom holds', 'Content to write and approve']} />,
-  },
-  {
-    id: 'key-choices',
-    chapter: CH.decisions,
-    title: 'Choices only Dycom can make',
-    render: () => (
-      <>
-        <Head title="Choices only Dycom can make" lede="Each has a working answer on the site today, so nothing waits — but each is Dycom’s call, and each shapes what visitors see." />
-        <ChoiceList items={keyChoices} />
-      </>
-    ),
-  },
-  {
-    id: 'smaller-choices',
-    chapter: CH.decisions,
-    title: 'Smaller choices',
-    render: () => (
-      <>
-        <Head title="Smaller choices, already answered for now" lede="Quick confirmations. The site works as described until Dycom says otherwise." />
-        <ChoiceList items={smallerChoices} />
-      </>
-    ),
-  },
-  {
-    id: 'information',
-    chapter: CH.decisions,
-    title: 'Information Dycom holds',
-    render: () => (
-      <>
-        <Head title="Information only Dycom holds" lede="The facts that make the site specific to Dycom — and keep it accurate after launch." />
-        <NeedsGrid />
-      </>
-    ),
-  },
-  {
-    id: 'content',
-    chapter: CH.decisions,
-    title: 'Content to write and approve',
-    render: () => (
-      <>
-        <Head title="Content to write and approve" lede="Some stories only Dycom can tell. For the rest, Icreon drafts in Dycom’s voice and Dycom approves." />
-        <ContentSplit />
-      </>
-    ),
-  },
-  {
-    id: 'investors-review',
-    chapter: CH.decisions,
-    title: 'From the Investors review',
-    render: () => (
-      <>
-        <Head title="Still open from the Investors review" />
-        <ChoiceList items={investorsReview} numbered={false} />
-      </>
-    ),
-  },
   // ---------------------------------------------------------------- close
   {
     id: 'close',
@@ -478,13 +410,10 @@ export const slides: Slide[] = [
     render: () => (
       <>
         <h1>Everything stays here</h1>
-        <p className="wt-lede">The library keeps every template, design, component and open question in one place for the teams building and governing the site. Use it to review, to onboard, and to settle the open questions.</p>
+        <p className="wt-lede">The library keeps every template, design and component in one place for the teams building and governing the site. Use it to review and to onboard.</p>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
           <Link href={lib.home} className="wt-button wt-button--inverse">
             Open the library <span aria-hidden="true">→</span>
-          </Link>
-          <Link href={lib.decisions} className="wt-button wt-button--outline" style={{ color: '#fff', borderColor: '#fff' }}>
-            Where we need your input <span aria-hidden="true">→</span>
           </Link>
         </div>
       </>
