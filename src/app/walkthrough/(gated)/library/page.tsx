@@ -11,7 +11,6 @@ export default function LibraryHome() {
     <div className="wt-page">
       <div className="wt-page-head">
         <div>
-          <p className="wt-eyebrow">dycomind.com · Design library</p>
           <h1>Everything behind the new dycomind.com</h1>
         </div>
         <p className="wt-lede">
@@ -20,31 +19,26 @@ export default function LibraryHome() {
       </div>
       <div className="wt-cards">
         <Link href={lib.story} className="wt-card wt-card--dark">
-          <p className="wt-eyebrow">Present</p>
           <h3>Story mode</h3>
           <p>The steering-committee walkthrough, full screen, one slide at a time. Arrow keys to move; G for the index.</p>
           <span className="wt-card-go">Start the walkthrough →</span>
         </Link>
         <Link href={lib.strategy} className="wt-card">
-          <p className="wt-eyebrow">Why</p>
           <h3>Purpose & experience</h3>
           <p>What the site is for, who it serves, the experience rules every page keeps, the sitemap and the shared frame.</p>
           <span className="wt-card-go">Read it →</span>
         </Link>
         <Link href={lib.templates} className="wt-card">
-          <p className="wt-eyebrow">What</p>
           <h3>{templates.length} templates</h3>
           <p>Each with its job, its narrative, its Sitecore mapping and what Dycom still owes — and its designs, live, at desktop and phone width.</p>
           <span className="wt-card-go">Browse templates →</span>
         </Link>
         <Link href={lib.components} className="wt-card">
-          <p className="wt-eyebrow">How</p>
           <h3>{components.length} components</h3>
           <p>The consolidated kit: what each rendering does, its variants, its data source, its status and which templates use it.</p>
           <span className="wt-card-go">Browse components →</span>
         </Link>
         <Link href={lib.decisions} className="wt-card">
-          <p className="wt-eyebrow">Next</p>
           <h3>Decisions & what’s owed</h3>
           <p>{openCount} open decisions and review items, the data the build needs, and the content Dycom supplies.</p>
           <span className="wt-card-go">See decisions →</span>

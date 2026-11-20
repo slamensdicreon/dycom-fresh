@@ -9,7 +9,6 @@ export default function DecisionsPage() {
     <div className="wt-page">
       <div className="wt-page-head">
         <div>
-          <p className="wt-eyebrow">Decisions & what’s owed</p>
           <h1>What we need from Dycom</h1>
         </div>
         <p className="wt-lede">

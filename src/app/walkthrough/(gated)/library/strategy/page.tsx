@@ -9,7 +9,6 @@ export default function StrategyPage() {
     <div className="wt-page">
       <div className="wt-page-head">
         <div>
-          <p className="wt-eyebrow">Purpose & experience</p>
           <h1>Scale is Local</h1>
         </div>
         <p className="wt-lede">
